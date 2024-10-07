@@ -1,0 +1,30 @@
+// ========================================================================================================================================================
+// Tabs
+.tabs {
+	// .tabs__navigation
+	&__navigation {
+		display: flex;
+		margin: toRem(0) toRem(-15);
+		&:not(:last-child) {
+			margin-bottom: toRem(24);
+		}
+	}
+	// .tabs__title
+	&__title {
+		width: 100%;
+		line-height: 125%;
+		font-size: toRem(16);
+		padding-bottom: toRem(8);
+		border-bottom: 1px solid transparent;
+		&._tab-active {
+			border-bottom: 1px solid $primaryColor;
+		}
+	}
+	// .tabs__content
+	&__content {
+	}
+	// .tabs__body
+	&__body {
+	}
+}
+// ========================================================================================================================================================

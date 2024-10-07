@@ -1,0 +1,144 @@
+// ========================================================================================================================================================
+//<FORM>
+// Сніппет (HTML):
+.form {
+	// .form__labels
+	&__labels {
+		display: grid;
+		gap: toRem(20);
+	}
+	// .form__label
+	&__label {
+		position: relative;
+		span {
+			line-height: 129%;
+			display: inline-flex;
+			color: $secondtxtColor;
+			&:not(:last-child) {
+				margin-bottom: toRem(8);
+			}
+		}
+		.form__error {
+			color: $redColor;
+			text-align: right;
+			font-size: toRem(12);
+			padding-top: toRem(5);
+		}
+	}
+	// .form__input
+	&__input {
+	}
+	// .form__bottom
+	&__bottom {
+		bottom: 0;
+		width: 100%;
+		position: fixed;
+		max-width: toRem(797.98);
+		margin: toRem(0) toRem(-15);
+		&--shadow {
+			box-shadow:
+				rgba(17, 17, 26, 0.05) 0px 1px 0px,
+				rgba(17, 17, 26, 0.1) 0px 0px 8px;
+		}
+	}
+	// .form__bottom-content
+	&__bottom-content {
+		padding: toRem(12) toRem(15);
+		&.ba-cont {
+			&::before,
+			&::after {
+				box-shadow:
+					rgba(17, 17, 26, 0.05) 0px 1px 0px,
+					rgba(17, 17, 26, 0.1) 0px 0px 8px;
+			}
+		}
+	}
+	// .form__button
+	&__button {
+		&:not(:last-child) {
+			margin-bottom: toRem(12);
+		}
+	}
+	// .form__text
+	&__text {
+		line-height: 117%;
+		text-align: center;
+		font-size: toRem(12);
+		a {
+			color: $primaryColor;
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+	// .form__confirm
+	&__confirm {
+		display: flex;
+		align-items: center;
+		padding-top: toRem(12);
+		justify-content: space-between;
+	}
+	// .form__checkbox
+	&__checkbox {
+	}
+	// .form__link
+	&__link {
+		line-height: 129%;
+		color: $primaryColor;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	// .form__bottom-button
+	&__bottom-button {
+		padding: toRem(15);
+		background-color: $bgColor;
+	}
+	// .form__save
+	&__save {
+		background-color: #fff;
+		padding: toRem(12) toRem(0) toRem(28) toRem(0);
+	}
+}
+//</FORM>
+//--------------------------------------------------------------
+// <BUTTONS>
+// Сніппет (HTML): btn
+@import "button";
+//--------------------------------------------------------------
+// <INPUTS>
+// Сніппет (HTML): inp
+@import "input";
+//--------------------------------------------------------------
+// <CHECK>
+// Сніппет (HTML): chk
+@import "checkbox";
+//--------------------------------------------------------------
+// <RADIO>
+// Сніппет (HTML): opt
+@import "radio";
+//--------------------------------------------------------------
+// <SELECT>
+// Сніппет (HTML): sel
+@import "select";
+//--------------------------------------------------------------
+// <RATING>
+// Сніппет (HTML): rating
+// @import "rating";
+//--------------------------------------------------------------
+// <QUANTITY>
+// Сніппет (HTML): qa
+// @import "quantity";
+//--------------------------------------------------------------
+// <RANGE>
+// Сніппет (HTML):
+@import "range";
+//--------------------------------------------------------------
+// <CALENDAR>
+// Сніппет (HTML):
+// @import "datepicker";
+// ========================================================================================================================================================

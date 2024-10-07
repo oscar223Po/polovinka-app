@@ -1,0 +1,103 @@
+// ========================================================================================================================================================
+// Базові стилі спойлерів
+// Сніппет (HTML): spoller
+// Блок зі спойлерами
+.spollers {
+	display: grid;
+	gap: 16px;
+}
+// Спойлер
+.spollers__item {
+	padding: toRem(15);
+	background-color: #fff;
+	border-radius: toRem(16);
+	border: 1px solid $borderColor;
+}
+// Заголовок спойлера
+.spollers__title {
+	width: 100%;
+	cursor: default;
+	text-align: left;
+	font-weight: 500;
+	position: relative;
+	list-style: none;
+	&::marker,
+	&::-webkit-details-marker {
+		display: none;
+	}
+	._spoller-init & {
+		cursor: pointer;
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			right: 0px;
+			top: 50%;
+			background-color: #000;
+			height: 1.5px;
+			width: 10px;
+			transition: transform 0.5s ease 0s;
+		}
+		&::before {
+			transform: translate(-75%, -50%) rotate(-40deg);
+		}
+		&::after {
+			transform: translate(0, -50%) rotate(40deg);
+		}
+		&._spoller-active {
+			&::before {
+				transform: translateX(-75%) rotate(40deg);
+			}
+			&::after {
+				transform: rotate(-40deg);
+			}
+		}
+	}
+}
+// Спан спойлера
+.spollers__span {
+	display: flex;
+	gap: toRem(12);
+	margin-right: toRem(30);
+	span {
+		display: flex;
+		line-height: 120%;
+		align-items: center;
+		@include adaptiveValue("font-size", 20, 18);
+	}
+	&::before {
+		display: flex;
+		width: toRem(24);
+		height: toRem(24);
+		align-items: center;
+		font-size: toRem(24);
+		justify-content: center;
+	}
+	&--yellow {
+		&::before {
+			color: $yellowColor;
+		}
+	}
+	&--red {
+		&::before {
+			color: $redColor;
+		}
+	}
+	&--blue {
+		&::before {
+			color: $blueColor;
+		}
+	}
+	&--primary {
+		&::before {
+			color: $primaryColor;
+		}
+	}
+}
+// Контент спойлера
+.spollers__body {
+	margin-top: toRem(12);
+	padding-top: toRem(12);
+	border-top: toRem(1) solid $borderColor;
+}
+// ========================================================================================================================================================

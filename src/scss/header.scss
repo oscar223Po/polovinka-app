@@ -1,0 +1,39 @@
+//========================================================================================================================================================
+// Header
+//========================================================================================================================================================
+// Header Request
+.header-request {
+	background-color: #fff;
+	border-bottom: 1px solid $borderColor;
+	&:not(:last-child) {
+		margin-bottom: toRem(24);
+	}
+	// .header-request__container
+	&__container {
+		display: grid;
+		padding-top: toRem(12);
+		padding-bottom: toRem(12);
+		grid-template-columns: toRem(32) 1fr toRem(32);
+	}
+	// .header-request__logo
+	&__logo {
+		display: flex;
+		width: toRem(32);
+		height: toRem(32);
+		align-items: center;
+		justify-content: center;
+		img {
+			max-width: 100%;
+		}
+	}
+	// .header-request__title
+	&__title {
+		display: flex;
+		font-weight: 500;
+		line-height: 125%;
+		align-items: center;
+		font-size: toRem(16);
+		justify-content: center;
+	}
+}
+//========================================================================================================================================================

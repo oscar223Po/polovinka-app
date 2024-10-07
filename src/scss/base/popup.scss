@@ -1,0 +1,91 @@
+// ========================================================================================================================================================
+// Popup
+body::after {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.8s ease 0s;
+	pointer-events: none;
+	z-index: 149;
+}
+.popup-show body::after {
+	opacity: 1;
+}
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding: 30px 15px;
+	transition: visibility 0.8s ease 0s;
+	visibility: hidden;
+	pointer-events: none;
+}
+.popup__close {
+	display: flex;
+	width: toRem(24);
+	height: toRem(24);
+	align-items: center;
+	justify-content: center;
+}
+.popup_show {
+	z-index: 150;
+	visibility: visible;
+	overflow: auto;
+	pointer-events: auto;
+}
+.popup_show .popup__content {
+	visibility: visible;
+	transform: scale(1);
+}
+.popup__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100%;
+	flex: 1 1 auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.popup__content {
+	visibility: hidden;
+	transform: scale(0);
+	transition: transform 0.3s ease 0s;
+	background-color: #fff;
+	padding: 16px;
+	width: 100%;
+	max-width: 767.98px;
+	border-radius: 16px;
+	.lock & {
+		visibility: visible;
+	}
+}
+// ========================================================================================================================================================
+// More Popup
+.property {
+	// .property__top
+	&__top {
+		display: flex;
+		gap: toRem(15);
+		align-items: center;
+		justify-content: space-between;
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	// .property__title
+	&__title {
+		font-weight: 500;
+		line-height: 120%;
+		font-size: toRem(20);
+	}
+}
+// ========================================================================================================================================================

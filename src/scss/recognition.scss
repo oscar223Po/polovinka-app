@@ -1,0 +1,289 @@
+// ========================================================================================================================================================
+// Auth Page *
+// ========================================================================================================================================================
+.auth {
+	// .auth__container
+	&__container {
+	}
+	// .auth__head
+	&__head {
+		text-align: center;
+		padding-top: toRem(15);
+		padding-bottom: toRem(24);
+		margin: toRem(0) toRem(-15);
+	}
+	// .auth__logo
+	&__logo {
+		&:not(:last-child) {
+			margin-bottom: toRem(16);
+		}
+	}
+	// .auth__title
+	&__title {
+		font-weight: 600;
+		line-height: 120%;
+		font-size: toRem(20);
+		&:not(:last-child) {
+			margin-bottom: toRem(12);
+		}
+	}
+	// .auth__text
+	&__text {
+		margin: 0 auto;
+		line-height: 129%;
+		max-width: toRem(325);
+		color: $secondtxtColor;
+	}
+	// .auth__tabs
+	&__tabs {
+		min-height: 100%;
+	}
+}
+.reg-body {
+	@include adaptiveValue("padding-bottom", 120, 130);
+	// .reg-body__gender
+	&__gender {
+		display: flex;
+		gap: toRem(13);
+		&:not(:last-child) {
+			margin-bottom: toRem(16);
+		}
+	}
+	// .reg-body__gender-button
+	&__gender-button {
+		width: 100%;
+		gap: toRem(8);
+		display: flex;
+		outline: none;
+		line-height: 129%;
+		height: toRem(82);
+		align-items: center;
+		background-color: #fff;
+		flex-direction: column;
+		justify-content: center;
+		border-radius: toRem(12);
+		border: toRem(1) solid $borderColor;
+		&--active {
+			border: 1px solid #cdc1ff;
+			background-color: $preprimaryColor;
+		}
+	}
+}
+.log-body {
+	padding-bottom: toRem(90);
+	@include adaptiveValue("padding-top", 55, 35);
+}
+// ========================================================================================================================================================
+// Request Page *
+// ========================================================================================================================================================
+// Request
+.request {
+	// .request__container
+	&__container {
+	}
+	// .request__form
+	&__form {
+	}
+	// .request__spollers
+	&__spollers {
+		&:not(:last-child) {
+			margin-bottom: toRem(24);
+		}
+	}
+}
+// Date
+.date {
+	// .date__selects
+	&__selects {
+		display: grid;
+		gap: toRem(12);
+		grid-template-columns: repeat(3, 1fr);
+		@media (max-width: toEm(389.98)) {
+			grid-auto-columns: 1fr;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			grid-template-areas:
+				"one two"
+				"three three";
+		}
+	}
+	// .date__select
+	&__select {
+		span {
+			display: flex;
+			line-height: 129%;
+			color: $secondtxtColor;
+			&:not(:last-child) {
+				margin-bottom: toRem(8);
+			}
+		}
+		&--one,
+		&--two {
+			z-index: 5;
+			position: relative;
+		}
+		@media (max-width: toEm(389.98)) {
+			&--one {
+				grid-area: one;
+			}
+			&--two {
+				grid-area: two;
+			}
+			&--three {
+				grid-area: three;
+			}
+		}
+	}
+}
+// Metric
+.metric {
+	// .metric__ranges
+	&__ranges {
+		display: grid;
+		gap: toRem(25);
+		padding: toRem(16) toRem(0);
+	}
+}
+.range {
+	// .range__nead
+	&__nead {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&:not(:last-child) {
+			margin-bottom: toRem(18);
+		}
+	}
+	// .range__title
+	&__title {
+	}
+	// .range__span
+	&__span {
+		color: $secondtxtColor;
+		&::after {
+			margin-left: toRem(3.5);
+		}
+		// .metric__range-span--01
+		&--hight {
+			&::after {
+				content: "см";
+			}
+		}
+		// .metric__range-span--02
+		&--weight {
+			&::after {
+				content: "кг";
+			}
+		}
+	}
+	// .range__slide
+	&__slide {
+	}
+}
+// More
+.more {
+	// .more__buttons
+	&__buttons {
+		display: grid;
+		gap: toRem(12);
+	}
+	// .more__button
+	&__button {
+		width: 100%;
+		display: flex;
+		gap: toRem(15);
+		text-align: left;
+		align-items: center;
+		min-height: toRem(56);
+		border-radius: toRem(12);
+		background-color: $bgColor;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		@include adaptiveValue("padding-left", 16, 12);
+		@include adaptiveValue("padding-right", 16, 12);
+		&::before {
+			display: flex;
+			width: toRem(24);
+			height: toRem(24);
+			align-items: center;
+			color: $primaryColor;
+			font-size: toRem(20);
+			justify-content: center;
+			transform: rotate(90deg);
+		}
+	}
+	// .more__button-inner
+	&__button-inner {
+		display: flex;
+		gap: toRem(8);
+		align-items: center;
+	}
+	// .more__button-svg
+	&__button-svg {
+		display: flex;
+		height: toRem(24);
+		align-items: center;
+		min-width: toRem(24);
+		max-width: toRem(24);
+		justify-content: center;
+	}
+	// .more__button-title
+	&__button-title {
+		overflow: hidden;
+		line-height: 125%;
+		font-size: toRem(16);
+		display: -webkit-box;
+		-webkit-line-clamp: 1;
+		-webkit-box-orient: vertical;
+		span {
+			color: $primaryColor;
+		}
+	}
+}
+// Languages
+.lang {
+	// .lang__buttons
+	&__buttons {
+		display: grid;
+		gap: toRem(8);
+		grid-template-columns: repeat(auto-fill, minmax(toRem(120), 1fr));
+	}
+	// .lang__button
+	&__button {
+		display: flex;
+		line-height: 120%;
+		align-items: center;
+		min-height: toRem(56);
+		justify-content: center;
+		border-radius: toRem(12);
+		background-color: $bgColor;
+		border: 1px solid transparent;
+		transition:
+			background-color 0.3s ease 0s,
+			border 0.3s ease 0s;
+		&--active {
+			border: 1px solid $primaryColor;
+			background-color: $preprimaryColor;
+		}
+	}
+}
+// About
+.about {
+	// .about__text
+	&__text {
+	}
+	// .about__title
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+	// .about__range
+	&__range {
+		padding-top: toRem(16);
+		&:not(:last-child) {
+			margin-bottom: toRem(35);
+		}
+	}
+}
+// ========================================================================================================================================================
