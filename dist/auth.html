@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Polovinka (Authentification) - AuthentificationPage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20241008010055">
+	<link rel="shortcut icon" href="img/icons/head-logo.svg">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<main class="page">
+			<!-- [Auth] -->
+			<section class="auth">
+				<div class="auth__container">
+					<div class="auth__head ba-cont">
+						<a href="" class="auth__logo"><img src="img/icons/logo.svg" alt="Logo"></a>
+						<h3 class="auth__title">Добро пожаловать в Polovinka</h3>
+						<div class="auth__text">
+							<p>Войдите в систему, чтобы начать поиск своей второй половинки</p>
+						</div>
+					</div>
+					<div data-tabs class="auth__tabs tabs">
+						<nav data-tabs-titles class="tabs__navigation ba-cont">
+							<button type="button" class="tabs__title _tab-active">Регистрация</button>
+							<button type="button" class="tabs__title">Вход</button>
+						</nav>
+						<div data-tabs-body class="tabs__content">
+							<div class="tabs__body reg-body">
+								<div class="reg-body__gender">
+									<button type="button" class="reg-body__gender-button">
+										<img src="img/icons/intro/men.svg" alt="Icon">
+										<span>Я мужчина</span>
+									</button>
+									<button type="button" class="reg-body__gender-button reg-body__gender-button--active">
+										<img src="img/icons/intro/women.svg" alt="Icon">
+										<span>Я женщина</span>
+									</button>
+								</div>
+								<form action="" class="reg-body__form form">
+									<div class="form__labels">
+										<label for="" class="form__label">
+											<span>Логин*</span>
+											<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Введите логин" placeholder="Логин" class="form__input input">
+										</label>
+										<label for="" class="form__label">
+											<span>Email адрес*</span>
+											<input data-required="email" autocomplete="off" type="email" name="form[]" data-error="Введите E-Mail" placeholder="E-Mail" class="form__input input">
+										</label>
+										<label for="" class="form__label">
+											<span>Подтвердите свой Email*</span>
+											<input data-required="email" autocomplete="off" type="email" name="form[]" data-error="Подтвердите E-Mail" placeholder="Подтвердите E-Mail" class="form__input input">
+										</label>
+										<label for="" class="form__label">
+											<span>Пароль*</span>
+											<input data-required="tel" autocomplete="off" type="password" name="form[]" data-error="Придумайте пароль" placeholder="Пароль" class="form__input input">
+										</label>
+										<label for="" class="form__label">
+											<span>Телефон</span>
+											<input data-required="tel" data-inputmask="'mask': '+7-999-999-99-99'" autocomplete="off" type="tel" name="form[]" data-error="Введите телефон" placeholder="Телефон" class="form__input input">
+										</label>
+									</div>
+									<div class="form__bottom form__bottom--shadow">
+										<div class="form__bottom-content ba-cont">
+											<button type="submit" class="form__button button">Регистрация</button>
+											<div class="form__text">Нажимая на кнопку "Регистрация", я принимаю условия <a href="">Пользовательского соглашения</a>.</div>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="tabs__body log-body">
+								<form action="" class="log-body__form form">
+									<div class="form__labels">
+										<label for="" class="form__label">
+											<span>Логин*</span>
+											<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Введите логин" placeholder="Логин" class="form__input input">
+										</label>
+										<label for="" class="form__label">
+											<span>Пароль*</span>
+											<input data-required="tel" autocomplete="off" type="password" name="form[]" data-error="Введите пароль" placeholder="Введите пароль" class="form__input input">
+										</label>
+									</div>
+									<div class="form__confirm">
+										<div class="form__checkbox checkbox">
+											<input id="c_1" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="c_1" class="checkbox__label"><span class="checkbox__text">Запомнить меня</span></label>
+										</div>
+										<a href="" class="form__link">Забыли пароль?</a>
+									</div>
+									<div class="form__bottom">
+										<div class="form__bottom-button">
+											<button type="submit" class="form__button button">Вход</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+	<script src="js/app.min.js?_v=20241008010055"></script>
+</body>
+
+</html>
