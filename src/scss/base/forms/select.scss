@@ -112,13 +112,15 @@
 		cursor: pointer;
 		color: inherit;
 		line-height: 129%;
+		border-radius: toRem(5);
 		padding: toRem(6) toRem(0);
+		transition: color 0.3s ease 0s;
 		&._select-selected {
 			background-color: #eee;
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				background: #d9d9d9;
+				color: $blueColor;
 			}
 		}
 	}
