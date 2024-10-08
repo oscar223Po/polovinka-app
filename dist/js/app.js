@@ -6580,15 +6580,33 @@
                 const propNames = [ "body", "hair", "eye", "belive", "type", "edu", "prof", "deal", "social", "home", "move", "smoke", "drink" ];
                 propNames.forEach((propName => {
                     document.querySelectorAll(`input[name="prop-${propName}"]`).forEach((radio => {
-                        radio.addEventListener("change", (() => updateTitle(propName)));
+                        radio.addEventListener("change", (() => {
+                            updateTitle(propName);
+                            const popup = document.querySelector(`#more-${propName}`);
+                            if (popup) {
+                                const popupInstance = modules_flsModules.popup;
+                                popupInstance.close(popup.id);
+                            }
+                        }));
                     }));
                 }));
                 propNames.forEach((propName => updateTitle(propName)));
             }
             const langButtons = document.querySelectorAll(".lang__button");
-            if (langButtons !== null) for (let i = 0; i < langButtons.length; i++) langButtons[i].addEventListener("click", (() => {
-                langButtons[i].classList.toggle("lang__button--active");
-            }));
+            const messageLang = document.getElementById("message-lang");
+            if (langButtons !== null && messageLang !== null) {
+                langButtons.forEach((button => {
+                    button.addEventListener("click", (() => {
+                        button.classList.toggle("lang__button--active");
+                        checkActiveButtons();
+                    }));
+                }));
+                function checkActiveButtons() {
+                    const hasActive = Array.from(langButtons).some((button => button.classList.contains("lang__button--active")));
+                    if (hasActive) messageLang.style.display = "none"; else messageLang.style.display = "block";
+                }
+                checkActiveButtons();
+            }
             const textareas = document.querySelectorAll(".request-textarea");
             if (textareas !== null) textareas.forEach((textarea => {
                 const charCount = textarea.nextElementSibling;
@@ -6597,6 +6615,21 @@
                     charCount.textContent = `${currentLength}/2000 символов`;
                 }));
             }));
+            const checkboxes = document.querySelectorAll(".form-chk");
+            const messageCheckbox = document.getElementById("message-chk");
+            if (checkboxes, messageCheckbox !== null) {
+                function checkCheckboxes() {
+                    let anyChecked = false;
+                    checkboxes.forEach((function(messageCheckbox) {
+                        if (messageCheckbox.checked) anyChecked = true;
+                    }));
+                    if (!anyChecked) messageCheckbox.style.display = "block"; else messageCheckbox.style.display = "none";
+                }
+                checkboxes.forEach((function(checkbox) {
+                    checkbox.addEventListener("change", checkCheckboxes);
+                }));
+                checkCheckboxes();
+            }
         }));
         window["FLS"] = false;
         spollers();

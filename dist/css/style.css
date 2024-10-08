@@ -1251,12 +1251,7 @@ body::after {
   justify-content: center
 }
 .more__button-title {
-  overflow: hidden;
-  line-height: 125%;
-  font-size: 1rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical
+  line-height: 125%
 }
 .more__button-title span {
   color: #a594f9
@@ -1306,6 +1301,9 @@ body::after {
   .more__button {
     padding-right: 1rem
   }
+  .more__button-title {
+    font-size: 1rem
+  }
 }
 @media (max-width:20em) {
   .spollers__span span {
@@ -1322,6 +1320,9 @@ body::after {
   }
   .more__button {
     padding-right: .75rem
+  }
+  .more__button-title {
+    font-size: .875rem
   }
 }
 @media (max-width:24.37375em) {
@@ -1390,6 +1391,16 @@ body::after {
   @supports not (padding-right:clamp(0.75rem ,0.5826289803rem + 0.8368550985vw ,1rem)) {
     .more__button {
       padding-right: calc(.75rem + .25*(100vw - 20rem)/ 29.87375)
+    }
+  }
+  @supports (font-size:clamp(0.875rem ,0.7913144901rem + 0.4184275493vw ,1rem)) {
+    .more__button-title {
+      font-size: clamp(.875rem ,.7913144901rem + .4184275493vw ,1rem)
+    }
+  }
+  @supports not (font-size:clamp(0.875rem ,0.7913144901rem + 0.4184275493vw ,1rem)) {
+    .more__button-title {
+      font-size: calc(.875rem + .125*(100vw - 20rem)/ 29.87375)
     }
   }
 }

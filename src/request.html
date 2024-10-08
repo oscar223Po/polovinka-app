@@ -115,30 +115,31 @@
 								<div class="spollers__body">
 									<div class="options">
 										<div class="options__item">
-											<input id="o_1" class="options__input" checked type="radio" value="1" name="opt-goal">
-											<label for="o_1" class="options__label"><span class="options__text">Переписка</span></label>
+											<input id="g_1" class="options__input form-chk" type="checkbox" value="1">
+											<label for="g_1" class="options__label"><span class="options__text">Переписка</span></label>
 										</div>
 										<div class="options__item">
-											<input id="o_2" class="options__input" type="radio" value="2" name="opt-goal">
-											<label for="o_2" class="options__label"><span class="options__text">Романтические отношения</span></label>
+											<input id="g_2" class="options__input form-chk" type="checkbox" value="2">
+											<label for="g_2" class="options__label"><span class="options__text">Романтические отношения</span></label>
 										</div>
 										<div class="options__item">
-											<input id="o_3" class="options__input" type="radio" value="3" name="opt-goal">
-											<label for="o_3" class="options__label"><span class="options__text">Брак</span></label>
+											<input id="g_3" class="options__input form-chk" type="checkbox" value="3">
+											<label for="g_3" class="options__label"><span class="options__text">Брак</span></label>
 										</div>
 										<div class="options__item">
-											<input id="o_4" class="options__input" type="radio" value="4" name="opt-goal">
-											<label for="o_4" class="options__label"><span class="options__text">Дружба</span></label>
+											<input id="g_4" class="options__input form-chk" type="checkbox" value="4">
+											<label for="g_4" class="options__label"><span class="options__text">Дружба</span></label>
 										</div>
 										<div class="options__item">
-											<input id="o_5" class="options__input" type="radio" value="5" name="opt-goal">
-											<label for="o_5" class="options__label"><span class="options__text">Продолжительные отношения</span></label>
+											<input id="g_5" class="options__input form-chk" type="checkbox" value="5">
+											<label for="g_5" class="options__label"><span class="options__text">Продолжительные отношения</span></label>
 										</div>
 										<div class="options__item">
-											<input id="o_6" class="options__input" type="radio" value="6" name="opt-goal">
-											<label for="o_6" class="options__label"><span class="options__text">Семья и рождение детей</span></label>
+											<input id="g_6" class="options__input form-chk" type="checkbox" value="6">
+											<label for="g_6" class="options__label"><span class="options__text">Семья и рождение детей</span></label>
 										</div>
 									</div>
+									<div id="message-chk" style="display: none; color: #f73d58; text-align: right; margin-top: 10px; font-size: 12px; font-weight: 500;">Выберите один из пунктов</div>
 								</div>
 							</details>
 							<details class="spollers__item">
@@ -146,7 +147,7 @@
 								<div class="spollers__body">
 									<div class="options">
 										<div class="options__item">
-											<input id="c_1" class="options__input" checked type="radio" value="1" name="opt-status">
+											<input id="c_1" class="options__input" type="radio" value="1" name="opt-status">
 											<label for="c_1" class="options__label"><span class="options__text">Не женет/ не замужем</span></label>
 										</div>
 										<div class="options__item">
@@ -173,7 +174,7 @@
 								<div class="spollers__body">
 									<div class="options">
 										<div class="options__item">
-											<input id="k_1" class="options__input" checked type="radio" value="1" name="opt-kids">
+											<input id="k_1" class="options__input" type="radio" value="1" name="opt-kids">
 											<label for="k_1" class="options__label"><span class="options__text">Нет детей</span></label>
 										</div>
 										<div class="options__item">
@@ -286,22 +287,23 @@
 								<div class="spollers__body lang">
 									<div class="lang__buttons">
 										<button type="button" class="lang__button">Иврит</button>
-										<button type="button" class="lang__button lang__button--active">Английский</button>
+										<button type="button" class="lang__button">Английский</button>
 										<button type="button" class="lang__button">Испанский</button>
 										<button type="button" class="lang__button">Украинский</button>
 										<button type="button" class="lang__button">Казахский</button>
 										<button type="button" class="lang__button">Армянский</button>
 										<button type="button" class="lang__button">Чешский</button>
 										<button type="button" class="lang__button">Немецкий</button>
-										<button type="button" class="lang__button lang__button--active">Русский</button>
+										<button type="button" class="lang__button">Русский</button>
 										<button type="button" class="lang__button">Французский</button>
 										<button type="button" class="lang__button">Грузинский</button>
 										<button type="button" class="lang__button">Арабский</button>
-										<button type="button" class="lang__button lang__button--active">Турецкий</button>
+										<button type="button" class="lang__button">Турецкий</button>
 										<button type="button" class="lang__button">Польский</button>
 										<button type="button" class="lang__button">Идиш</button>
 										<button type="button" class="lang__button">Румынский</button>
 									</div>
+									<div id="message-lang" style="display: none; color: #f73d58; text-align: right; margin-top: 10px; font-size: 12px; font-weight: 500;">Выберите один из пунктов</div>
 								</div>
 							</details>
 							<details class="spollers__item">
@@ -309,7 +311,7 @@
 								<div class="spollers__body">
 									<div class="options">
 										<div class="options__item">
-											<input id="m_1" class="options__input" checked type="radio" value="1" name="opt-move">
+											<input id="m_1" class="options__input" type="radio" value="1" name="opt-move">
 											<label for="m_1" class="options__label"><span class="options__text">Отношусь положительно к переезду в другую страну</span></label>
 										</div>
 										<div class="options__item">

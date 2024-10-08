@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241008010626">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241008174309">
 	<link rel="shortcut icon" href="img/icons/head-logo.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -136,30 +136,31 @@
 								<div class="spollers__body">
 									<div class="options">
 										<div class="options__item">
-											<input id="o_1" class="options__input" checked type="radio" value="1" name="opt-goal">
-											<label for="o_1" class="options__label"><span class="options__text">Переписка</span></label>
+											<input id="g_1" class="options__input form-chk" type="checkbox" value="1">
+											<label for="g_1" class="options__label"><span class="options__text">Переписка</span></label>
 										</div>
 										<div class="options__item">
-											<input id="o_2" class="options__input" type="radio" value="2" name="opt-goal">
-											<label for="o_2" class="options__label"><span class="options__text">Романтические отношения</span></label>
+											<input id="g_2" class="options__input form-chk" type="checkbox" value="2">
+											<label for="g_2" class="options__label"><span class="options__text">Романтические отношения</span></label>
 										</div>
 										<div class="options__item">
-											<input id="o_3" class="options__input" type="radio" value="3" name="opt-goal">
-											<label for="o_3" class="options__label"><span class="options__text">Брак</span></label>
+											<input id="g_3" class="options__input form-chk" type="checkbox" value="3">
+											<label for="g_3" class="options__label"><span class="options__text">Брак</span></label>
 										</div>
 										<div class="options__item">
-											<input id="o_4" class="options__input" type="radio" value="4" name="opt-goal">
-											<label for="o_4" class="options__label"><span class="options__text">Дружба</span></label>
+											<input id="g_4" class="options__input form-chk" type="checkbox" value="4">
+											<label for="g_4" class="options__label"><span class="options__text">Дружба</span></label>
 										</div>
 										<div class="options__item">
-											<input id="o_5" class="options__input" type="radio" value="5" name="opt-goal">
-											<label for="o_5" class="options__label"><span class="options__text">Продолжительные отношения</span></label>
+											<input id="g_5" class="options__input form-chk" type="checkbox" value="5">
+											<label for="g_5" class="options__label"><span class="options__text">Продолжительные отношения</span></label>
 										</div>
 										<div class="options__item">
-											<input id="o_6" class="options__input" type="radio" value="6" name="opt-goal">
-											<label for="o_6" class="options__label"><span class="options__text">Семья и рождение детей</span></label>
+											<input id="g_6" class="options__input form-chk" type="checkbox" value="6">
+											<label for="g_6" class="options__label"><span class="options__text">Семья и рождение детей</span></label>
 										</div>
 									</div>
+									<div id="message-chk" style="display: none; color: #f73d58; text-align: right; margin-top: 10px; font-size: 12px; font-weight: 500;">Выберите один из пунктов</div>
 								</div>
 							</details>
 							<details class="spollers__item">
@@ -169,7 +170,7 @@
 								<div class="spollers__body">
 									<div class="options">
 										<div class="options__item">
-											<input id="c_1" class="options__input" checked type="radio" value="1" name="opt-status">
+											<input id="c_1" class="options__input" type="radio" value="1" name="opt-status">
 											<label for="c_1" class="options__label"><span class="options__text">Не женет/ не замужем</span></label>
 										</div>
 										<div class="options__item">
@@ -198,7 +199,7 @@
 								<div class="spollers__body">
 									<div class="options">
 										<div class="options__item">
-											<input id="k_1" class="options__input" checked type="radio" value="1" name="opt-kids">
+											<input id="k_1" class="options__input" type="radio" value="1" name="opt-kids">
 											<label for="k_1" class="options__label"><span class="options__text">Нет детей</span></label>
 										</div>
 										<div class="options__item">
@@ -317,22 +318,23 @@
 								<div class="spollers__body lang">
 									<div class="lang__buttons">
 										<button type="button" class="lang__button">Иврит</button>
-										<button type="button" class="lang__button lang__button--active">Английский</button>
+										<button type="button" class="lang__button">Английский</button>
 										<button type="button" class="lang__button">Испанский</button>
 										<button type="button" class="lang__button">Украинский</button>
 										<button type="button" class="lang__button">Казахский</button>
 										<button type="button" class="lang__button">Армянский</button>
 										<button type="button" class="lang__button">Чешский</button>
 										<button type="button" class="lang__button">Немецкий</button>
-										<button type="button" class="lang__button lang__button--active">Русский</button>
+										<button type="button" class="lang__button">Русский</button>
 										<button type="button" class="lang__button">Французский</button>
 										<button type="button" class="lang__button">Грузинский</button>
 										<button type="button" class="lang__button">Арабский</button>
-										<button type="button" class="lang__button lang__button--active">Турецкий</button>
+										<button type="button" class="lang__button">Турецкий</button>
 										<button type="button" class="lang__button">Польский</button>
 										<button type="button" class="lang__button">Идиш</button>
 										<button type="button" class="lang__button">Румынский</button>
 									</div>
+									<div id="message-lang" style="display: none; color: #f73d58; text-align: right; margin-top: 10px; font-size: 12px; font-weight: 500;">Выберите один из пунктов</div>
 								</div>
 							</details>
 							<details class="spollers__item">
@@ -342,7 +344,7 @@
 								<div class="spollers__body">
 									<div class="options">
 										<div class="options__item">
-											<input id="m_1" class="options__input" checked type="radio" value="1" name="opt-move">
+											<input id="m_1" class="options__input" type="radio" value="1" name="opt-move">
 											<label for="m_1" class="options__label"><span class="options__text">Отношусь положительно к переезду в другую страну</span></label>
 										</div>
 										<div class="options__item">
@@ -542,7 +544,7 @@
 					</div>
 					<div class="options">
 						<div class="options__item">
-							<input id="pb_1" class="options__input" type="radio" value="1" name="prop-body">
+							<input id="pb_1" class="options__input" checked type="radio" value="1" name="prop-body">
 							<label for="pb_1" class="options__label"><span class="options__text">Худощавое</span></label>
 						</div>
 						<div class="options__item">
@@ -554,7 +556,7 @@
 							<label for="pb_3" class="options__label"><span class="options__text">Спортивное</span></label>
 						</div>
 						<div class="options__item">
-							<input id="pb_4" class="options__input" checked type="radio" value="4" name="prop-body">
+							<input id="pb_4" class="options__input" type="radio" value="4" name="prop-body">
 							<label for="pb_4" class="options__label"><span class="options__text">Мускулистое</span></label>
 						</div>
 						<div class="options__item">
@@ -588,7 +590,7 @@
 					</div>
 					<div class="options">
 						<div class="options__item">
-							<input id="ph_1" class="options__input" type="radio" value="1" name="prop-hair">
+							<input id="ph_1" class="options__input" checked type="radio" value="1" name="prop-hair">
 							<label for="ph_1" class="options__label"><span class="options__text">Черный</span></label>
 						</div>
 						<div class="options__item">
@@ -600,7 +602,7 @@
 							<label for="ph_3" class="options__label"><span class="options__text">Рыжий</span></label>
 						</div>
 						<div class="options__item">
-							<input id="ph_4" class="options__input" checked type="radio" value="4" name="prop-hair">
+							<input id="ph_4" class="options__input" type="radio" value="4" name="prop-hair">
 							<label for="ph_4" class="options__label"><span class="options__text">Русый</span></label>
 						</div>
 						<div class="options__item">
@@ -642,7 +644,7 @@
 					</div>
 					<div class="options">
 						<div class="options__item">
-							<input id="pe_1" class="options__input" type="radio" value="1" name="prop-eye">
+							<input id="pe_1" class="options__input" checked type="radio" value="1" name="prop-eye">
 							<label for="pe_1" class="options__label"><span class="options__text">Серые</span></label>
 						</div>
 						<div class="options__item">
@@ -654,7 +656,7 @@
 							<label for="pe_3" class="options__label"><span class="options__text">Зеленые</span></label>
 						</div>
 						<div class="options__item">
-							<input id="pe_4" class="options__input" checked type="radio" value="4" name="prop-eye">
+							<input id="pe_4" class="options__input" type="radio" value="4" name="prop-eye">
 							<label for="pe_4" class="options__label"><span class="options__text">Карие</span></label>
 						</div>
 						<div class="options__item">
@@ -684,7 +686,7 @@
 					</div>
 					<div class="options">
 						<div class="options__item">
-							<input id="pf_1" class="options__input" type="radio" value="1" name="prop-belive">
+							<input id="pf_1" class="options__input" checked type="radio" value="1" name="prop-belive">
 							<label for="pf_1" class="options__label"><span class="options__text">Иудаизм: не религиозный/ая</span></label>
 						</div>
 						<div class="options__item">
@@ -696,7 +698,7 @@
 							<label for="pf_3" class="options__label"><span class="options__text">Православие</span></label>
 						</div>
 						<div class="options__item">
-							<input id="pf_4" class="options__input" checked type="radio" value="4" name="prop-belive">
+							<input id="pf_4" class="options__input" type="radio" value="4" name="prop-belive">
 							<label for="pf_4" class="options__label"><span class="options__text">Ислам</span></label>
 						</div>
 						<div class="options__item">
@@ -730,7 +732,7 @@
 					</div>
 					<div class="options">
 						<div class="options__item">
-							<input id="pt_1" class="options__input" type="radio" value="1" name="prop-type">
+							<input id="pt_1" class="options__input" checked type="radio" value="1" name="prop-type">
 							<label for="pt_1" class="options__label"><span class="options__text">Европейский</span></label>
 						</div>
 						<div class="options__item">
@@ -742,7 +744,7 @@
 							<label for="pt_3" class="options__label"><span class="options__text">Смешанный</span></label>
 						</div>
 						<div class="options__item">
-							<input id="pt_4" class="options__input" checked type="radio" value="4" name="prop-type">
+							<input id="pt_4" class="options__input" type="radio" value="4" name="prop-type">
 							<label for="pt_4" class="options__label"><span class="options__text">Азиатский</span></label>
 						</div>
 						<div class="options__item">
@@ -773,7 +775,7 @@
 					</div>
 					<div class="options">
 						<div class="options__item">
-							<input id="pd_1" class="options__input" type="radio" value="1" name="prop-edu">
+							<input id="pd_1" class="options__input" checked type="radio" value="1" name="prop-edu">
 							<label for="pd_1" class="options__label"><span class="options__text">III степень</span></label>
 						</div>
 						<div class="options__item">
@@ -781,7 +783,7 @@
 							<label for="pd_2" class="options__label"><span class="options__text">Среднее</span></label>
 						</div>
 						<div class="options__item">
-							<input id="pd_3" class="options__input" checked type="radio" value="3" name="prop-edu">
+							<input id="pd_3" class="options__input" type="radio" value="3" name="prop-edu">
 							<label for="pd_3" class="options__label"><span class="options__text">Незак. Колледж</span></label>
 						</div>
 						<div class="options__item">
@@ -831,7 +833,7 @@
 					</div>
 					<div class="options">
 						<div class="options__item">
-							<input id="pp_1" class="options__input" type="radio" value="1" name="prop-prof">
+							<input id="pp_1" class="options__input" checked type="radio" value="1" name="prop-prof">
 							<label for="pp_1" class="options__label"><span class="options__text">Работаю</span></label>
 						</div>
 						<div class="options__item">
@@ -843,7 +845,7 @@
 							<label for="pp_3" class="options__label"><span class="options__text">В армии</span></label>
 						</div>
 						<div class="options__item">
-							<input id="pp_4" class="options__input" checked type="radio" value="4" name="prop-prof">
+							<input id="pp_4" class="options__input" type="radio" value="4" name="prop-prof">
 							<label for="pp_4" class="options__label"><span class="options__text">Бизнес</span></label>
 						</div>
 						<div class="options__item">
@@ -873,7 +875,7 @@
 					</div>
 					<div class="options">
 						<div class="options__item">
-							<input id="pm_1" class="options__input" type="radio" value="1" name="prop-deal">
+							<input id="pm_1" class="options__input" checked type="radio" value="1" name="prop-deal">
 							<label for="pm_1" class="options__label"><span class="options__text">Управление</span></label>
 						</div>
 						<div class="options__item">
@@ -885,7 +887,7 @@
 							<label for="pm_3" class="options__label"><span class="options__text">Консультация</span></label>
 						</div>
 						<div class="options__item">
-							<input id="pm_4" class="options__input" checked type="radio" value="4" name="prop-deal">
+							<input id="pm_4" class="options__input" type="radio" value="4" name="prop-deal">
 							<label for="pm_4" class="options__label"><span class="options__text">Развитие</span></label>
 						</div>
 						<div class="options__item">
@@ -919,7 +921,7 @@
 					</div>
 					<div class="options">
 						<div class="options__item">
-							<input id="ps_1" class="options__input" type="radio" value="1" name="prop-social">
+							<input id="ps_1" class="options__input" checked type="radio" value="1" name="prop-social">
 							<label for="ps_1" class="options__label"><span class="options__text">Богатый</span></label>
 						</div>
 						<div class="options__item">
@@ -931,7 +933,7 @@
 							<label for="ps_3" class="options__label"><span class="options__text">Уязвимость</span></label>
 						</div>
 						<div class="options__item">
-							<input id="ps_4" class="options__input" checked type="radio" value="4" name="prop-social">
+							<input id="ps_4" class="options__input" type="radio" value="4" name="prop-social">
 							<label for="ps_4" class="options__label"><span class="options__text">Привилегия</span></label>
 						</div>
 						<div class="options__item">
@@ -957,7 +959,7 @@
 					</div>
 					<div class="options">
 						<div class="options__item">
-							<input id="po_1" class="options__input" type="radio" value="1" name="prop-home">
+							<input id="po_1" class="options__input" checked type="radio" value="1" name="prop-home">
 							<label for="po_1" class="options__label"><span class="options__text">Квартира</span></label>
 						</div>
 						<div class="options__item">
@@ -969,7 +971,7 @@
 							<label for="po_3" class="options__label"><span class="options__text">Съемное жилье</span></label>
 						</div>
 						<div class="options__item">
-							<input id="po_4" class="options__input" checked type="radio" value="4" name="prop-home">
+							<input id="po_4" class="options__input" type="radio" value="4" name="prop-home">
 							<label for="po_4" class="options__label"><span class="options__text">Личное жилье</span></label>
 						</div>
 						<div class="options__item">
@@ -995,7 +997,7 @@
 					</div>
 					<div class="options">
 						<div class="options__item">
-							<input id="pv_1" class="options__input" type="radio" value="1" name="prop-move">
+							<input id="pv_1" class="options__input" checked type="radio" value="1" name="prop-move">
 							<label for="pv_1" class="options__label"><span class="options__text">Пешком</span></label>
 						</div>
 						<div class="options__item">
@@ -1007,7 +1009,7 @@
 							<label for="pv_3" class="options__label"><span class="options__text">Такси</span></label>
 						</div>
 						<div class="options__item">
-							<input id="pv_4" class="options__input" checked type="radio" value="4" name="prop-move">
+							<input id="pv_4" class="options__input" type="radio" value="4" name="prop-move">
 							<label for="pv_4" class="options__label"><span class="options__text">Общественный</span></label>
 						</div>
 						<div class="options__item">
@@ -1033,8 +1035,8 @@
 					</div>
 					<div class="options">
 						<div class="options__item">
-							<input id="pk_1" class="options__input" type="radio" value="1" name="prop-smoke">
-							<label for="pk_1" class="options__label"><span class="options__text">Позитивное</span></label>
+							<input id="pk_1" class="options__input" checked type="radio" value="1" name="prop-smoke">
+							<label for="pk_1" class="options__label"><span class="options__text">Негативное</span></label>
 						</div>
 						<div class="options__item">
 							<input id="pk_2" class="options__input" type="radio" value="2" name="prop-smoke">
@@ -1045,8 +1047,8 @@
 							<label for="pk_3" class="options__label"><span class="options__text">Бросаю</span></label>
 						</div>
 						<div class="options__item">
-							<input id="pk_4" class="options__input" checked type="radio" value="4" name="prop-smoke">
-							<label for="pk_4" class="options__label"><span class="options__text">Негативное</span></label>
+							<input id="pk_4" class="options__input" type="radio" value="4" name="prop-smoke">
+							<label for="pk_4" class="options__label"><span class="options__text">Позитивное</span></label>
 						</div>
 						<div class="options__item">
 							<input id="pk_5" class="options__input" type="radio" value="5" name="prop-smoke">
@@ -1071,8 +1073,8 @@
 					</div>
 					<div class="options">
 						<div class="options__item">
-							<input id="pi_1" class="options__input" type="radio" value="1" name="prop-drink">
-							<label for="pi_1" class="options__label"><span class="options__text">Позитивное</span></label>
+							<input id="pi_1" class="options__input" checked type="radio" value="1" name="prop-drink">
+							<label for="pi_1" class="options__label"><span class="options__text">Негативное</span></label>
 						</div>
 						<div class="options__item">
 							<input id="pi_2" class="options__input" type="radio" value="2" name="prop-drink">
@@ -1083,8 +1085,8 @@
 							<label for="pi_3" class="options__label"><span class="options__text">Умеренное</span></label>
 						</div>
 						<div class="options__item">
-							<input id="pi_4" class="options__input" checked type="radio" value="4" name="prop-drink">
-							<label for="pi_4" class="options__label"><span class="options__text">Негативное</span></label>
+							<input id="pi_4" class="options__input" type="radio" value="4" name="prop-drink">
+							<label for="pi_4" class="options__label"><span class="options__text">Позитивное</span></label>
 						</div>
 						<div class="options__item">
 							<input id="pi_5" class="options__input" type="radio" value="5" name="prop-drink">
@@ -1097,7 +1099,7 @@
 		<!-- //======================================================================================================================================================== -->
 
 	</div>
-	<script src="js/app.min.js?_v=20241008010626"></script>
+	<script src="js/app.min.js?_v=20241008174309"></script>
 </body>
 
 </html>

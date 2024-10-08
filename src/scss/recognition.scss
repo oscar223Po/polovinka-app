@@ -229,12 +229,8 @@
 	}
 	// .more__button-title
 	&__button-title {
-		overflow: hidden;
 		line-height: 125%;
-		font-size: toRem(16);
-		display: -webkit-box;
-		-webkit-line-clamp: 1;
-		-webkit-box-orient: vertical;
+		@include adaptiveValue("font-size", 16, 14);
 		span {
 			color: $primaryColor;
 		}
