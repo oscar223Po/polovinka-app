@@ -67,6 +67,12 @@
 			justify-content: center;
 			background-color: $primaryColor;
 		}
+		&.lab-chk {
+			&::before,
+			&::after {
+				border-radius: toRem(3);
+			}
+		}
 	}
 	// .options__text
 	&__text {

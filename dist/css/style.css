@@ -456,6 +456,10 @@ textarea.input {
   justify-content: center;
   background-color: #a594f9
 }
+.options__label.lab-chk::after,
+.options__label.lab-chk::before {
+  border-radius: .1875rem
+}
 .options__text {
   line-height: 125%
 }
