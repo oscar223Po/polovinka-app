@@ -46,24 +46,20 @@ document.addEventListener('DOMContentLoaded', function () {
 		propNames.forEach(propName => updateTitle(propName));
 	}
 	// ================[ JavaScript Section Languages Buttons ]================
-	const langButtons = document.querySelectorAll(".lang__button");
-	const messageLang = document.getElementById("message-lang");
-	if (langButtons !== null && messageLang !== null) {
-		langButtons.forEach(button => {
-			button.addEventListener("click", () => {
-				button.classList.toggle("lang__button--active");
-				checkActiveButtons();
+	const langRadio = document.querySelectorAll('.lang__input');
+	const messageLang = document.getElementById("lang-chk");
+	if (langRadio, messageLang !== null) {
+		const checkRadioButtons = () => {
+			const anyChecked = Array.from(langRadio).some(input => input.checked);
+			langRadio.forEach(input => {
+				input.classList.toggle('_form-error-lang', !anyChecked);
 			});
+			messageLang.style.display = anyChecked ? 'none' : 'block';
+		};
+		checkRadioButtons();
+		langRadio.forEach(input => {
+			input.addEventListener('change', checkRadioButtons);
 		});
-		function checkActiveButtons() {
-			const hasActive = Array.from(langButtons).some(button => button.classList.contains("lang__button--active"));
-			if (hasActive) {
-				messageLang.style.display = 'none';
-			} else {
-				messageLang.style.display = 'block';
-			}
-		}
-		checkActiveButtons();
 	}
 	// ================[ JavaScript Section Textarea Limit ]================
 	const textareas = document.querySelectorAll('.request-textarea');

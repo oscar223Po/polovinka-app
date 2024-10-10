@@ -236,33 +236,6 @@
 		}
 	}
 }
-// Languages
-.lang {
-	// .lang__buttons
-	&__buttons {
-		display: grid;
-		gap: toRem(8);
-		grid-template-columns: repeat(auto-fill, minmax(toRem(120), 1fr));
-	}
-	// .lang__button
-	&__button {
-		display: flex;
-		line-height: 120%;
-		align-items: center;
-		min-height: toRem(56);
-		justify-content: center;
-		border-radius: toRem(12);
-		background-color: $bgColor;
-		border: 1px solid transparent;
-		transition:
-			background-color 0.3s ease 0s,
-			border 0.3s ease 0s;
-		&--active {
-			border: 1px solid $primaryColor;
-			background-color: $preprimaryColor;
-		}
-	}
-}
 // About
 .about {
 	// .about__text

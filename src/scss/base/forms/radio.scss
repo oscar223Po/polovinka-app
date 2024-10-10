@@ -80,3 +80,53 @@
 	}
 }
 // ========================================================================================================================================================
+// Lang Options
+.lang {
+	gap: toRem(8);
+	grid-template-columns: repeat(auto-fill, minmax(toRem(120), 1fr));
+	// .lang__item
+	&__item {
+		display: flex;
+		cursor: pointer;
+		overflow: hidden;
+		position: relative;
+		align-items: center;
+		justify-content: center;
+		border-radius: toRem(12);
+	}
+	// .lang__input
+	&__input {
+		width: 0;
+		height: 0;
+		opacity: 0;
+		position: absolute;
+		&:focus-visible + .lang__label {
+		}
+		&:checked + .lang__label {
+			background-color: $preprimaryColor;
+			border: toRem(1) solid $primaryColor;
+		}
+		&._form-error-lang + .lang__label {
+			transition: border 0.3s ease 0s;
+			border: toRem(1) solid $redColor;
+		}
+	}
+	// .lang__label
+	&__label {
+		width: 100%;
+		display: flex;
+		cursor: pointer;
+		align-items: center;
+		min-height: toRem(56);
+		justify-content: center;
+		border-radius: toRem(12);
+		background-color: $bgColor;
+		transition: border 0.3s ease 0s;
+		border: toRem(1) solid transparent;
+	}
+	// .lang__text
+	&__text {
+		line-height: 125%;
+	}
+}
+// ========================================================================================================================================================
