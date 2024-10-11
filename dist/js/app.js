@@ -6558,13 +6558,6 @@
             }
         }), 0);
         document.addEventListener("DOMContentLoaded", (function() {
-            const genderButton = document.querySelectorAll(".reg-body__gender-button");
-            if (genderButton !== null) genderButton.forEach((button => {
-                button.addEventListener("click", (() => {
-                    genderButton.forEach((btn => btn.classList.remove("reg-body__gender-button--active")));
-                    button.classList.add("reg-body__gender-button--active");
-                }));
-            }));
             const moreButtons = document.querySelector(".more__buttons");
             if (moreButtons !== null) {
                 function updateTitle(propName) {

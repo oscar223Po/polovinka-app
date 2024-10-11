@@ -3,16 +3,6 @@ import { isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js";
 document.addEventListener('DOMContentLoaded', function () {
-	// ================[ JavaScript Section Gender Buttons ]================
-	const genderButton = document.querySelectorAll(".reg-body__gender-button");
-	if (genderButton !== null) {
-		genderButton.forEach(button => {
-			button.addEventListener("click", () => {
-				genderButton.forEach(btn => btn.classList.remove("reg-body__gender-button--active"));
-				button.classList.add("reg-body__gender-button--active");
-			})
-		})
-	}
 	// ================[ JavaScript Section Radio Buttons ]================
 	const moreButtons = document.querySelector(".more__buttons");
 	if (moreButtons !== null) {

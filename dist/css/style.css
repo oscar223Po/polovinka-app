@@ -505,6 +505,47 @@ textarea.input {
 .lang__text {
   line-height: 125%
 }
+.gender {
+  display: flex;
+  gap: .8125rem
+}
+.gender__item {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  border-radius: .75rem
+}
+.gender__input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute
+}
+.gender__input:checked+.gender__label {
+  border: 1px solid #cdc1ff;
+  background-color: #f5f3ff
+}
+.gender__label {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  height: 5.125rem;
+  line-height: 129%;
+  align-items: center;
+  background-color: #fff;
+  justify-content: center;
+  border-radius: .75rem;
+  border: .0625rem solid #eff0f1
+}
+.gender__text {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  flex-direction: column
+}
 .select {
   min-width: 0;
   position: relative
@@ -1184,30 +1225,8 @@ body::after {
 .auth__tabs {
   min-height: 100%
 }
-.reg-body__gender {
-  display: flex;
-  gap: .8125rem
-}
 .reg-body__gender:not(:last-child) {
   margin-bottom: 1rem
-}
-.reg-body__gender-button {
-  width: 100%;
-  gap: .5rem;
-  display: flex;
-  outline: 0;
-  line-height: 129%;
-  height: 5.125rem;
-  align-items: center;
-  background-color: #fff;
-  flex-direction: column;
-  justify-content: center;
-  border-radius: .75rem;
-  border: .0625rem solid #eff0f1
-}
-.reg-body__gender-button--active {
-  border: 1px solid #cdc1ff;
-  background-color: #f5f3ff
 }
 .log-body {
   padding-bottom: 5.625rem

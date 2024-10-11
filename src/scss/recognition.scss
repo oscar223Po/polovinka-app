@@ -43,29 +43,8 @@
 	@include adaptiveValue("padding-bottom", 120, 130);
 	// .reg-body__gender
 	&__gender {
-		display: flex;
-		gap: toRem(13);
 		&:not(:last-child) {
 			margin-bottom: toRem(16);
-		}
-	}
-	// .reg-body__gender-button
-	&__gender-button {
-		width: 100%;
-		gap: toRem(8);
-		display: flex;
-		outline: none;
-		line-height: 129%;
-		height: toRem(82);
-		align-items: center;
-		background-color: #fff;
-		flex-direction: column;
-		justify-content: center;
-		border-radius: toRem(12);
-		border: toRem(1) solid $borderColor;
-		&--active {
-			border: 1px solid #cdc1ff;
-			background-color: $preprimaryColor;
 		}
 	}
 }
