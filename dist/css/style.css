@@ -538,7 +538,8 @@ textarea.input {
   background-color: #fff;
   justify-content: center;
   border-radius: .75rem;
-  border: .0625rem solid #eff0f1
+  border: .0625rem solid #eff0f1;
+  transition: background-color .3s ease 0s,border .3s ease 0s
 }
 .gender__text {
   display: flex;
