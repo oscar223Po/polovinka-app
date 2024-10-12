@@ -41,11 +41,14 @@
 }
 .reg-body {
 	@include adaptiveValue("padding-bottom", 120, 130);
-	// .reg-body__gender
-	&__gender {
+	// .reg-body__content
+	&__content {
 		&:not(:last-child) {
 			margin-bottom: toRem(16);
 		}
+	}
+	// .reg-body__gender
+	&__gender {
 	}
 }
 .log-body {

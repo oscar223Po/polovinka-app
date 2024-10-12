@@ -6600,6 +6600,21 @@
                     input.addEventListener("change", checkRadioButtons);
                 }));
             }
+            const genderRadio = document.querySelectorAll(".gender__input");
+            const messageGender = document.getElementById("gender-chk");
+            if (genderRadio, messageGender !== null) {
+                const checkRadioButtons = () => {
+                    const anyChecked = Array.from(genderRadio).some((input => input.checked));
+                    genderRadio.forEach((input => {
+                        input.classList.toggle("_form-error-gender", !anyChecked);
+                    }));
+                    messageGender.style.display = anyChecked ? "none" : "block";
+                };
+                checkRadioButtons();
+                genderRadio.forEach((input => {
+                    input.addEventListener("change", checkRadioButtons);
+                }));
+            }
             const textareas = document.querySelectorAll(".request-textarea");
             if (textareas !== null) textareas.forEach((textarea => {
                 const charCount = textarea.nextElementSibling;

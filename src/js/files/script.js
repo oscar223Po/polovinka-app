@@ -51,6 +51,22 @@ document.addEventListener('DOMContentLoaded', function () {
 			input.addEventListener('change', checkRadioButtons);
 		});
 	}
+	// ================[ JavaScript Section Languages Buttons ]================
+	const genderRadio = document.querySelectorAll('.gender__input');
+	const messageGender = document.getElementById("gender-chk");
+	if (genderRadio, messageGender !== null) {
+		const checkRadioButtons = () => {
+			const anyChecked = Array.from(genderRadio).some(input => input.checked);
+			genderRadio.forEach(input => {
+				input.classList.toggle('_form-error-gender', !anyChecked);
+			});
+			messageGender.style.display = anyChecked ? 'none' : 'block';
+		};
+		checkRadioButtons();
+		genderRadio.forEach(input => {
+			input.addEventListener('change', checkRadioButtons);
+		});
+	}
 	// ================[ JavaScript Section Textarea Limit ]================
 	const textareas = document.querySelectorAll('.request-textarea');
 	if (textareas !== null) {

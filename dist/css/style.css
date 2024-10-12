@@ -528,6 +528,11 @@ textarea.input {
   border: 1px solid #cdc1ff;
   background-color: #f5f3ff
 }
+.gender__input._form-error-gender+.gender__label {
+  transition: border .3s ease 0s;
+  border: .0625rem solid #f73d58;
+  background-color: hsla(0,0%,100%,.65)
+}
 .gender__label {
   width: 100%;
   display: flex;
@@ -1226,7 +1231,7 @@ body::after {
 .auth__tabs {
   min-height: 100%
 }
-.reg-body__gender:not(:last-child) {
+.reg-body__content:not(:last-child) {
   margin-bottom: 1rem
 }
 .log-body {
