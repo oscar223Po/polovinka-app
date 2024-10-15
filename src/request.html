@@ -10,7 +10,7 @@
 		<main class="page">
 			<!-- [Request] -->
 			<section class="request">
-				<div class="request__container">
+				<div class="request__container-mob">
 					<form action="" class="request__form form">
 						<div data-spollers class="request__spollers spollers">
 							<details class="spollers__item">
@@ -21,10 +21,14 @@
 											<span>Имя*</span>
 											<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Введите логин" placeholder="Олег" class="form__input input input--gray">
 										</label>
-										<label for="" class="form__label">
-											<span>Город*</span>
-											<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Введите логин" placeholder="Название города" class="form__input input input--gray">
-										</label>
+										<div class="form__select">
+											<span>Регион*</span>
+											<select name="region[]" data-class-modif="form" id="regionSelect">
+												<option value="1" selected data-href="request.html">Центр Израиля</option>
+												<option value="2" data-href="request.html">Север Израиля</option>
+												<option value="3" data-href="request.html">Юг Израиля</option>
+											</select>
+										</div>
 									</div>
 								</div>
 							</details>
@@ -529,7 +533,7 @@
 							</details>
 						</div>
 						<div class="form__save ba-cont">
-							<button type="submit" class="form__button button">Сохранить</button>
+							<button type="submit" class="form__button button button--lr">Сохранить</button>
 						</div>
 					</form>
 				</div>

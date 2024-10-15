@@ -1,3 +1,116 @@
 //========================================================================================================================================================
 // Footer
+.footer {
+	color: $bgColor;
+	padding-top: toRem(15);
+	background-color: #2d1436;
+	padding-bottom: toRem(15);
+	box-shadow:
+		rgba(240, 46, 170, 0.2) 0px -5px,
+		rgba(240, 46, 170, 0.1) 0px -10px,
+		rgba(240, 46, 170, 0.05) 0px -15px;
+	// .footer__container
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width: $tablet) {
+			flex-direction: column;
+		}
+	}
+	// .footer__side
+	&__side {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 25, 15);
+		@media (max-width: $tablet) {
+			padding-bottom: toRem(15);
+		}
+		@media (max-width: $mobileSmall) {
+			flex-direction: column;
+		}
+	}
+	// .footer__logo
+	&__logo {
+		max-width: toRem(35);
+		transition: opacity 0.3s ease 0s;
+		img {
+			max-width: 100%;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.85;
+			}
+		}
+	}
+	// .footer__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: toRem(10);
+		justify-content: center;
+		@include adaptiveValue("column-gap", 30, 15);
+	}
+	// .footer__item
+	&__item {
+	}
+	// .footer__link
+	&__link {
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $yellowColor;
+			}
+		}
+	}
+	// .footer__actions
+	&__actions {
+		display: flex;
+		gap: toRem(20);
+		align-items: center;
+		@media (max-width: $tablet) {
+			width: 100%;
+			gap: toRem(15);
+			padding-top: toRem(15);
+			justify-content: space-between;
+			border-top: toRem(1) solid rgba($bgColor, 0.1);
+		}
+		@media (max-width: $mobileSmall) {
+			flex-direction: column;
+		}
+	}
+	// .footer__personal
+	&__personal {
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $yellowColor;
+			}
+		}
+	}
+	// .footer__select
+	&__select {
+		@media (max-width: $tablet) {
+			display: flex;
+			gap: toRem(15);
+			align-items: center;
+		}
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+			gap: toRem(0);
+			flex-direction: row-reverse;
+			justify-content: space-between;
+		}
+	}
+	// .footer__personal-mb
+	&__personal-mb {
+		@media (min-width: $tablet) {
+			display: none;
+		}
+	}
+	// .footer__copy
+	&__copy {
+		opacity: 0.85;
+	}
+}
 //========================================================================================================================================================

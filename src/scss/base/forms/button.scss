@@ -3,20 +3,63 @@
 // Сніппет (HTML): btn
 .button {
 	width: 100%;
-	color: #fff;
 	line-height: 125%;
 	align-items: center;
 	display: inline-flex;
 	font-size: toRem(16);
-	min-height: toRem(44);
 	justify-content: center;
-	border-radius: toRem(60);
-	background-color: $primaryColor;
-	transition: background-color 0.3s ease 0s;
-	@media (any-hover: hover) {
-		&:hover {
-			background-color: $mainColor;
+	transition:
+		background-color 0.3s ease 0s,
+		color 0.3s ease 0s;
+	&--lr {
+		color: #fff;
+		min-height: toRem(44);
+		border-radius: toRem(60);
+		background-color: $primaryColor;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $mainColor;
+			}
 		}
+	}
+	&--lb,
+	&--rb {
+		gap: toRem(8);
+		min-height: toRem(40);
+		border-radius: toRem(10);
+		padding: toRem(0) toRem(10);
+		box-shadow:
+			rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+			rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+		&::before {
+			display: flex;
+			width: toRem(18);
+			height: toRem(18);
+			align-items: center;
+			justify-content: center;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #2d1436;
+			}
+		}
+		@media (max-width: toEm(649.98)) {
+			span {
+				display: none;
+			}
+		}
+	}
+	// .button--lb
+	&--lb {
+		color: $primaryColor;
+		background-color: $bgMainColor;
+		border: toRem(1) solid $primaryColor;
+	}
+	// .button--rb
+	&--rb {
+		color: $redColor;
+		background-color: $bgMainColor;
+		border: toRem(1) solid $redColor;
 	}
 }
 // ========================================================================================================================================================

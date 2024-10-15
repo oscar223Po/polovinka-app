@@ -29,6 +29,7 @@
 	}
 	// .select__value
 	&__value {
+		width: 100%;
 		display: flex;
 		min-width: 0;
 		align-items: center;
@@ -138,11 +139,12 @@
 	&--show-top {
 		.select__options {
 			top: auto;
-			bottom: calc(100% - toRem(1));
+			bottom: calc(100% - toRem(-5));
 			border: 1px solid #d9d9d9;
 			border-bottom: 0;
-			border-radius: 4px 4px 0 0;
-			padding: 5px 0px 10px 0px;
+			padding: 8px 12px;
+			border-radius: toRem(12);
+			box-shadow: 0 4px 6px 0 rgba(42, 42, 42, 0.085);
 		}
 	}
 	*/
@@ -158,6 +160,34 @@
 	&._select-multiple {
 	}
 	&._select-checkbox {
+	}
+	&_lang {
+		.select__title {
+			background-color: transparent;
+		}
+		.select__value {
+			gap: toRem(3);
+			padding: 0px 5px;
+			height: toRem(25);
+		}
+		.select__options {
+			top: auto;
+			padding: 3px;
+			border-radius: toRem(5);
+			background-color: #2d1436;
+			bottom: calc(100% - toRem(-5));
+			box-shadow: rgba(225, 225, 225, 0.2) 0px 1px 5px 0px;
+		}
+		.select__option {
+			color: $bgColor;
+			text-align: center;
+			transition: background-color 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: rgba($yellowColor, 0.5);
+				}
+			}
+		}
 	}
 }
 // Тег

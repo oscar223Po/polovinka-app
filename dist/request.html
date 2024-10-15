@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241012180640">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241015171209">
 	<link rel="shortcut icon" href="img/icons/head-logo.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
 	<div class="wrapper">
 		<!-- Header -->
 		<header class="header-request">
-			<div class="header-request__container">
+			<div class="header-request__container-mob">
 				<a href="" class="header-request__logo"><img src="img/icons/logo.svg" alt="Logo"></a>
 				<h5 class="header-request__title">Заполнение анкеты</h5>
 			</div>
@@ -25,7 +25,7 @@
 		<main class="page">
 			<!-- [Request] -->
 			<section class="request">
-				<div class="request__container">
+				<div class="request__container-mob">
 					<form action="" class="request__form form">
 						<div data-spollers class="request__spollers spollers">
 							<details class="spollers__item">
@@ -38,10 +38,14 @@
 											<span>Имя*</span>
 											<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Введите логин" placeholder="Олег" class="form__input input input--gray">
 										</label>
-										<label for="" class="form__label">
-											<span>Город*</span>
-											<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Введите логин" placeholder="Название города" class="form__input input input--gray">
-										</label>
+										<div class="form__select">
+											<span>Регион*</span>
+											<select name="region[]" data-class-modif="form" id="regionSelect">
+												<option value="1" selected data-href="request.html">Центр Израиля</option>
+												<option value="2" data-href="request.html">Север Израиля</option>
+												<option value="3" data-href="request.html">Юг Израиля</option>
+											</select>
+										</div>
 									</div>
 								</div>
 							</details>
@@ -570,7 +574,7 @@
 							</details>
 						</div>
 						<div class="form__save ba-cont">
-							<button type="submit" class="form__button button">Сохранить</button>
+							<button type="submit" class="form__button button button--lr">Сохранить</button>
 						</div>
 					</form>
 				</div>
@@ -1147,7 +1151,7 @@
 		<!-- //======================================================================================================================================================== -->
 
 	</div>
-	<script src="js/app.min.js?_v=20241012180640"></script>
+	<script src="js/app.min.js?_v=20241015171209"></script>
 </body>
 
 </html>
