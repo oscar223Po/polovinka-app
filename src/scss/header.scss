@@ -1,7 +1,7 @@
 //========================================================================================================================================================
 // Header
 .header {
-	overflow: hidden;
+	z-index: 10;
 	position: relative;
 	box-shadow:
 		rgba(240, 46, 170, 0.2) 0px 5px,
@@ -27,6 +27,13 @@
 		min-height: toRem(70);
 		justify-content: space-between;
 	}
+	// .header__relative
+	&__relative {
+		display: flex;
+		gap: toRem(15);
+		position: relative;
+		align-items: center;
+	}
 	// .header__logo
 	&__logo {
 		display: flex;
@@ -42,12 +49,20 @@
 				opacity: 0.95;
 			}
 		}
+		@media (max-width: $mobile) {
+			z-index: 1;
+			position: relative;
+		}
 	}
 	// .header__side
 	&__side {
 		display: flex;
 		align-items: center;
 		@include adaptiveValue("gap", 25, 15);
+		@media (max-width: $mobile) {
+			z-index: 1;
+			position: relative;
+		}
 	}
 	// .header__list
 	&__list {

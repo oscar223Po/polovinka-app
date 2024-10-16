@@ -9,6 +9,7 @@
 		rgba(240, 46, 170, 0.2) 0px -5px,
 		rgba(240, 46, 170, 0.1) 0px -10px,
 		rgba(240, 46, 170, 0.05) 0px -15px;
+	@include adaptiveValue("margin-top", 70, 30);
 	// .footer__container
 	&__container {
 		display: flex;
@@ -86,6 +87,9 @@
 			&:hover {
 				color: $yellowColor;
 			}
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(14);
 		}
 	}
 	// .footer__select

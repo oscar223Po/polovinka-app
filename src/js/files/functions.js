@@ -422,18 +422,24 @@ export function menuInit() {
 	if (document.querySelector(".icon-menu")) {
 		document.addEventListener("click", function (e) {
 			if (bodyLockStatus && e.target.closest('.icon-menu')) {
-				bodyLockToggle();
+				if (window.innerWidth <= 767.98) {
+					bodyLockToggle();
+				}
 				document.documentElement.classList.toggle("menu-open");
 			}
 		});
 	};
 }
 export function menuOpen() {
-	bodyLock();
+	if (window.innerWidth <= 767.98) {
+		bodyLock();
+	}
 	document.documentElement.classList.add("menu-open");
 }
 export function menuClose() {
-	bodyUnlock();
+	if (window.innerWidth <= 767.98) {
+		bodyUnlock();
+	}
 	document.documentElement.classList.remove("menu-open");
 }
 // Модуль "показати ще" =======================================================================================================================================================================================================================
