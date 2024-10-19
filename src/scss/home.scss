@@ -1,6 +1,4 @@
 // ========================================================================================================================================================
-// * HOME *
-// ========================================================================================================================================================
 // Intro
 .intro {
 	@include adaptiveValue("padding-top", 50, 25);
@@ -201,9 +199,6 @@
 	flex-direction: column;
 	border-radius: toRem(15);
 	background-color: rgba(#ff6a00, 0.5);
-	box-shadow:
-		rgba($bgColor, 0.1) 0px 1px 3px 0px,
-		rgba($bgColor, 0.06) 0px 1px 2px 0px;
 	&:nth-child(2n) {
 		background-color: rgba(#ee0979, 0.3);
 		flex-direction: column-reverse;
@@ -259,7 +254,7 @@
 	}
 	// .online__slider
 	&__slider {
-		@media (max-width: $mobile) {
+		@media (max-width: $tablet) {
 			margin: toRem(0) toRem(-15);
 			padding: toRem(0) toRem(15);
 		}
@@ -337,39 +332,6 @@
 		@include adaptiveValue("font-size", 16, 14);
 		span {
 			font-weight: 600;
-		}
-	}
-}
-// ========================================================================================================================================================
-// * PROFILE
-// ========================================================================================================================================================
-.profile {
-	padding-top: toRem(30);
-	padding-bottom: toRem(30);
-	// .profile__container
-	&__container {
-		display: grid;
-		gap: toRem(25);
-		align-items: start;
-		@media (min-width: $mobile) {
-			grid-template-columns: toRem(300) 1fr;
-		}
-	}
-	// .profile__aside
-	&__aside {
-		@media (max-width: $mobile) {
-			order: 2;
-		}
-	}
-	// .profile__content
-	&__content {
-		color: $bgColor;
-		padding: toRem(20);
-		font-size: toRem(18);
-		border-radius: toRem(12);
-		background-color: #381a42;
-		@media (max-width: $mobile) {
-			order: 1;
 		}
 	}
 }

@@ -2,7 +2,6 @@
 //<BUTTONS (a.btn+tab)>
 // Сніппет (HTML): btn
 .button {
-	width: 100%;
 	line-height: 125%;
 	align-items: center;
 	display: inline-flex;
@@ -11,6 +10,8 @@
 	transition:
 		background-color 0.3s ease 0s,
 		color 0.3s ease 0s;
+	// -------------------------------
+	// .button--lr
 	&--lr {
 		color: #fff;
 		min-height: toRem(44);
@@ -18,16 +19,19 @@
 		background-color: $primaryColor;
 		@media (any-hover: hover) {
 			&:hover {
-				background-color: $mainColor;
+				background-color: #000000;
 			}
 		}
 	}
+	// -------------------------------
+	// Buttons For Header Register
 	&--lb,
-	&--rb {
+	&--rb,
+	&--ob {
 		gap: toRem(8);
 		min-height: toRem(40);
 		border-radius: toRem(10);
-		padding: toRem(0) toRem(10);
+		padding: toRem(8) toRem(10);
 		box-shadow:
 			rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
 			rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
@@ -40,7 +44,7 @@
 		}
 		@media (any-hover: hover) {
 			&:hover {
-				background-color: #2d1436;
+				background-color: $purpleColor;
 			}
 		}
 		@media (max-width: toEm(649.98)) {
@@ -52,15 +56,22 @@
 	// .button--lb
 	&--lb {
 		color: $primaryColor;
-		background-color: $bgMainColor;
+		background-color: $bgColor;
 		border: toRem(1) solid $primaryColor;
 	}
 	// .button--rb
 	&--rb {
 		color: $redColor;
-		background-color: $bgMainColor;
+		background-color: $bgColor;
 		border: toRem(1) solid $redColor;
 	}
+	// .button--ob
+	&--ob {
+		color: $orangeColor;
+		background-color: $bgColor;
+		border: toRem(1) solid $orangeColor;
+	}
+	// -------------------------------
 	// .button--ord
 	&--ord {
 		width: auto;
@@ -69,8 +80,8 @@
 		position: relative;
 		min-height: toRem(50);
 		border-radius: toRem(30);
+		background-color: $bgColor;
 		padding: toRem(0) toRem(30);
-		background-color: $bgMainColor;
 		border: toRem(1) solid $redColor;
 		span {
 			z-index: 1;
@@ -86,8 +97,8 @@
 			top: toRem(0);
 			left: toRem(0);
 			position: absolute;
+			background: $gradientOrange;
 			transition: left 0.3s ease 0s;
-			background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
 		}
 		@media (any-hover: hover) {
 			&:hover {

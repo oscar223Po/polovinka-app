@@ -1,3 +1,4 @@
+// ========================================================================================================================================================
 //<INPUT>
 // Сніппет (HTML): inp
 input[type="text"],
@@ -15,14 +16,19 @@ textarea {
 	border-radius: 12px;
 	caret-color: inherit;
 	min-height: toRem(46);
-	background-color: #fff;
-	border: 1px solid $borderColor;
+	background-color: $bgColor;
+	border: 1px solid rgba($mainColor, 0.7);
 	transition: border 0.3s ease 0s;
 	&::placeholder {
 		color: $placeholderColor;
 	}
+	&--white {
+		background-color: #ffffff;
+		border: 1px solid rgba(#dddddd, 0.5);
+	}
 	&--gray {
-		background-color: $bgColor;
+		background-color: #f7f8f9;
+		border: 1px solid rgba(#dddddd, 0.5);
 	}
 	&:focus {
 		outline: none;
@@ -46,13 +52,11 @@ textarea {
 		opacity: 0;
 	}
 }
-
 textarea.input {
 	resize: none;
-	padding: 12px;
+	padding: 14px 12px;
 	min-height: toRem(120);
 }
-
 .count {
 	font-size: 12px;
 	line-height: 117%;
@@ -60,3 +64,4 @@ textarea.input {
 	margin-top: toRem(8);
 	color: $secondtxtColor;
 }
+// ========================================================================================================================================================

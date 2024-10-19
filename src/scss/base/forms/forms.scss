@@ -60,6 +60,7 @@
 	}
 	// .form__button
 	&__button {
+		width: 100%;
 		&:not(:last-child) {
 			margin-bottom: toRem(12);
 		}
@@ -101,7 +102,7 @@
 	// .form__bottom-button
 	&__bottom-button {
 		padding: toRem(15);
-		background-color: $bgColor;
+		background-color: #f7f8f9;
 	}
 	// .form__save
 	&__save {

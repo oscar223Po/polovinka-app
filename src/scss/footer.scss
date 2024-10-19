@@ -1,10 +1,9 @@
 //========================================================================================================================================================
 // Footer
 .footer {
-	color: $bgColor;
 	padding-top: toRem(15);
-	background-color: #2d1436;
 	padding-bottom: toRem(15);
+	background-color: $purpleColor;
 	box-shadow:
 		rgba(240, 46, 170, 0.2) 0px -5px,
 		rgba(240, 46, 170, 0.1) 0px -10px,

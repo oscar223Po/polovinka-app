@@ -1,3 +1,5 @@
+// ========================================================================================================================================================
+// Menu
 .menu {
 	// .menu__icon
 	&__icon {
@@ -47,7 +49,7 @@
 			overflow: auto;
 			position: fixed;
 			transition: left 0.3s;
-			background-color: $bgMainColor;
+			background-color: #230e2b;
 			padding: toRem(90) toRem(15) toRem(25) toRem(15);
 			&::before {
 				top: 0;
@@ -72,7 +74,7 @@
 	&__aside {
 	}
 }
-//Burger Icon
+// Burger Icon
 .icon-menu {
 	z-index: 5;
 	display: block;
@@ -92,7 +94,7 @@
 		width: 100%;
 		height: toRem(2);
 		border-radius: toRem(10);
-		background-color: $bgColor;
+		background-color: $mainColor;
 	}
 	&::before {
 		top: 0;
@@ -121,3 +123,4 @@
 		}
 	}
 }
+// ========================================================================================================================================================

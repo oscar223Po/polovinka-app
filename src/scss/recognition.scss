@@ -178,7 +178,7 @@
 		align-items: center;
 		min-height: toRem(56);
 		border-radius: toRem(12);
-		background-color: $bgColor;
+		background-color: #f7f8f9;
 		flex-direction: row-reverse;
 		justify-content: space-between;
 		@include adaptiveValue("padding-left", 16, 12);
