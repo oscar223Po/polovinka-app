@@ -245,12 +245,17 @@
 }
 // Online
 .online {
-	@include adaptiveValue("padding-top", 70, 30);
+	margin-bottom: toRem(40);
+	@include adaptiveValue("padding-top", 60, 30);
 	// .online__container
 	&__container {
 	}
 	// .online__heading
 	&__heading {
+	}
+	// .online__gallery
+	&__gallery {
+		position: relative;
 	}
 	// .online__slider
 	&__slider {
@@ -267,10 +272,13 @@
 		overflow: hidden;
 		border-radius: toRem(20);
 	}
+	// .online__arrows
+	&__arrows {
+	}
 }
 // Parag
 .parag {
-	@include adaptiveValue("padding-top", 85, 70);
+	@include adaptiveValue("padding-top", 85, 60);
 	&__container {
 		position: relative;
 		&::before,

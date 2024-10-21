@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Polovinka (ProfileQuest) - ProfileQuestPage</title>
+	<title>Polovinka (QuestionnaireVip) - QuestionnaireVipPage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -137,31 +137,38 @@
 				<div class="quest__container">
 					<div class="quest__body">
 						<div class="quest__main main-quest">
-							<div class="main-quest__image img bg-shad">
-								<img src="img/photo-men.webp" alt="Image">
+							<div class="main-quest__image img bg-shad bg-shad--rbwl">
+								<img src="img/photo-women.webp" alt="Image">
 								<div class="main-quest__actions">
-									<button type="button" class="main-quest__button button button--ob _icon-image">Альбом Фотографий</button>
+									<button type="button" class="main-quest__button button button--ord">
+										<span>
+											Поприветствовать
+											<svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0.84703 9.57614C0.84703 9.57614 0.218141 8.65948 1.13536 8.03114C2.05147 7.40281 2.67981 8.31892 2.67981 8.31892L5.59703 12.5734C5.69759 12.4056 5.80759 12.24 5.93036 12.0767L1.88147 6.17281C1.88147 6.17281 1.25314 5.2567 2.16981 4.62837C3.08592 4.00003 3.71425 4.91614 3.71425 4.91614L7.52259 10.47C7.66425 10.3545 7.80925 10.2384 7.9587 10.1245L3.5437 3.68503C3.5437 3.68503 2.91536 2.76892 3.83203 2.14059C4.74814 1.51225 5.37648 2.42836 5.37648 2.42836L9.79148 8.8667C9.9537 8.76725 10.1143 8.68114 10.2754 8.59003L6.1487 2.57225C6.1487 2.57225 5.52036 1.65614 6.43648 1.02781C7.35259 0.399476 7.98092 1.31559 7.98092 1.31559L12.3443 7.67892L13.0076 8.6467C10.2587 10.5323 9.99703 14.0795 11.5676 16.37C11.8815 16.8284 12.3398 16.5145 12.3398 16.5145C10.4548 13.765 11.0304 10.6756 13.7798 8.79059L12.9693 4.73392C12.9693 4.73392 12.6665 3.66503 13.7348 3.3617C14.8037 3.05892 15.107 4.12781 15.107 4.12781L16.0431 6.90781C16.4143 8.01003 16.8093 9.10837 17.332 10.1473C18.8081 13.0806 17.9265 16.7261 15.1431 18.6356C12.107 20.7173 7.95648 19.9434 5.87425 16.9078L0.84703 9.57614Z" fill="#FFDC5D" />
+											</svg>
+										</span>
+									</button>
+									<button type="button" class="main-quest__button button button--rb _icon.webpt">Подарить подарок</button>
 								</div>
 							</div>
 						</div>
-						<div class="quest__describe describe-quest bg-ord bg-ord--pm">
+						<div class="quest__describe describe-quest bg-ord bg-ord--gr bg-shad bg-shad--rbwr">
 							<div class="describe-quest__top">
-								<h4 class="describe-quest__title title title--blu">Андрей 23</h4>
+								<h4 class="describe-quest__title title title--blu">Анна 25 <span>"VIP"</span></h4>
 								<div class="describe-quest__span">Онлайн</div>
 							</div>
-							<div class="describe-quest__items describe-quest__items--mine bg-ord bg-ord--pk">
+							<div class="describe-quest__actions">
+								<a href="" class="describe-quest__button describe-quest__button--one _icon-mail">Написать</a>
+								<a href="" class="describe-quest__button describe-quest__button--two _icon-quest">Пожаловаться</a>
+								<a href="" class="describe-quest__button describe-quest__button--three _icon-alert">Заблокировать</a>
+								<a href="" class="describe-quest__button describe-quest__button--four _icon-goal">Совместимость</a>
+							</div>
+							<div class="describe-quest__items bg-ord bg-ord--pk">
 								<div class="describe-quest__item">Рост<span>186 см</span></div>
 								<div class="describe-quest__item">Вес<span>80 кг</span></div>
 								<div class="describe-quest__item">Цвет глаз<span>Голубые</span></div>
 								<div class="describe-quest__item">Цвет волос<span>Светлые</span></div>
 								<div class="describe-quest__item">Цель знакомства<span>Пока не знаю</span></div>
-							</div>
-							<div class="describe-quest__items describe-quest__items--mine bg-ord bg-ord--pl">
-								<div class="describe-quest__item">Я ищу<span>Женщину</span></div>
-								<div class="describe-quest__item">Возраст партнёра<span>33 - 46</span></div>
-								<div class="describe-quest__item">Приоритеты знакомства<span>Отношения</span></div>
-								<div class="describe-quest__item">Семейный статус<span>Разведен</span></div>
-								<div class="describe-quest__item">Дети<span>У меня нет детей</span></div>
 							</div>
 							<div data-da=".quest__mobile-content, 991.98" class="describe-quest__content bg-ord bg-ord--pg">
 								<div class="describe-quest__about">
@@ -174,6 +181,8 @@
 									</a>
 									<a href="" class="describe-quest__photo button button--lb _icon-image">Фото в Альбоме<span>4</span></a>
 								</div>
+								<a href="" class="describe-quest__bell button button--ob _icon-bell">Прислать мне уведомление когда Анна вернётся на сайт</a>
+								<div class="describe-quest__tip">Стоимость услуги 15 Стрел Купидона Оплатив эту услугу, вы получите автоматическое уведомление на ваш e-mail, когда Анна будет на сайте.</div>
 							</div>
 						</div>
 					</div>
@@ -189,11 +198,39 @@
 							<p>Знакомлюсь для длительных отношений. Легко нахожу контакт с людьми, но чтобы сблизиться мне нужно время. Мне важно, чтобы совпадали взгляды на жизнь и события по ключевым вопросам. Чтобы человек был бодр духом. Чтобы юмор совпадал. Чтобы человек умел дружить. Переписки длительные не люблю, лучше встретиться, чтобы быстрее все понятно стало. Или на волне, или нет.</p>
 						</blockquote>
 					</div>
-					<div class="textual__about text bg-ord bg-ord--pl">
-						<p>Андрей – адекватная, толерантная и общительная женщина, которая ищет искренние знакомства в Израиле. В её жизни важна эмпатия и активная жизненная позиция, а также бережное отношение к окружающим. Рисование – это не просто увлечение, а способ самовыражения и способствующий гармонии в жизни. Анна мечтает о мужчине, который станет не только партнером, но и верным другом, с которым можно обсудить важные темы и поддержать друг друга в трудные времена. Возраст, который интересует Анну, составляет от 33 до 46 лет. Цель знакомства – построение продолжительных отношений, возможно, даже для брака. Переезд в другую страну не исключается, что открывает новые горизонты для совместного будущего.</p>
+					<div class="textual__about text bg-ord bg-ord--pk">
+						<p>Анна – адекватная, толерантная и общительная женщина, которая ищет искренние знакомства в Израиле. В её жизни важна эмпатия и активная жизненная позиция, а также бережное отношение к окружающим. Рисование – это не просто увлечение, а способ самовыражения и способствующий гармонии в жизни. Анна мечтает о мужчине, который станет не только партнером, но и верным другом, с которым можно обсудить важные темы и поддержать друг друга в трудные времена. Возраст, который интересует Анну, составляет от 33 до 46 лет. Цель знакомства – построение продолжительных отношений, возможно, даже для брака. Переезд в другую страну не исключается, что открывает новые горизонты для совместного будущего.</p>
 						<p>В данный момент Анна не работает, но её интересы сосредоточены на искусстве, культуре и музыке. Если вы ищете знакомства в Израиле для русскоязычных, возможно, Анна станет тем самым человеком, с которым захочется разделить радости и трудности жизни. Не упустите шанс познакомиться с этой удивительной женщиной!</p>
 					</div>
 					<div class="textual__base">
+						<div class="textual__data data-textual">
+							<h4 class="data-textual__title title title--blu">Данные о знакомстве</h4>
+							<div class="data-textual__items">
+								<div class="data-textual__item">
+									<div class="data-textual__label">Я ищу:</div>
+									<div class="data-textual__content">Мужчину</div>
+								</div>
+								<div class="data-textual__item">
+									<div class="data-textual__label">Возраст партнёра:</div>
+									<div class="data-textual__content">33 - 46</div>
+								</div>
+								<div class="data-textual__item">
+									<div class="data-textual__label">Приоритеты знакомства:</div>
+									<div class="data-textual__content">
+										<p>Знакомство для продолжительных отношений</p>
+										<p>Знакомство для брака</p>
+									</div>
+								</div>
+								<div class="data-textual__item">
+									<div class="data-textual__label">Семейный статус:</div>
+									<div class="data-textual__content">Разведена</div>
+								</div>
+								<div class="data-textual__item">
+									<div class="data-textual__label">Дети:</div>
+									<div class="data-textual__content">У меня нет детей</div>
+								</div>
+							</div>
+						</div>
 						<div class="textual__data data-textual">
 							<h4 class="data-textual__title title title--blu">Личные данные</h4>
 							<div class="data-textual__items">
@@ -251,15 +288,19 @@
 								</div>
 								<div class="data-textual__item">
 									<div class="data-textual__label">Обо мне:</div>
-									<div class="data-textual__content">Несколько слов о себе</div>
+									<div class="data-textual__content">
+										<p>Творческий человек, общительная. Соблюдаю границы других людей и мне важно, чтобы соблюдали мои. Обращаю внимание на мужчин, которые были в терапии. Но если не были, то никогда не поздно))</p>
+									</div>
 								</div>
 								<div class="data-textual__item">
 									<div class="data-textual__label">Мои интересы и увлечения:</div>
-									<div class="data-textual__content">Мои интересы и увлечения</div>
+									<div class="data-textual__content">Рисую, общаюсь с людьми, люблю квизы, мафию, интересуюсь политикой</div>
 								</div>
 								<div class="data-textual__item">
 									<div class="data-textual__label">Хочу найти в партнере:</div>
-									<div class="data-textual__content">Хочу найти в партнере</div>
+									<div class="data-textual__content">
+										<p>В мужчинах ценю: эмпатию, толерантность, активность. Мне важно, чтобы мужчина был другом: поддержка, общие взгляды на важные темы, бережное отношение друг к другу, уважение границ.</p>
+									</div>
 								</div>
 							</div>
 						</div>

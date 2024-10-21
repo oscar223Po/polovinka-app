@@ -1544,8 +1544,18 @@ summary::marker {
 .bg-ord--pg {
   background: linear-gradient(90deg,#2d1436 0,rgba(255,106,0,.15) 100%)
 }
+.bg-ord--gr {
+  border: .0625rem solid hsla(0,0%,100%,.1);
+  background: linear-gradient(-90deg,rgba(52,70,90,.85) 0,rgba(16,94,25,.85) 100%)
+}
 .bg-shad {
   box-shadow: rgba(35,14,43,.4) 0 3px 15px 0,rgba(35,14,43,.4) 0 3px 15px 0
+}
+.bg-shad--rbwl {
+  box-shadow: rgba(240,46,170,.4) -5px 5px,rgba(240,46,170,.3) -10px 10px,rgba(240,46,170,.2) -15px 15px,rgba(240,46,170,.1) -20px 20px,rgba(240,46,170,.05) -25px 25px
+}
+.bg-shad--rbwr {
+  box-shadow: rgba(240,46,170,.4) 5px 5px,rgba(240,46,170,.3) 10px 10px,rgba(240,46,170,.2) 15px 15px,rgba(240,46,170,.1) 20px 20px,rgba(240,46,170,.05) 25px 25px
 }
 .aside {
   padding: .3125rem;
@@ -1818,6 +1828,87 @@ summary::marker {
 .switch__round {
   border-radius: 34px
 }
+.arrows {
+  top: 50%;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-transform: translate(0,-50%);
+  transform: translate(0,-50%)
+}
+.arrows__arrow {
+  overflow: hidden;
+  width: 2.1875rem;
+  font-weight: 700;
+  height: 2.1875rem;
+  position: relative;
+  font-size: 1.375rem;
+  border-radius: .625rem;
+  background: linear-gradient(90deg,#ee0979 0,#ff6a00 100%);
+  transition: opacity .4s ease 0s;
+  box-shadow: rgba(0,0,0,.1) 0 4px 6px -1px,rgba(0,0,0,.06) 0 2px 4px -1px
+}
+.arrows__arrow--prev {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  margin-left: -1.09375rem
+}
+.arrows__arrow--next {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  margin-right: -1.09375rem
+}
+.dotts {
+  width: 100%;
+  display: flex;
+  gap: .4375rem;
+  flex-wrap: wrap;
+  position: absolute;
+  justify-content: center;
+  -webkit-transform: translate(0,100%);
+  transform: translate(0,100%)
+}
+.dotts .swiper-pagination-bullet {
+  display: flex;
+  flex: 0 0 22px;
+  cursor: pointer;
+  margin: 2px 0;
+  height: 1.375rem;
+  position: relative;
+  align-items: center;
+  justify-content: center
+}
+.dotts .swiper-pagination-bullet::after {
+  content: "";
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  background-color: #d8d8d8;
+  transition: background-color .3s ease 0s
+}
+.dotts .swiper-pagination-bullet::before {
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 50%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  border: 1px solid #ff6a00;
+  transition: all .3s ease 0s
+}
+.dotts .swiper-pagination-bullet-active::after {
+  background-color: #ff6a00
+}
+.dotts .swiper-pagination-bullet-active::before {
+  -webkit-transform: scale(1);
+  transform: scale(1)
+}
 .header {
   z-index: 10;
   position: relative;
@@ -2085,6 +2176,12 @@ summary::marker {
   height: 100%;
   border-radius: .9375rem
 }
+.online {
+  margin-bottom: 2.5rem
+}
+.online__gallery {
+  position: relative
+}
 .online__slide {
   overflow: hidden;
   border-radius: 1.25rem
@@ -2264,6 +2361,13 @@ summary::marker {
 .describe-quest__top:not(:last-child) {
   margin-bottom: 1.25rem
 }
+.describe-quest__title span {
+  font-family: "Montserrat Alternates";
+  background: linear-gradient(90deg,#ee0979 0,#ff6a00 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
 .describe-quest__span {
   border-radius: .3125rem;
   padding: .1875rem .625rem;
@@ -2309,6 +2413,9 @@ summary::marker {
 }
 .describe-quest__button--four {
   color: #66a1f7
+}
+.describe-quest__items--mine:not(:last-child) {
+  margin-bottom: 1.25rem
 }
 .describe-quest__item {
   display: flex;
@@ -2375,11 +2482,15 @@ summary::marker {
   margin-bottom: 1.5625rem
 }
 .textual__about:not(:last-child) {
-  margin-bottom: 1.875rem
+  margin-bottom: 2.5rem
 }
 .textual__base {
   display: grid;
   gap: 2.1875rem
+}
+.textual__button {
+  display: flex;
+  justify-content: center
 }
 .quote-textual__sibtitle:not(:last-child) {
   margin-bottom: .625rem
@@ -2403,37 +2514,43 @@ summary::marker {
   text-align: center
 }
 .data-textual__title:not(:last-child) {
-  margin-bottom: .9375rem
+  margin-bottom: 1.25rem
 }
 .data-textual__items {
-  overflow: hidden;
-  border-radius: .75rem
+  display: grid;
+  gap: .625rem
 }
 .data-textual__item {
-  display: grid;
+  display: flex;
+  gap: .625rem;
+  flex-wrap: wrap;
   align-items: center;
-  padding: .9375rem .625rem;
+  border-radius: .75rem;
+  padding: .625rem .9375rem;
   justify-content: space-between;
-  background-color: hsla(0,0%,100%,.05);
-  grid-template-columns: repeat(2,1fr)
+  background: linear-gradient(90deg,rgba(81,65,151,.5) 0,rgba(126,20,80,.5) 100%)
 }
 .data-textual__item:nth-child(2n) {
   background: linear-gradient(90deg,rgba(238,9,121,.5) 0,rgba(255,106,0,.5) 100%)
 }
-.data-textual__item span {
-  font-weight: 500;
-  text-align: right;
-  font-family: "Montserrat Alternates"
+.data-textual__label {
+  font-weight: 500
 }
-.data-textual__item-content {
-  display: flex;
-  font-weight: 500;
+.data-textual__content {
   align-items: end;
-  line-height: 125%;
-  text-align: right;
-  row-gap: .625rem;
-  flex-direction: column;
-  font-family: "Montserrat Alternates"
+  line-height: 135%;
+  padding: .3125rem;
+  border-radius: .75rem;
+  background-color: #230e2b;
+  padding: .4375rem .625rem;
+  border: .0625rem solid rgba(102,161,247,.3)
+}
+.data-textual__content p:not(:last-child) {
+  margin-bottom: .1875rem
+}
+.data-textual__content p::before {
+  content: "-";
+  margin-right: .3125rem
 }
 .auth__head {
   text-align: center;
@@ -2739,6 +2856,9 @@ summary::marker {
   .video {
     gap: 1.25rem
   }
+  .dotts {
+    bottom: -1.25rem
+  }
   .header__side {
     gap: 1.5625rem
   }
@@ -2787,7 +2907,7 @@ summary::marker {
     font-size: 1.375rem
   }
   .online {
-    padding-top: 4.375rem
+    padding-top: 3.75rem
   }
   .parag {
     padding-top: 5.3125rem
@@ -2798,8 +2918,17 @@ summary::marker {
   .about-profile__subtitle {
     font-size: 1rem
   }
+  .describe-quest__title span {
+    font-size: 1.875rem
+  }
   .textual {
-    padding-top: 1.875rem
+    padding-top: 2.8125rem
+  }
+  .textual__base:not(:last-child) {
+    margin-bottom: 1.5625rem
+  }
+  .data-textual__label {
+    font-size: 1.125rem
   }
   .reg-body {
     padding-bottom: 7.5rem
@@ -2857,6 +2986,9 @@ summary::marker {
   .video {
     gap: .9375rem
   }
+  .dotts {
+    bottom: -.9375rem
+  }
   .header__side {
     gap: .9375rem
   }
@@ -2908,7 +3040,7 @@ summary::marker {
     padding-top: 1.875rem
   }
   .parag {
-    padding-top: 4.375rem
+    padding-top: 3.75rem
   }
   .item-parag__body {
     font-size: .875rem
@@ -2916,8 +3048,17 @@ summary::marker {
   .about-profile__subtitle {
     font-size: .875rem
   }
+  .describe-quest__title span {
+    font-size: 1.375rem
+  }
   .textual {
     padding-top: 1.5625rem
+  }
+  .textual__base:not(:last-child) {
+    margin-bottom: 1.25rem
+  }
+  .data-textual__label {
+    font-size: 1rem
   }
   .reg-body {
     padding-bottom: 8.125rem
@@ -2939,6 +3080,14 @@ summary::marker {
   }
   .breadcrumbs {
     padding-bottom: 1.5625rem
+  }
+}
+@media (max-width:75.625em) {
+  .arrows__arrow--prev {
+    margin-left: -.625rem
+  }
+  .arrows__arrow--next {
+    margin-right: -.625rem
   }
 }
 @media (max-width:61.99875em) {
@@ -2976,8 +3125,14 @@ summary::marker {
   .quest__body:not(:last-child) {
     margin-bottom: 1.25rem
   }
+  .main-quest__image.bg-shad--rbwl {
+    box-shadow: none
+  }
   .main-quest__actions {
     flex-direction: column-reverse
+  }
+  .describe-quest.bg-shad--rbwr {
+    box-shadow: none
   }
   .describe-quest__actions {
     grid-template-columns: auto
@@ -3036,6 +3191,9 @@ summary::marker {
   .about-profile__button {
     width: 100%;
     padding: 0
+  }
+  .data-textual__item {
+    padding: .625rem
   }
 }
 @media (max-width:40.62375em) {
@@ -3214,6 +3372,16 @@ summary::marker {
       gap: calc(.9375rem + .3125*(100vw - 20rem)/ 54.375)
     }
   }
+  @supports (bottom:clamp(-1.25rem ,-0.8225574713rem + -0.5747126437vw ,-0.9375rem)) {
+    .dotts {
+      bottom: clamp(-1.25rem ,-.8225574713rem + -.5747126437vw ,-.9375rem)
+    }
+  }
+  @supports not (bottom:clamp(-1.25rem ,-0.8225574713rem + -0.5747126437vw ,-0.9375rem)) {
+    .dotts {
+      bottom: calc(-.9375rem + -.3125*(100vw - 20rem)/ 54.375)
+    }
+  }
   @supports (gap:clamp(0.9375rem ,0.7076149425rem + 1.1494252874vw ,1.5625rem)) {
     .header__side {
       gap: clamp(.9375rem ,.7076149425rem + 1.1494252874vw ,1.5625rem)
@@ -3368,24 +3536,24 @@ summary::marker {
       font-size: calc(1.125rem + .25*(100vw - 20rem)/ 54.375)
     }
   }
-  @supports (padding-top:clamp(1.875rem ,0.9554597701rem + 4.5977011494vw ,4.375rem)) {
+  @supports (padding-top:clamp(1.875rem ,1.1853448276rem + 3.4482758621vw ,3.75rem)) {
     .online {
-      padding-top: clamp(1.875rem ,.9554597701rem + 4.5977011494vw ,4.375rem)
+      padding-top: clamp(1.875rem ,1.1853448276rem + 3.4482758621vw ,3.75rem)
     }
   }
-  @supports not (padding-top:clamp(1.875rem ,0.9554597701rem + 4.5977011494vw ,4.375rem)) {
+  @supports not (padding-top:clamp(1.875rem ,1.1853448276rem + 3.4482758621vw ,3.75rem)) {
     .online {
-      padding-top: calc(1.875rem + 2.5*(100vw - 20rem)/ 54.375)
+      padding-top: calc(1.875rem + 1.875*(100vw - 20rem)/ 54.375)
     }
   }
-  @supports (padding-top:clamp(4.375rem ,4.0301724138rem + 1.724137931vw ,5.3125rem)) {
+  @supports (padding-top:clamp(3.75rem ,3.1752873563rem + 2.8735632184vw ,5.3125rem)) {
     .parag {
-      padding-top: clamp(4.375rem ,4.0301724138rem + 1.724137931vw ,5.3125rem)
+      padding-top: clamp(3.75rem ,3.1752873563rem + 2.8735632184vw ,5.3125rem)
     }
   }
-  @supports not (padding-top:clamp(4.375rem ,4.0301724138rem + 1.724137931vw ,5.3125rem)) {
+  @supports not (padding-top:clamp(3.75rem ,3.1752873563rem + 2.8735632184vw ,5.3125rem)) {
     .parag {
-      padding-top: calc(4.375rem + .9375*(100vw - 20rem)/ 54.375)
+      padding-top: calc(3.75rem + 1.5625*(100vw - 20rem)/ 54.375)
     }
   }
   @supports (font-size:clamp(0.875rem ,0.8290229885rem + 0.2298850575vw ,1rem)) {
@@ -3408,14 +3576,44 @@ summary::marker {
       font-size: calc(.875rem + .125*(100vw - 20rem)/ 54.375)
     }
   }
-  @supports (padding-top:clamp(1.5625rem ,1.4475574713rem + 0.5747126437vw ,1.875rem)) {
-    .textual {
-      padding-top: clamp(1.5625rem ,1.4475574713rem + .5747126437vw ,1.875rem)
+  @supports (font-size:clamp(1.375rem ,1.191091954rem + 0.9195402299vw ,1.875rem)) {
+    .describe-quest__title span {
+      font-size: clamp(1.375rem ,1.191091954rem + .9195402299vw ,1.875rem)
     }
   }
-  @supports not (padding-top:clamp(1.5625rem ,1.4475574713rem + 0.5747126437vw ,1.875rem)) {
+  @supports not (font-size:clamp(1.375rem ,1.191091954rem + 0.9195402299vw ,1.875rem)) {
+    .describe-quest__title span {
+      font-size: calc(1.375rem + .5*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (padding-top:clamp(1.5625rem ,1.1027298851rem + 2.2988505747vw ,2.8125rem)) {
     .textual {
-      padding-top: calc(1.5625rem + .3125*(100vw - 20rem)/ 54.375)
+      padding-top: clamp(1.5625rem ,1.1027298851rem + 2.2988505747vw ,2.8125rem)
+    }
+  }
+  @supports not (padding-top:clamp(1.5625rem ,1.1027298851rem + 2.2988505747vw ,2.8125rem)) {
+    .textual {
+      padding-top: calc(1.5625rem + 1.25*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (margin-bottom:clamp(1.25rem ,1.1350574713rem + 0.5747126437vw ,1.5625rem)) {
+    .textual__base:not(:last-child) {
+      margin-bottom: clamp(1.25rem ,1.1350574713rem + .5747126437vw ,1.5625rem)
+    }
+  }
+  @supports not (margin-bottom:clamp(1.25rem ,1.1350574713rem + 0.5747126437vw ,1.5625rem)) {
+    .textual__base:not(:last-child) {
+      margin-bottom: calc(1.25rem + .3125*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (font-size:clamp(1rem ,0.9540229885rem + 0.2298850575vw ,1.125rem)) {
+    .data-textual__label {
+      font-size: clamp(1rem ,.9540229885rem + .2298850575vw ,1.125rem)
+    }
+  }
+  @supports not (font-size:clamp(1rem ,0.9540229885rem + 0.2298850575vw ,1.125rem)) {
+    .data-textual__label {
+      font-size: calc(1rem + .125*(100vw - 20rem)/ 54.375)
     }
   }
   @supports (padding-bottom:clamp(7.5rem ,8.3548850575rem + -1.1494252874vw ,8.125rem)) {
@@ -3533,6 +3731,9 @@ summary::marker {
   .video__item:hover .video__content {
     -webkit-transform: translate(0,100%);
     transform: translate(0,100%)
+  }
+  .arrows__arrow:hover {
+    opacity: .75
   }
   .header__logo:hover {
     opacity: .95
