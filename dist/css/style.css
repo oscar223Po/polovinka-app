@@ -602,6 +602,10 @@ textarea.input {
   align-items: center;
   border-radius: .75rem
 }
+.options__item.rtl-reverse .options__label::after {
+  left: 16px;
+  right: auto
+}
 .options__input {
   width: 0;
   height: 0;

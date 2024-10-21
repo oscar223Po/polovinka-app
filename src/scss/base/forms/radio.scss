@@ -11,6 +11,14 @@
 		position: relative;
 		align-items: center;
 		border-radius: toRem(12);
+		&.rtl-reverse {
+			.options__label {
+				&::after {
+					left: 16px;
+					right: auto;
+				}
+			}
+		}
 	}
 	// .options__input
 	&__input {

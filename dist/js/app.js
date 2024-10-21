@@ -9895,6 +9895,12 @@
                 }));
                 checkCheckboxes();
             }
+            if (document.documentElement.getAttribute("dir") === "rtl") {
+                const items = document.querySelectorAll(".options__item");
+                items.forEach((item => {
+                    item.classList.add("rtl-reverse");
+                }));
+            }
         }));
         window["FLS"] = false;
         menuInit();

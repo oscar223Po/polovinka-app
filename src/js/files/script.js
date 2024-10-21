@@ -100,5 +100,13 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 		checkCheckboxes();
 	}
+	// ================[ JavaScript Section ]================
+	if (document.documentElement.getAttribute('dir') === 'rtl') {
+		// Находим все элементы options__item и добавляем класс rtl-reverse
+		const items = document.querySelectorAll('.options__item');
+		items.forEach(item => {
+			item.classList.add('rtl-reverse');
+		});
+	}
 });
 //--------------------------------------------------------------
