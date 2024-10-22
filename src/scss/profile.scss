@@ -14,6 +14,9 @@
 	&__content {
 		@media (max-width: $tablet) {
 			order: 1;
+			&.bg-shad--rbwr {
+				box-shadow: none;
+			}
 		}
 	}
 	// .profile__head
@@ -52,6 +55,12 @@
 	&__ancet {
 		&.button {
 			width: 100%;
+		}
+		span {
+			display: block;
+			font-weight: 600;
+			color: $orangeColor;
+			font-family: $fontFamilyMontAlt;
 		}
 		&:not(:last-child) {
 			margin-bottom: toRem(20);

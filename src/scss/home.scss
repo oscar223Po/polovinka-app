@@ -31,44 +31,88 @@
 			}
 		}
 	}
-	// .intro__images
-	&__images {
+	// .intro__gallery
+	&__gallery {
 		height: 100%;
 		display: grid;
 		position: relative;
-		grid-template-columns: repeat(2, 1fr);
-		@include adaptiveValue("gap", 15, 5);
 	}
-	// .intro__image
-	&__image {
-		height: 100%;
-		@include adaptiveValue("border-radius", 30, 15);
-		&:first-child {
-			box-shadow:
-				rgba(240, 46, 170, 0.4) -5px 5px,
-				rgba(240, 46, 170, 0.3) -10px 10px,
-				rgba(240, 46, 170, 0.2) -15px 15px,
-				rgba(240, 46, 170, 0.1) -20px 20px,
-				rgba(240, 46, 170, 0.05) -25px 25px;
+	// .intro__slider
+	&__slider.swiper {
+		overflow: hidden;
+		border-radius: toRem(10);
+	}
+	// .intro__wrapper
+	&__wrapper {
+	}
+	// .intro__slide
+	&__slide {
+		transition:
+			opacity 0.3s ease 0s,
+			filter 1s ease 0s;
+		&.swiper-slide-active {
+			opacity: 1;
 		}
-		&:last-child {
-			box-shadow:
-				rgba(240, 46, 170, 0.4) 5px 5px,
-				rgba(240, 46, 170, 0.3) 10px 10px,
-				rgba(240, 46, 170, 0.2) 15px 15px,
-				rgba(240, 46, 170, 0.1) 20px 20px,
-				rgba(240, 46, 170, 0.05) 25px 25px;
+		&.swiper-slide-next {
+			opacity: 0.4;
+			filter: blur(15px);
+		}
+		&.swiper-slide-prev {
+			opacity: 0.4;
+			filter: blur(15px);
 		}
 	}
 	// .intro__svg
 	&__svg {
-		left: 0;
-		top: 50%;
-		right: 0;
-		z-index: 1;
-		margin: 0 auto;
+		width: toRem(50);
+		height: toRem(50);
 		position: absolute;
-		transform: translate(0px, -50%);
+		animation: circle 2.5s infinite;
+		@media (max-width: $mobile) {
+			opacity: 0.95;
+		}
+		// .intro__svg--one
+		&--one,
+		&--two {
+			top: -10px;
+		}
+		&--one {
+			left: -10px;
+			transform: rotate(-45deg);
+		}
+		// .intro__svg--two
+		&--two {
+			right: -10px;
+			transform: rotate(45deg);
+		}
+		// .intro__svg--three
+		&--three,
+		&--four {
+			bottom: -10px;
+		}
+		&--three {
+			left: -10px;
+			transform: rotate(-135deg);
+		}
+		// .intro__svg--four
+		&--four {
+			right: -10px;
+			transform: rotate(135deg);
+		}
+		@keyframes circle {
+			0% {
+				width: toRem(50);
+				height: toRem(50);
+			}
+			50% {
+				width: toRem(40);
+				height: toRem(40);
+			}
+			100% {
+				width: toRem(50);
+				height: toRem(50);
+			}
+		}
 	}
 	// .intro__bottom
 	&__bottom {
