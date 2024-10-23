@@ -78,6 +78,14 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 		});
 	}
+	const textareamin = document.querySelector('.request-textarea-min');
+	if (textareamin !== null) {
+		const charCount = textareamin.nextElementSibling;
+		textareamin.addEventListener('input', () => {
+			const currentLength = textareamin.value.length;
+			charCount.textContent = `${currentLength}/30 символов`;
+		});
+	}
 	// ================[ JavaScript Section Checkbox Form ]================
 	const checkboxes = document.querySelectorAll('.form-chk');
 	const messageCheckbox = document.getElementById('message-chk');
@@ -106,6 +114,29 @@ document.addEventListener('DOMContentLoaded', function () {
 		const items = document.querySelectorAll('.options__item');
 		items.forEach(item => {
 			item.classList.add('rtl-reverse');
+		});
+	}
+	// ================[ JavaScript Section ]================
+	const uploadArea = document.getElementById('uploadArea');
+	const fileInput = document.getElementById('fileInput');
+	if (uploadArea, fileInput !== null) {
+		uploadArea.addEventListener('dragover', (e) => {
+			e.preventDefault();
+			uploadArea.classList.add('hover');
+		});
+		uploadArea.addEventListener('dragleave', () => {
+			uploadArea.classList.remove('hover');
+		});
+		uploadArea.addEventListener('drop', (e) => {
+			e.preventDefault();
+			uploadArea.classList.remove('hover');
+			const files = e.dataTransfer.files;
+			if (files.length > 0) {
+				fileInput.files = files; // Задаем файлы в input
+			}
+		});
+		uploadArea.addEventListener('click', () => {
+			fileInput.click();
 		});
 	}
 });

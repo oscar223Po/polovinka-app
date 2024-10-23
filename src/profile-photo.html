@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Polovinka (ProfilePhoto) - ProfilePhotoPage"
+})
+
+<body class="bg-main">
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<!-- [Breadcrumbs] -->
+			<nav class="breadcrumbs">
+				<div class="breadcrumbs__container">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+						<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Мой профиль</a></li>
+						<li class="breadcrumbs__item"><div class="breadcrumbs__current">Управление фотографиями</div></li>
+					</ul>
+				</div>
+			</nav>
+			<!-- [Photo] -->
+			<section class="photo">
+				<div class="photo__container cont-menu">
+					<aside class="photo__aside aside bg-shad">
+						<ul class="aside__list">
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink _icon-aside-ed">Изменения</div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink _icon-aside-in">Приветствие</div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink _icon-aside-ph">Фотографии<span>1</span></div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink _icon-aside-vd">Видео<span>0</span></div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink _icon-aside-vt">Голосование<span>0/25</span></div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink aside__inlink--cl-01 _icon-aside-cw">Игра “Мой Принц”</div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink aside__inlink--cl-02 _icon-aside-mg">Дневник<span>0</span></div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink aside__inlink--cl-03 _icon-aside-tp">Приоритеты<span>0/24</span></div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink aside__inlink--cl-04 _icon-aside-aw">Мои ответы<span>0/18</span></div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink _icon-aside-st">Настройки</div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink aside__inlink--cl-05 _icon-aside-wp">Мои обои</div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink aside__inlink--cl-06 _icon-aside-wr">Попутчики</div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink aside__inlink--cl-07 _icon-aside-sr">Критерии поиска</div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink aside__inlink--cl-08 _icon-aside-pw">Смена пароля</div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink aside__inlink--cl-09 _icon-arrow-sn">Заморозить анкету</div>
+								</a>
+							</li>
+						</ul>
+					</aside>
+					<div class="photo__content bg-ord bg-ord--pm">
+						<div class="photo__heading heading heading--mr">
+							<h3 class="heading__title title title--red">Управление открытыми фотографиями</h3>
+							<div class="heading__text text text--sf">Фотографии размещённые в этом разделе будут доступны для просмотра всем пользователям сайта</div>
+						</div>
+						<div data-tabs class="photo__tabs tabs-photo">
+							<nav data-tabs-titles class="tabs-photo__navigation">
+								<button type="button" class="tabs-photo__title _tab-active _icon-eye">Открытые</button>
+								<button type="button" class="tabs-photo__title _icon-eye-off">Закрытые</button>
+							</nav>
+							<div data-tabs-body class="tabs-photo__content">
+								<div class="tabs-photo__body body-tabs-photo">
+									<div class="body-tabs-photo__content bg-ord">
+										<div class="body-tabs-photo__item bg-shad">
+											<div class="body-tabs-photo__image img"><img src="@img/photo-men.jpg" alt="Image"></div>
+											<div class="body-tabs-photo__actions">
+												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--trash _icon-trash"></button>
+												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--simple _icon-undo"></button>
+												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--lock _icon-lock"></button>
+												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--simple _icon-redo"></button>
+											</div>
+										</div>
+										<div class="body-tabs-photo__item bg-shad">
+											<div class="body-tabs-photo__image img"><img src="@img/photo-men.jpg" alt="Image"></div>
+											<div class="body-tabs-photo__actions">
+												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--trash _icon-trash"></button>
+												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--simple _icon-undo"></button>
+												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--lock _icon-lock"></button>
+												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--simple _icon-redo"></button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="tabs-photo__body body-tabs-photo">
+									<div class="body-tabs-photo__code bg-ord bg-ord--pm">
+										<div class="body-tabs-photo__top title title--min">Секретный код для просмотра Ваших закрытых фотографий другими участниками:</div>
+										<div class="body-tabs-photo__label">
+											<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" value="ODGK7N6J" class="body-tabs-photo__input input">
+											<button type="button" class="body-tabs-photo__change button button--ob _icon-aside-ed">Изменить</button>
+										</div>
+									</div>
+									<div class="body-tabs-photo__content bg-ord">
+										<div class="body-tabs-photo__item bg-shad">
+											<div class="body-tabs-photo__image img"><img src="@img/photo-men.jpg" alt="Image"></div>
+											<div class="body-tabs-photo__actions">
+												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--trash _icon-trash"></button>
+												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--simple _icon-undo"></button>
+												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--lock _icon-unlocked"></button>
+												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--simple _icon-redo"></button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="photo__bottom bottom-photo">
+							<button data-popup="#picture" type="button" class="bottom-photo__button button button--ord"><span>Добавить фотографию 📸</span></button>
+							<div class="bottom-photo__text">
+								<p>Если у Вас не получается загрузить фотографию, мы с удовольствием поможем вам.</p>
+								<p>Всё что вам нужно сделать - выслать на адрес <a href="mailto:admin@2polovinka.co.il">admin@2polovinka.co.il</a> Вашу фотографию, указав Ваш логин.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+		@@include('html/_popup.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

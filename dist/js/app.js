@@ -4616,6 +4616,51 @@
                 FLS(`[Форми]: ${message}`);
             }
         }
+        function formRating() {
+            const ratings = document.querySelectorAll("[data-rating]");
+            if (ratings) ratings.forEach((rating => {
+                const ratingValue = +rating.dataset.ratingValue;
+                const ratingSize = +rating.dataset.ratingSize ? +rating.dataset.ratingSize : 5;
+                formRatingInit(rating, ratingSize);
+                ratingValue ? formRatingSet(rating, ratingValue) : null;
+                document.addEventListener("click", formRatingAction);
+            }));
+            function formRatingAction(e) {
+                const targetElement = e.target;
+                if (targetElement.closest(".rating__input")) {
+                    const currentElement = targetElement.closest(".rating__input");
+                    const ratingValue = +currentElement.value;
+                    const rating = currentElement.closest(".rating");
+                    const ratingSet = rating.dataset.rating === "set";
+                    ratingSet ? formRatingGet(rating, ratingValue) : null;
+                }
+            }
+            function formRatingInit(rating, ratingSize) {
+                let ratingItems = ``;
+                for (let index = 0; index < ratingSize; index++) {
+                    index === 0 ? ratingItems += `<div class="rating__items">` : null;
+                    ratingItems += `\n\t\t\t\t<label class="rating__item">\n\t\t\t\t\t<input class="rating__input" type="radio" name="rating" value="${index + 1}">\n\t\t\t\t</label>`;
+                    index === ratingSize ? ratingItems += `</div">` : null;
+                }
+                rating.insertAdjacentHTML("beforeend", ratingItems);
+            }
+            function formRatingGet(rating, ratingValue) {
+                const resultRating = ratingValue;
+                formRatingSet(rating, resultRating);
+            }
+            function formRatingSet(rating, value) {
+                const ratingItems = rating.querySelectorAll(".rating__item");
+                const resultFullItems = parseInt(value);
+                const resultPartItem = value - resultFullItems;
+                rating.hasAttribute("data-rating-title") ? rating.title = value : null;
+                ratingItems.forEach(((ratingItem, index) => {
+                    ratingItem.classList.remove("rating__item--active");
+                    ratingItem.querySelector("span") ? ratingItems[index].querySelector("span").remove() : null;
+                    if (index <= resultFullItems - 1) ratingItem.classList.add("rating__item--active");
+                    if (index === resultFullItems && resultPartItem) ratingItem.insertAdjacentHTML("beforeend", `<span style="width:${resultPartItem * 100}%"></span>`);
+                }));
+            }
+        }
         class SelectConstructor {
             constructor(props, data = null) {
                 let defaultConfig = {
@@ -6797,6 +6842,9 @@
             };
             animate();
         }
+        function utils_getSlideTransformEl(slideEl) {
+            return slideEl.querySelector(".swiper-slide-transform") || slideEl.shadowRoot && slideEl.shadowRoot.querySelector(".swiper-slide-transform") || slideEl;
+        }
         function utils_elementChildren(element, selector) {
             if (selector === void 0) selector = "";
             const children = [ ...element.children ];
@@ -6870,6 +6918,14 @@
                 parent = parent.parentElement;
             }
             return parents;
+        }
+        function utils_elementTransitionEnd(el, callback) {
+            function fireCallBack(e) {
+                if (e.target !== el) return;
+                callback.call(el, e);
+                el.removeEventListener("transitionend", fireCallBack);
+            }
+            if (callback) el.addEventListener("transitionend", fireCallBack);
         }
         function elementOuterSize(el, size, includeMargins) {
             const window = ssr_window_esm_getWindow();
@@ -10273,6 +10329,179 @@
                 resume
             });
         }
+        function effect_target_effectTarget(effectParams, slideEl) {
+            const transformEl = utils_getSlideTransformEl(slideEl);
+            if (transformEl !== slideEl) {
+                transformEl.style.backfaceVisibility = "hidden";
+                transformEl.style["-webkit-backface-visibility"] = "hidden";
+            }
+            return transformEl;
+        }
+        function effect_virtual_transition_end_effectVirtualTransitionEnd(_ref) {
+            let {swiper, duration, transformElements, allSlides} = _ref;
+            const {activeIndex} = swiper;
+            const getSlide = el => {
+                if (!el.parentElement) {
+                    const slide = swiper.slides.filter((slideEl => slideEl.shadowRoot && slideEl.shadowRoot === el.parentNode))[0];
+                    return slide;
+                }
+                return el.parentElement;
+            };
+            if (swiper.params.virtualTranslate && duration !== 0) {
+                let eventTriggered = false;
+                let transitionEndTarget;
+                if (allSlides) transitionEndTarget = transformElements; else transitionEndTarget = transformElements.filter((transformEl => {
+                    const el = transformEl.classList.contains("swiper-slide-transform") ? getSlide(transformEl) : transformEl;
+                    return swiper.getSlideIndex(el) === activeIndex;
+                }));
+                transitionEndTarget.forEach((el => {
+                    utils_elementTransitionEnd(el, (() => {
+                        if (eventTriggered) return;
+                        if (!swiper || swiper.destroyed) return;
+                        eventTriggered = true;
+                        swiper.animating = false;
+                        const evt = new window.CustomEvent("transitionend", {
+                            bubbles: true,
+                            cancelable: true
+                        });
+                        swiper.wrapperEl.dispatchEvent(evt);
+                    }));
+                }));
+            }
+        }
+        function create_shadow_createShadow(suffix, slideEl, side) {
+            const shadowClass = `swiper-slide-shadow${side ? `-${side}` : ""}${suffix ? ` swiper-slide-shadow-${suffix}` : ""}`;
+            const shadowContainer = utils_getSlideTransformEl(slideEl);
+            let shadowEl = shadowContainer.querySelector(`.${shadowClass.split(" ").join(".")}`);
+            if (!shadowEl) {
+                shadowEl = utils_createElement("div", shadowClass.split(" "));
+                shadowContainer.append(shadowEl);
+            }
+            return shadowEl;
+        }
+        function effect_init_effectInit(params) {
+            const {effect, swiper, on, setTranslate, setTransition, overwriteParams, perspective, recreateShadows, getEffectParams} = params;
+            on("beforeInit", (() => {
+                if (swiper.params.effect !== effect) return;
+                swiper.classNames.push(`${swiper.params.containerModifierClass}${effect}`);
+                if (perspective && perspective()) swiper.classNames.push(`${swiper.params.containerModifierClass}3d`);
+                const overwriteParamsResult = overwriteParams ? overwriteParams() : {};
+                Object.assign(swiper.params, overwriteParamsResult);
+                Object.assign(swiper.originalParams, overwriteParamsResult);
+            }));
+            on("setTranslate", (() => {
+                if (swiper.params.effect !== effect) return;
+                setTranslate();
+            }));
+            on("setTransition", ((_s, duration) => {
+                if (swiper.params.effect !== effect) return;
+                setTransition(duration);
+            }));
+            on("transitionEnd", (() => {
+                if (swiper.params.effect !== effect) return;
+                if (recreateShadows) {
+                    if (!getEffectParams || !getEffectParams().slideShadows) return;
+                    swiper.slides.forEach((slideEl => {
+                        slideEl.querySelectorAll(".swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left").forEach((shadowEl => shadowEl.remove()));
+                    }));
+                    recreateShadows();
+                }
+            }));
+            let requireUpdateOnVirtual;
+            on("virtualUpdate", (() => {
+                if (swiper.params.effect !== effect) return;
+                if (!swiper.slides.length) requireUpdateOnVirtual = true;
+                requestAnimationFrame((() => {
+                    if (requireUpdateOnVirtual && swiper.slides && swiper.slides.length) {
+                        setTranslate();
+                        requireUpdateOnVirtual = false;
+                    }
+                }));
+            }));
+        }
+        function EffectCards(_ref) {
+            let {swiper, extendParams, on} = _ref;
+            extendParams({
+                cardsEffect: {
+                    slideShadows: true,
+                    rotate: true,
+                    perSlideRotate: 2,
+                    perSlideOffset: 8
+                }
+            });
+            const setTranslate = () => {
+                const {slides, activeIndex, rtlTranslate: rtl} = swiper;
+                const params = swiper.params.cardsEffect;
+                const {startTranslate, isTouched} = swiper.touchEventsData;
+                const currentTranslate = rtl ? -swiper.translate : swiper.translate;
+                for (let i = 0; i < slides.length; i += 1) {
+                    const slideEl = slides[i];
+                    const slideProgress = slideEl.progress;
+                    const progress = Math.min(Math.max(slideProgress, -4), 4);
+                    let offset = slideEl.swiperSlideOffset;
+                    if (swiper.params.centeredSlides && !swiper.params.cssMode) swiper.wrapperEl.style.transform = `translateX(${swiper.minTranslate()}px)`;
+                    if (swiper.params.centeredSlides && swiper.params.cssMode) offset -= slides[0].swiperSlideOffset;
+                    let tX = swiper.params.cssMode ? -offset - swiper.translate : -offset;
+                    let tY = 0;
+                    const tZ = -100 * Math.abs(progress);
+                    let scale = 1;
+                    let rotate = -params.perSlideRotate * progress;
+                    let tXAdd = params.perSlideOffset - Math.abs(progress) * .75;
+                    const slideIndex = swiper.virtual && swiper.params.virtual.enabled ? swiper.virtual.from + i : i;
+                    const isSwipeToNext = (slideIndex === activeIndex || slideIndex === activeIndex - 1) && progress > 0 && progress < 1 && (isTouched || swiper.params.cssMode) && currentTranslate < startTranslate;
+                    const isSwipeToPrev = (slideIndex === activeIndex || slideIndex === activeIndex + 1) && progress < 0 && progress > -1 && (isTouched || swiper.params.cssMode) && currentTranslate > startTranslate;
+                    if (isSwipeToNext || isSwipeToPrev) {
+                        const subProgress = (1 - Math.abs((Math.abs(progress) - .5) / .5)) ** .5;
+                        rotate += -28 * progress * subProgress;
+                        scale += -.5 * subProgress;
+                        tXAdd += 96 * subProgress;
+                        tY = `${-25 * subProgress * Math.abs(progress)}%`;
+                    }
+                    if (progress < 0) tX = `calc(${tX}px ${rtl ? "-" : "+"} (${tXAdd * Math.abs(progress)}%))`; else if (progress > 0) tX = `calc(${tX}px ${rtl ? "-" : "+"} (-${tXAdd * Math.abs(progress)}%))`; else tX = `${tX}px`;
+                    if (!swiper.isHorizontal()) {
+                        const prevY = tY;
+                        tY = tX;
+                        tX = prevY;
+                    }
+                    const scaleString = progress < 0 ? `${1 + (1 - scale) * progress}` : `${1 - (1 - scale) * progress}`;
+                    const transform = `\n        translate3d(${tX}, ${tY}, ${tZ}px)\n        rotateZ(${params.rotate ? rtl ? -rotate : rotate : 0}deg)\n        scale(${scaleString})\n      `;
+                    if (params.slideShadows) {
+                        let shadowEl = slideEl.querySelector(".swiper-slide-shadow");
+                        if (!shadowEl) shadowEl = create_shadow_createShadow("cards", slideEl);
+                        if (shadowEl) shadowEl.style.opacity = Math.min(Math.max((Math.abs(progress) - .5) / .5, 0), 1);
+                    }
+                    slideEl.style.zIndex = -Math.abs(Math.round(slideProgress)) + slides.length;
+                    const targetEl = effect_target_effectTarget(params, slideEl);
+                    targetEl.style.transform = transform;
+                }
+            };
+            const setTransition = duration => {
+                const transformElements = swiper.slides.map((slideEl => utils_getSlideTransformEl(slideEl)));
+                transformElements.forEach((el => {
+                    el.style.transitionDuration = `${duration}ms`;
+                    el.querySelectorAll(".swiper-slide-shadow").forEach((shadowEl => {
+                        shadowEl.style.transitionDuration = `${duration}ms`;
+                    }));
+                }));
+                effect_virtual_transition_end_effectVirtualTransitionEnd({
+                    swiper,
+                    duration,
+                    transformElements
+                });
+            };
+            effect_init_effectInit({
+                effect: "cards",
+                swiper,
+                on,
+                setTranslate,
+                setTransition,
+                perspective: () => true,
+                overwriteParams: () => ({
+                    watchSlidesProgress: true,
+                    virtualTranslate: !swiper.params.cssMode
+                })
+            });
+        }
         function initSliders() {
             if (document.querySelector(".intro__slider")) new swiper_core_Swiper(".intro__slider", {
                 modules: [ Navigation, Autoplay ],
@@ -10297,19 +10526,23 @@
                 on: {}
             });
             if (document.querySelector(".online__slider")) new swiper_core_Swiper(".online__slider", {
-                modules: [ Navigation, Pagination ],
+                modules: [ Navigation, Pagination, Autoplay ],
                 observer: true,
                 observeParents: true,
                 slidesPerView: 4,
                 spaceBetween: 20,
                 speed: 800,
+                autoplay: {
+                    delay: 1500,
+                    disableOnInteraction: false
+                },
                 pagination: {
                     el: ".online__dotts",
                     clickable: true
                 },
                 navigation: {
-                    prevEl: ".arrows__arrow--prev",
-                    nextEl: ".arrows__arrow--next"
+                    prevEl: ".arrows__online--prev",
+                    nextEl: ".arrows__online--next"
                 },
                 breakpoints: {
                     320: {
@@ -10328,6 +10561,26 @@
                         slidesPerView: 4,
                         spaceBetween: 20
                     }
+                },
+                on: {}
+            });
+            if (document.querySelector(".photos__slider")) new swiper_core_Swiper(".photos__slider", {
+                modules: [ Navigation, Pagination, EffectCards ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                grabCursor: true,
+                speed: 800,
+                effect: "cards",
+                pagination: {
+                    el: ".controls-photos__fraction",
+                    clickable: true,
+                    type: "fraction"
+                },
+                navigation: {
+                    prevEl: ".arrows__photos--prev",
+                    nextEl: ".arrows__photos--next"
                 },
                 on: {}
             });
@@ -10494,6 +10747,14 @@
                     charCount.textContent = `${currentLength}/2000 символов`;
                 }));
             }));
+            const textareamin = document.querySelector(".request-textarea-min");
+            if (textareamin !== null) {
+                const charCount = textareamin.nextElementSibling;
+                textareamin.addEventListener("input", (() => {
+                    const currentLength = textareamin.value.length;
+                    charCount.textContent = `${currentLength}/30 символов`;
+                }));
+            }
             const checkboxes = document.querySelectorAll(".form-chk");
             const messageCheckbox = document.getElementById("message-chk");
             if (checkboxes, messageCheckbox !== null) {
@@ -10515,6 +10776,26 @@
                     item.classList.add("rtl-reverse");
                 }));
             }
+            const uploadArea = document.getElementById("uploadArea");
+            const fileInput = document.getElementById("fileInput");
+            if (uploadArea, fileInput !== null) {
+                uploadArea.addEventListener("dragover", (e => {
+                    e.preventDefault();
+                    uploadArea.classList.add("hover");
+                }));
+                uploadArea.addEventListener("dragleave", (() => {
+                    uploadArea.classList.remove("hover");
+                }));
+                uploadArea.addEventListener("drop", (e => {
+                    e.preventDefault();
+                    uploadArea.classList.remove("hover");
+                    const files = e.dataTransfer.files;
+                    if (files.length > 0) fileInput.files = files;
+                }));
+                uploadArea.addEventListener("click", (() => {
+                    fileInput.click();
+                }));
+            }
         }));
         window["FLS"] = false;
         menuInit();
@@ -10525,5 +10806,6 @@
             autoHeight: false
         });
         formSubmit();
+        formRating();
     })();
 })();

@@ -4,6 +4,7 @@
 @import "base/mixins";
 
 // Підключення шрифтів ===========================================================================================================================================================================================================================================================================
+@import url(https://fonts.googleapis.com/css?family=Kings:regular);
 @import url(https://fonts.googleapis.com/css?family=Roboto:regular,500);
 @import url(https://fonts.googleapis.com/css?family=Montserrat+Alternates:300,regular,500,600,700,800,900);
 
@@ -20,7 +21,9 @@
 
 // За замовчуванням шрифт ==============================================================================================================================================================================================================================================================================
 $fontFamily: "Roboto";
+$fontFamilyNumbers: "Kings";
 $fontFamilyMontAlt: "Montserrat Alternates";
+
 $fontSize: toRem(16); // де 14(px) - розмір шрифту за замовчуванням з макету
 
 // Основні кольори аутентифікація
@@ -202,12 +205,16 @@ body {
 	&__list {
 		gap: toRem(5);
 		flex-wrap: wrap;
+		line-height: 125%;
 		align-items: center;
 		display: inline-flex;
-		border-radius: toRem(30);
+		border-radius: toRem(10);
 		background: $gradientPink;
-		padding: toRem(5) toRem(10);
+		padding: toRem(5) toRem(7);
 		font-family: $fontFamilyMontAlt;
+		@media (max-width: $mobileSmall) {
+			gap: toRem(3);
+		}
 	}
 	// .breadcrumbs__item
 	&__item {
@@ -223,6 +230,9 @@ body {
 				font-size: toRem(20);
 				transform: rotate(90deg);
 			}
+		}
+		@media (max-width: $mobileSmall) {
+			gap: toRem(3);
 		}
 	}
 	// .breadcrumbs__link

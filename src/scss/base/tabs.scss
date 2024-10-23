@@ -1,5 +1,5 @@
 // ========================================================================================================================================================
-// Tabs
+// Tabs Custom
 .tabs {
 	// .tabs__navigation
 	&__navigation {
@@ -25,6 +25,59 @@
 	}
 	// .tabs__body
 	&__body {
+	}
+}
+// ========================================================================================================================================================
+// Tabs Profile Photo
+.tabs-photo {
+	// .tabs-photo__navigation
+	&__navigation {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("gap", 15, 10);
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	// .tabs-photo__title
+	&__title {
+		width: 100%;
+		display: flex;
+		gap: toRem(8);
+		align-items: center;
+		justify-content: center;
+		border-radius: toRem(12);
+		background-color: $bgColor;
+		padding: toRem(12) toRem(0);
+		transition:
+			background-color 0.3s ease 0s,
+			color 0.3s ease 0s;
+			@include adaptiveValue("font-size", 18, 14);
+		&:first-child {
+			color: $blueColor;
+			border: toRem(1) solid rgba($blueColor, 0.5);
+		}
+		&:last-child {
+			color: $redColor;
+			border: toRem(1) solid rgba($redColor, 0.5);
+		}
+		&._tab-active {
+			&:last-child {
+				color: $mainColor;
+				background-color: rgba($redColor, 0.5);
+			}
+			&:first-child {
+				color: $mainColor;
+				background-color: rgba($blueColor, 0.5);
+			}
+		}
+	}
+	// .tabs-photo__content
+	&__content {
+	}
+	// .tabs-photo__body
+	&__body {
+		position: relative;
 	}
 }
 // ========================================================================================================================================================

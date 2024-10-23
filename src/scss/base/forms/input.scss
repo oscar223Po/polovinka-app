@@ -56,12 +56,22 @@ textarea.input {
 	resize: none;
 	padding: 14px 12px;
 	min-height: toRem(120);
+	&--res {
+		min-height: toRem(100);
+		max-height: toRem(100);
+	}
 }
-.count {
+.count,
+.symbols {
 	font-size: 12px;
 	line-height: 117%;
 	text-align: right;
 	margin-top: toRem(8);
+}
+.count {
 	color: $secondtxtColor;
+}
+.symbols {
+	color: rgba($mainColor, 0.85);
 }
 // ========================================================================================================================================================

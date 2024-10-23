@@ -584,7 +584,7 @@ summary {
 }
 //========================================================================================================================================================
 // Slider Arrow & Dotts
-.arrows {
+.arrows-mrg {
 	top: 50%;
 	z-index: 1;
 	width: 100%;
@@ -593,6 +593,46 @@ summary {
 	align-items: center;
 	justify-content: space-between;
 	transform: translate(0px, -50%);
+	// .arrows-mrg__arrow
+	&__arrow {
+		overflow: hidden;
+		width: toRem(35);
+		font-weight: 700;
+		height: toRem(35);
+		position: relative;
+		font-size: toRem(22);
+		border-radius: toRem(10);
+		background: $gradientOrange;
+		transition: opacity 0.4s ease 0s;
+		box-shadow:
+			rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+			rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.75;
+			}
+		}
+		// .arrows-mrg__arrow--prev
+		&--prev {
+			transform: rotate(-90deg);
+			margin-left: toRem(-17.5);
+			@media (max-width: toEm(1210)) {
+				margin-left: toRem(-10);
+			}
+		}
+		// .arrows-mrg__arrow--next
+		&--next {
+			transform: rotate(90deg);
+			margin-right: toRem(-17.5);
+			@media (max-width: toEm(1210)) {
+				margin-right: toRem(-10);
+			}
+		}
+	}
+}
+.arrows {
+	display: flex;
+	align-items: center;
 	// .arrows__arrow
 	&__arrow {
 		overflow: hidden;
@@ -615,18 +655,10 @@ summary {
 		// .arrows__arrow--prev
 		&--prev {
 			transform: rotate(-90deg);
-			margin-left: toRem(-17.5);
-			@media (max-width: toEm(1210)) {
-				margin-left: toRem(-10);
-			}
 		}
 		// .arrows__arrow--next
 		&--next {
 			transform: rotate(90deg);
-			margin-right: toRem(-17.5);
-			@media (max-width: toEm(1210)) {
-				margin-right: toRem(-10);
-			}
 		}
 	}
 }
@@ -679,3 +711,41 @@ summary {
 	}
 }
 //========================================================================================================================================================
+// Upload File Picture
+.upload {
+	// .upload__area
+	&__area {
+		width: 100%;
+		display: flex;
+		cursor: pointer;
+		height: toRem(200);
+		text-align: center;
+		align-items: center;
+		border-radius: 10px;
+		justify-content: center;
+		background-color: $bgColor;
+		border: 1px dashed $pinkColor;
+		transition: background-color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: rgba($blueColor, 0.1);
+			}
+		}
+		&._form-error {
+			border: 1px dashed $redColor;
+		}
+	}
+	// .upload__label
+	&__label {
+		line-height: 125%;
+		padding: toRem(0) toRem(30);
+		@include adaptiveValue("font-size", 16, 14);
+	}
+	// .upload__input
+	&__input {
+		&[type="file"] {
+			display: none;
+		}
+	}
+}
+// ========================================================================================================================================================

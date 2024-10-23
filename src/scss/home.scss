@@ -64,8 +64,8 @@
 	}
 	// .intro__svg
 	&__svg {
-		width: toRem(50);
-		height: toRem(50);
+		width: toRem(60);
+		height: toRem(60);
 		position: absolute;
 		animation: circle 2.5s infinite;
 		@media (max-width: $mobile) {
@@ -101,16 +101,16 @@
 		}
 		@keyframes circle {
 			0% {
-				width: toRem(50);
-				height: toRem(50);
+				width: toRem(60);
+				height: toRem(60);
 			}
 			50% {
 				width: toRem(40);
 				height: toRem(40);
 			}
 			100% {
-				width: toRem(50);
-				height: toRem(50);
+				width: toRem(60);
+				height: toRem(60);
 			}
 		}
 	}
