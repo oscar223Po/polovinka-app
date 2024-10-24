@@ -1784,6 +1784,9 @@ summary::marker {
 .bg-shad--rbwr {
   box-shadow: rgba(240,46,170,.4) 5px 5px,rgba(240,46,170,.3) 10px 10px,rgba(240,46,170,.2) 15px 15px,rgba(240,46,170,.1) 20px 20px,rgba(240,46,170,.05) 25px 25px
 }
+.bg-shad--rbm {
+  box-shadow: rgba(240,46,170,.4) 3px 3px,rgba(240,46,170,.3) 6px 6px,rgba(240,46,170,.2) 9px 9px
+}
 .aside {
   padding: .3125rem;
   border-radius: .75rem;
@@ -1930,8 +1933,17 @@ summary::marker {
   bottom: 15px
 }
 .articles__label {
+  display: flex;
   font-weight: 600;
-  padding-left: .9375rem
+  align-items: center;
+  padding: 0 .9375rem;
+  justify-content: space-between
+}
+.articles__label span {
+  border-radius: .1875rem;
+  padding: .3125rem .625rem;
+  background: linear-gradient(90deg,#514197 0,#7e1450 100%);
+  box-shadow: rgba(35,14,43,.3) 0 3px 15px 0,rgba(35,14,43,.3) 0 3px 15px 0
 }
 .articles__label:not(:last-child) {
   margin-bottom: .625rem

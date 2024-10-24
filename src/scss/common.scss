@@ -203,6 +203,12 @@ summary {
 			rgba(240, 46, 170, 0.1) 20px 20px,
 			rgba(240, 46, 170, 0.05) 25px 25px;
 	}
+	&--rbm {
+		box-shadow:
+			rgba(240, 46, 170, 0.4) 3px 3px,
+			rgba(240, 46, 170, 0.3) 6px 6px,
+			rgba(240, 46, 170, 0.2) 9px 9px;
+	}
 }
 //========================================================================================================================================================
 // Aside
@@ -415,8 +421,19 @@ summary {
 	}
 	// .articles__label
 	&__label {
+		display: flex;
 		font-weight: 600;
-		padding-left: toRem(15);
+		align-items: center;
+		padding: toRem(0) toRem(15);
+		justify-content: space-between;
+		span {
+			border-radius: toRem(3);
+			padding: toRem(5) toRem(10);
+			background: linear-gradient(90deg, rgba(#514197, 1) 0%, rgba(#7e1450, 1) 100%);
+			box-shadow:
+				rgba($bgColor, 0.3) 0px 3px 15px 0px,
+				rgba($bgColor, 0.3) 0px 3px 15px 0px;
+		}
 		&:not(:last-child) {
 			margin-bottom: toRem(10);
 		}
