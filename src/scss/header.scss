@@ -36,7 +36,8 @@
 	}
 	// .header__logo
 	&__logo {
-		display: flex;
+		align-items: center;
+		display: inline-flex;
 		border-radius: toRem(30);
 		padding: toRem(5) toRem(10);
 		transition: opacity 0.3s ease 0s;
