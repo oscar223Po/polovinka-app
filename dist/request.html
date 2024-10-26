@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241025223306">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241027003917">
 	<link rel="shortcut icon" href="img/icons/head-logo.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,19 +26,19 @@
 			<!-- [Request] -->
 			<section class="request">
 				<div class="request__container-mob">
-					<form action="" class="request__form form">
-						<div data-spollers class="request__spollers spollers">
-							<details class="spollers__item">
-								<summary class="spollers__title">
-									<div class="spollers__span spollers__span--yellow _icon-user"><span>Кто ты и откуда?</span></div>
+					<form action="" class="request__form shape">
+						<div data-spollers class="request__spollers spollers-auth">
+							<details class="spollers-auth__item">
+								<summary class="spollers-auth__title">
+									<div class="spollers-auth__span spollers-auth__span--yellow _icon-user"><span>Кто ты и откуда?</span></div>
 								</summary>
-								<div class="spollers__body">
-									<div class="form__labels">
-										<label for="" class="form__label">
+								<div class="spollers-auth__body">
+									<div class="shape__labels">
+										<label for="" class="shape__label">
 											<span>Имя*</span>
-											<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Введите логин" placeholder="Олег" class="form__input input input--gray">
+											<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Введите логин" placeholder="Олег" class="shape__input input input--gray">
 										</label>
-										<div class="form__select">
+										<div class="shape__select">
 											<span>Регион*</span>
 											<select name="region[]" data-class-modif="form" id="regionSelect">
 												<option value="1" selected data-href="request.html">Центр Израиля</option>
@@ -49,11 +49,11 @@
 									</div>
 								</div>
 							</details>
-							<details class="spollers__item">
-								<summary class="spollers__title">
-									<div class="spollers__span spollers__span--red _icon-date"><span>Когда у тебя День Рождение?</span></div>
+							<details class="spollers-auth__item">
+								<summary class="spollers-auth__title">
+									<div class="spollers-auth__span spollers-auth__span--red _icon-date"><span>Когда у тебя День Рождение?</span></div>
 								</summary>
-								<div class="spollers__body date">
+								<div class="spollers-auth__body date">
 									<div class="date__selects">
 										<div class="date__select date__select--one">
 											<span>День</span>
@@ -133,11 +133,11 @@
 									</div>
 								</div>
 							</details>
-							<details class="spollers__item">
-								<summary class="spollers__title">
-									<div class="spollers__span spollers__span--blue _icon-goal"><span>Цель знакомства</span></div>
+							<details class="spollers-auth__item">
+								<summary class="spollers-auth__title">
+									<div class="spollers-auth__span spollers-auth__span--blue _icon-goal"><span>Цель знакомства</span></div>
 								</summary>
-								<div class="spollers__body">
+								<div class="spollers-auth__body">
 									<div class="options">
 										<div class="options__item">
 											<input id="g_1" class="options__input form-chk" type="checkbox" value="1">
@@ -167,11 +167,11 @@
 									<div id="message-chk" style="display: none; color: #f73d58; text-align: right; margin-top: 10px; font-size: 12px; font-weight: 500;">Выберите один из пунктов</div>
 								</div>
 							</details>
-							<details class="spollers__item">
-								<summary class="spollers__title">
-									<div class="spollers__span spollers__span--blue _icon-family"><span>Твой семейный статус</span></div>
+							<details class="spollers-auth__item">
+								<summary class="spollers-auth__title">
+									<div class="spollers-auth__span spollers-auth__span--blue _icon-family"><span>Твой семейный статус</span></div>
 								</summary>
-								<div class="spollers__body">
+								<div class="spollers-auth__body">
 									<div class="options">
 										<div class="options__item">
 											<input id="c_1" class="options__input" type="radio" value="1" name="opt-status">
@@ -196,11 +196,11 @@
 									</div>
 								</div>
 							</details>
-							<details class="spollers__item">
-								<summary class="spollers__title">
-									<div class="spollers__span spollers__span--yellow _icon-kids"><span>Дети</span></div>
+							<details class="spollers-auth__item">
+								<summary class="spollers-auth__title">
+									<div class="spollers-auth__span spollers-auth__span--yellow _icon-kids"><span>Дети</span></div>
 								</summary>
-								<div class="spollers__body">
+								<div class="spollers-auth__body">
 									<div class="options">
 										<div class="options__item">
 											<input id="k_1" class="options__input" type="radio" value="1" name="opt-kids">
@@ -221,34 +221,34 @@
 									</div>
 								</div>
 							</details>
-							<details class="spollers__item">
-								<summary class="spollers__title">
-									<div class="spollers__span spollers__span--red _icon-info"><span>Рост и вес</span></div>
+							<details class="spollers-auth__item">
+								<summary class="spollers-auth__title">
+									<div class="spollers-auth__span spollers-auth__span--red _icon-info"><span>Рост и вес</span></div>
 								</summary>
-								<div class="spollers__body metric">
+								<div class="spollers-auth__body metric">
 									<div class="metric__ranges">
 										<div class="metric__range range">
 											<div class="range__nead">
 												<h5 class="range__title title title--min">Рост:</h5>
-												<span class="range__span range__span--hight" id="range-span-hight"></span>
+												<span class="range__span span-auth range__span--hight" id="range-span-hight"></span>
 											</div>
 											<div class="range__slide" id="range-hight"></div>
 										</div>
 										<div class="metric__range range">
 											<div class="range__nead">
 												<h5 class="range__title title title--min">Вес:</h5>
-												<span class="range__span range__span--weight" id="range-span-weight"></span>
+												<span class="range__span span-auth range__span--weight" id="range-span-weight"></span>
 											</div>
 											<div class="range__slide" id="range-weight"></div>
 										</div>
 									</div>
 								</div>
 							</details>
-							<details class="spollers__item">
-								<summary class="spollers__title">
-									<div class="spollers__span spollers__span--blue _icon-quest"><span>Еще немного о себе</span></div>
+							<details class="spollers-auth__item">
+								<summary class="spollers-auth__title">
+									<div class="spollers-auth__span spollers-auth__span--blue _icon-quest"><span>Еще немного о себе</span></div>
 								</summary>
-								<div class="spollers__body more">
+								<div class="spollers-auth__body more">
 									<div class="more__buttons">
 										<button data-popup="#more-body" type="button" class="more__button _icon-arrow">
 											<div class="more__button-inner">
@@ -315,11 +315,11 @@
 									</div>
 								</div>
 							</details>
-							<details class="spollers__item">
-								<summary class="spollers__title">
-									<div class="spollers__span spollers__span--blue _icon-language"><span>Владение языками</span></div>
+							<details class="spollers-auth__item">
+								<summary class="spollers-auth__title">
+									<div class="spollers-auth__span spollers-auth__span--blue _icon-language"><span>Владение языками</span></div>
 								</summary>
-								<div class="spollers__body">
+								<div class="spollers-auth__body">
 									<div class="options lang">
 										<div class="lang__item">
 											<input id="l_1" class="lang__input" type="checkbox" value="1" name="chk-lang">
@@ -389,11 +389,11 @@
 									<div id="lang-chk" style="color: #f73d58; text-align: right; margin-top: 10px; font-size: 12px; font-weight: 500;">Выберите один из пунктов</div>
 								</div>
 							</details>
-							<details class="spollers__item">
-								<summary class="spollers__title">
-									<div class="spollers__span spollers__span--yellow _icon-move"><span>Возможность переезда</span></div>
+							<details class="spollers-auth__item">
+								<summary class="spollers-auth__title">
+									<div class="spollers-auth__span spollers-auth__span--yellow _icon-move"><span>Возможность переезда</span></div>
 								</summary>
-								<div class="spollers__body">
+								<div class="spollers-auth__body">
 									<div class="options">
 										<div class="options__item">
 											<input id="m_1" class="options__input" type="radio" value="1" name="opt-move">
@@ -418,11 +418,11 @@
 									</div>
 								</div>
 							</details>
-							<details class="spollers__item">
-								<summary class="spollers__title">
-									<div class="spollers__span spollers__span--red _icon-quest"><span>Еще пару вопросов</span></div>
+							<details class="spollers-auth__item">
+								<summary class="spollers-auth__title">
+									<div class="spollers-auth__span spollers-auth__span--red _icon-quest"><span>Еще пару вопросов</span></div>
 								</summary>
-								<div class="spollers__body more">
+								<div class="spollers-auth__body more">
 									<div class="more__buttons">
 										<button data-popup="#more-edu" type="button" class="more__button _icon-arrow">
 											<div class="more__button-inner">
@@ -535,33 +535,33 @@
 									</div>
 								</div>
 							</details>
-							<details class="spollers__item">
-								<summary class="spollers__title">
-									<div class="spollers__span spollers__span--blue _icon-about"><span>Несколько слов о себе</span></div>
+							<details class="spollers-auth__item">
+								<summary class="spollers-auth__title">
+									<div class="spollers-auth__span spollers-auth__span--blue _icon-about"><span>Несколько слов о себе</span></div>
 								</summary>
-								<div class="spollers__body">
+								<div class="spollers-auth__body">
 									<textarea data-required="text" class="input input--gray request-textarea" rows="10" cols="50" maxlength="2000" placeholder="Немного о себе"></textarea>
 									<div class="count">0/2000 символов</div>
 								</div>
 							</details>
-							<details class="spollers__item">
-								<summary class="spollers__title">
-									<div class="spollers__span spollers__span--primary _icon-hobby"><span>Интересы и увлечения</span></div>
+							<details class="spollers-auth__item">
+								<summary class="spollers-auth__title">
+									<div class="spollers-auth__span spollers-auth__span--primary _icon-hobby"><span>Интересы и увлечения</span></div>
 								</summary>
-								<div class="spollers__body">
+								<div class="spollers-auth__body">
 									<textarea data-required="text" class="input input--gray request-textarea" rows="10" cols="50" maxlength="2000" placeholder="Немного о увлечениях"></textarea>
 									<div class="count">0/2000 символов</div>
 								</div>
 							</details>
-							<details class="spollers__item">
-								<summary class="spollers__title">
-									<div class="spollers__span spollers__span--yellow _icon-partner"><span>О партнёре</span></div>
+							<details class="spollers-auth__item">
+								<summary class="spollers-auth__title">
+									<div class="spollers-auth__span spollers-auth__span--yellow _icon-partner"><span>О партнёре</span></div>
 								</summary>
-								<div class="spollers__body about">
+								<div class="spollers-auth__body about">
 									<div class="about__range range">
 										<div class="range__nead">
 											<h5 class="range__title title title--min">Возраст партнёра:</h5>
-											<span class="range__span" id="range-span-old"></span>
+											<span class="range__span span-auth" id="range-span-old"></span>
 										</div>
 										<div class="range__slide" id="range-old"></div>
 									</div>
@@ -573,8 +573,8 @@
 								</div>
 							</details>
 						</div>
-						<div class="form__save ba-cont">
-							<button type="submit" class="form__button button button--lr">Сохранить</button>
+						<div class="shape__save ba-cont">
+							<button type="submit" class="shape__button button button--lr">Сохранить</button>
 						</div>
 					</form>
 				</div>
@@ -1244,7 +1244,7 @@
 		<!-- //======================================================================================================================================================== -->
 
 	</div>
-	<script src="js/app.min.js?_v=20241025223306"></script>
+	<script src="js/app.min.js?_v=20241027003917"></script>
 </body>
 
 </html>

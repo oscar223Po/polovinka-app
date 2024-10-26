@@ -123,7 +123,6 @@
 	&__ranges {
 		display: grid;
 		gap: toRem(25);
-		padding: toRem(16) toRem(0);
 	}
 }
 .range {
@@ -133,7 +132,7 @@
 		align-items: center;
 		justify-content: space-between;
 		&:not(:last-child) {
-			margin-bottom: toRem(18);
+			margin-bottom: toRem(24);
 		}
 	}
 	// .range__title
@@ -141,9 +140,14 @@
 	}
 	// .range__span
 	&__span {
-		color: $secondtxtColor;
+		font-weight: 500;
+		color: $yellowColor;
 		&::after {
 			margin-left: toRem(3.5);
+		}
+		&.span-auth {
+			font-weight: 400;
+			color: $secondtxtColor;
 		}
 		// .metric__range-span--01
 		&--hight {
@@ -163,6 +167,62 @@
 	}
 }
 // More
+.more {
+	// .more__buttons
+	&__buttons {
+		display: grid;
+		gap: toRem(12);
+	}
+	// .more__button
+	&__button {
+		width: 100%;
+		display: flex;
+		gap: toRem(15);
+		text-align: left;
+		align-items: center;
+		min-height: toRem(56);
+		border-radius: toRem(12);
+		flex-direction: row-reverse;
+		background-color: $purpleColor;
+		justify-content: space-between;
+		@include adaptiveValue("padding-left", 16, 12);
+		@include adaptiveValue("padding-right", 16, 12);
+		&::before {
+			display: flex;
+			width: toRem(24);
+			height: toRem(24);
+			align-items: center;
+			color: $primaryColor;
+			font-size: toRem(20);
+			justify-content: center;
+			transform: rotate(90deg);
+		}
+	}
+	// .more__button-inner
+	&__button-inner {
+		display: flex;
+		gap: toRem(8);
+		align-items: center;
+	}
+	// .more__button-svg
+	&__button-svg {
+		display: flex;
+		height: toRem(24);
+		align-items: center;
+		min-width: toRem(24);
+		max-width: toRem(24);
+		justify-content: center;
+	}
+	// .more__button-title
+	&__button-title {
+		line-height: 125%;
+		@include adaptiveValue("font-size", 16, 14);
+		span {
+			color: $primaryColor;
+		}
+	}
+}
+/*
 .more {
 	// .more__buttons
 	&__buttons {
@@ -218,6 +278,7 @@
 		}
 	}
 }
+*/
 // About
 .about {
 	// .about__text

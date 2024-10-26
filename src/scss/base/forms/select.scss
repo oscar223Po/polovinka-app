@@ -125,7 +125,6 @@
 			}
 		}
 	}
-
 	// Конструкція додаткових даних
 	&__row {
 		display: inline-flex;
@@ -185,6 +184,27 @@
 			@media (any-hover: hover) {
 				&:hover {
 					background-color: rgba($yellowColor, 0.5);
+				}
+			}
+		}
+	}
+	&_main {
+		.select__title {
+			background-color: rgba($pinkColor, 0.1);
+			border: toRem(1) solid rgba($pinkColor, 0.45);
+		}
+		.select__value {
+			font-weight: 400;
+		}
+		.select__options {
+			background-color: $purpleColor;
+			border: toRem(1) solid rgba($pinkColor, 0.45);
+		}
+		.select__option {
+			color: $mainColor;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $blueColor;
 				}
 			}
 		}

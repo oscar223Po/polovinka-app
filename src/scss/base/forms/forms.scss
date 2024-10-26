@@ -1,8 +1,8 @@
 // ========================================================================================================================================================
 //<FORM>
 // Сніппет (HTML):
-.form {
-	// .form__labels
+.shape {
+	// .shape__labels
 	&__labels {
 		display: grid;
 		gap: toRem(20);
@@ -19,7 +19,7 @@
 			}
 		}
 	}
-	// .form__label
+	// .shape__label
 	&__label {
 		.form__error {
 			color: $redColor;
@@ -28,10 +28,10 @@
 			padding-top: toRem(5);
 		}
 	}
-	// .form__input
+	// .shape__input
 	&__input {
 	}
-	// .form__bottom
+	// .shape__bottom
 	&__bottom {
 		left: 0;
 		right: 0;
@@ -46,7 +46,7 @@
 				rgba(17, 17, 26, 0.1) 0px 0px 8px;
 		}
 	}
-	// .form__bottom-content
+	// .shape__bottom-content
 	&__bottom-content {
 		padding: toRem(12) toRem(15);
 		&.ba-cont {
@@ -58,14 +58,14 @@
 			}
 		}
 	}
-	// .form__button
+	// .shape__button
 	&__button {
 		width: 100%;
 		&:not(:last-child) {
 			margin-bottom: toRem(12);
 		}
 	}
-	// .form__text
+	// .shape__text
 	&__text {
 		line-height: 117%;
 		text-align: center;
@@ -79,17 +79,17 @@
 			}
 		}
 	}
-	// .form__confirm
+	// .shape__confirm
 	&__confirm {
 		display: flex;
 		align-items: center;
 		padding-top: toRem(12);
 		justify-content: space-between;
 	}
-	// .form__checkbox
+	// .shape__checkbox
 	&__checkbox {
 	}
-	// .form__link
+	// .shape__link
 	&__link {
 		line-height: 129%;
 		color: $primaryColor;
@@ -99,15 +99,26 @@
 			}
 		}
 	}
-	// .form__bottom-button
+	// .shape__bottom-button
 	&__bottom-button {
 		padding: toRem(15);
 		background-color: #f7f8f9;
 	}
-	// .form__save
+	// .shape__save
 	&__save {
 		background-color: #fff;
 		padding: toRem(12) toRem(0) toRem(28) toRem(0);
+	}
+}
+.form {
+	// .form__select
+	&__select {
+		span {
+			display: inline-flex;
+			&:not(:last-child) {
+				margin-bottom: toRem(8);
+			}
+		}
 	}
 }
 //</FORM>

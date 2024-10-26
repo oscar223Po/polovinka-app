@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241025223306">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241027003917">
 	<link rel="shortcut icon" href="img/icons/head-logo.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,13 +25,13 @@
 							<p>Войдите в систему, чтобы начать поиск своей второй половинки</p>
 						</div>
 					</div>
-					<div data-tabs class="auth__tabs tabs">
-						<nav data-tabs-titles class="tabs__navigation ba-cont">
-							<button type="button" class="tabs__title _tab-active">Регистрация</button>
-							<button type="button" class="tabs__title">Вход</button>
+					<div data-tabs class="auth__tabs tabs-auth">
+						<nav data-tabs-titles class="tabs-auth__navigation ba-cont">
+							<button type="button" class="tabs-auth__title _tab-active">Регистрация</button>
+							<button type="button" class="tabs-auth__title">Вход</button>
 						</nav>
-						<div data-tabs-body class="tabs__content">
-							<div class="tabs__body reg-body">
+						<div data-tabs-body class="tabs-auth__content">
+							<div class="tabs-auth__body reg-body">
 								<div class="reg-body__content">
 									<div class="reg-body__gender gender">
 										<div class="gender__item">
@@ -55,59 +55,59 @@
 									</div>
 									<div id="gender-chk" style="color: #f73d58; text-align: right; margin-top: 10px; font-size: 12px; font-weight: 500;">Выберите один из пунктов</div>
 								</div>
-								<form action="" class="reg-body__form form">
-									<div class="form__labels">
-										<label for="" class="form__label">
+								<form action="" class="reg-body__form shape">
+									<div class="shape__labels">
+										<label for="" class="shape__label">
 											<span>Логин*</span>
-											<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Введите логин" placeholder="Логин" class="form__input input input--white">
+											<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Введите логин" placeholder="Логин" class="shape__input input input--white">
 										</label>
-										<label for="" class="form__label">
+										<label for="" class="shape__label">
 											<span>Email адрес*</span>
-											<input data-required="email" autocomplete="off" type="email" name="form[]" data-error="Введите E-Mail" placeholder="E-Mail" class="form__input input input--white">
+											<input data-required="email" autocomplete="off" type="email" name="form[]" data-error="Введите E-Mail" placeholder="E-Mail" class="shape__input input input--white">
 										</label>
-										<label for="" class="form__label">
+										<label for="" class="shape__label">
 											<span>Подтвердите свой Email*</span>
-											<input data-required="email" autocomplete="off" type="email" name="form[]" data-error="Подтвердите E-Mail" placeholder="Подтвердите E-Mail" class="form__input input input--white">
+											<input data-required="email" autocomplete="off" type="email" name="form[]" data-error="Подтвердите E-Mail" placeholder="Подтвердите E-Mail" class="shape__input input input--white">
 										</label>
-										<label for="" class="form__label">
+										<label for="" class="shape__label">
 											<span>Пароль*</span>
-											<input data-required="tel" autocomplete="off" type="password" name="form[]" data-error="Придумайте пароль" placeholder="Пароль" class="form__input input input--white">
+											<input data-required="tel" autocomplete="off" type="password" name="form[]" data-error="Придумайте пароль" placeholder="Пароль" class="shape__input input input--white">
 										</label>
-										<label for="" class="form__label">
+										<label for="" class="shape__label">
 											<span>Телефон</span>
-											<input data-required="tel" data-inputmask="'mask': '+7-999-999-99-99'" autocomplete="off" type="tel" name="form[]" data-error="Введите телефон" placeholder="Телефон" class="form__input input input--white">
+											<input data-required="tel" data-inputmask="'mask': '+7-999-999-99-99'" autocomplete="off" type="tel" name="form[]" data-error="Введите телефон" placeholder="Телефон" class="shape__input input input--white">
 										</label>
 									</div>
-									<div class="form__bottom form__bottom--shadow">
-										<div class="form__bottom-content ba-cont">
-											<button type="submit" class="form__button button button--lr">Регистрация</button>
-											<div class="form__text">Нажимая на кнопку "Регистрация", я принимаю условия <a href="">Пользовательского соглашения</a>.</div>
+									<div class="shape__bottom shape__bottom--shadow">
+										<div class="shape__bottom-content ba-cont">
+											<button type="submit" class="shape__button button button--lr">Регистрация</button>
+											<div class="shape__text">Нажимая на кнопку "Регистрация", я принимаю условия <a href="">Пользовательского соглашения</a>.</div>
 										</div>
 									</div>
 								</form>
 							</div>
-							<div class="tabs__body log-body">
-								<form action="" class="log-body__form form">
-									<div class="form__labels">
-										<label for="" class="form__label">
+							<div class="tabs-auth__body log-body">
+								<form action="" class="log-body__form shape">
+									<div class="shape__labels">
+										<label for="" class="shape__label">
 											<span>Логин*</span>
-											<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Введите логин" placeholder="Логин" class="form__input input input--white">
+											<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Введите логин" placeholder="Логин" class="shape__input input input--white">
 										</label>
-										<label for="" class="form__label">
+										<label for="" class="shape__label">
 											<span>Пароль*</span>
-											<input data-required="tel" autocomplete="off" type="password" name="form[]" data-error="Введите пароль" placeholder="Введите пароль" class="form__input input input--white">
+											<input data-required="tel" autocomplete="off" type="password" name="form[]" data-error="Введите пароль" placeholder="Введите пароль" class="shape__input input input--white">
 										</label>
 									</div>
-									<div class="form__confirm">
-										<div class="form__checkbox checkbox">
+									<div class="shape__confirm">
+										<div class="shape__checkbox checkbox">
 											<input id="c_1" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="form[]">
 											<label for="c_1" class="checkbox__label"><span class="checkbox__text">Запомнить меня</span></label>
 										</div>
-										<a href="" class="form__link">Забыли пароль?</a>
+										<a href="" class="shape__link">Забыли пароль?</a>
 									</div>
-									<div class="form__bottom">
-										<div class="form__bottom-button">
-											<button type="submit" class="form__button button button--lr">Вход</button>
+									<div class="shape__bottom">
+										<div class="shape__bottom-button">
+											<button type="submit" class="shape__button button button--lr">Вход</button>
 										</div>
 									</div>
 								</form>
@@ -118,7 +118,7 @@
 			</section>
 		</main>
 	</div>
-	<script src="js/app.min.js?_v=20241025223306"></script>
+	<script src="js/app.min.js?_v=20241027003917"></script>
 </body>
 
 </html>

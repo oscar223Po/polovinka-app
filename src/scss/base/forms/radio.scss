@@ -11,6 +11,205 @@
 		position: relative;
 		align-items: center;
 		border-radius: toRem(12);
+		border: toRem(1) solid rgba(#fff, 0.15);
+		&.rtl-reverse {
+			.options__label {
+				&::after {
+					left: 16px;
+					right: auto;
+				}
+			}
+		}
+	}
+	// .options__input
+	&__input {
+		width: 0;
+		height: 0;
+		opacity: 0;
+		position: absolute;
+		&:focus-visible + .options__label:before {
+		}
+		&:checked + .options__label:before {
+		}
+		&:checked + .options__label:after {
+			transform: scale(1);
+		}
+	}
+	// .options__label
+	&__label {
+		gap: 15px;
+		width: 100%;
+		display: flex;
+		cursor: pointer;
+		align-items: center;
+		min-height: toRem(56);
+		background-color: $purpleColor;
+		padding: toRem(0) toRem(16);
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		&:before {
+			content: "";
+			margin-top: toRem(17);
+			align-self: flex-start;
+			width: 22px;
+			height: 22px;
+			flex: 0 0 22px;
+			border-radius: 50%;
+			background-color: $bgColor;
+			border: 1px solid $pinkColor;
+		}
+		&:after {
+			@extend %ic;
+			content: "\e903";
+			transition: all 0.3s ease 0s;
+			transform: scale(0);
+			width: 22px;
+			height: 22px;
+			border-radius: 50%;
+			font-size: toRem(12);
+			position: absolute;
+			right: 16px;
+			top: 17px;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: $pinkColor;
+		}
+		&.lab-chk {
+			&::before,
+			&::after {
+				border-radius: toRem(3);
+			}
+		}
+	}
+	// .options__text
+	&__text {
+		line-height: 125%;
+	}
+}
+// ========================================================================================================================================================
+// Lang Options
+.lang {
+	gap: toRem(8);
+	grid-template-columns: repeat(auto-fill, minmax(toRem(120), 1fr));
+	// .lang__item
+	&__item {
+		display: flex;
+		cursor: pointer;
+		overflow: hidden;
+		position: relative;
+		align-items: center;
+		justify-content: center;
+		border-radius: toRem(12);
+	}
+	// .lang__input
+	&__input {
+		width: 0;
+		height: 0;
+		opacity: 0;
+		position: absolute;
+		&:focus-visible + .lang__label {
+		}
+		&:checked + .lang__label {
+			background-color: rgba($blueColor, 0.15);
+			border: toRem(1) solid $primaryColor;
+		}
+		&._form-error-lang + .lang__label {
+			transition: border 0.3s ease 0s;
+			border: toRem(1) solid rgba($redColor, 0.5);
+		}
+	}
+	// .lang__label
+	&__label {
+		width: 100%;
+		display: flex;
+		cursor: pointer;
+		align-items: center;
+		min-height: toRem(56);
+		justify-content: center;
+		border-radius: toRem(12);
+		background-color: $purpleColor;
+		transition:
+			background-color 0.3s ease 0s,
+			border 0.3s ease 0s;
+		border: toRem(1) solid transparent;
+	}
+	// .lang__text
+	&__text {
+		line-height: 125%;
+	}
+}
+// ========================================================================================================================================================
+// Gender Options
+.gender {
+	display: flex;
+	gap: toRem(13);
+	// .gender__item
+	&__item {
+		width: 100%;
+		display: flex;
+		cursor: pointer;
+		overflow: hidden;
+		position: relative;
+		align-items: center;
+		border-radius: toRem(12);
+	}
+	// .gender__input
+	&__input {
+		width: 0;
+		height: 0;
+		opacity: 0;
+		position: absolute;
+		&:focus-visible + .gender__label {
+		}
+		&:checked + .gender__label {
+			border: 1px solid #cdc1ff;
+			background-color: $preprimaryColor;
+		}
+		&._form-error-gender + .gender__label {
+			transition: border 0.3s ease 0s;
+			border: toRem(1) solid $redColor;
+			background-color: rgba(#fff, 0.65);
+		}
+	}
+	// .gender__label
+	&__label {
+		width: 100%;
+		display: flex;
+		cursor: pointer;
+		height: toRem(82);
+		line-height: 129%;
+		align-items: center;
+		background-color: #fff;
+		justify-content: center;
+		border-radius: toRem(12);
+		border: toRem(1) solid $borderColor;
+		transition:
+			background-color 0.3s ease 0s,
+			border 0.3s ease 0s;
+	}
+	// .gender__text
+	&__text {
+		display: flex;
+		gap: toRem(8);
+		align-items: center;
+		flex-direction: column;
+	}
+}
+// ========================================================================================================================================================
+/*
+.options {
+	display: grid;
+	gap: toRem(12);
+	// .options__item
+	&__item {
+		display: flex;
+		cursor: pointer;
+		overflow: hidden;
+		position: relative;
+		align-items: center;
+		border-radius: toRem(12);
 		&.rtl-reverse {
 			.options__label {
 				&::after {
@@ -87,8 +286,9 @@
 		line-height: 125%;
 	}
 }
-// ========================================================================================================================================================
-// Lang Options
+*/
+
+/*
 .lang {
 	gap: toRem(8);
 	grid-template-columns: repeat(auto-fill, minmax(toRem(120), 1fr));
@@ -137,61 +337,4 @@
 		line-height: 125%;
 	}
 }
-// ========================================================================================================================================================
-// Gender Options
-.gender {
-	display: flex;
-	gap: toRem(13);
-	// .gender__item
-	&__item {
-		width: 100%;
-		display: flex;
-		cursor: pointer;
-		overflow: hidden;
-		position: relative;
-		align-items: center;
-		border-radius: toRem(12);
-	}
-	// .gender__input
-	&__input {
-		width: 0;
-		height: 0;
-		opacity: 0;
-		position: absolute;
-		&:focus-visible + .gender__label {
-		}
-		&:checked + .gender__label {
-			border: 1px solid #cdc1ff;
-			background-color: $preprimaryColor;
-		}
-		&._form-error-gender + .gender__label {
-			transition: border 0.3s ease 0s;
-			border: toRem(1) solid $redColor;
-			background-color: rgba(#fff, 0.65);
-		}
-	}
-	// .gender__label
-	&__label {
-		width: 100%;
-		display: flex;
-		cursor: pointer;
-		height: toRem(82);
-		line-height: 129%;
-		align-items: center;
-		background-color: #fff;
-		justify-content: center;
-		border-radius: toRem(12);
-		border: toRem(1) solid $borderColor;
-		transition:
-			background-color 0.3s ease 0s,
-			border 0.3s ease 0s;
-	}
-	// .gender__text
-	&__text {
-		display: flex;
-		gap: toRem(8);
-		align-items: center;
-		flex-direction: column;
-	}
-}
-// ========================================================================================================================================================
+*/

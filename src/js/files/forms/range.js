@@ -17,6 +17,8 @@ export function rangeInit() {
 	const rangeOld = document.getElementById("range-old");
 	var rangeOldValue = document.getElementById("range-span-old");
 
+	const rangeOldSearch = document.getElementById("range-old-search");
+	var rangeOldSearchValue = document.getElementById("range-span-search-old");
 
 	if (rangeHight, rangeWeight !== null) {
 		// Hight
@@ -47,6 +49,8 @@ export function rangeInit() {
 			rangeWeightValue.innerHTML = values[handle];
 			rangeWeightValue.innerHTML = parseFloat(values[handle]).toFixed(0);
 		});
+	}
+	if (rangeOld, rangeOldValue !== null) {
 		// Old
 		noUiSlider.create(rangeOld, {
 			start: [25, 50],
@@ -59,6 +63,21 @@ export function rangeInit() {
 		});
 		rangeOld.noUiSlider.on('update', function (values, handle) {
 			rangeOldValue.innerHTML = Math.round(values[0]) + ' - ' + Math.round(values[1]);
+		});
+	}
+	if (rangeOldSearch, rangeOldSearchValue !== null) {
+		// Old
+		noUiSlider.create(rangeOldSearch, {
+			start: [25, 50],
+			animate: false,
+			connect: true,
+			range: {
+				min: 18,
+				max: 70
+			}
+		});
+		rangeOldSearch.noUiSlider.on('update', function (values, handle) {
+			rangeOldSearchValue.innerHTML = Math.round(values[0]) + ' - ' + Math.round(values[1]);
 		});
 	}
 }

@@ -1,36 +1,6 @@
 // ========================================================================================================================================================
-// Tabs Custom
 .tabs {
 	// .tabs__navigation
-	&__navigation {
-		display: flex;
-		margin: toRem(0) toRem(-15);
-		&:not(:last-child) {
-			margin-bottom: toRem(24);
-		}
-	}
-	// .tabs__title
-	&__title {
-		width: 100%;
-		line-height: 125%;
-		font-size: toRem(16);
-		padding-bottom: toRem(8);
-		border-bottom: 1px solid transparent;
-		&._tab-active {
-			border-bottom: 1px solid $primaryColor;
-		}
-	}
-	// .tabs__content
-	&__content {
-	}
-	// .tabs__body
-	&__body {
-	}
-}
-// ========================================================================================================================================================
-// Tabs Profile Photo
-.tabs-photo {
-	// .tabs-photo__navigation
 	&__navigation {
 		display: flex;
 		align-items: center;
@@ -39,7 +9,7 @@
 			margin-bottom: toRem(20);
 		}
 	}
-	// .tabs-photo__title
+	// .tabs__title
 	&__title {
 		width: 100%;
 		display: flex;
@@ -52,7 +22,7 @@
 		transition:
 			background-color 0.3s ease 0s,
 			color 0.3s ease 0s;
-			@include adaptiveValue("font-size", 18, 14);
+		@include adaptiveValue("font-size", 18, 14);
 		&:first-child {
 			color: $blueColor;
 			border: toRem(1) solid rgba($blueColor, 0.5);
@@ -72,12 +42,41 @@
 			}
 		}
 	}
-	// .tabs-photo__content
+	// .tabs__content
 	&__content {
 	}
-	// .tabs-photo__body
+	// .tabs__body
 	&__body {
 		position: relative;
+	}
+}
+// ========================================================================================================================================================
+// Tabs Auth
+.tabs-auth {
+	// .tabs-auth__navigation
+	&__navigation {
+		display: flex;
+		margin: toRem(0) toRem(-15);
+		&:not(:last-child) {
+			margin-bottom: toRem(24);
+		}
+	}
+	// .tabs-auth__title
+	&__title {
+		width: 100%;
+		line-height: 125%;
+		font-size: toRem(16);
+		padding-bottom: toRem(8);
+		border-bottom: 1px solid transparent;
+		&._tab-active {
+			border-bottom: 1px solid $primaryColor;
+		}
+	}
+	// .tabs-auth__content
+	&__content {
+	}
+	// .tabs-auth__body
+	&__body {
 	}
 }
 // ========================================================================================================================================================
