@@ -19,7 +19,7 @@
 		background-color: $primaryColor;
 		@media (any-hover: hover) {
 			&:hover {
-				background-color: #000000;
+				background-color: $pinkColor;
 			}
 		}
 	}
@@ -45,11 +45,6 @@
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: $purpleColor;
-			}
-		}
-		@media (max-width: toEm(649.98)) {
-			span {
-				display: none;
 			}
 		}
 	}

@@ -56,12 +56,6 @@
 		&.button {
 			width: 100%;
 		}
-		span {
-			display: block;
-			font-weight: 600;
-			color: $orangeColor;
-			font-family: $fontFamilyMontAlt;
-		}
 		&:not(:last-child) {
 			margin-bottom: toRem(20);
 		}

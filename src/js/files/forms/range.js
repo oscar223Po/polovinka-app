@@ -8,18 +8,11 @@ import * as noUiSlider from 'nouislider';
 // import 'nouislider/dist/nouislider.css';
 
 export function rangeInit() {
+	// ================[ JavaScript Nouislider For Hight & Weight ]================
 	const rangeHight = document.getElementById("range-hight");
 	const rangeWeight = document.getElementById("range-weight");
-
 	var rangeHightValue = document.getElementById("range-span-hight");
 	var rangeWeightValue = document.getElementById("range-span-weight");
-
-	const rangeOld = document.getElementById("range-old");
-	var rangeOldValue = document.getElementById("range-span-old");
-
-	const rangeOldSearch = document.getElementById("range-old-search");
-	var rangeOldSearchValue = document.getElementById("range-span-search-old");
-
 	if (rangeHight, rangeWeight !== null) {
 		// Hight
 		noUiSlider.create(rangeHight, {
@@ -50,6 +43,11 @@ export function rangeInit() {
 			rangeWeightValue.innerHTML = parseFloat(values[handle]).toFixed(0);
 		});
 	}
+	// ================[ JavaScript Nouislider For Old ]================
+	const rangeOld = document.getElementById("range-old");
+	var rangeOldValue = document.getElementById("range-span-old");
+	const rangeOldSearch = document.getElementById("range-old-search");
+	var rangeOldSearchValue = document.getElementById("range-span-search-old");
 	if (rangeOld, rangeOldValue !== null) {
 		// Old
 		noUiSlider.create(rangeOld, {

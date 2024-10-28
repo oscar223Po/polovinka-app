@@ -107,13 +107,13 @@
  */
 .noUi-target {
 	border-radius: 16px;
-	background: $dashColor;
+	background: $gradientPink;
 }
 .noUi-connects {
 	border-radius: 16px;
 }
 .noUi-connect {
-	background: $primaryColor;
+	background: $pinkColor;
 }
 /* Handles and cursors;
  */
@@ -129,7 +129,7 @@
 	border-radius: 50%;
 	align-items: center;
 	justify-content: center;
-	background: $primaryColor;
+	background: $redColor;
 	border: toRem(1) solid #fff;
 }
 /* Handle stripes;

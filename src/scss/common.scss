@@ -28,7 +28,7 @@ summary {
 // Before & After Content
 .ba-cont {
 	position: relative;
-	background-color: #fff;
+	background-color: $purpleColor;
 	&::before,
 	&::after {
 		top: 0;
@@ -37,7 +37,7 @@ summary {
 		width: 1000%;
 		height: 100%;
 		position: absolute;
-		background-color: #fff;
+		background-color: $purpleColor;
 	}
 	&::before {
 		left: 100%;
@@ -188,6 +188,11 @@ summary {
 	// .bg-ord--pm
 	&--pm {
 		background-color: #381d42;
+		border: toRem(1) solid rgba(#fff, 0.1);
+	}
+	// .bg-ord--pr
+	&--pr {
+		background-color: $purpleColor;
 		border: toRem(1) solid rgba(#fff, 0.1);
 	}
 }

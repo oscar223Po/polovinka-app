@@ -136,13 +136,18 @@
 	}
 	// .header__button
 	&__button {
+		@media (max-width: toEm(649.98)) {
+			span {
+				display: none;
+			}
+		}
 	}
 }
 //========================================================================================================================================================
 // Header Request
 .header-request {
-	background-color: #fff;
-	border-bottom: 1px solid $borderColor;
+	background-color: $purpleColor;
+	border-bottom: 1px solid rgba($borderColor, 0.1);
 	&:not(:last-child) {
 		margin-bottom: toRem(24);
 	}

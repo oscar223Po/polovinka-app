@@ -78,11 +78,11 @@ document.addEventListener('DOMContentLoaded', function () {
 			});
 		});
 	}
-	const textareamin = document.querySelector('.request-textarea-min');
-	if (textareamin !== null) {
-		const charCount = textareamin.nextElementSibling;
-		textareamin.addEventListener('input', () => {
-			const currentLength = textareamin.value.length;
+	const textareaMin = document.querySelector('.request-textarea-min');
+	if (textareaMin !== null) {
+		const charCount = textareaMin.nextElementSibling;
+		textareaMin.addEventListener('input', () => {
+			const currentLength = textareaMin.value.length;
 			charCount.textContent = `${currentLength}/30 символов`;
 		});
 	}

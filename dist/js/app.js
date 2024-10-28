@@ -6560,10 +6560,6 @@
             const rangeWeight = document.getElementById("range-weight");
             var rangeHightValue = document.getElementById("range-span-hight");
             var rangeWeightValue = document.getElementById("range-span-weight");
-            const rangeOld = document.getElementById("range-old");
-            var rangeOldValue = document.getElementById("range-span-old");
-            const rangeOldSearch = document.getElementById("range-old-search");
-            var rangeOldSearchValue = document.getElementById("range-span-search-old");
             if (rangeHight, rangeWeight !== null) {
                 initialize(rangeHight, {
                     start: 180,
@@ -6592,6 +6588,10 @@
                     rangeWeightValue.innerHTML = parseFloat(values[handle]).toFixed(0);
                 }));
             }
+            const rangeOld = document.getElementById("range-old");
+            var rangeOldValue = document.getElementById("range-span-old");
+            const rangeOldSearch = document.getElementById("range-old-search");
+            var rangeOldSearchValue = document.getElementById("range-span-search-old");
             if (rangeOld, rangeOldValue !== null) {
                 initialize(rangeOld, {
                     start: [ 25, 50 ],
@@ -10765,11 +10765,11 @@
                     charCount.textContent = `${currentLength}/2000 символов`;
                 }));
             }));
-            const textareamin = document.querySelector(".request-textarea-min");
-            if (textareamin !== null) {
-                const charCount = textareamin.nextElementSibling;
-                textareamin.addEventListener("input", (() => {
-                    const currentLength = textareamin.value.length;
+            const textareaMin = document.querySelector(".request-textarea-min");
+            if (textareaMin !== null) {
+                const charCount = textareaMin.nextElementSibling;
+                textareaMin.addEventListener("input", (() => {
+                    const currentLength = textareaMin.value.length;
                     charCount.textContent = `${currentLength}/30 символов`;
                 }));
             }

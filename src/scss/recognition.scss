@@ -32,7 +32,6 @@
 		margin: 0 auto;
 		line-height: 129%;
 		max-width: toRem(325);
-		color: $secondtxtColor;
 	}
 	// .auth__tabs
 	&__tabs {
@@ -94,7 +93,6 @@
 		span {
 			display: flex;
 			line-height: 129%;
-			color: $secondtxtColor;
 			&:not(:last-child) {
 				margin-bottom: toRem(8);
 			}
@@ -181,10 +179,13 @@
 		text-align: left;
 		align-items: center;
 		min-height: toRem(56);
+		padding-top: toRem(10);
 		border-radius: toRem(12);
+		padding-bottom: toRem(10);
+		background-color: $bgColor;
 		flex-direction: row-reverse;
-		background-color: $purpleColor;
 		justify-content: space-between;
+		border: toRem(1) solid rgba(#fff, 0.15);
 		@include adaptiveValue("padding-left", 16, 12);
 		@include adaptiveValue("padding-right", 16, 12);
 		&::before {
@@ -212,6 +213,8 @@
 		min-width: toRem(24);
 		max-width: toRem(24);
 		justify-content: center;
+		@media (max-width: $mobileSmall) {
+		}
 	}
 	// .more__button-title
 	&__button-title {
@@ -222,63 +225,6 @@
 		}
 	}
 }
-/*
-.more {
-	// .more__buttons
-	&__buttons {
-		display: grid;
-		gap: toRem(12);
-	}
-	// .more__button
-	&__button {
-		width: 100%;
-		display: flex;
-		gap: toRem(15);
-		text-align: left;
-		align-items: center;
-		min-height: toRem(56);
-		border-radius: toRem(12);
-		background-color: #f7f8f9;
-		flex-direction: row-reverse;
-		justify-content: space-between;
-		@include adaptiveValue("padding-left", 16, 12);
-		@include adaptiveValue("padding-right", 16, 12);
-		&::before {
-			display: flex;
-			width: toRem(24);
-			height: toRem(24);
-			align-items: center;
-			color: $primaryColor;
-			font-size: toRem(20);
-			justify-content: center;
-			transform: rotate(90deg);
-		}
-	}
-	// .more__button-inner
-	&__button-inner {
-		display: flex;
-		gap: toRem(8);
-		align-items: center;
-	}
-	// .more__button-svg
-	&__button-svg {
-		display: flex;
-		height: toRem(24);
-		align-items: center;
-		min-width: toRem(24);
-		max-width: toRem(24);
-		justify-content: center;
-	}
-	// .more__button-title
-	&__button-title {
-		line-height: 125%;
-		@include adaptiveValue("font-size", 16, 14);
-		span {
-			color: $primaryColor;
-		}
-	}
-}
-*/
 // About
 .about {
 	// .about__text

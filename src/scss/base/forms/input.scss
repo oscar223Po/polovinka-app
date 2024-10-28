@@ -17,18 +17,13 @@ textarea {
 	caret-color: inherit;
 	min-height: toRem(46);
 	background-color: $bgColor;
-	border: 1px solid rgba($mainColor, 0.7);
+	border: 1px solid rgba($mainColor, 0.3);
 	transition: border 0.3s ease 0s;
 	&::placeholder {
 		color: $placeholderColor;
 	}
-	&--white {
-		background-color: #ffffff;
-		border: 1px solid rgba(#dddddd, 0.5);
-	}
-	&--gray {
-		background-color: #f7f8f9;
-		border: 1px solid rgba(#dddddd, 0.5);
+	&--purple {
+		background-color: $purpleColor;
 	}
 	&:focus {
 		outline: none;
@@ -55,23 +50,12 @@ textarea {
 textarea.input {
 	resize: none;
 	padding: 14px 12px;
-	min-height: toRem(120);
-	&--res {
-		min-height: toRem(100);
-		max-height: toRem(100);
-	}
 }
-.count,
-.symbols {
+.count {
 	font-size: 12px;
 	line-height: 117%;
 	text-align: right;
 	margin-top: toRem(8);
-}
-.count {
-	color: $secondtxtColor;
-}
-.symbols {
 	color: rgba($mainColor, 0.85);
 }
 // ========================================================================================================================================================

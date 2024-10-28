@@ -67,9 +67,6 @@ body::after {
 	.lock & {
 		visibility: visible;
 	}
-	&.property {
-		background-color: #fff;
-	}
 }
 .top-popup {
 	display: flex;
@@ -154,6 +151,7 @@ body::after {
 	}
 	// .picture__input
 	&__input {
+		height: toRem(100);
 		&._form-error {
 			font-weight: 400;
 		}

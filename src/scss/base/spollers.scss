@@ -3,70 +3,14 @@
 .spollers {
 	display: grid;
 	gap: 16px;
-}
-// Спойлер
-.spollers__item {
-	padding: toRem(15);
-	border-radius: toRem(10);
-	background-color: $bgColor;
-}
-// Заголовок спойлера
-.spollers__title {
-	width: 100%;
-	cursor: default;
-	text-align: left;
-	position: relative;
-	list-style: none;
-	&::marker,
-	&::-webkit-details-marker {
-		display: none;
-	}
-	._spoller-init & {
-		cursor: pointer;
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			right: 0px;
-			top: 50%;
-			background-color: $mainColor;
-			height: 1.5px;
-			width: 10px;
-			transition: transform 0.5s ease 0s;
-		}
-		&::before {
-			transform: translate(-75%, -50%) rotate(-40deg);
-		}
-		&::after {
-			transform: translate(0, -50%) rotate(40deg);
-		}
-		&._spoller-active {
-			&::before {
-				transform: translateX(-75%) rotate(40deg);
-			}
-			&::after {
-				transform: rotate(-40deg);
-			}
-		}
-	}
-}
-// Контент спойлера
-.spollers__body {
-	padding-top: toRem(12);
-}
-// ========================================================================================================================================================
-// Spoller Auth
-.spollers-auth {
-	display: grid;
-	gap: 16px;
-	// .spollers-auth__item
+	// .spollers__item
 	&__item {
 		padding: toRem(15);
-		background-color: #fff;
 		border-radius: toRem(16);
-		border: 1px solid $borderColor;
+		background-color: $purpleColor;
+		border: 1px solid rgba($mainColor, 0.1);
 	}
-	// .spollers-auth__title
+	// .spollers__title
 	&__title {
 		width: 100%;
 		cursor: default;
@@ -86,7 +30,7 @@
 				position: absolute;
 				right: 0px;
 				top: 50%;
-				background-color: #000;
+				background-color: $blueColor;
 				height: 1.5px;
 				width: 10px;
 				transition: transform 0.5s ease 0s;
@@ -107,7 +51,7 @@
 			}
 		}
 	}
-	// .spollers-auth__span
+	// .spollers__span
 	&__span {
 		display: flex;
 		gap: toRem(12);
@@ -147,11 +91,11 @@
 			}
 		}
 	}
-	// .spollers-auth__body
+	// .spollers__body
 	&__body {
 		margin-top: toRem(12);
 		padding-top: toRem(12);
-		border-top: toRem(1) solid $borderColor;
+		border-top: toRem(1) solid rgba($mainColor, 0.25);
 		.metric__ranges {
 			padding: toRem(16) toRem(0);
 		}
