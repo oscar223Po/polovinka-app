@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Polovinka (ProfilePhoto) - ProfilePhotoPage</title>
+	<title>Polovinka (SearchQuestResult) - SearchResultQuest</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<style>
@@ -41,17 +41,16 @@
 				<div class="breadcrumbs__container">
 					<ul class="breadcrumbs__list">
 						<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
-						<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Мой профиль</a></li>
 						<li class="breadcrumbs__item">
-							<div class="breadcrumbs__current">Управление фотографиями</div>
+							<div class="breadcrumbs__current">Поиск анкет</div>
 						</li>
 					</ul>
 				</div>
 			</nav>
-			<!-- [Photo] -->
-			<section class="photo">
-				<div class="photo__container cont-menu">
-					<aside class="photo__aside aside bg-shad">
+			<!-- [Result] -->
+			<section class="result">
+				<div class="result__container cont-menu">
+					<aside class="result__aside aside bg-shad">
 						<ul class="aside__list">
 							<li class="aside__item">
 								<a href="" class="aside__link _icon-arrow">
@@ -130,68 +129,178 @@
 							</li>
 						</ul>
 					</aside>
-					<div class="photo__content bg-ord bg-ord--pm">
-						<div class="photo__heading heading heading--mr">
-							<h3 class="heading__title title title--red">Управление открытыми фотографиями</h3>
-							<div class="heading__text text text--sf">Фотографии размещённые в этом разделе будут доступны для просмотра всем пользователям сайта</div>
-						</div>
-						<div data-tabs class="photo__tabs tabs">
-							<nav data-tabs-titles class="tabs__navigation">
-								<button type="button" class="tabs__title _tab-active _icon-eye">Открытые</button>
-								<button type="button" class="tabs__title _icon-eye-off">Закрытые</button>
-							</nav>
-							<div data-tabs-body class="tabs__content">
-								<div class="tabs__body body-tabs-photo">
-									<div class="body-tabs-photo__content bg-ord">
-										<div class="body-tabs-photo__item bg-shad">
-											<div class="body-tabs-photo__image img"><img data-src="img/photo-men.webp" alt="Image"></div>
-											<div class="body-tabs-photo__actions">
-												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--trash _icon-trash"></button>
-												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--simple _icon-undo"></button>
-												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--lock _icon-lock"></button>
-												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--simple _icon-redo"></button>
-											</div>
-										</div>
-										<div class="body-tabs-photo__item bg-shad">
-											<div class="body-tabs-photo__image img"><img data-src="img/photo-men.webp" alt="Image"></div>
-											<div class="body-tabs-photo__actions">
-												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--trash _icon-trash"></button>
-												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--simple _icon-undo"></button>
-												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--lock _icon-lock"></button>
-												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--simple _icon-redo"></button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="tabs__body body-tabs-photo">
-									<div class="body-tabs-photo__code bg-ord bg-ord--pr">
-										<div class="body-tabs-photo__top title title--min">Секретный код для просмотра Ваших закрытых фотографий другими участниками:</div>
-										<div class="body-tabs-photo__label">
-											<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="" value="ODGK7N6J" class="body-tabs-photo__input input">
-											<button type="button" class="body-tabs-photo__change button button--ob _icon-aside-ed">Изменить</button>
-										</div>
-									</div>
-									<div class="body-tabs-photo__content bg-ord">
-										<div class="body-tabs-photo__item bg-shad">
-											<div class="body-tabs-photo__image img"><img data-src="img/photo-men.webp" alt="Image"></div>
-											<div class="body-tabs-photo__actions">
-												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--trash _icon-trash"></button>
-												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--simple _icon-undo"></button>
-												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--lock _icon-unlocked"></button>
-												<button type="button" class="body-tabs-photo__button body-tabs-photo__button--simple _icon-redo"></button>
-											</div>
-										</div>
-									</div>
-								</div>
+					<div class="result__content bg-ord bg-ord--pm">
+						<div class="result__heading heading heading--center heading--mr">
+							<h3 class="heading__title title title--red">Результаты вашего поиска</h3>
+							<div class="heading__text text text--sf">
+								<p>Вот результаты по вашему запросу. Мы собрали наиболее релевантную информацию и представили ее в удобном формате. Ознакомьтесь с результами, чтобы найти подходящий для вас вариант. Надеемся, это поможет вам!</p>
 							</div>
 						</div>
-						<div class="photo__bottom bottom-photo">
-							<button data-popup="#picture" type="button" class="bottom-photo__button button button--ord"><span>Добавить фотографию 📸</span></button>
-							<div class="bottom-photo__text">
-								<p>Если у Вас не получается загрузить фотографию, мы с удовольствием поможем вам.</p>
-								<p>Всё что вам нужно сделать - выслать на адрес <a href="mailto:admin@2polovinka.co.il">admin@2polovinka.co.il</a> Вашу фотографию, указав Ваш логин.</p>
-							</div>
+						<div class="result__articles articles">
+							<article data-watch class="articles__item">
+								<div class="articles__image img"><img data-src="img/photo-rec-women.webp" alt="Image"></div>
+								<div class="articles__top">
+									<a href="" class="articles__photo _icon-image">3</a>
+									<div class="articles__online">Онлайн</div>
+								</div>
+								<div class="articles__content">
+									<div class="articles__info">
+										<div class="articles__label">
+											<div class="articles__name">Виктория <span>24</span></div>
+										</div>
+										<div class="articles__region">Регион: <span>Север Израиля</span></div>
+									</div>
+									<div class="articles__actions">
+										<button type="button" class="articles__button button button--ord"><span class="_icon-mail">Написать</span></button>
+										<button data-popup="#done-favorites" type="button" class="articles__btn btn-heart button button--rb _icon-heart"></button>
+										<button type="button" class="articles__btn button button--ob _icon.webpt"></button>
+									</div>
+								</div>
+							</article>
+							<article data-watch class="articles__item">
+								<div class="articles__image img"><img data-src="img/photo-rec-women.webp" alt="Image"></div>
+								<div class="articles__top">
+									<a href="" class="articles__photo _icon-image">3</a>
+									<div class="articles__online">Онлайн</div>
+								</div>
+								<div class="articles__content">
+									<div class="articles__info">
+										<div class="articles__label">
+											<div class="articles__name">Виктория <span>24</span></div>
+										</div>
+										<div class="articles__region">Регион: <span>Север Израиля</span></div>
+									</div>
+									<div class="articles__actions">
+										<button type="button" class="articles__button button button--ord"><span class="_icon-mail">Написать</span></button>
+										<button data-popup="#done-favorites" type="button" class="articles__btn btn-heart button button--rb _icon-heart"></button>
+										<button type="button" class="articles__btn button button--ob _icon.webpt"></button>
+									</div>
+								</div>
+							</article>
+							<article data-watch class="articles__item bg-shad bg-shad--rbm">
+								<div class="articles__image img"><img data-src="img/photo-rec-women.webp" alt="Image"></div>
+								<div class="articles__top">
+									<a href="" class="articles__photo _icon-image">3</a>
+									<div class="articles__online">Онлайн</div>
+								</div>
+								<div class="articles__content">
+									<div class="articles__info">
+										<div class="articles__label">
+											<div class="articles__name">Виктория <span>24</span></div>
+											<div class="articles__status">VIP</div>
+										</div>
+										<div class="articles__region">Регион: <span>Север Израиля</span></div>
+									</div>
+									<div class="articles__actions">
+										<button type="button" class="articles__button button button--ord"><span class="_icon-mail">Написать</span></button>
+										<button data-popup="#done-favorites" type="button" class="articles__btn btn-heart button button--rb _icon-heart"></button>
+										<button type="button" class="articles__btn button button--ob _icon.webpt"></button>
+									</div>
+								</div>
+							</article>
+							<article data-watch class="articles__item">
+								<div class="articles__image img"><img data-src="img/photo-rec-women.webp" alt="Image"></div>
+								<div class="articles__top">
+									<a href="" class="articles__photo _icon-image">3</a>
+									<div class="articles__online">Онлайн</div>
+								</div>
+								<div class="articles__content">
+									<div class="articles__info">
+										<div class="articles__label">
+											<div class="articles__name">Виктория <span>24</span></div>
+										</div>
+										<div class="articles__region">Регион: <span>Север Израиля</span></div>
+									</div>
+									<div class="articles__actions">
+										<button type="button" class="articles__button button button--ord"><span class="_icon-mail">Написать</span></button>
+										<button data-popup="#done-favorites" type="button" class="articles__btn btn-heart button button--rb _icon-heart"></button>
+										<button type="button" class="articles__btn button button--ob _icon.webpt"></button>
+									</div>
+								</div>
+							</article>
+							<article data-watch class="articles__item">
+								<div class="articles__image img"><img data-src="img/photo-rec-women.webp" alt="Image"></div>
+								<div class="articles__top">
+									<a href="" class="articles__photo _icon-image">3</a>
+									<div class="articles__online">Онлайн</div>
+								</div>
+								<div class="articles__content">
+									<div class="articles__info">
+										<div class="articles__label">
+											<div class="articles__name">Виктория <span>24</span></div>
+										</div>
+										<div class="articles__region">Регион: <span>Север Израиля</span></div>
+									</div>
+									<div class="articles__actions">
+										<button type="button" class="articles__button button button--ord"><span class="_icon-mail">Написать</span></button>
+										<button data-popup="#done-favorites" type="button" class="articles__btn btn-heart button button--rb _icon-heart"></button>
+										<button type="button" class="articles__btn button button--ob _icon.webpt"></button>
+									</div>
+								</div>
+							</article>
+							<article data-watch class="articles__item bg-shad bg-shad--rbm">
+								<div class="articles__image img"><img data-src="img/photo-rec-women.webp" alt="Image"></div>
+								<div class="articles__top">
+									<a href="" class="articles__photo _icon-image">3</a>
+									<div class="articles__online">Онлайн</div>
+								</div>
+								<div class="articles__content">
+									<div class="articles__info">
+										<div class="articles__label">
+											<div class="articles__name">Виктория <span>24</span></div>
+											<div class="articles__status">VIP</div>
+										</div>
+										<div class="articles__region">Регион: <span>Север Израиля</span></div>
+									</div>
+									<div class="articles__actions">
+										<button type="button" class="articles__button button button--ord"><span class="_icon-mail">Написать</span></button>
+										<button data-popup="#done-favorites" type="button" class="articles__btn btn-heart button button--rb _icon-heart"></button>
+										<button type="button" class="articles__btn button button--ob _icon.webpt"></button>
+									</div>
+								</div>
+							</article>
+							<article data-watch class="articles__item">
+								<div class="articles__image img"><img data-src="img/photo-rec-women.webp" alt="Image"></div>
+								<div class="articles__top">
+									<a href="" class="articles__photo _icon-image">3</a>
+									<div class="articles__online">Онлайн</div>
+								</div>
+								<div class="articles__content">
+									<div class="articles__info">
+										<div class="articles__label">
+											<div class="articles__name">Виктория <span>24</span></div>
+										</div>
+										<div class="articles__region">Регион: <span>Север Израиля</span></div>
+									</div>
+									<div class="articles__actions">
+										<button type="button" class="articles__button button button--ord"><span class="_icon-mail">Написать</span></button>
+										<button data-popup="#done-favorites" type="button" class="articles__btn btn-heart button button--rb _icon-heart"></button>
+										<button type="button" class="articles__btn button button--ob _icon.webpt"></button>
+									</div>
+								</div>
+							</article>
+							<article data-watch class="articles__item">
+								<div class="articles__image img"><img data-src="img/photo-rec-women.webp" alt="Image"></div>
+								<div class="articles__top">
+									<a href="" class="articles__photo _icon-image">3</a>
+									<div class="articles__online">Онлайн</div>
+								</div>
+								<div class="articles__content">
+									<div class="articles__info">
+										<div class="articles__label">
+											<div class="articles__name">Виктория <span>24</span></div>
+										</div>
+										<div class="articles__region">Регион: <span>Север Израиля</span></div>
+									</div>
+									<div class="articles__actions">
+										<button type="button" class="articles__button button button--ord"><span class="_icon-mail">Написать</span></button>
+										<button data-popup="#done-favorites" type="button" class="articles__btn btn-heart button button--rb _icon-heart"></button>
+										<button type="button" class="articles__btn button button--ob _icon.webpt"></button>
+									</div>
+								</div>
+							</article>
 						</div>
+						<button type="button" class="result__button button button--lb">Показать еще результаты</button>
 					</div>
 				</div>
 			</section>

@@ -216,14 +216,8 @@
 	&__actions {
 		bottom: 0;
 		width: 100%;
-		display: flex;
-		gap: toRem(10);
 		padding: toRem(10);
 		position: absolute;
-		align-items: center;
-		@media (max-width: $tablet) {
-			flex-direction: column-reverse;
-		}
 	}
 	// .main-quest__button
 	&__button {
@@ -284,12 +278,12 @@
 		display: flex;
 		gap: toRem(8);
 		align-items: center;
-		font-size: toRem(18);
 		justify-content: center;
 		padding: toRem(17) toRem(0);
 		transition:
 			background-color 0.3s ease 0s,
 			color 0.3s ease 0s;
+		@include adaptiveValue("font-size", 18, 15, 2, $containerWidth, 991.98);
 		&::before {
 			display: flex;
 			width: toRem(18);
@@ -297,19 +291,22 @@
 			align-items: center;
 			justify-content: center;
 		}
+		&.add-fav {
+			background-color: #fff;
+		}
 		@media (max-width: $tablet) {
+			font-size: toRem(18);
 			&:not(:last-child) {
 				border-bottom: toRem(1) solid rgba(#fff, 0.15);
 			}
 		}
 		// .describe-quest__button--one
 		&--one {
-			color: $orangeColor;
+			background-color: rgba($blueColor, 0.75);
 			border-bottom: toRem(1) solid rgba(#fff, 0.15);
 			@media (any-hover: hover) {
 				&:hover {
-					color: $mainColor;
-					background-color: rgba($orangeColor, 0.75);
+					background-color: rgba($blueColor, 1);
 				}
 			}
 			@media (min-width: $tablet) {
@@ -329,6 +326,7 @@
 		// .describe-quest__button--three
 		&--three {
 			color: $yellowColor;
+			border-bottom: toRem(1) solid rgba(#fff, 0.15);
 			@media (any-hover: hover) {
 				&:hover {
 					color: $mainColor;
@@ -341,11 +339,35 @@
 		}
 		// .describe-quest__button--four
 		&--four {
-			color: $blueColor;
+			color: $orangeColor;
+			border-bottom: toRem(1) solid rgba(#fff, 0.15);
 			@media (any-hover: hover) {
 				&:hover {
 					color: $mainColor;
-					background-color: rgba($blueColor, 0.75);
+					background-color: rgba($orangeColor, 0.75);
+				}
+			}
+		}
+		// .describe-quest__button--five
+		&--five {
+			color: $redColor;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $mainColor;
+					background-color: red;
+				}
+			}
+			@media (min-width: $tablet) {
+				border-right: toRem(1) solid rgba(#fff, 0.15);
+			}
+		}
+		// .describe-quest__button--six
+		&--six {
+			color: $greenColor;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $mainColor;
+					background-color: $greenColor;
 				}
 			}
 		}

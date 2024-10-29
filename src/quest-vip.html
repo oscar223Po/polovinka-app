@@ -7,7 +7,7 @@
 <body class="bg-main">
 	<div class="wrapper">
 		@@include('html/_header-menu.htm',{})
-		<main class="page">
+		<main class="page pad-min">
 			<!-- [Breadcrumbs] -->
 			<nav class="breadcrumbs">
 				<div class="breadcrumbs__container">
@@ -23,9 +23,9 @@
 					<div class="quest__body">
 						<div class="quest__main main-quest">
 							<div class="main-quest__image img bg-shad bg-shad--rbwl">
-								<img src="@img/photo-women.jpg" alt="Image">
+								<img data-src="@img/photo-women.jpg" alt="Image">
 								<div class="main-quest__actions">
-									<button type="button" class="main-quest__button button button--ord">
+									<button data-popup="#greeting" type="button" class="main-quest__button button button--ord">
 										<span>
 											Поприветствовать
 											<svg width="19" height="20" viewBox="0 0 19 20" fill="none"
@@ -36,7 +36,6 @@
 											</svg>
 										</span>
 									</button>
-									<button type="button" class="main-quest__button button button--rb _icon-gift">Подарить подарок</button>
 								</div>
 							</div>
 						</div>
@@ -210,109 +209,123 @@
 						<div class="online__slider swiper">
 							<div class="online__wrapper swiper-wrapper">
 								<div class="online__slide swiper-slide">
-									<article class="articles__item">
-										<div class="articles__image img"><img src="@img/photo-men.jpg" alt="Image"></div>
+									<article data-watch class="articles__item">
+										<div class="articles__image img"><img data-src="@img/photo-men.jpg" alt="Image"></div>
 										<div class="articles__top">
 											<a href="" class="articles__photo _icon-image">3</a>
 											<div class="articles__online">Онлайн</div>
 										</div>
 										<div class="articles__content articles__content--mb">
-											<div class="articles__label">
-												<div class="articles__name">Роман <span>27</span></div>
+											<div class="articles__info">
+												<div class="articles__label">
+													<div class="articles__name">Роман <span>27</span></div>
+												</div>
+												<div class="articles__region">Регион: <span>Север Израиля</span></div>
 											</div>
-											<div class="articles__region">Регион: <span>Север Израиля</span></div>
 										</div>
 									</article>
 								</div>
 								<div class="online__slide swiper-slide">
-									<article class="articles__item">
-										<div class="articles__image img"><img src="@img/photo-men.jpg" alt="Image"></div>
+									<article data-watch class="articles__item">
+										<div class="articles__image img"><img data-src="@img/photo-men.jpg" alt="Image"></div>
 										<div class="articles__top">
 											<a href="" class="articles__photo _icon-image">3</a>
 											<div class="articles__online">Онлайн</div>
 										</div>
 										<div class="articles__content articles__content--mb">
-											<div class="articles__label">
-												<div class="articles__name">Роман <span>27</span></div>
+											<div class="articles__info">
+												<div class="articles__label">
+													<div class="articles__name">Роман <span>27</span></div>
+												</div>
+												<div class="articles__region">Регион: <span>Север Израиля</span></div>
 											</div>
-											<div class="articles__region">Регион: <span>Север Израиля</span></div>
 										</div>
 									</article>
 								</div>
 								<div class="online__slide swiper-slide">
-									<article class="articles__item">
-										<div class="articles__image img"><img src="@img/photo-men.jpg" alt="Image"></div>
+									<article data-watch class="articles__item">
+										<div class="articles__image img"><img data-src="@img/photo-men.jpg" alt="Image"></div>
 										<div class="articles__top">
 											<a href="" class="articles__photo _icon-image">3</a>
 											<div class="articles__online">Онлайн</div>
 										</div>
 										<div class="articles__content articles__content--mb">
-											<div class="articles__label">
-												<div class="articles__name">Роман <span>27</span></div>
-												<div class="articles__status">VIP</div>
+											<div class="articles__info">
+												<div class="articles__label">
+													<div class="articles__name">Роман <span>27</span></div>
+													<div class="articles__status">VIP</div>
+												</div>
+												<div class="articles__region">Регион: <span>Север Израиля</span></div>
 											</div>
-											<div class="articles__region">Регион: <span>Север Израиля</span></div>
 										</div>
 									</article>
 								</div>
 								<div class="online__slide swiper-slide">
-									<article class="articles__item">
-										<div class="articles__image img"><img src="@img/photo-men.jpg" alt="Image"></div>
+									<article data-watch class="articles__item">
+										<div class="articles__image img"><img data-src="@img/photo-men.jpg" alt="Image"></div>
 										<div class="articles__top">
 											<a href="" class="articles__photo _icon-image">3</a>
 											<div class="articles__online">Онлайн</div>
 										</div>
 										<div class="articles__content articles__content--mb">
-											<div class="articles__label">
-												<div class="articles__name">Роман <span>27</span></div>
+											<div class="articles__info">
+												<div class="articles__label">
+													<div class="articles__name">Роман <span>27</span></div>
+												</div>
+												<div class="articles__region">Регион: <span>Север Израиля</span></div>
 											</div>
-											<div class="articles__region">Регион: <span>Север Израиля</span></div>
 										</div>
 									</article>
 								</div>
 								<div class="online__slide swiper-slide">
-									<article class="articles__item">
-										<div class="articles__image img"><img src="@img/photo-men.jpg" alt="Image"></div>
+									<article data-watch class="articles__item">
+										<div class="articles__image img"><img data-src="@img/photo-men.jpg" alt="Image"></div>
 										<div class="articles__top">
 											<a href="" class="articles__photo _icon-image">3</a>
 											<div class="articles__online">Онлайн</div>
 										</div>
 										<div class="articles__content articles__content--mb">
-											<div class="articles__label">
-												<div class="articles__name">Роман <span>27</span></div>
-												<div class="articles__status">VIP</div>
+											<div class="articles__info">
+												<div class="articles__label">
+													<div class="articles__name">Роман <span>27</span></div>
+													<div class="articles__status">VIP</div>
+												</div>
+												<div class="articles__region">Регион: <span>Север Израиля</span></div>
 											</div>
-											<div class="articles__region">Регион: <span>Север Израиля</span></div>
 										</div>
 									</article>
 								</div>
 								<div class="online__slide swiper-slide">
-									<article class="articles__item">
-										<div class="articles__image img"><img src="@img/photo-men.jpg" alt="Image"></div>
+									<article data-watch class="articles__item">
+										<div class="articles__image img"><img data-src="@img/photo-men.jpg" alt="Image"></div>
 										<div class="articles__top">
 											<a href="" class="articles__photo _icon-image">3</a>
 											<div class="articles__online">Онлайн</div>
 										</div>
 										<div class="articles__content articles__content--mb">
-											<div class="articles__label">
-												<div class="articles__name">Роман <span>27</span></div>
+											<div class="articles__info">
+												<div class="articles__label">
+													<div class="articles__name">Роман <span>27</span></div>
+												</div>
+												<div class="articles__region">Регион: <span>Север Израиля</span></div>
 											</div>
-											<div class="articles__region">Регион: <span>Север Израиля</span></div>
 										</div>
 									</article>
 								</div>
 								<div class="online__slide swiper-slide">
-									<article class="articles__item">
-										<div class="articles__image img"><img src="@img/photo-men.jpg" alt="Image"></div>
+									<article data-watch class="articles__item">
+										<div class="articles__image img"><img data-src="@img/photo-men.jpg" alt="Image"></div>
 										<div class="articles__top">
 											<a href="" class="articles__photo _icon-image">3</a>
 											<div class="articles__online">Онлайн</div>
 										</div>
 										<div class="articles__content articles__content--mb">
-											<div class="articles__label">
-												<div class="articles__name">Роман <span>27</span></div>
+											<div class="articles__info">
+												<div class="articles__label">
+													<div class="articles__name">Роман <span>27</span></div>
+												</div>
+												<div class="articles__region">Регион: <span>Север Израиля</span></div>
 											</div>
-											<div class="articles__region">Регион: <span>Север Израиля</span></div>
 										</div>
 									</article>
 								</div>

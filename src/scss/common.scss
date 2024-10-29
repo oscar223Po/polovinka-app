@@ -98,6 +98,159 @@ summary {
 		grid-template-columns: toRem(300) 1fr;
 	}
 }
+// Navigation
+.nav {
+	top: 50%;
+	z-index: 3;
+	position: fixed;
+	transform: translate(0px, -50%);
+	transition: opacity 0.3s ease 0s;
+	&._nav-active {
+		opacity: 0;
+	}
+	@media (max-width: toEm(1314.98)) {
+		top: auto;
+		bottom: 0;
+		width: 100%;
+		transform: translate(0, 0);
+		border-radius: toRem(10) toRem(10) toRem(0) toRem(0);
+		box-shadow: rgba(38, 57, 77, 0.5) 0px -20px 30px -10px;
+		background: linear-gradient(270deg, #340943 0%, #51044a 100%);
+	}
+	// .nav__list
+	&__list {
+		display: flex;
+		gap: toRem(10);
+		align-items: start;
+		flex-direction: column;
+		@media (max-width: toEm(1314.98)) {
+			margin: 0 auto;
+			flex-direction: row;
+			max-width: toRem(1190);
+			justify-content: space-between;
+			padding: toRem(20) toRem(15) toRem(5) toRem(15);
+		}
+		@media (max-width: $mobileSmall) {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			padding: toRem(15) toRem(15) toRem(5) toRem(15);
+		}
+	}
+	// .nav__item
+	&__item {
+		position: relative;
+		span {
+			top: -8px;
+			right: 5px;
+			z-index: 1;
+			display: flex;
+			color: $mainColor;
+			position: absolute;
+			align-items: center;
+			font-size: toRem(12);
+			pointer-events: none;
+			min-height: toRem(18);
+			justify-content: center;
+			border-radius: toRem(5);
+			padding: toRem(0) toRem(7);
+			transform: translate(100%, 0px);
+			background-color: rgba($redColor, 0.7);
+		}
+		&:nth-child(2) {
+			.nav__link {
+				color: $orangeColor;
+			}
+		}
+		&:nth-child(3) {
+			.nav__link {
+				color: $blueColor;
+			}
+		}
+		&:nth-child(4) {
+			.nav__link {
+				color: $redColor;
+			}
+		}
+		&:nth-child(5) {
+			.nav__link {
+				color: $yellowColor;
+			}
+		}
+		&:nth-child(7) {
+			.nav__link {
+				color: $orangeColor;
+			}
+		}
+		@media (min-width: toEm(1314.98)) {
+			@media (any-hover: hover) {
+				&:hover {
+					.nav__link {
+						padding: toRem(10) toRem(10) toRem(10) toRem(20);
+					}
+				}
+			}
+		}
+		@media (max-width: toEm(1314.98)) {
+			width: 100%;
+			span {
+				right: 0;
+				top: -10px;
+				transform: translate(3px, 0px);
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			span {
+				top: -5px;
+			}
+		}
+	}
+	// .nav__link
+	&__link {
+		display: flex;
+		font-size: toRem(20);
+		justify-content: center;
+		background-color: #381d42;
+		transition: padding 0.3s ease 0s;
+		padding: toRem(10) toRem(10) toRem(10) toRem(15);
+		border-top: toRem(1) solid rgba($orangeColor, 0.15);
+		border-radius: toRem(0) toRem(10) toRem(10) toRem(0);
+		border-right: toRem(1) solid rgba($orangeColor, 0.15);
+		border-bottom: toRem(1) solid rgba($orangeColor, 0.15);
+		&::before {
+			display: flex;
+			width: toRem(20);
+			height: toRem(20);
+			align-items: center;
+			justify-content: center;
+		}
+		@media (max-width: toEm(1314.98)) {
+			width: 100%;
+			transition: none;
+			padding: toRem(10);
+			border-bottom: none;
+			border-radius: toRem(10);
+			background-color: $bgColor;
+			border: toRem(1) solid rgba($orangeColor, 0.15);
+		}
+		@media (max-width: $mobileSmall) {
+			padding: toRem(7);
+			font-size: toRem(16);
+			&::before {
+				width: toRem(16);
+				height: toRem(16);
+			}
+		}
+	}
+}
+// Page With Padding
+.page {
+	&.pad-max {
+		@include adaptiveValue("padding-top", 120, 95);
+	}
+	&.pad-min {
+		@include adaptiveValue("padding-top", 105, 100);
+	}
+}
 // ========================================================================================================================================================
 // Title & Text
 .title {
@@ -351,6 +504,12 @@ summary {
 	@include adaptiveValue("gap", 20, 15);
 	// .articles__item
 	&__item {
+		opacity: 0;
+		transition: opacity 0.5s ease 0.05s;
+		&._watcher-view {
+			opacity: 1;
+		}
+		height: 100%;
 		overflow: hidden;
 		position: relative;
 		border-radius: toRem(20) toRem(20) toRem(25) toRem(25);
@@ -366,7 +525,9 @@ summary {
 	}
 	// .articles__image
 	&__image {
+		height: 100%;
 		position: relative;
+		max-height: toRem(360);
 		&::before {
 			z-index: 1;
 			content: "";
@@ -432,16 +593,21 @@ summary {
 			bottom: 15px;
 		}
 	}
+	// .articles__info
+	&__info {
+		display: grid;
+		gap: toRem(10);
+		padding: toRem(0) toRem(15);
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
 	// .articles__label
 	&__label {
 		display: flex;
 		font-weight: 600;
 		align-items: center;
-		padding: toRem(0) toRem(15);
 		justify-content: space-between;
-		&:not(:last-child) {
-			margin-bottom: toRem(10);
-		}
 	}
 	// .articles__name
 	&__name {
@@ -457,14 +623,34 @@ summary {
 	}
 	// .articles__region
 	&__region {
-		padding-left: toRem(15);
-		&:not(:last-child) {
-			margin-bottom: toRem(15);
-		}
+	}
+	// .articles__actions
+	&__actions {
+		display: flex;
+		gap: toRem(3);
+		align-items: center;
 	}
 	// .articles__button
 	&__button {
 		width: 100%;
+		span {
+			&::before {
+				font-size: toRem(18);
+			}
+		}
+	}
+	// .articles__btn
+	&__btn {
+		height: toRem(48);
+		border-radius: 50%;
+		min-width: toRem(48);
+		font-size: toRem(18);
+		background-color: $purpleColor;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $bgColor;
+			}
+		}
 	}
 }
 // Video
@@ -474,6 +660,11 @@ summary {
 	@include adaptiveValue("gap", 20, 15);
 	// .video__item
 	&__item {
+		opacity: 0;
+		transition: opacity 0.5s ease 0.05s;
+		&._watcher-view {
+			opacity: 1;
+		}
 		overflow: hidden;
 		position: relative;
 		border-radius: toRem(20);
@@ -779,6 +970,36 @@ summary {
 	&__input {
 		&[type="file"] {
 			display: none;
+		}
+	}
+}
+// ========================================================================================================================================================
+// Quest Button Add Favorite
+.btn-heart {
+	span {
+		&:last-child {
+			display: none;
+		}
+	}
+	&--active {
+		color: $mainColor;
+		background-color: rgba(red, 0.9);
+		&.describe-quest__button--five {
+			color: $mainColor;
+			background-color: red;
+		}
+		span {
+			&:first-child {
+				display: none;
+			}
+			&:last-child {
+				display: block;
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: red;
+			}
 		}
 	}
 }

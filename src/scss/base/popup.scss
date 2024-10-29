@@ -71,6 +71,7 @@ body::after {
 .top-popup {
 	display: flex;
 	align-items: center;
+	column-gap: toRem(10);
 	padding-bottom: toRem(12);
 	justify-content: space-between;
 	border-bottom: toRem(1) solid rgba(#fff, 0.15);
@@ -80,8 +81,9 @@ body::after {
 	// .top-popup__title
 	&__title {
 		font-weight: 500;
-		background: $gradientOrange;
+		line-height: 125%;
 		background-clip: text;
+		background: $gradientOrange;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		@include adaptiveValue("font-size", 30, 20);
@@ -164,8 +166,8 @@ body::after {
 // Photos Rate Popup
 .photos {
 	overflow: hidden;
-	padding: toRem(16) toRem(16) toRem(30) toRem(16);
 	max-width: 529.98px;
+	padding: toRem(16) toRem(16) toRem(30) toRem(16);
 	// .photos__top
 	&__top {
 	}
@@ -250,6 +252,115 @@ body::after {
 	// .controls-photos__arrows
 	&__arrows {
 		gap: toRem(10);
+	}
+}
+// ========================================================================================================================================================
+// Popup Greeting
+.greeting {
+	max-width: 529.98px;
+	// .greeting__top
+	&__top {
+	}
+	// .greeting__form
+	&__form {
+		display: grid;
+		gap: toRem(15);
+		@media (min-width: toEm(549.98)) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	// .greeting__actions
+	&__actions {
+		span {
+			display: flex;
+			&:not(:last-child) {
+				margin-bottom: toRem(8);
+			}
+		}
+	}
+	// .greeting__buttons
+	&__buttons {
+		display: grid;
+		gap: toRem(5);
+		grid-template-columns: repeat(auto-fill, minmax(toRem(45), 1fr));
+	}
+	// .greeting__button
+	&__button {
+		width: 100%;
+		display: flex;
+		height: toRem(40);
+		align-items: center;
+		font-size: toRem(18);
+		justify-content: center;
+	}
+	// .greeting__done
+	&__done {
+		display: grid;
+		gap: toRem(20);
+	}
+	// .greeting__text
+	&__text {
+		font-weight: 500;
+		line-height: 130%;
+		text-align: center;
+		font-family: $fontFamilyMontAlt;
+		@include adaptiveValue("font-size", 18, 16);
+	}
+	// .greeting__close
+	&__close {
+		display: flex;
+		margin: 0 auto;
+	}
+}
+// ========================================================================================================================================================
+// Popup Done
+.done {
+	max-width: 489.98px;
+	// .done__head
+	&__head {
+		text-align: center;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 30, 20);
+		}
+	}
+	// .done__title
+	&__title {
+		font-weight: 500;
+		line-height: 125%;
+		background-clip: text;
+		padding-bottom: toRem(15);
+		background: $gradientOrange;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		border-bottom: toRem(1) solid rgba(#fff, 0.15);
+		@include adaptiveValue("font-size", 30, 18);
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+	// .done__text
+	&__text {
+		font-weight: 500;
+		line-height: 130%;
+		font-family: $fontFamilyMontAlt;
+		@include adaptiveValue("font-size", 18, 14);
+		span {
+			color: $blueColor;
+		}
+		a {
+			color: $blueColor;
+			text-decoration: underline;
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	// .done__close
+	&__close {
+		display: flex;
+		margin: 0 auto;
 	}
 }
 // ========================================================================================================================================================

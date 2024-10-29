@@ -9,6 +9,7 @@
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
 import { Autoplay, EffectCards, Navigation, Pagination } from 'swiper/modules';
+
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 

@@ -5,8 +5,12 @@
 	<title>Polovinka (QuestionnaireVip) - QuestionnaireVipPage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241029012530">
+	<style>
+		body {
+			opacity: 0;
+		}
+	</style>
+	<link rel="stylesheet" href="css/style.min.css?_v=20241030025641">
 	<link rel="shortcut icon" href="img/icons/head-logo.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -110,7 +114,6 @@
 					<ul class="header__list">
 						<li class="header__item"><a href="" class="header__link header__link--search _icon-search"><span>Поиск анкет</span></a></li>
 						<li class="header__item"><a href="" class="header__link header__link--new _icon-family"><span>Новые анкеты</span></a></li>
-						<li class="header__item"><a href="" class="header__link header__link--about _icon-about"><span>О нас</span></a></li>
 					</ul>
 					<div class="header__actions">
 						<a href="" class="header__button button button--lb _icon-user-check"><span>Вход</span></a>
@@ -120,7 +123,7 @@
 			</div>
 		</header>
 		<!-- $=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-> -->
-		<main class="page">
+		<main class="page pad-min">
 			<!-- [Breadcrumbs] -->
 			<nav class="breadcrumbs">
 				<div class="breadcrumbs__container">
@@ -138,9 +141,9 @@
 					<div class="quest__body">
 						<div class="quest__main main-quest">
 							<div class="main-quest__image img bg-shad bg-shad--rbwl">
-								<img src="img/photo-women.webp" alt="Image">
+								<img data-src="img/photo-women.webp" alt="Image">
 								<div class="main-quest__actions">
-									<button type="button" class="main-quest__button button button--ord">
+									<button data-popup="#greeting" type="button" class="main-quest__button button button--ord">
 										<span>
 											Поприветствовать
 											<svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -148,7 +151,6 @@
 											</svg>
 										</span>
 									</button>
-									<button type="button" class="main-quest__button button button--rb _icon.webpt">Подарить подарок</button>
 								</div>
 							</div>
 						</div>
@@ -322,109 +324,123 @@
 						<div class="online__slider swiper">
 							<div class="online__wrapper swiper-wrapper">
 								<div class="online__slide swiper-slide">
-									<article class="articles__item">
-										<div class="articles__image img"><img src="img/photo-men.webp" alt="Image"></div>
+									<article data-watch class="articles__item">
+										<div class="articles__image img"><img data-src="img/photo-men.webp" alt="Image"></div>
 										<div class="articles__top">
 											<a href="" class="articles__photo _icon-image">3</a>
 											<div class="articles__online">Онлайн</div>
 										</div>
 										<div class="articles__content articles__content--mb">
-											<div class="articles__label">
-												<div class="articles__name">Роман <span>27</span></div>
+											<div class="articles__info">
+												<div class="articles__label">
+													<div class="articles__name">Роман <span>27</span></div>
+												</div>
+												<div class="articles__region">Регион: <span>Север Израиля</span></div>
 											</div>
-											<div class="articles__region">Регион: <span>Север Израиля</span></div>
 										</div>
 									</article>
 								</div>
 								<div class="online__slide swiper-slide">
-									<article class="articles__item">
-										<div class="articles__image img"><img src="img/photo-men.webp" alt="Image"></div>
+									<article data-watch class="articles__item">
+										<div class="articles__image img"><img data-src="img/photo-men.webp" alt="Image"></div>
 										<div class="articles__top">
 											<a href="" class="articles__photo _icon-image">3</a>
 											<div class="articles__online">Онлайн</div>
 										</div>
 										<div class="articles__content articles__content--mb">
-											<div class="articles__label">
-												<div class="articles__name">Роман <span>27</span></div>
+											<div class="articles__info">
+												<div class="articles__label">
+													<div class="articles__name">Роман <span>27</span></div>
+												</div>
+												<div class="articles__region">Регион: <span>Север Израиля</span></div>
 											</div>
-											<div class="articles__region">Регион: <span>Север Израиля</span></div>
 										</div>
 									</article>
 								</div>
 								<div class="online__slide swiper-slide">
-									<article class="articles__item">
-										<div class="articles__image img"><img src="img/photo-men.webp" alt="Image"></div>
+									<article data-watch class="articles__item">
+										<div class="articles__image img"><img data-src="img/photo-men.webp" alt="Image"></div>
 										<div class="articles__top">
 											<a href="" class="articles__photo _icon-image">3</a>
 											<div class="articles__online">Онлайн</div>
 										</div>
 										<div class="articles__content articles__content--mb">
-											<div class="articles__label">
-												<div class="articles__name">Роман <span>27</span></div>
-												<div class="articles__status">VIP</div>
+											<div class="articles__info">
+												<div class="articles__label">
+													<div class="articles__name">Роман <span>27</span></div>
+													<div class="articles__status">VIP</div>
+												</div>
+												<div class="articles__region">Регион: <span>Север Израиля</span></div>
 											</div>
-											<div class="articles__region">Регион: <span>Север Израиля</span></div>
 										</div>
 									</article>
 								</div>
 								<div class="online__slide swiper-slide">
-									<article class="articles__item">
-										<div class="articles__image img"><img src="img/photo-men.webp" alt="Image"></div>
+									<article data-watch class="articles__item">
+										<div class="articles__image img"><img data-src="img/photo-men.webp" alt="Image"></div>
 										<div class="articles__top">
 											<a href="" class="articles__photo _icon-image">3</a>
 											<div class="articles__online">Онлайн</div>
 										</div>
 										<div class="articles__content articles__content--mb">
-											<div class="articles__label">
-												<div class="articles__name">Роман <span>27</span></div>
+											<div class="articles__info">
+												<div class="articles__label">
+													<div class="articles__name">Роман <span>27</span></div>
+												</div>
+												<div class="articles__region">Регион: <span>Север Израиля</span></div>
 											</div>
-											<div class="articles__region">Регион: <span>Север Израиля</span></div>
 										</div>
 									</article>
 								</div>
 								<div class="online__slide swiper-slide">
-									<article class="articles__item">
-										<div class="articles__image img"><img src="img/photo-men.webp" alt="Image"></div>
+									<article data-watch class="articles__item">
+										<div class="articles__image img"><img data-src="img/photo-men.webp" alt="Image"></div>
 										<div class="articles__top">
 											<a href="" class="articles__photo _icon-image">3</a>
 											<div class="articles__online">Онлайн</div>
 										</div>
 										<div class="articles__content articles__content--mb">
-											<div class="articles__label">
-												<div class="articles__name">Роман <span>27</span></div>
-												<div class="articles__status">VIP</div>
+											<div class="articles__info">
+												<div class="articles__label">
+													<div class="articles__name">Роман <span>27</span></div>
+													<div class="articles__status">VIP</div>
+												</div>
+												<div class="articles__region">Регион: <span>Север Израиля</span></div>
 											</div>
-											<div class="articles__region">Регион: <span>Север Израиля</span></div>
 										</div>
 									</article>
 								</div>
 								<div class="online__slide swiper-slide">
-									<article class="articles__item">
-										<div class="articles__image img"><img src="img/photo-men.webp" alt="Image"></div>
+									<article data-watch class="articles__item">
+										<div class="articles__image img"><img data-src="img/photo-men.webp" alt="Image"></div>
 										<div class="articles__top">
 											<a href="" class="articles__photo _icon-image">3</a>
 											<div class="articles__online">Онлайн</div>
 										</div>
 										<div class="articles__content articles__content--mb">
-											<div class="articles__label">
-												<div class="articles__name">Роман <span>27</span></div>
+											<div class="articles__info">
+												<div class="articles__label">
+													<div class="articles__name">Роман <span>27</span></div>
+												</div>
+												<div class="articles__region">Регион: <span>Север Израиля</span></div>
 											</div>
-											<div class="articles__region">Регион: <span>Север Израиля</span></div>
 										</div>
 									</article>
 								</div>
 								<div class="online__slide swiper-slide">
-									<article class="articles__item">
-										<div class="articles__image img"><img src="img/photo-men.webp" alt="Image"></div>
+									<article data-watch class="articles__item">
+										<div class="articles__image img"><img data-src="img/photo-men.webp" alt="Image"></div>
 										<div class="articles__top">
 											<a href="" class="articles__photo _icon-image">3</a>
 											<div class="articles__online">Онлайн</div>
 										</div>
 										<div class="articles__content articles__content--mb">
-											<div class="articles__label">
-												<div class="articles__name">Роман <span>27</span></div>
+											<div class="articles__info">
+												<div class="articles__label">
+													<div class="articles__name">Роман <span>27</span></div>
+												</div>
+												<div class="articles__region">Регион: <span>Север Израиля</span></div>
 											</div>
-											<div class="articles__region">Регион: <span>Север Израиля</span></div>
 										</div>
 									</article>
 								</div>
@@ -1116,28 +1132,28 @@
 						<div class="photos__slider swiper">
 							<div class="photos__wrapper swiper-wrapper">
 								<div class="photos__slide slide-photos swiper-slide bg-shad">
-									<div class="slide-photos__image img"><img src="img/photo-women.webp" alt="Image"></div>
+									<div class="slide-photos__image img"><img data-src="img/photo-women.webp" alt="Image"></div>
 									<div class="slide-photos__rate">
 										<span>Оцените эту фотографию:</span>
 										<div data-rating="set" class="rating"></div>
 									</div>
 								</div>
 								<div class="photos__slide slide-photos swiper-slide bg-shad">
-									<div class="slide-photos__image img"><img src="img/photo-men.webp" alt="Image"></div>
+									<div class="slide-photos__image img"><img data-src="img/photo-men.webp" alt="Image"></div>
 									<div class="slide-photos__rate">
 										<span>Оцените эту фотографию:</span>
 										<div data-rating="set" class="rating"></div>
 									</div>
 								</div>
 								<div class="photos__slide slide-photos swiper-slide bg-shad">
-									<div class="slide-photos__image img"><img src="img/photo-women.webp" alt="Image"></div>
+									<div class="slide-photos__image img"><img data-src="img/photo-women.webp" alt="Image"></div>
 									<div class="slide-photos__rate">
 										<span>Оцените эту фотографию:</span>
 										<div data-rating="set" class="rating"></div>
 									</div>
 								</div>
 								<div class="photos__slide slide-photos swiper-slide bg-shad">
-									<div class="slide-photos__image img"><img src="img/photo-men.webp" alt="Image"></div>
+									<div class="slide-photos__image img"><img data-src="img/photo-men.webp" alt="Image"></div>
 									<div class="slide-photos__rate">
 										<span>Оцените эту фотографию:</span>
 										<div data-rating="set" class="rating"></div>
@@ -1160,9 +1176,105 @@
 			</div>
 		</div>
 		<!-- //======================================================================================================================================================== -->
+		<!-- Greeting -->
+		<div id="greeting" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content greeting bg-shad bg-shad--rbwr">
+					<div class="greeting__top top-popup">
+						<h4 class="top-popup__title">Как хотите поприветствовать?</h4>
+						<button data-close type="button" class="top-popup__close">
+							<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M18 6L6 18" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M6 6L18 18" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</button>
+					</div>
+					<form action="" class="greeting__form form">
+						<div class="form__select">
+							<span class="title title--min">Стандартное приветствие:</span>
+							<select name="form[]" data-class-modif="main">
+								<option value="1" selected>Привет!</option>
+								<option value="2">Привет))</option>
+								<option value="3">Привет :)</option>
+								<option value="4">שלום</option>
+								<option value="5">Привет ;)</option>
+								<option value="6">Приветик;-)</option>
+								<option value="7">Шалом!</option>
+								<option value="8">Приветик</option>
+								<option value="9">Hi</option>
+								<option value="10">Приветствую!</option>
+								<option value="11">Ты мне нравишься!</option>
+								<option value="12">Давай знакомиться!</option>
+							</select>
+						</div>
+						<div class="greeting__actions">
+							<span class="title title--min">Выбрать подарок:</span>
+							<div class="greeting__buttons">
+								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">💐</button>
+								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">🎁</button>
+								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">🍫</button>
+								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">💝</button>
+								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">💐</button>
+								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">🎁</button>
+								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">🍫</button>
+								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">💝</button>
+								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">💐</button>
+								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">🎁</button>
+								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">🍫</button>
+								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">💝</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- //======================================================================================================================================================== -->
+		<!-- Done Greeting -->
+		<div id="done-greeting" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content done bg-shad bg-shad--rbwr">
+					<div class="done__head">
+						<h4 class="done__title">Вы отправили приветствие!</h4>
+						<div class="done__text">
+							<p>Благодарим вас! Ваш <span>подарок</span> был успешно отправлен пользователю!</p>
+						</div>
+					</div>
+					<button data-close type="button" class="done__close button button--ord"><span>Отлично!</span></button>
+				</div>
+			</div>
+		</div>
+		<!-- Done Favorites -->
+		<div id="done-favorites" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content done bg-shad bg-shad--rbwr">
+					<div class="done__head">
+						<h4 class="done__title">Вы добавили пользователя!</h4>
+						<div class="done__text">
+							<p>Поздравляем вас! Вы успешно добавили этого пользователя в <a href="">фавориты</a>!</p>
+						</div>
+					</div>
+					<button data-close type="button" class="done__close button button--ord"><span>Отлично!</span></button>
+				</div>
+			</div>
+		</div>
+		<!-- Done Favorites Remove -->
+		<div id="done-favorites-remove" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content done bg-shad bg-shad--rbwr">
+					<div class="done__head">
+						<h4 class="done__title">Вы убрали пользователя!</h4>
+						<div class="done__text">
+							<p>Поздравляем вас! Вы успешно убрали этого пользователя из <a href="">фаворитов</a>!</p>
+						</div>
+					</div>
+					<button data-close type="button" class="done__close button button--ord"><span>Закрыть</span></button>
+				</div>
+			</div>
+		</div>
+		<!-- //======================================================================================================================================================== -->
 
 	</div>
-	<script src="js/app.min.js?_v=20241029012530"></script>
+	<script src="js/app.min.js?_v=20241030025641"></script>
 </body>
 
 </html>

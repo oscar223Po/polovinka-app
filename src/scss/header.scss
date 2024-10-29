@@ -1,8 +1,12 @@
 //========================================================================================================================================================
 // Header
 .header {
+	top: 0;
+	left: 0;
+	width: 100%;
 	z-index: 10;
-	position: relative;
+	position: fixed;
+	background-color: $purpleColor;
 	box-shadow:
 		rgba(240, 46, 170, 0.2) 0px 5px,
 		rgba(240, 46, 170, 0.1) 0px 10px,
@@ -121,12 +125,6 @@
 				color: $yellowColor;
 			}
 		}
-		// .header__link--about
-		&--about {
-			&::before {
-				color: $blueColor;
-			}
-		}
 	}
 	// .header__actions
 	&__actions {
@@ -140,6 +138,41 @@
 			span {
 				display: none;
 			}
+		}
+	}
+	// .header__auth
+	&__auth {
+		display: flex;
+		gap: toRem(7);
+		padding: toRem(5);
+		align-items: center;
+		border-radius: toRem(5);
+		transition: opacity 0.3s ease 0s;
+		background: linear-gradient(270deg, #454979 0%, #665d65 100%);
+		span {
+			font-weight: 500;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.85;
+			}
+		}
+		@media (max-width: toEm(399.98)) {
+			padding: toRem(0);
+			border: toRem(1) solid rgba($pinkColor, 0.5);
+			span {
+				display: none;
+			}
+		}
+	}
+	// .header__auth-image
+	&__auth-image {
+		width: toRem(30);
+		height: toRem(30);
+		border-radius: toRem(5);
+		@media (max-width: toEm(399.98)) {
+			width: toRem(40);
+			height: toRem(40);
 		}
 	}
 }

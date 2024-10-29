@@ -139,5 +139,33 @@ document.addEventListener('DOMContentLoaded', function () {
 			fileInput.click();
 		});
 	}
+	// ================[ JavaScript Section ]================
+	const footer = document.querySelector('.footer');
+	const nav = document.querySelector('.nav');
+	if (nav !== null) {
+		window.addEventListener('scroll', () => {
+			const footerRect = footer.getBoundingClientRect();
+			const windowHeight = window.innerHeight;
+			if (footerRect.top <= windowHeight) {
+				nav.classList.add('_nav-active'); // Добавляем класс, когда достигли footer
+			} else {
+				nav.classList.remove('_nav-active'); // Убираем класс, когда выше footer
+			}
+		});
+	}
+	// ================[ JavaScript Section Add Favorite ]================
+	const heartButtons = document.querySelectorAll('.btn-heart');
+	if (heartButtons !== null) {
+		heartButtons.forEach(button => {
+			button.addEventListener('click', function () {
+				this.classList.toggle('btn-heart--active');
+				if (this.classList.contains('btn-heart--active')) {
+					this.setAttribute('data-popup', '#done-favorites');
+				} else {
+					this.setAttribute('data-popup', '#done-favorites-remove');
+				}
+			});
+		});
+	}
 });
 //--------------------------------------------------------------
