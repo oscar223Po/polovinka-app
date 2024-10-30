@@ -3360,7 +3360,7 @@ summary::marker {
   font-size: .875rem;
   font-family: "Montserrat Alternates"
 }
-.webpt-quest__title {
+.present-quest__title {
   font-weight: 500;
   line-height: 125%;
   background: linear-gradient(-90deg,#ee0979 0,#ffba33 100%);
@@ -3368,15 +3368,15 @@ summary::marker {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent
 }
-.webpt-quest__title:not(:last-child) {
+.present-quest__title:not(:last-child) {
   margin-bottom: .9375rem
 }
-.webpt-quest__items {
+.present-quest__items {
   display: grid;
   gap: .9375rem;
   grid-template-columns: repeat(auto-fill,minmax(80px,1fr))
 }
-.webpt-quest__item {
+.present-quest__item {
   display: flex;
   padding: .625rem;
   align-items: center;
@@ -3385,7 +3385,7 @@ summary::marker {
   background-color: #230e2b;
   border: .0625rem solid rgba(247,248,249,.1)
 }
-.webpt-quest__item img {
+.present-quest__item img {
   width: 100%
 }
 .textual__quote:not(:last-child) {
@@ -4061,10 +4061,10 @@ summary::marker {
   .describe-quest__button {
     font-size: 1.125rem
   }
-  .webpt-quest {
+  .present-quest {
     margin-top: 2.1875rem
   }
-  .webpt-quest__title {
+  .present-quest__title {
     font-size: 1.375rem
   }
   .textual {
@@ -4242,10 +4242,10 @@ summary::marker {
   .describe-quest__title span {
     font-size: 1.375rem
   }
-  .webpt-quest {
+  .present-quest {
     margin-top: 1.5625rem
   }
-  .webpt-quest__title {
+  .present-quest__title {
     font-size: 1.125rem
   }
   .textual {
@@ -5053,22 +5053,22 @@ summary::marker {
     }
   }
   @supports (margin-top:clamp(1.5625rem ,1.3326149425rem + 1.1494252874vw ,2.1875rem)) {
-    .webpt-quest {
+    .present-quest {
       margin-top: clamp(1.5625rem ,1.3326149425rem + 1.1494252874vw ,2.1875rem)
     }
   }
   @supports not (margin-top:clamp(1.5625rem ,1.3326149425rem + 1.1494252874vw ,2.1875rem)) {
-    .webpt-quest {
+    .present-quest {
       margin-top: calc(1.5625rem + .625*(100vw - 20rem)/ 54.375)
     }
   }
   @supports (font-size:clamp(1.125rem ,1.033045977rem + 0.4597701149vw ,1.375rem)) {
-    .webpt-quest__title {
+    .present-quest__title {
       font-size: clamp(1.125rem ,1.033045977rem + .4597701149vw ,1.375rem)
     }
   }
   @supports not (font-size:clamp(1.125rem ,1.033045977rem + 0.4597701149vw ,1.375rem)) {
-    .webpt-quest__title {
+    .present-quest__title {
       font-size: calc(1.125rem + .25*(100vw - 20rem)/ 54.375)
     }
   }
