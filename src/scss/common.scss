@@ -104,9 +104,12 @@ summary {
 	z-index: 3;
 	position: fixed;
 	transform: translate(0px, -50%);
-	transition: opacity 0.3s ease 0s;
+	transition:
+		opacity 0.3s ease 0s,
+		visibility 0.3s ease 0s;
 	&._nav-active {
 		opacity: 0;
+		visibility: hidden;
 	}
 	@media (max-width: toEm(1314.98)) {
 		top: auto;

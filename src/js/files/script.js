@@ -68,22 +68,18 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	}
 	// ================[ JavaScript Section Textarea Limit ]================
+	const updateCharCount = (textarea, maxLength) => {
+		const charCount = textarea.nextElementSibling;
+		textarea.addEventListener('input', () => {
+			const currentLength = textarea.value.length;
+			charCount.textContent = `${currentLength}/${maxLength} символов`;
+		});
+	};
 	const textareas = document.querySelectorAll('.request-textarea');
 	if (textareas !== null) {
 		textareas.forEach(textarea => {
-			const charCount = textarea.nextElementSibling;
-			textarea.addEventListener('input', () => {
-				const currentLength = textarea.value.length;
-				charCount.textContent = `${currentLength}/2000 символов`;
-			});
-		});
-	}
-	const textareaMin = document.querySelector('.request-textarea-min');
-	if (textareaMin !== null) {
-		const charCount = textareaMin.nextElementSibling;
-		textareaMin.addEventListener('input', () => {
-			const currentLength = textareaMin.value.length;
-			charCount.textContent = `${currentLength}/30 символов`;
+			const maxLength = textarea.getAttribute('maxlength');
+			updateCharCount(textarea, maxLength);
 		});
 	}
 	// ================[ JavaScript Section Checkbox Form ]================
@@ -139,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			fileInput.click();
 		});
 	}
-	// ================[ JavaScript Section ]================
+	// ================[ JavaScript Remove Navigation Near Footer ]================
 	const footer = document.querySelector('.footer');
 	const nav = document.querySelector('.nav');
 	if (nav !== null) {
@@ -147,9 +143,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			const footerRect = footer.getBoundingClientRect();
 			const windowHeight = window.innerHeight;
 			if (footerRect.top <= windowHeight) {
-				nav.classList.add('_nav-active'); // Добавляем класс, когда достигли footer
+				nav.classList.add('_nav-active');
 			} else {
-				nav.classList.remove('_nav-active'); // Убираем класс, когда выше footer
+				nav.classList.remove('_nav-active');
 			}
 		});
 	}

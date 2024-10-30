@@ -23,6 +23,120 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale
 }
+._icon-about:before {
+  content: ""
+}
+._icon-arrow-min:before {
+  content: ""
+}
+._icon-arrow:before {
+  content: ""
+}
+._icon-check:before {
+  content: ""
+}
+._icon-date:before {
+  content: ""
+}
+._icon-family:before {
+  content: ""
+}
+._icon-faq:before {
+  content: ""
+}
+._icon-goal:before {
+  content: ""
+}
+._icon-hobby:before {
+  content: ""
+}
+._icon-info:before {
+  content: ""
+}
+._icon-kids:before {
+  content: ""
+}
+._icon-language:before {
+  content: ""
+}
+._icon-link:before {
+  content: ""
+}
+._icon-look:before {
+  content: ""
+}
+._icon-messages:before {
+  content: ""
+}
+._icon-move:before {
+  content: ""
+}
+._icon-partner:before {
+  content: ""
+}
+._icon-profile:before {
+  content: ""
+}
+._icon-quest:before {
+  content: ""
+}
+._icon-search:before {
+  content: ""
+}
+._icon-user:before {
+  content: ""
+}
+._icon-alert:before {
+  content: ""
+}
+._icon-bell:before {
+  content: ""
+}
+._icon-bookmark:before {
+  content: ""
+}
+._icon-clock:before {
+  content: ""
+}
+._icon-eye:before {
+  content: ""
+}
+._icon-eye-off:before {
+  content: ""
+}
+._icon-present:before {
+  content: ""
+}
+._icon-heart:before {
+  content: ""
+}
+._icon-help-circle:before {
+  content: ""
+}
+._icon-image:before {
+  content: ""
+}
+._icon-link-ic:before {
+  content: ""
+}
+._icon-mail:before {
+  content: ""
+}
+._icon-location:before {
+  content: ""
+}
+._icon-phone:before {
+  content: ""
+}
+._icon-dislike:before {
+  content: ""
+}
+._icon-like:before {
+  content: ""
+}
+._icon-trash:before {
+  content: ""
+}
 ._icon-sign-01:before {
   content: ""
 }
@@ -124,120 +238,6 @@
 }
 ._icon-user-check:before {
   content: ""
-}
-._icon-about:before {
-  content: ""
-}
-._icon-arrow-min:before {
-  content: ""
-}
-._icon-arrow:before {
-  content: ""
-}
-._icon-check:before {
-  content: ""
-}
-._icon-date:before {
-  content: ""
-}
-._icon-family:before {
-  content: ""
-}
-._icon-faq:before {
-  content: ""
-}
-._icon-goal:before {
-  content: ""
-}
-._icon-hobby:before {
-  content: ""
-}
-._icon-info:before {
-  content: ""
-}
-._icon-kids:before {
-  content: ""
-}
-._icon-language:before {
-  content: ""
-}
-._icon-link:before {
-  content: ""
-}
-._icon-look:before {
-  content: ""
-}
-._icon-messages:before {
-  content: ""
-}
-._icon-move:before {
-  content: ""
-}
-._icon-partner:before {
-  content: ""
-}
-._icon-profile:before {
-  content: ""
-}
-._icon-quest:before {
-  content: ""
-}
-._icon-search:before {
-  content: ""
-}
-._icon-user:before {
-  content: ""
-}
-._icon-alert:before {
-  content: ""
-}
-._icon-bell:before {
-  content: ""
-}
-._icon-bookmark:before {
-  content: ""
-}
-._icon-clock:before {
-  content: ""
-}
-._icon-eye:before {
-  content: ""
-}
-._icon-eye-off:before {
-  content: ""
-}
-._icon.webpt:before {
-  content: ""
-}
-._icon-heart:before {
-  content: ""
-}
-._icon-help-circle:before {
-  content: ""
-}
-._icon-image:before {
-  content: ""
-}
-._icon-link-ic:before {
-  content: ""
-}
-._icon-mail:before {
-  content: ""
-}
-._icon-location:before {
-  content: ""
-}
-._icon-phone:before {
-  content: ""
-}
-._icon-dislike:before {
-  content: ""
-}
-._icon-like:before {
-  content: ""
-}
-._icon-trash:before {
-  content: ""
 }
 * {
   padding: 0;
@@ -728,6 +728,7 @@ textarea.input {
   justify-content: center
 }
 .lang {
+  display: grid;
   gap: .5rem
 }
 .lang__item {
@@ -814,6 +815,48 @@ textarea.input {
   gap: .5rem;
   align-items: center;
   flex-direction: column
+}
+.talent {
+  display: grid;
+  gap: .5rem;
+  grid-template-columns: repeat(auto-fill,minmax(6.25rem,1fr))
+}
+.talent__item {
+  display: flex;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border-radius: .75rem
+}
+.talent__input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute
+}
+.talent__input:checked+.talent__label {
+  background-color: rgba(102,161,247,.15);
+  border: .0625rem solid #a594f9
+}
+.talent__label {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  min-height: 3.5rem;
+  justify-content: center;
+  border-radius: .75rem;
+  background-color: rgba(247,61,88,.15);
+  transition: background-color .3s ease 0s,border .3s ease 0s;
+  border: .0625rem solid rgba(247,248,249,.1)
+}
+.talent__img {
+  padding: 1.5625rem
+}
+.talent__img img {
+  max-width: 100%
 }
 .select {
   min-width: 0;
@@ -1602,6 +1645,16 @@ body::after {
   display: flex;
   margin: 0 auto
 }
+.present {
+  max-width: 529.98px
+}
+.present__form {
+  display: grid;
+  gap: .9375rem
+}
+.present__input {
+  height: 6.25rem
+}
 .spollers {
   display: grid;
   gap: 16px
@@ -1846,10 +1899,11 @@ summary::marker {
   position: fixed;
   -webkit-transform: translate(0,-50%);
   transform: translate(0,-50%);
-  transition: opacity .3s ease 0s
+  transition: opacity .3s ease 0s,visibility .3s ease 0s
 }
 .nav._nav-active {
-  opacity: 0
+  opacity: 0;
+  visibility: hidden
 }
 .nav__list {
   display: flex;

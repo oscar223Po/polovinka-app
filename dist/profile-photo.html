@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20241030025641">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241030153941">
 	<link rel="shortcut icon" href="img/icons/head-logo.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,8 +28,10 @@
 						<li class="header__item"><a href="" class="header__link header__link--new _icon-family"><span>Новые анкеты</span></a></li>
 					</ul>
 					<div class="header__actions">
-						<a href="" class="header__button button button--lb _icon-user-check"><span>Вход</span></a>
-						<a href="" class="header__button button button--rb _icon-user-plus"><span>Регистрация</span></a>
+						<a href="profile.html" class="header__auth">
+							<div class="header__auth-image img"><img src="img/photo-men.webp" alt="Image"></div>
+							<span>Мой профиль</span>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -848,7 +850,7 @@
 							<p><span>Совет:</span> Когда ваша фотография появится в окошке, вы сможете редактировать её (обрезать, перемещать кадр), нажав на значок <span class="_icon-aside-ed"></span> Постарайтесь сделать так, чтобы лицо на фото находилось в середине кадра.</p>
 						</div>
 						<div class="picture__textarea">
-							<textarea data-required="text" autocomplete="off" name="form[]" placeholder="Подпись к фотографии" rows="10" cols="50" maxlength="30" class="picture__input input request-textarea-min"></textarea>
+							<textarea data-required="text" autocomplete="off" name="form[]" placeholder="Подпись к фотографии" rows="10" cols="50" maxlength="30" class="picture__input input request-textarea"></textarea>
 							<div class="count">0/30 символов</div>
 						</div>
 						<button type="submit" class="picture__button button button--ob _icon-image">Загрузить</button>
@@ -1013,9 +1015,70 @@
 			</div>
 		</div>
 		<!-- //======================================================================================================================================================== -->
+		<!-- Present -->
+		<div id="present" aria-hidden="true" class="popup">
+			<div class="popup__wrapper">
+				<div class="popup__content present bg-shad bg-shad--rbwr">
+					<div class="present__top top-popup">
+						<h4 class="top-popup__title">Выбрать подарок</h4>
+						<button data-close type="button" class="top-popup__close">
+							<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M18 6L6 18" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+								<path d="M6 6L18 18" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+							</svg>
+						</button>
+					</div>
+					<form action="" class="present__form">
+						<div class="present__text text">
+							<p>Отправить виртуальный подарок человеку, который вам понравился - лучший способ начать знакомство!</p>
+						</div>
+						<div class="present__options talent">
+							<div class="talent__item">
+								<input id="g_1" class="talent__input" type="radio" value="1" name="talent">
+								<label for="g_1" class="talent__label"><span class="talent__img"><img src="img/present/01.webp" alt="Image"></span></label>
+							</div>
+							<div class="talent__item">
+								<input id="g_2" class="talent__input" type="radio" value="2" name="talent">
+								<label for="g_2" class="talent__label"><span class="talent__img"><img src="img/present/02.webp" alt="Image"></span></label>
+							</div>
+							<div class="talent__item">
+								<input id="g_3" class="talent__input" type="radio" value="3" name="talent">
+								<label for="g_3" class="talent__label"><span class="talent__img"><img src="img/present/03.webp" alt="Image"></span></label>
+							</div>
+							<div class="talent__item">
+								<input id="g_4" class="talent__input" type="radio" value="4" name="talent">
+								<label for="g_4" class="talent__label"><span class="talent__img"><img src="img/present/04.webp" alt="Image"></span></label>
+							</div>
+							<div class="talent__item">
+								<input id="g_5" class="talent__input" type="radio" value="5" name="talent">
+								<label for="g_5" class="talent__label"><span class="talent__img"><img src="img/present/02.webp" alt="Image"></span></label>
+							</div>
+							<div class="talent__item">
+								<input id="g_6" class="talent__input" type="radio" value="6" name="talent">
+								<label for="g_6" class="talent__label"><span class="talent__img"><img src="img/present/03.webp" alt="Image"></span></label>
+							</div>
+							<div class="talent__item">
+								<input id="g_7" class="talent__input" type="radio" value="7" name="talent">
+								<label for="g_7" class="talent__label"><span class="talent__img"><img src="img/present/01.webp" alt="Image"></span></label>
+							</div>
+							<div class="talent__item">
+								<input id="g_8" class="talent__input" type="radio" value="8" name="talent">
+								<label for="g_8" class="talent__label"><span class="talent__img"><img src="img/present/04.webp" alt="Image"></span></label>
+							</div>
+						</div>
+						<div class="present__textarea">
+							<textarea data-required="text" autocomplete="off" name="form[]" placeholder="Подпись к фотографии" rows="10" cols="50" maxlength="30" class="present__input input request-textarea"></textarea>
+							<div class="count">0/30 символов</div>
+						</div>
+						<button data-popup="#done-greeting" type="button" class="present__button button button--ob _icon-present">Подарить</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- //======================================================================================================================================================== -->
 
 	</div>
-	<script src="js/app.min.js?_v=20241030025641"></script>
+	<script src="js/app.min.js?_v=20241030153941"></script>
 </body>
 
 </html>

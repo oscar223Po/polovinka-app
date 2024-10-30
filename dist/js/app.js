@@ -11171,22 +11171,18 @@
                     input.addEventListener("change", checkRadioButtons);
                 }));
             }
-            const textareas = document.querySelectorAll(".request-textarea");
-            if (textareas !== null) textareas.forEach((textarea => {
+            const updateCharCount = (textarea, maxLength) => {
                 const charCount = textarea.nextElementSibling;
                 textarea.addEventListener("input", (() => {
                     const currentLength = textarea.value.length;
-                    charCount.textContent = `${currentLength}/2000 символов`;
+                    charCount.textContent = `${currentLength}/${maxLength} символов`;
                 }));
+            };
+            const textareas = document.querySelectorAll(".request-textarea");
+            if (textareas !== null) textareas.forEach((textarea => {
+                const maxLength = textarea.getAttribute("maxlength");
+                updateCharCount(textarea, maxLength);
             }));
-            const textareaMin = document.querySelector(".request-textarea-min");
-            if (textareaMin !== null) {
-                const charCount = textareaMin.nextElementSibling;
-                textareaMin.addEventListener("input", (() => {
-                    const currentLength = textareaMin.value.length;
-                    charCount.textContent = `${currentLength}/30 символов`;
-                }));
-            }
             const checkboxes = document.querySelectorAll(".form-chk");
             const messageCheckbox = document.getElementById("message-chk");
             if (checkboxes, messageCheckbox !== null) {
