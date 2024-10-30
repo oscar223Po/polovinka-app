@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Polovinka (PaymentSubscribe) - PaymentSubscribePage"
+})
+
+<body class="bg-main">
+	<div class="wrapper">
+		@@include('html/_header-auth.htm',{})
+		<main class="page pad-min">
+			<!-- [Breadcrumbs] -->
+			<nav class="breadcrumbs">
+				<div class="breadcrumbs__container">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+						<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Мой профиль</a></li>
+						<li class="breadcrumbs__item"><div class="breadcrumbs__current">Оплата услуги</div></li>
+					</ul>
+				</div>
+			</nav>
+			<!-- [Payment] -->
+			<section class="payment">
+				<div class="payment__container cont-menu">
+					<aside class="payment__aside aside bg-shad">
+						<ul class="aside__list">
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink _icon-aside-ed">Изменения</div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink _icon-aside-in">Приветствие</div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink _icon-aside-ph">Фотографии<span>1</span></div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink _icon-aside-vd">Видео<span>0</span></div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink _icon-aside-vt">Голосование<span>0/25</span></div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink aside__inlink--cl-01 _icon-aside-cw">Игра “Мой Принц”</div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink aside__inlink--cl-02 _icon-aside-mg">Дневник<span>0</span></div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink aside__inlink--cl-03 _icon-aside-tp">Приоритеты<span>0/24</span></div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink aside__inlink--cl-04 _icon-aside-aw">Мои ответы<span>0/18</span></div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink _icon-aside-st">Настройки</div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink aside__inlink--cl-05 _icon-aside-wp">Мои обои</div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink aside__inlink--cl-06 _icon-aside-wr">Попутчики</div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink aside__inlink--cl-07 _icon-aside-sr">Критерии поиска</div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink aside__inlink--cl-08 _icon-aside-pw">Смена пароля</div>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="" class="aside__link _icon-arrow">
+									<div class="aside__inlink aside__inlink--cl-09 _icon-arrow-sn">Заморозить анкету</div>
+								</a>
+							</li>
+						</ul>
+					</aside>
+					<div class="payment__content bg-ord bg-ord--pm">
+						<div class="payment__heading heading heading--mr">
+							<h3 class="heading__title title title--red">Выберите способ оплаты для "Услуги"</h3>
+							<div class="heading__text text text--sf">
+								<p>После активации услуги ваша анкета будет поднята на <span>первое месте в результатах поиска</span> и будет <span>показываться на главной странице сайта</span>, привлекая большее внимание у посетителей сайта.</p>
+							</div>
+						</div>
+						<div data-tabs class="payment__tabs tabs-payment">
+							<nav data-tabs-titles class="tabs-payment__navigation bg-ord bg-ord--pm">
+								<button type="button" class="tabs-payment__title _tab-active"><img src="@img/payment/pay-visa.svg" alt="Pay"></button>
+								<button type="button" class="tabs-payment__title"><img src="@img/payment/pay-paypal.svg" alt="Pay"></button>
+								<button type="button" class="tabs-payment__title"><img src="@img/payment/pay-bank.svg" alt="Pay"></button>
+								<button type="button" class="tabs-payment__title"><img src="@img/payment/pay-pbp.svg" alt="Pay"></button>
+								<button type="button" class="tabs-payment__title"><img src="@img/payment/pay-crypto.svg" alt="Pay"></button>
+							</nav>
+							<div data-tabs-body class="tabs-payment__content">
+								<div class="tabs-payment__body body-tabs-payment">
+									<div class="body-tabs-payment__head">
+										<div class="body-tabs-payment__label">
+											<h4 class="body-tabs-payment__title">Стоимость услуги будет составлять <span>5$</span></h4>
+											<div class="body-tabs-payment__span">(Credit / Debit Card)</div>
+										</div>
+										<div class="body-tabs-payment__text text">
+											<p>Анкета будет опускаться на нижние позиции по мере активации услуги поднятия другими пользователями или добавления новых анкет.</p>
+										</div>
+									</div>
+									<div class="body-tabs-payment__deal bg-ord bg-ord--pr">
+										<div class="body-tabs-payment__cost">
+											<span class="_icon-heart">1 Стрела Купидона</span>
+											<span>= 5$</span>
+										</div>
+										<div class="body-tabs-payment__method">(PayPal: 1 <span class="_icon-heart"></span> = 1.10₪)</div>
+									</div>
+									<a href="" class="body-tabs-payment__button button button--ord"><span>Продолжить оплачивать через "Visa"</span></a>
+								</div>
+								<div class="tabs-payment__body body-tabs-payment">
+									<div class="body-tabs-payment__head">
+										<div class="body-tabs-payment__label">
+											<h4 class="body-tabs-payment__title">Стоимость услуги будет составлять <span>5$</span></h4>
+											<div class="body-tabs-payment__span">(PayPal)</div>
+										</div>
+										<div class="body-tabs-payment__text text">
+											<p>Анкета будет опускаться на нижние позиции по мере активации услуги поднятия другими пользователями или добавления новых анкет.</p>
+										</div>
+									</div>
+									<div class="body-tabs-payment__deal bg-ord bg-ord--pr">
+										<div class="body-tabs-payment__cost">
+											<span class="_icon-heart">1 Стрела Купидона</span>
+											<span>= 5$</span>
+										</div>
+										<div class="body-tabs-payment__method">(PayPal: 1 <span class="_icon-heart"></span> = 1.10₪)</div>
+									</div>
+									<a href="" class="body-tabs-payment__button button button--ord"><span>Продолжить оплачивать через "PayPal"</span></a>
+								</div>
+								<div class="tabs-payment__body body-tabs-payment">
+									<div class="body-tabs-payment__head">
+										<div class="body-tabs-payment__label">
+											<h4 class="body-tabs-payment__title">Стоимость услуги будет составлять <span>5$</span></h4>
+											<div class="body-tabs-payment__span">(Bank Transfer / Cash)</div>
+										</div>
+										<div class="body-tabs-payment__text text">
+											<p>Анкета будет опускаться на нижние позиции по мере активации услуги поднятия другими пользователями или добавления новых анкет.</p>
+										</div>
+									</div>
+									<div class="body-tabs-payment__deal bg-ord bg-ord--pr">
+										<div class="body-tabs-payment__cost">
+											<span class="_icon-heart">1 Стрела Купидона</span>
+											<span>= 5$</span>
+										</div>
+										<div class="body-tabs-payment__method">(PayPal: 1 <span class="_icon-heart"></span> = 1.10₪)</div>
+									</div>
+									<a href="" class="body-tabs-payment__button button button--ord"><span>Продолжить оплачивать через "Bank"</span></a>
+								</div>
+								<div class="tabs-payment__body body-tabs-payment">
+									<div class="body-tabs-payment__head">
+										<div class="body-tabs-payment__label">
+											<h4 class="body-tabs-payment__title">Стоимость услуги будет составлять <span>5$</span></h4>
+											<div class="body-tabs-payment__span">(Pepper / Bit / PayBox)</div>
+										</div>
+										<div class="body-tabs-payment__text text">
+											<p>Анкета будет опускаться на нижние позиции по мере активации услуги поднятия другими пользователями или добавления новых анкет.</p>
+										</div>
+									</div>
+									<div class="body-tabs-payment__deal bg-ord bg-ord--pr">
+										<div class="body-tabs-payment__cost">
+											<span class="_icon-heart">1 Стрела Купидона</span>
+											<span>= 5$</span>
+										</div>
+										<div class="body-tabs-payment__method">(PayPal: 1 <span class="_icon-heart"></span> = 1.10₪)</div>
+									</div>
+									<a href="" class="body-tabs-payment__button button button--ord"><span>Продолжить оплачивать через "BPB"</span></a>
+								</div>
+								<div class="tabs-payment__body body-tabs-payment">
+									<div class="body-tabs-payment__head">
+										<div class="body-tabs-payment__label">
+											<h4 class="body-tabs-payment__title">Стоимость услуги будет составлять <span>5$</span></h4>
+											<div class="body-tabs-payment__span">(Bitcoin / Crypto)</div>
+										</div>
+										<div class="body-tabs-payment__text text">
+											<p>Анкета будет опускаться на нижние позиции по мере активации услуги поднятия другими пользователями или добавления новых анкет.</p>
+										</div>
+									</div>
+									<div class="body-tabs-payment__deal bg-ord bg-ord--pr">
+										<div class="body-tabs-payment__cost">
+											<span class="_icon-heart">1 Стрела Купидона</span>
+											<span>= 5$</span>
+										</div>
+										<div class="body-tabs-payment__method">(PayPal: 1 <span class="_icon-heart"></span> = 1.10₪)</div>
+									</div>
+									<a href="" class="body-tabs-payment__button button button--ord"><span>Продолжить оплачивать через "Crypto"</span></a>
+								</div>
+							</div>
+						</div>
+						<div data-spollers class="payment__spollers spollers">
+							<details class="spollers__item">
+								<summary class="spollers__title"><div class="spollers__span spollers__span--blue _icon-alert"><span>Инструкция по оплате</span></div></summary>
+								<div class="spollers__body text">
+									<p>Цены на все услуги на сайте обозначены в израильских шекелях - ₪ (New Israeli Shekel - NIS) или в виртуальной валюте сайта Стрел Купидона - "<i class="_icon-heart"></i>" 1 <i class="_icon-heart"></i> = 1 New Israeli Shekel - NIS. (PayPal: 1 <i class="_icon-heart"></i> = 1.10₪) Вы можете оплатить любую услугу, включая активацию почты, из Вашего баланса или напрямую с помощью кредитной/дебитной карты, банковского перевода или через Пэйпал.</p>
+									<p>По умолчанию установлен способ оплаты <span>Кредитной картой</span>, но Вы можете изменить его нажатием на иконку, того вида оплаты, который Вы предпочитаете в разделе "Способ оплаты" на этой странице.</p>
+									<p>Если на Вашем счёте на сайте достачно средств для оплаты выбранной Вами услуги, то оплата за услугу спишется с Вашего счёта на сайте вне зависимости от того, какой способ оплаты установлен. Если на Вашем счёте недостаточно средств для оплаты услуги, то после нажатия "Заказать услугу", Вы попадете на защищенную страницу оплаты он-лайн (при оплате картой или через Пэйпал).</p>
+									<p>При оплате картой процессинг производится защищенной системой Tranzila Принимаются все виды кредитных карт, за исключением Diners Club</p>
+									<p>Через несколько секунд после оплаты он-лайн, услуга будет активирована.</p>
+									<p>При оплате другими способами, вам будет необходимо выслать нам подтверждение об оплате и ваш логин или Email на эл. почту: <a href="mailto:billing@2polovinka.co.il">billing@2polovinka.co.il</a>. В этом случае, выбранная Вами услуга будет активирована в течении 3-24 часов с момента получения подтверждения об оплате.</p>
+									<p>Мы не храним информацию о Вашей кредитной карте и автоматически не списываем денежные средства: платеж будет единовременным. В дальнейшем никаких платежей и списаний не будет, если вы, конечно, сами не захотите продлить абонемент 😊.</p>
+									<p>В распечтке платежей по Вашей кредитной крточке понятие <span>"сайт знакомств"</span> фигурировать не будет. Будет указано лишь название компании, предоставляющей услугу.</p>
+								</div>
+							</details>
+						</div>
+						<div class="payment__bottom text text--sf bg-ord bg-ord--pg">
+							<p>Если у вас возникли проблемы или вопросы, свяжитесь с нашей службой поддержки через контактную форму или по телефону +972584212177 или по <a href="">WhatsApp 972584212177</a>.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

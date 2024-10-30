@@ -1,0 +1,130 @@
+// ========================================================================================================================================================
+// Payment
+.payment {
+	// .payment__container
+	&__container {
+	}
+	// .payment__aside
+	&__aside {
+		@media (max-width: $tablet) {
+			order: 2;
+		}
+	}
+	// .payment__content
+	&__content {
+		@media (max-width: $tablet) {
+			order: 1;
+		}
+	}
+	// .payment__heading
+	&__heading {
+		.heading__text {
+			max-width: 100%;
+		}
+	}
+	// .payment__tabs
+	&__tabs {
+		&:not(:last-child) {
+			margin-bottom: toRem(25);
+		}
+	}
+	// .tabs-payment__body
+	&__body {
+	}
+	// .payment__spollers
+	&__spollers {
+		.spollers__body {
+			color: rgba($mainColor, 0.85);
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(25);
+		}
+	}
+	// .payment__bottom
+	&__bottom {
+	}
+}
+.body-tabs-payment {
+	// .body-tabs-payment__head
+	&__head {
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+	// .body-tabs-payment__label
+	&__label {
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: toRem(5);
+		align-items: center;
+		column-gap: toRem(10);
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+	// .body-tabs-payment__title
+	&__title {
+		font-weight: 500;
+		line-height: 125%;
+		background: linear-gradient(-90deg, $greenColor 0%, $yellowColor 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		@include adaptiveValue("font-size", 22, 18);
+	}
+	// .body-tabs-payment__span
+	&__span {
+		color: gainsboro;
+		font-weight: 500;
+		@include adaptiveValue("font-size", 22, 18);
+	}
+	// .body-tabs-payment__text
+	&__text {
+	}
+	// .body-tabs-payment__deal
+	&__deal {
+		flex-wrap: wrap;
+		row-gap: toRem(10);
+		align-items: center;
+		column-gap: toRem(8);
+		display: inline-flex;
+		&:not(:last-child) {
+			margin-bottom: toRem(25);
+		}
+	}
+	// .body-tabs-payment__cost
+	&__cost {
+		display: flex;
+		gap: toRem(4);
+		align-items: center;
+		@include adaptiveValue("font-size", 20, 16);
+		span {
+			gap: toRem(4);
+			align-items: center;
+			display: inline-flex;
+			&::before {
+				color: $redColor;
+			}
+		}
+	}
+	// .body-tabs-payment__method
+	&__method {
+		gap: toRem(4);
+		align-items: center;
+		display: inline-flex;
+		padding-bottom: toRem(1);
+		color: rgba($mainColor, 0.75);
+		@include adaptiveValue("font-size", 18, 14);
+		span {
+			&::before {
+				color: $redColor;
+				@include adaptiveValue("font-size", 20, 16);
+			}
+		}
+	}
+	// .body-tabs-payment__button
+	&__button {
+		display: flex;
+	}
+}
+// ========================================================================================================================================================

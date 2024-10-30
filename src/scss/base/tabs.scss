@@ -1,4 +1,5 @@
 // ========================================================================================================================================================
+// Tabs
 .tabs {
 	// .tabs__navigation
 	&__navigation {
@@ -76,6 +77,62 @@
 	&__content {
 	}
 	// .tabs-auth__body
+	&__body {
+	}
+}
+// ========================================================================================================================================================
+// Tabs Payment
+.tabs-payment {
+	// .tabs-payment__navigation
+	&__navigation {
+		width: 100%;
+		display: flex;
+		gap: toRem(10);
+		align-items: center;
+		&.bg-ord {
+			padding: toRem(10);
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+		@media (max-width: $mobileSmall) {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			&.bg-ord {
+				padding: 0;
+				border: none;
+				box-shadow: none;
+			}
+		}
+	}
+	// .tabs-payment__title
+	&__title {
+		width: 100%;
+		opacity: 0.5;
+		display: flex;
+		overflow: hidden;
+		align-items: center;
+		justify-content: center;
+		background-color: $bgColor;
+		transition: opacity 0.3s ease 0s;
+		@include adaptiveValue("border-radius", 15, 3);
+		img {
+			width: 100%;
+			filter: grayscale(1);
+			pointer-events: none;
+			transform: scale(1.05);
+		}
+		&._tab-active {
+			opacity: 1;
+			img {
+				filter: grayscale(0);
+			}
+		}
+	}
+	// .tabs-payment__content
+	&__content {
+	}
+	// .tabs-payment__body
 	&__body {
 	}
 }
