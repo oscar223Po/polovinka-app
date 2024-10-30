@@ -3660,6 +3660,22 @@ summary::marker {
 .log-body {
   padding-bottom: 5.625rem
 }
+.request {
+  position: relative
+}
+.request::before {
+  top: -20%;
+  content: "";
+  z-index: -1;
+  width: 100%;
+  height: 120%;
+  opacity: .1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background: url(../img/bg-header.svg) 0 0 repeat
+}
 .request__spollers:not(:last-child) {
   margin-bottom: 1.5rem
 }
