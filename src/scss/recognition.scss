@@ -66,12 +66,12 @@
 		z-index: -1;
 		width: 100%;
 		height: 120%;
-		opacity: 0.1;
+		opacity: 0.3;
 		left: toRem(0);
 		right: toRem(0);
 		bottom: toRem(0);
 		position: absolute;
-		background: url("@img/bg-header.svg") 0 0 repeat;
+		background: url("@img/bg-hearts.svg") 0 0 repeat;
 	}
 	// .request__container
 	&__container {

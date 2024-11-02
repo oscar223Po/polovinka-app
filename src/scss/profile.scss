@@ -204,6 +204,7 @@
 	&__image {
 		height: 100%;
 		position: relative;
+		max-height: toRem(687);
 		border-radius: toRem(20);
 		border: toRem(1) solid rgba(#fff, 0.1);
 		&:not(:last-child) {
@@ -215,17 +216,104 @@
 			}
 		}
 	}
+	// .main-quest__optional
+	&__optional {
+		top: 25px;
+		width: 100%;
+		display: flex;
+		gap: toRem(30);
+		position: absolute;
+		align-items: start;
+		flex-direction: column;
+		@media (max-width: $mobile) {
+			top: 15px;
+			gap: toRem(10);
+		}
+	}
+	// .main-quest__option
+	&__option {
+		display: flex;
+		font-weight: 500;
+		padding: toRem(8);
+		align-items: center;
+		font-size: toRem(16);
+		margin-left: toRem(38);
+		flex-direction: row-reverse;
+		color: rgba($mainColor, 0.95);
+		background-color: $purpleColor;
+		font-family: $fontFamilyMontAlt;
+		transition:
+			margin 0.7s ease 0s,
+			transform 0.7s ease 0s;
+		transform: translate(-100%, 0px);
+		border-top: toRem(1) solid rgba($mainColor, 0.25);
+		border-radius: toRem(0) toRem(5) toRem(5) toRem(0);
+		border-right: toRem(1) solid rgba($mainColor, 0.25);
+		border-bottom: toRem(1) solid rgba($mainColor, 0.25);
+		&::before {
+			font-size: toRem(22);
+			margin-left: toRem(16);
+			transition: margin 0.3s ease 0s;
+		}
+		span {
+			display: flex;
+			font-weight: 700;
+			color: $orangeColor;
+			font-size: toRem(20);
+			padding-top: toRem(4);
+			margin-left: toRem(5);
+			font-family: $fontFamilyNumbers;
+		}
+		@media (min-width: $mobile) {
+			@media (any-hover: hover) {
+				&:hover {
+					margin-left: 0;
+					transform: translate(0, 0px);
+					&::before {
+						margin-left: toRem(10);
+					}
+				}
+			}
+		}
+		@media (max-width: $mobile) {
+			flex-direction: row;
+			margin-left: toRem(0);
+			transform: translate(0px, 0px);
+			&.bg-shad--rbwr {
+				box-shadow:
+					rgba($bgColor, 0.15) 0px 3px 15px 0px,
+					rgba($bgColor, 0.15) 0px 3px 15px 0px;
+			}
+			h5 {
+				display: none;
+			}
+			span {
+				margin-left: toRem(10);
+			}
+			&::before {
+				margin-left: 0;
+			}
+		}
+		&--video {
+			&::before {
+				color: $blueColor;
+			}
+		}
+		&--note {
+			&::before {
+				color: $redColor;
+			}
+		}
+	}
 	// .main-quest__actions
 	&__actions {
 		bottom: 0;
 		width: 100%;
 		padding: toRem(10);
 		position: absolute;
-	}
-	// .main-quest__button
-	&__button {
-		width: 100%;
-		min-height: toRem(48);
+		.button {
+			width: 100%;
+		}
 	}
 }
 .describe-quest {
@@ -517,6 +605,70 @@
 	}
 }
 // ========================================================================================================================================================
+// Record
+.record {
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 50, 30);
+	}
+	// .record__container
+	&__container {
+	}
+	// .record__heading
+	&__heading {
+	}
+	// .record__body
+	&__body {
+	}
+	// .record__video
+	&__video {
+		background-color: $bgColor;
+		&.video {
+			@media (min-width: $mobileSmall) {
+				grid-template-columns: repeat(auto-fill, minmax(toRem(210), 1fr));
+			}
+		}
+	}
+}
+// Note
+.note {
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 50, 30);
+	}
+	// .note__container
+	&__container {
+	}
+	// .note__heading
+	&__heading {
+	}
+	// .note__body
+	&__body {
+	}
+	// .note__atricles
+	&__atricles {
+	}
+}
+// Quote
+.quote {
+	&:not(:last-child) {
+		@include adaptiveValue("margin-bottom", 50, 30);
+	}
+	// .quote__container
+	&__container {
+	}
+	// .quote__body
+	&__body {
+	}
+	// .quote__heading
+	&__heading {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 20, 15);
+		}
+	}
+	// .quote__text
+	&__text {
+	}
+}
+// ========================================================================================================================================================
 // Textual
 .textual {
 	@include adaptiveValue("padding-top", 30, 25);
@@ -733,22 +885,9 @@
 	&__content {
 		display: grid;
 		gap: toRem(15);
-		position: relative;
 		background: linear-gradient(90deg, rgba($bgColor, 1) 0%, rgba($yellowColor, 0.05) 100%);
 		@media (min-width: $mobileSmall) {
 			grid-template-columns: repeat(auto-fill, minmax(toRem(230), 1fr));
-		}
-		&::before {
-			content: "";
-			width: 100%;
-			opacity: 0.7;
-			height: 100%;
-			top: toRem(0);
-			left: toRem(0);
-			right: toRem(0);
-			bottom: toRem(0);
-			position: absolute;
-			background: url("@img/bg-header.svg") 0 0 repeat;
 		}
 	}
 	// .body-tabs-photo__item
