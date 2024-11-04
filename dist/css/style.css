@@ -859,6 +859,45 @@ textarea.input {
 .talent__img img {
   max-width: 100%
 }
+.term {
+  display: grid;
+  gap: .5rem
+}
+.term__item {
+  display: flex;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  border-radius: .75rem
+}
+.term__input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  position: absolute
+}
+.term__input:checked+.term__label {
+  background-color: rgba(238,9,121,.25);
+  border: .0625rem solid rgba(238,9,121,.75)
+}
+.term__label {
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  min-height: 3.125rem;
+  justify-content: center;
+  border-radius: .75rem;
+  background-color: #230e2b;
+  transition: background-color .3s ease 0s,border .3s ease 0s;
+  border: .0625rem solid rgba(247,248,249,.25)
+}
+.term__text {
+  font-weight: 500;
+  line-height: 125%
+}
 .select {
   min-width: 0;
   position: relative
@@ -2346,6 +2385,126 @@ summary::marker {
   font-size: 1.125rem;
   background-color: #2d1436
 }
+.accounts {
+  display: grid;
+  gap: 1.25rem
+}
+.accounts__account {
+  opacity: 0;
+  display: grid;
+  gap: .9375rem;
+  transition: opacity .5s ease .05s;
+  border: .0625rem solid hsla(0,0%,100%,.1);
+  background-color: rgba(35,166,64,.1)
+}
+.accounts__account._watcher-view {
+  opacity: 1
+}
+.accounts__image {
+  height: 100%;
+  position: relative;
+  max-height: 21.25rem;
+  border-radius: .9375rem
+}
+.accounts__actions {
+  top: 50%;
+  left: 5px;
+  display: flex;
+  gap: .625rem;
+  position: absolute;
+  flex-direction: column;
+  -webkit-transform: translate(0,-50%);
+  transform: translate(0,-50%)
+}
+.accounts__btn {
+  height: 3rem;
+  border-radius: 50%;
+  min-width: 3rem;
+  font-size: 1.125rem
+}
+.accounts__content {
+  display: flex;
+  gap: .9375rem;
+  flex-direction: column;
+  justify-content: space-between
+}
+.accounts__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.accounts__label {
+  display: flex;
+  gap: .625rem;
+  align-items: center
+}
+.accounts__seen {
+  pointer-events: none;
+  border-radius: .75rem;
+  padding: .1875rem .5rem;
+  box-shadow: rgba(50,50,105,.15) 0 2px 5px 0,rgba(0,0,0,.05) 0 1px 1px 0
+}
+.accounts__seen.online-true {
+  background-color: #23a640
+}
+.accounts__seen.online-false {
+  background-color: #959595
+}
+.accounts__optional {
+  display: grid;
+  overflow: hidden;
+  border-radius: .75rem;
+  background-color: rgba(35,14,43,.75);
+  border: .0625rem solid rgba(255,106,0,.3)
+}
+.accounts__option {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  justify-content: center;
+  padding: .75rem 0;
+  transition: background-color .3s ease 0s,color .3s ease 0s
+}
+.accounts__option::before {
+  display: flex;
+  width: 1.125rem;
+  height: 1.125rem;
+  align-items: center;
+  justify-content: center
+}
+.accounts__option--one {
+  background-color: rgba(102,161,247,.75);
+  border-bottom: .0625rem solid hsla(0,0%,100%,.15)
+}
+.accounts__option--two {
+  border-bottom: .0625rem solid hsla(0,0%,100%,.15)
+}
+.accounts__option--three {
+  color: #ffba33;
+  border-right: .0625rem solid hsla(0,0%,100%,.15)
+}
+.accounts__option--four {
+  color: #ff6a00
+}
+.accounts__item {
+  display: flex;
+  font-weight: 500;
+  flex-wrap: wrap;
+  row-gap: .625rem;
+  align-items: center;
+  justify-content: space-between
+}
+.accounts__item:not(:first-child) {
+  padding-top: .75rem
+}
+.accounts__item:not(:last-child) {
+  padding-bottom: .75rem;
+  border-bottom: .0625rem dashed hsla(0,0%,100%,.3)
+}
+.accounts__item span {
+  font-weight: 400;
+  font-family: "Montserrat Alternates"
+}
 .video {
   display: grid
 }
@@ -3211,7 +3370,7 @@ summary::marker {
 .result__heading .heading__text {
   max-width: 100%
 }
-.result__articles:not(:last-child) {
+.result__accounts:not(:last-child) {
   margin-bottom: 1.5625rem
 }
 .result__button {
@@ -3514,23 +3673,37 @@ summary::marker {
   font-size: .875rem;
   font-family: "Montserrat Alternates"
 }
-.present-quest__title {
+.rest-quest {
+  display: grid;
+  gap: 1.25rem
+}
+.rest-quest .rest-quest__block:nth-child(1):only-child,
+.rest-quest .rest-quest__block:nth-child(2):only-child {
+  grid-column: 1/-1
+}
+.rest-quest__title {
+  display: flex;
   font-weight: 500;
   line-height: 125%;
+  align-items: center;
   background: linear-gradient(-90deg,#ee0979 0,#ffba33 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent
 }
-.present-quest__title:not(:last-child) {
+.rest-quest__title::before {
+  margin-right: .5rem;
+  padding-bottom: .1875rem
+}
+.rest-quest__title:not(:last-child) {
   margin-bottom: .9375rem
 }
-.present-quest__items {
+.block-present__items {
   display: grid;
   gap: .9375rem;
   grid-template-columns: repeat(auto-fill,minmax(80px,1fr))
 }
-.present-quest__item {
+.block-present__item {
   display: flex;
   padding: .625rem;
   align-items: center;
@@ -3539,8 +3712,52 @@ summary::marker {
   background-color: #230e2b;
   border: .0625rem solid rgba(247,248,249,.1)
 }
-.present-quest__item img {
+.block-present__item img {
   width: 100%
+}
+.block-game__mine:not(:last-child) {
+  margin-bottom: .9375rem
+}
+.block-game__content {
+  position: relative
+}
+.mine-block-game {
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.mine-block-game__title {
+  font-weight: 500
+}
+.mine-block-game__value {
+  color: #ffba33;
+  font-size: 1.5rem;
+  font-family: Kings
+}
+.mine-block-game__value span {
+  display: flex;
+  margin-top: .1875rem
+}
+.other-block-game__title {
+  font-weight: 500;
+  line-height: 125%;
+  background: linear-gradient(90deg,#66a1f7 0,#ffba33 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
+.other-block-game__title:not(:last-child) {
+  margin-bottom: .9375rem
+}
+.other-block-game__items {
+  display: grid;
+  gap: .625rem;
+  grid-template-columns: repeat(auto-fill,minmax(3.75rem,1fr))
+}
+.other-block-game__item {
+  display: flex;
+  border-radius: .5rem;
+  transition: opacity .3s ease 0s
 }
 .record__video {
   background-color: #230e2b
@@ -3708,6 +3925,29 @@ summary::marker {
 .payment__spollers:not(:last-child) {
   margin-bottom: 1.5625rem
 }
+.body-tabs-payment__term:not(:last-child) {
+  margin-bottom: 1.25rem
+}
+.body-tabs-payment__subtitle {
+  font-weight: 500;
+  line-height: 125%;
+  color: #f7f8f9;
+  position: relative;
+  padding-left: .75rem
+}
+.body-tabs-payment__subtitle::before {
+  left: 0;
+  content: "";
+  height: 100%;
+  display: flex;
+  position: absolute;
+  min-width: .1875rem;
+  border-radius: .1875rem;
+  background-color: #66a1f7
+}
+.body-tabs-payment__subtitle:not(:last-child) {
+  margin-bottom: .9375rem
+}
 .body-tabs-payment__head:not(:last-child) {
   margin-bottom: .9375rem
 }
@@ -3772,6 +4012,17 @@ summary::marker {
 }
 .body-tabs-payment__button {
   display: flex
+}
+.chat__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+.chat__label {
+  border-radius: .3125rem;
+  padding: .3125rem .625rem;
+  background-color: rgba(238,9,121,.45);
+  border: .0625rem solid rgba(247,248,249,.15)
 }
 .auth__head {
   text-align: center;
@@ -3857,11 +4108,16 @@ summary::marker {
   color: #ffba33
 }
 .range__span::after {
-  margin-left: .21875rem
+  font-weight: 400;
+  margin-left: .21875rem;
+  color: rgba(247,248,249,.85)
 }
 .range__span.span-auth {
   font-weight: 400;
   color: #545454
+}
+.range__span--old::after {
+  content: "лет"
 }
 .range__span--hight::after {
   content: "см"
@@ -3993,6 +4249,12 @@ summary::marker {
   .lang {
     grid-template-columns: repeat(auto-fill,minmax(7.5rem,1fr))
   }
+  .term {
+    grid-template-columns: repeat(auto-fill,minmax(10rem,1fr))
+  }
+  .accounts__optional {
+    grid-template-columns: repeat(2,1fr)
+  }
   .video {
     grid-template-columns: repeat(auto-fill,minmax(18.75rem,1fr))
   }
@@ -4062,6 +4324,9 @@ summary::marker {
     transform: scale(1);
     visibility: visible
   }
+  .accounts__account {
+    grid-template-columns: 35.928144% 1fr
+  }
   .video__button {
     opacity: .7
   }
@@ -4083,6 +4348,9 @@ summary::marker {
   .cont-menu {
     grid-template-columns: 18.75rem 1fr
   }
+  .accounts__option--one {
+    border-right: .0625rem solid hsla(0,0%,100%,.15)
+  }
   .describe-quest__button--one {
     border-right: .0625rem solid hsla(0,0%,100%,.15)
   }
@@ -4097,6 +4365,9 @@ summary::marker {
   }
   .describe-quest__mobile-content {
     display: none
+  }
+  .rest-quest {
+    grid-template-columns: 60.344828% auto
   }
   .body-tabs-photo__actions {
     opacity: .3
@@ -4178,6 +4449,15 @@ summary::marker {
   .articles {
     gap: 1.25rem
   }
+  .accounts__name {
+    font-size: 1.5rem
+  }
+  .accounts__name span {
+    font-size: 1.5rem
+  }
+  .accounts__status {
+    font-size: 1.5rem
+  }
   .video {
     gap: 1.25rem
   }
@@ -4255,11 +4535,17 @@ summary::marker {
   .describe-quest__button {
     font-size: 1.125rem
   }
-  .present-quest {
+  .rest-quest {
     margin-top: 2.1875rem
   }
-  .present-quest__title {
+  .rest-quest__title {
     font-size: 1.375rem
+  }
+  .mine-block-game__title {
+    font-size: 1.125rem
+  }
+  .other-block-game__title {
+    font-size: 1.125rem
   }
   .record:not(:last-child) {
     margin-bottom: 3.125rem
@@ -4281,6 +4567,9 @@ summary::marker {
   }
   .data-textual__label {
     font-size: 1.125rem
+  }
+  .body-tabs-payment__subtitle {
+    font-size: 1.25rem
   }
   .body-tabs-payment__title {
     font-size: 1.375rem
@@ -4397,6 +4686,15 @@ summary::marker {
   .articles {
     gap: .9375rem
   }
+  .accounts__name {
+    font-size: 1.25rem
+  }
+  .accounts__name span {
+    font-size: 1.25rem
+  }
+  .accounts__status {
+    font-size: 1.25rem
+  }
   .video {
     gap: .9375rem
   }
@@ -4463,11 +4761,17 @@ summary::marker {
   .describe-quest__title span {
     font-size: 1.375rem
   }
-  .present-quest {
+  .rest-quest {
     margin-top: 1.5625rem
   }
-  .present-quest__title {
-    font-size: 1.125rem
+  .rest-quest__title {
+    font-size: 1.25rem
+  }
+  .mine-block-game__title {
+    font-size: 1rem
+  }
+  .other-block-game__title {
+    font-size: 1rem
   }
   .record:not(:last-child) {
     margin-bottom: 1.875rem
@@ -4488,6 +4792,9 @@ summary::marker {
     margin-bottom: 1.25rem
   }
   .data-textual__label {
+    font-size: 1rem
+  }
+  .body-tabs-payment__subtitle {
     font-size: 1rem
   }
   .body-tabs-payment__title {
@@ -4570,6 +4877,12 @@ summary::marker {
   }
 }
 @media (max-width:61.99875em) {
+  .cont-menu .cont-menu-base {
+    order: 2
+  }
+  .cont-menu .cont-menu-head {
+    order: 1
+  }
   .header__link span {
     display: none
   }
@@ -4597,24 +4910,6 @@ summary::marker {
     margin: 0 -.9375rem;
     padding: 0 .9375rem
   }
-  .search__aside {
-    order: 2
-  }
-  .search__content {
-    order: 1
-  }
-  .result__aside {
-    order: 2
-  }
-  .result__content {
-    order: 1
-  }
-  .profile__aside {
-    order: 2
-  }
-  .profile__content {
-    order: 1
-  }
   .profile__content.bg-shad--rbwr {
     box-shadow: none
   }
@@ -4639,20 +4934,8 @@ summary::marker {
   .describe-quest__content {
     border: .0625rem solid hsla(0,0%,100%,.1)
   }
-  .photo__aside {
-    order: 2
-  }
-  .photo__content {
-    order: 1
-  }
   .photo__content.bg-shad--rbwr {
     box-shadow: none
-  }
-  .payment__aside {
-    order: 2
-  }
-  .payment__content {
-    order: 1
   }
 }
 @media (max-width:47.99875em) {
@@ -4791,6 +5074,18 @@ summary::marker {
   .nav__link::before {
     width: 1rem;
     height: 1rem
+  }
+  .accounts__account {
+    background-color: #381d42
+  }
+  .accounts__label {
+    gap: .3125rem
+  }
+  .accounts__option--three {
+    border-bottom: .0625rem solid hsla(0,0%,100%,.15)
+  }
+  .accounts__item {
+    font-size: .875rem
   }
   .footer__navs {
     gap: .625rem;
@@ -5137,6 +5432,36 @@ summary::marker {
       gap: calc(.9375rem + .3125*(100vw - 20rem)/ 54.375)
     }
   }
+  @supports (font-size:clamp(1.25rem ,1.158045977rem + 0.4597701149vw ,1.5rem)) {
+    .accounts__name {
+      font-size: clamp(1.25rem ,1.158045977rem + .4597701149vw ,1.5rem)
+    }
+  }
+  @supports not (font-size:clamp(1.25rem ,1.158045977rem + 0.4597701149vw ,1.5rem)) {
+    .accounts__name {
+      font-size: calc(1.25rem + .25*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (font-size:clamp(1.25rem ,1.158045977rem + 0.4597701149vw ,1.5rem)) {
+    .accounts__name span {
+      font-size: clamp(1.25rem ,1.158045977rem + .4597701149vw ,1.5rem)
+    }
+  }
+  @supports not (font-size:clamp(1.25rem ,1.158045977rem + 0.4597701149vw ,1.5rem)) {
+    .accounts__name span {
+      font-size: calc(1.25rem + .25*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (font-size:clamp(1.25rem ,1.158045977rem + 0.4597701149vw ,1.5rem)) {
+    .accounts__status {
+      font-size: clamp(1.25rem ,1.158045977rem + .4597701149vw ,1.5rem)
+    }
+  }
+  @supports not (font-size:clamp(1.25rem ,1.158045977rem + 0.4597701149vw ,1.5rem)) {
+    .accounts__status {
+      font-size: calc(1.25rem + .25*(100vw - 20rem)/ 54.375)
+    }
+  }
   @supports (gap:clamp(0.9375rem ,0.8225574713rem + 0.5747126437vw ,1.25rem)) {
     .video {
       gap: clamp(.9375rem ,.8225574713rem + .5747126437vw ,1.25rem)
@@ -5358,23 +5683,43 @@ summary::marker {
     }
   }
   @supports (margin-top:clamp(1.5625rem ,1.3326149425rem + 1.1494252874vw ,2.1875rem)) {
-    .present-quest {
+    .rest-quest {
       margin-top: clamp(1.5625rem ,1.3326149425rem + 1.1494252874vw ,2.1875rem)
     }
   }
   @supports not (margin-top:clamp(1.5625rem ,1.3326149425rem + 1.1494252874vw ,2.1875rem)) {
-    .present-quest {
+    .rest-quest {
       margin-top: calc(1.5625rem + .625*(100vw - 20rem)/ 54.375)
     }
   }
-  @supports (font-size:clamp(1.125rem ,1.033045977rem + 0.4597701149vw ,1.375rem)) {
-    .present-quest__title {
-      font-size: clamp(1.125rem ,1.033045977rem + .4597701149vw ,1.375rem)
+  @supports (font-size:clamp(1.25rem ,1.2040229885rem + 0.2298850575vw ,1.375rem)) {
+    .rest-quest__title {
+      font-size: clamp(1.25rem ,1.2040229885rem + .2298850575vw ,1.375rem)
     }
   }
-  @supports not (font-size:clamp(1.125rem ,1.033045977rem + 0.4597701149vw ,1.375rem)) {
-    .present-quest__title {
-      font-size: calc(1.125rem + .25*(100vw - 20rem)/ 54.375)
+  @supports not (font-size:clamp(1.25rem ,1.2040229885rem + 0.2298850575vw ,1.375rem)) {
+    .rest-quest__title {
+      font-size: calc(1.25rem + .125*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (font-size:clamp(1rem ,0.9540229885rem + 0.2298850575vw ,1.125rem)) {
+    .mine-block-game__title {
+      font-size: clamp(1rem ,.9540229885rem + .2298850575vw ,1.125rem)
+    }
+  }
+  @supports not (font-size:clamp(1rem ,0.9540229885rem + 0.2298850575vw ,1.125rem)) {
+    .mine-block-game__title {
+      font-size: calc(1rem + .125*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (font-size:clamp(1rem ,0.9540229885rem + 0.2298850575vw ,1.125rem)) {
+    .other-block-game__title {
+      font-size: clamp(1rem ,.9540229885rem + .2298850575vw ,1.125rem)
+    }
+  }
+  @supports not (font-size:clamp(1rem ,0.9540229885rem + 0.2298850575vw ,1.125rem)) {
+    .other-block-game__title {
+      font-size: calc(1rem + .125*(100vw - 20rem)/ 54.375)
     }
   }
   @supports (margin-bottom:clamp(1.875rem ,1.4152298851rem + 2.2988505747vw ,3.125rem)) {
@@ -5445,6 +5790,16 @@ summary::marker {
   @supports not (font-size:clamp(1rem ,0.9540229885rem + 0.2298850575vw ,1.125rem)) {
     .data-textual__label {
       font-size: calc(1rem + .125*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (font-size:clamp(1rem ,0.908045977rem + 0.4597701149vw ,1.25rem)) {
+    .body-tabs-payment__subtitle {
+      font-size: clamp(1rem ,.908045977rem + .4597701149vw ,1.25rem)
+    }
+  }
+  @supports not (font-size:clamp(1rem ,0.908045977rem + 0.4597701149vw ,1.25rem)) {
+    .body-tabs-payment__subtitle {
+      font-size: calc(1rem + .25*(100vw - 20rem)/ 54.375)
     }
   }
   @supports (font-size:clamp(1.125rem ,1.033045977rem + 0.4597701149vw ,1.375rem)) {
@@ -5652,6 +6007,25 @@ summary::marker {
   .articles__btn:hover {
     background-color: #230e2b
   }
+  .accounts__account:hover .accounts__image img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
+  }
+  .accounts__option--one:hover {
+    background-color: #66a1f7
+  }
+  .accounts__option--two:hover {
+    color: #f7f8f9;
+    background-color: rgba(255,186,51,.75)
+  }
+  .accounts__option--three:hover {
+    color: #f7f8f9;
+    background-color: rgba(247,61,88,.75)
+  }
+  .accounts__option--four:hover {
+    color: #f7f8f9;
+    background-color: rgba(255,106,0,.75)
+  }
   .video__item:hover .video__button {
     opacity: 1
   }
@@ -5738,6 +6112,9 @@ summary::marker {
   .describe-quest__button--six:hover {
     color: #f7f8f9;
     background-color: #23a640
+  }
+  .other-block-game__item:hover {
+    opacity: .75
   }
   .bottom-photo__text a:hover {
     text-decoration: none

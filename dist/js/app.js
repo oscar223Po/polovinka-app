@@ -6925,6 +6925,36 @@
                     rangeOldSearchValue.innerHTML = Math.round(values[0]) + " - " + Math.round(values[1]);
                 }));
             }
+            const rangeHightScope = document.getElementById("range-hight-scope");
+            const rangeWeightScope = document.getElementById("range-weight-scope");
+            var rangeHightValueScope = document.getElementById("range-scope-hight");
+            var rangeWeightValueScope = document.getElementById("range-scope-weight");
+            if (rangeHightScope, rangeWeightScope !== null) {
+                initialize(rangeHightScope, {
+                    start: [ 155, 175 ],
+                    animate: false,
+                    connect: true,
+                    range: {
+                        min: 150,
+                        max: 220
+                    }
+                });
+                rangeHightScope.noUiSlider.on("update", (function(values, handle) {
+                    rangeHightValueScope.innerHTML = Math.round(values[0]) + " - " + Math.round(values[1]);
+                }));
+                initialize(rangeWeightScope, {
+                    start: [ 65, 85 ],
+                    animate: false,
+                    connect: true,
+                    range: {
+                        min: 50,
+                        max: 120
+                    }
+                });
+                rangeWeightScope.noUiSlider.on("update", (function(values, handle) {
+                    rangeWeightValueScope.innerHTML = Math.round(values[0]) + " - " + Math.round(values[1]);
+                }));
+            }
         }
         rangeInit();
         function ssr_window_esm_isObject(obj) {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html term="en">
 @@include('html/_head.htm',{
 "title":"Polovinka (PaymentSubscribe) - PaymentSubscribePage"
 })
@@ -21,7 +21,7 @@
 			<!-- [Payment] -->
 			<section class="payment">
 				<div class="payment__container cont-menu">
-					<aside class="payment__aside aside bg-shad">
+					<aside class="payment__aside cont-menu-base aside bg-shad">
 						<ul class="aside__list">
 							<li class="aside__item">
 								<a href="" class="aside__link _icon-arrow">
@@ -100,7 +100,7 @@
 							</li>
 						</ul>
 					</aside>
-					<div class="payment__content bg-ord bg-ord--pm">
+					<div class="payment__content cont-menu-head bg-ord bg-ord--pm">
 						<div class="payment__heading heading heading--mr">
 							<h3 class="heading__title title title--red">Выберите способ оплаты для "Услуги"</h3>
 							<div class="heading__text text text--sf">
@@ -117,6 +117,27 @@
 							</nav>
 							<div data-tabs-body class="tabs-payment__content">
 								<div class="tabs-payment__body body-tabs-payment">
+									<div class="body-tabs-payment__term bg-ord bg-ord--pr">
+										<h4 class="body-tabs-payment__subtitle">Выберете длительность подписки</h4>
+										<div class="body-tabs-payment__options term">
+											<div class="term__item">
+												<input id="v_1" class="term__input" checked type="radio" value="1" name="term-visa">
+												<label for="v_1" class="term__label"><span class="term__text">Неделя</span></label>
+											</div>
+											<div class="term__item">
+												<input id="v_2" class="term__input" type="radio" value="2" name="term-visa">
+												<label for="v_2" class="term__label"><span class="term__text">1 Месяц</span></label>
+											</div>
+											<div class="term__item">
+												<input id="v_3" class="term__input" type="radio" value="3" name="term-visa">
+												<label for="v_3" class="term__label"><span class="term__text">3 Месяца</span></label>
+											</div>
+											<div class="term__item">
+												<input id="v_4" class="term__input" type="radio" value="4" name="term-visa">
+												<label for="v_4" class="term__label"><span class="term__text">Год</span></label>
+											</div>
+										</div>
+									</div>
 									<div class="body-tabs-payment__head">
 										<div class="body-tabs-payment__label">
 											<h4 class="body-tabs-payment__title">Стоимость услуги будет составлять <span>5$</span></h4>
@@ -136,6 +157,27 @@
 									<a href="" class="body-tabs-payment__button button button--ord"><span>Продолжить оплачивать через "Visa"</span></a>
 								</div>
 								<div class="tabs-payment__body body-tabs-payment">
+									<div class="body-tabs-payment__term bg-ord bg-ord--pr">
+										<h4 class="body-tabs-payment__subtitle">Выберете длительность подписки</h4>
+										<div class="body-tabs-payment__options term">
+											<div class="term__item">
+												<input id="p_1" class="term__input" checked type="radio" value="1" name="term-pay">
+												<label for="p_1" class="term__label"><span class="term__text">Неделя</span></label>
+											</div>
+											<div class="term__item">
+												<input id="p_2" class="term__input" type="radio" value="2" name="term-pay">
+												<label for="p_2" class="term__label"><span class="term__text">1 Месяц</span></label>
+											</div>
+											<div class="term__item">
+												<input id="p_3" class="term__input" type="radio" value="3" name="term-pay">
+												<label for="p_3" class="term__label"><span class="term__text">3 Месяца</span></label>
+											</div>
+											<div class="term__item">
+												<input id="p_4" class="term__input" type="radio" value="4" name="term-pay">
+												<label for="p_4" class="term__label"><span class="term__text">Год</span></label>
+											</div>
+										</div>
+									</div>
 									<div class="body-tabs-payment__head">
 										<div class="body-tabs-payment__label">
 											<h4 class="body-tabs-payment__title">Стоимость услуги будет составлять <span>5$</span></h4>
@@ -155,6 +197,27 @@
 									<a href="" class="body-tabs-payment__button button button--ord"><span>Продолжить оплачивать через "PayPal"</span></a>
 								</div>
 								<div class="tabs-payment__body body-tabs-payment">
+									<div class="body-tabs-payment__term bg-ord bg-ord--pr">
+										<h4 class="body-tabs-payment__subtitle">Выберете длительность подписки</h4>
+										<div class="body-tabs-payment__options term">
+											<div class="term__item">
+												<input id="b_1" class="term__input" checked type="radio" value="1" name="term-bank">
+												<label for="b_1" class="term__label"><span class="term__text">Неделя</span></label>
+											</div>
+											<div class="term__item">
+												<input id="b_2" class="term__input" type="radio" value="2" name="term-bank">
+												<label for="b_2" class="term__label"><span class="term__text">1 Месяц</span></label>
+											</div>
+											<div class="term__item">
+												<input id="b_3" class="term__input" type="radio" value="3" name="term-bank">
+												<label for="b_3" class="term__label"><span class="term__text">3 Месяца</span></label>
+											</div>
+											<div class="term__item">
+												<input id="b_4" class="term__input" type="radio" value="4" name="term-bank">
+												<label for="b_4" class="term__label"><span class="term__text">Год</span></label>
+											</div>
+										</div>
+									</div>
 									<div class="body-tabs-payment__head">
 										<div class="body-tabs-payment__label">
 											<h4 class="body-tabs-payment__title">Стоимость услуги будет составлять <span>5$</span></h4>
@@ -174,6 +237,27 @@
 									<a href="" class="body-tabs-payment__button button button--ord"><span>Продолжить оплачивать через "Bank"</span></a>
 								</div>
 								<div class="tabs-payment__body body-tabs-payment">
+									<div class="body-tabs-payment__term bg-ord bg-ord--pr">
+										<h4 class="body-tabs-payment__subtitle">Выберете длительность подписки</h4>
+										<div class="body-tabs-payment__options term">
+											<div class="term__item">
+												<input id="o_1" class="term__input" checked type="radio" value="1" name="term-btb">
+												<label for="o_1" class="term__label"><span class="term__text">Неделя</span></label>
+											</div>
+											<div class="term__item">
+												<input id="o_2" class="term__input" type="radio" value="2" name="term-btb">
+												<label for="o_2" class="term__label"><span class="term__text">1 Месяц</span></label>
+											</div>
+											<div class="term__item">
+												<input id="o_3" class="term__input" type="radio" value="3" name="term-btb">
+												<label for="o_3" class="term__label"><span class="term__text">3 Месяца</span></label>
+											</div>
+											<div class="term__item">
+												<input id="o_4" class="term__input" type="radio" value="4" name="term-btb">
+												<label for="o_4" class="term__label"><span class="term__text">Год</span></label>
+											</div>
+										</div>
+									</div>
 									<div class="body-tabs-payment__head">
 										<div class="body-tabs-payment__label">
 											<h4 class="body-tabs-payment__title">Стоимость услуги будет составлять <span>5$</span></h4>
@@ -193,6 +277,27 @@
 									<a href="" class="body-tabs-payment__button button button--ord"><span>Продолжить оплачивать через "BPB"</span></a>
 								</div>
 								<div class="tabs-payment__body body-tabs-payment">
+									<div class="body-tabs-payment__term bg-ord bg-ord--pr">
+										<h4 class="body-tabs-payment__subtitle">Выберете длительность подписки</h4>
+										<div class="body-tabs-payment__options term">
+											<div class="term__item">
+												<input id="c_1" class="term__input" checked type="radio" value="1" name="term-crypto">
+												<label for="c_1" class="term__label"><span class="term__text">Неделя</span></label>
+											</div>
+											<div class="term__item">
+												<input id="c_2" class="term__input" type="radio" value="2" name="term-crypto">
+												<label for="c_2" class="term__label"><span class="term__text">1 Месяц</span></label>
+											</div>
+											<div class="term__item">
+												<input id="c_3" class="term__input" type="radio" value="3" name="term-crypto">
+												<label for="c_3" class="term__label"><span class="term__text">3 Месяца</span></label>
+											</div>
+											<div class="term__item">
+												<input id="c_4" class="term__input" type="radio" value="4" name="term-crypto">
+												<label for="c_4" class="term__label"><span class="term__text">Год</span></label>
+											</div>
+										</div>
+									</div>
 									<div class="body-tabs-payment__head">
 										<div class="body-tabs-payment__label">
 											<h4 class="body-tabs-payment__title">Стоимость услуги будет составлять <span>5$</span></h4>

@@ -6,15 +6,9 @@
 	}
 	// .payment__aside
 	&__aside {
-		@media (max-width: $tablet) {
-			order: 2;
-		}
 	}
 	// .payment__content
 	&__content {
-		@media (max-width: $tablet) {
-			order: 1;
-		}
 	}
 	// .payment__heading
 	&__heading {
@@ -45,6 +39,34 @@
 	}
 }
 .body-tabs-payment {
+	// .body-tabs-payment__term
+	&__term {
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+	// .body-tabs-payment__subtitle
+	&__subtitle {
+		font-weight: 500;
+		line-height: 125%;
+		color: $mainColor;
+		position: relative;
+		padding-left: toRem(12);
+		@include adaptiveValue("font-size", 20, 16);
+		&::before {
+			left: 0;
+			content: "";
+			height: 100%;
+			display: flex;
+			position: absolute;
+			min-width: toRem(3);
+			border-radius: toRem(3);
+			background-color: $blueColor;
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
 	// .body-tabs-payment__head
 	&__head {
 		&:not(:last-child) {
@@ -77,9 +99,6 @@
 		color: gainsboro;
 		font-weight: 500;
 		@include adaptiveValue("font-size", 22, 18);
-	}
-	// .body-tabs-payment__text
-	&__text {
 	}
 	// .body-tabs-payment__deal
 	&__deal {

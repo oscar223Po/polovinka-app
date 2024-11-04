@@ -6,15 +6,9 @@
 	}
 	// .search__aside
 	&__aside {
-		@media (max-width: $tablet) {
-			order: 2;
-		}
 	}
 	// .search__content
 	&__content {
-		@media (max-width: $tablet) {
-			order: 1;
-		}
 		@media (max-width: $mobileSmall) {
 			border: none;
 			background: none;
@@ -190,15 +184,9 @@
 	}
 	// .result__aside
 	&__aside {
-		@media (max-width: $tablet) {
-			order: 2;
-		}
 	}
 	// .result__content
 	&__content {
-		@media (max-width: $tablet) {
-			order: 1;
-		}
 		@media (max-width: $mobileSmall) {
 			border: none;
 			background: none;
@@ -211,8 +199,8 @@
 			max-width: 100%;
 		}
 	}
-	// .result__articles
-	&__articles {
+	// .result__accounts
+	&__accounts {
 		&:not(:last-child) {
 			margin-bottom: toRem(25);
 		}

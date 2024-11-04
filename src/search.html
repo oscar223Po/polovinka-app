@@ -20,7 +20,7 @@
 			<!-- [Search] -->
 			<section class="search">
 				<div class="search__container cont-menu">
-					<aside class="search__aside aside bg-shad">
+					<aside class="search__aside cont-menu-base aside bg-shad">
 						<ul class="aside__list">
 							<li class="aside__item">
 								<a href="" class="aside__link _icon-arrow">
@@ -99,7 +99,7 @@
 							</li>
 						</ul>
 					</aside>
-					<div class="search__content bg-ord bg-ord--pm">
+					<div class="search__content cont-menu-head bg-ord bg-ord--pm">
 						<div class="search__heading heading heading--center">
 							<h3 class="heading__title title title--red">Быстрый и эффективный поиск анкет: найди свою любовь быстро и легко</h3>
 							<div class="heading__text text text--sf">
@@ -144,7 +144,7 @@
 											<div class="body-search__range range bg-ord bg-ord--pr">
 												<div class="range__nead">
 													<h5 class="range__title title title--min">Возраст партнёра:</h5>
-													<span class="range__span" id="range-span-old"></span>
+													<span class="range__span range__span--old" id="range-span-old"></span>
 												</div>
 												<div class="range__slide" id="range-old"></div>
 											</div>
@@ -190,23 +190,23 @@
 													<div class="metric__range range">
 														<div class="range__nead">
 															<h5 class="range__title title title--min">Возраст партнёра:</h5>
-															<span class="range__span" id="range-span-search-old"></span>
+															<span class="range__span range__span--old" id="range-span-search-old"></span>
 														</div>
 														<div class="range__slide" id="range-old-search"></div>
 													</div>
 													<div class="metric__range range">
 														<div class="range__nead">
 															<h5 class="range__title title title--min">Рост:</h5>
-															<span class="range__span range__span--hight" id="range-span-hight"></span>
+															<span class="range__span range__span--hight" id="range-scope-hight"></span>
 														</div>
-														<div class="range__slide" id="range-hight"></div>
+														<div class="range__slide" id="range-hight-scope"></div>
 													</div>
 													<div class="metric__range range">
 														<div class="range__nead">
 															<h5 class="range__title title title--min">Вес:</h5>
-															<span class="range__span range__span--weight" id="range-span-weight"></span>
+															<span class="range__span range__span--weight" id="range-scope-weight"></span>
 														</div>
-														<div class="range__slide" id="range-weight"></div>
+														<div class="range__slide" id="range-weight-scope"></div>
 													</div>
 												</div>
 											</div>
@@ -248,24 +248,24 @@
 													<div class="spollers__body">
 														<div class="options">
 															<div class="options__item">
-																<input id="c_1" class="options__input" type="radio" value="1" name="opt-status">
-																<label for="c_1" class="options__label"><span class="options__text">Не женет/ не замужем</span></label>
+																<input id="c_1" class="options__input form-chk" type="checkbox" value="1">
+																<label for="c_1" class="options__label lab-chk"><span class="options__text">Не женет/ не замужем</span></label>
 															</div>
 															<div class="options__item">
-																<input id="c_2" class="options__input" type="radio" value="2" name="opt-status">
-																<label for="c_2" class="options__label"><span class="options__text">Состою в браке</span></label>
+																<input id="c_2" class="options__input form-chk" type="checkbox" value="2">
+																<label for="c_2" class="options__label lab-chk"><span class="options__text">Состою в браке</span></label>
 															</div>
 															<div class="options__item">
-																<input id="c_3" class="options__input" type="radio" value="3" name="opt-status">
-																<label for="c_3" class="options__label"><span class="options__text">Вдовец/Вдова</span></label>
+																<input id="c_3" class="options__input form-chk" type="checkbox" value="3">
+																<label for="c_3" class="options__label lab-chk"><span class="options__text">Вдовец/Вдова</span></label>
 															</div>
 															<div class="options__item">
-																<input id="c_4" class="options__input" type="radio" value="4" name="opt-status">
-																<label for="c_4" class="options__label"><span class="options__text">В разводе</span></label>
+																<input id="c_4" class="options__input form-chk" type="checkbox" value="4">
+																<label for="c_4" class="options__label lab-chk"><span class="options__text">В разводе</span></label>
 															</div>
 															<div class="options__item">
-																<input id="c_5" class="options__input" type="radio" value="5" name="opt-status">
-																<label for="c_5" class="options__label"><span class="options__text">В процессе развода</span></label>
+																<input id="c_5" class="options__input form-chk" type="checkbox" value="5">
+																<label for="c_5" class="options__label lab-chk"><span class="options__text">В процессе развода</span></label>
 															</div>
 														</div>
 													</div>
@@ -275,20 +275,20 @@
 													<div class="spollers__body">
 														<div class="options">
 															<div class="options__item">
-																<input id="k_1" class="options__input" type="radio" value="1" name="opt-kids">
-																<label for="k_1" class="options__label"><span class="options__text">Нет детей</span></label>
+																<input id="k_1" class="options__input form-chk" type="checkbox" value="1">
+																<label for="k_1" class="options__label lab-chk"><span class="options__text">Нет детей</span></label>
 															</div>
 															<div class="options__item">
-																<input id="k_2" class="options__input" type="radio" value="2" name="opt-kids">
-																<label for="k_2" class="options__label"><span class="options__text">Нет детей, но хотелось бы</span></label>
+																<input id="k_2" class="options__input form-chk" type="checkbox" value="2">
+																<label for="k_2" class="options__label lab-chk"><span class="options__text">Нет детей, но хотелось бы</span></label>
 															</div>
 															<div class="options__item">
-																<input id="k_3" class="options__input" type="radio" value="3" name="opt-kids">
-																<label for="k_3" class="options__label"><span class="options__text">Есть дети, живут вмести со мной</span></label>
+																<input id="k_3" class="options__input form-chk" type="checkbox" value="3">
+																<label for="k_3" class="options__label lab-chk"><span class="options__text">Есть дети, живут вмести со мной</span></label>
 															</div>
 															<div class="options__item">
-																<input id="k_4" class="options__input" type="radio" value="4" name="opt-kids">
-																<label for="k_4" class="options__label"><span class="options__text">Есть дети, живут отдельно</span></label>
+																<input id="k_4" class="options__input form-chk" type="checkbox" value="4">
+																<label for="k_4" class="options__label lab-chk"><span class="options__text">Есть дети, живут отдельно</span></label>
 															</div>
 														</div>
 													</div>
@@ -554,52 +554,52 @@
 													<div class="spollers__body">
 														<div class="options">
 															<div class="options__item">
-																<input id="r_1" class="options__input" type="radio" value="1" name="opt-sign">
-																<label for="r_1" class="options__label"><span class="options__text _icon-sign-01">Овен</span></label>
+																<input id="r_1" class="options__input form-chk" type="checkbox" value="1">
+																<label for="r_1" class="options__label lab-chk"><span class="options__text _icon-sign-01">Овен</span></label>
 															</div>
 															<div class="options__item">
-																<input id="r_2" class="options__input" type="radio" value="2" name="opt-sign">
-																<label for="r_2" class="options__label"><span class="options__text _icon-sign-02">Телец</span></label>
+																<input id="r_2" class="options__input form-chk" type="checkbox" value="2">
+																<label for="r_2" class="options__label lab-chk"><span class="options__text _icon-sign-02">Телец</span></label>
 															</div>
 															<div class="options__item">
-																<input id="r_3" class="options__input" type="radio" value="3" name="opt-sign">
-																<label for="r_3" class="options__label"><span class="options__text _icon-sign-03">Близнецы</span></label>
+																<input id="r_3" class="options__input form-chk" type="checkbox" value="3">
+																<label for="r_3" class="options__label lab-chk"><span class="options__text _icon-sign-03">Близнецы</span></label>
 															</div>
 															<div class="options__item">
-																<input id="r_4" class="options__input" type="radio" value="4" name="opt-sign">
-																<label for="r_4" class="options__label"><span class="options__text _icon-sign-04">Рак</span></label>
+																<input id="r_4" class="options__input form-chk" type="checkbox" value="4">
+																<label for="r_4" class="options__label lab-chk"><span class="options__text _icon-sign-04">Рак</span></label>
 															</div>
 															<div class="options__item">
-																<input id="r_5" class="options__input" type="radio" value="5" name="opt-sign">
-																<label for="r_5" class="options__label"><span class="options__text _icon-sign-05">Лев</span></label>
+																<input id="r_5" class="options__input form-chk" type="checkbox" value="5">
+																<label for="r_5" class="options__label lab-chk"><span class="options__text _icon-sign-05">Лев</span></label>
 															</div>
 															<div class="options__item">
-																<input id="r_6" class="options__input" type="radio" value="6" name="opt-sign">
-																<label for="r_6" class="options__label"><span class="options__text _icon-sign-06">Дева</span></label>
+																<input id="r_6" class="options__input form-chk" type="checkbox" value="6">
+																<label for="r_6" class="options__label lab-chk"><span class="options__text _icon-sign-06">Дева</span></label>
 															</div>
 															<div class="options__item">
-																<input id="r_7" class="options__input" type="radio" value="7" name="opt-sign">
-																<label for="r_7" class="options__label"><span class="options__text _icon-sign-07">Весы</span></label>
+																<input id="r_7" class="options__input form-chk" type="checkbox" value="7">
+																<label for="r_7" class="options__label lab-chk"><span class="options__text _icon-sign-07">Весы</span></label>
 															</div>
 															<div class="options__item">
-																<input id="r_8" class="options__input" type="radio" value="8" name="opt-sign">
-																<label for="r_8" class="options__label"><span class="options__text _icon-sign-08">Скорпион</span></label>
+																<input id="r_8" class="options__input form-chk" type="checkbox" value="8">
+																<label for="r_8" class="options__label lab-chk"><span class="options__text _icon-sign-08">Скорпион</span></label>
 															</div>
 															<div class="options__item">
-																<input id="r_9" class="options__input" type="radio" value="9" name="opt-sign">
-																<label for="r_9" class="options__label"><span class="options__text _icon-sign-09">Стрелец</span></label>
+																<input id="r_9" class="options__input form-chk" type="checkbox" value="9">
+																<label for="r_9" class="options__label lab-chk"><span class="options__text _icon-sign-09">Стрелец</span></label>
 															</div>
 															<div class="options__item">
-																<input id="r_10" class="options__input" type="radio" value="10" name="opt-sign">
-																<label for="r_10" class="options__label"><span class="options__text _icon-sign-10">Козерог</span></label>
+																<input id="r_10" class="options__input form-chk" type="checkbox" value="10">
+																<label for="r_10" class="options__label lab-chk"><span class="options__text _icon-sign-10">Козерог</span></label>
 															</div>
 															<div class="options__item">
-																<input id="r_11" class="options__input" type="radio" value="11" name="opt-sign">
-																<label for="r_11" class="options__label"><span class="options__text _icon-sign-11">Водолей</span></label>
+																<input id="r_11" class="options__input form-chk" type="checkbox" value="11">
+																<label for="r_11" class="options__label lab-chk"><span class="options__text _icon-sign-11">Водолей</span></label>
 															</div>
 															<div class="options__item">
-																<input id="r_12" class="options__input" type="radio" value="12" name="opt-sign">
-																<label for="r_12" class="options__label"><span class="options__text _icon-sign-12">Рыбы</span></label>
+																<input id="r_12" class="options__input form-chk" type="checkbox" value="12">
+																<label for="r_12" class="options__label lab-chk"><span class="options__text _icon-sign-12">Рыбы</span></label>
 															</div>
 														</div>
 													</div>
@@ -628,7 +628,7 @@
 			</section>
 		</main>
 		@@include('html/_footer.htm',{})
-		@@include('html/_popup.htm',{})
+		@@include('html/_popup-search.htm',{})
 	</div>
 	@@include('html/_js.htm',{})
 </body>

@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20241102200634">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241104230200">
 	<link rel="shortcut icon" href="img/icons/head-logo.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,7 +50,7 @@
 			<!-- [Search] -->
 			<section class="search">
 				<div class="search__container cont-menu">
-					<aside class="search__aside aside bg-shad">
+					<aside class="search__aside cont-menu-base aside bg-shad">
 						<ul class="aside__list">
 							<li class="aside__item">
 								<a href="" class="aside__link _icon-arrow">
@@ -129,7 +129,7 @@
 							</li>
 						</ul>
 					</aside>
-					<div class="search__content bg-ord bg-ord--pm">
+					<div class="search__content cont-menu-head bg-ord bg-ord--pm">
 						<div class="search__heading heading heading--center">
 							<h3 class="heading__title title title--red">Быстрый и эффективный поиск анкет: найди свою любовь быстро и легко</h3>
 							<div class="heading__text text text--sf">
@@ -174,7 +174,7 @@
 											<div class="body-search__range range bg-ord bg-ord--pr">
 												<div class="range__nead">
 													<h5 class="range__title title title--min">Возраст партнёра:</h5>
-													<span class="range__span" id="range-span-old"></span>
+													<span class="range__span range__span--old" id="range-span-old"></span>
 												</div>
 												<div class="range__slide" id="range-old"></div>
 											</div>
@@ -220,23 +220,23 @@
 													<div class="metric__range range">
 														<div class="range__nead">
 															<h5 class="range__title title title--min">Возраст партнёра:</h5>
-															<span class="range__span" id="range-span-search-old"></span>
+															<span class="range__span range__span--old" id="range-span-search-old"></span>
 														</div>
 														<div class="range__slide" id="range-old-search"></div>
 													</div>
 													<div class="metric__range range">
 														<div class="range__nead">
 															<h5 class="range__title title title--min">Рост:</h5>
-															<span class="range__span range__span--hight" id="range-span-hight"></span>
+															<span class="range__span range__span--hight" id="range-scope-hight"></span>
 														</div>
-														<div class="range__slide" id="range-hight"></div>
+														<div class="range__slide" id="range-hight-scope"></div>
 													</div>
 													<div class="metric__range range">
 														<div class="range__nead">
 															<h5 class="range__title title title--min">Вес:</h5>
-															<span class="range__span range__span--weight" id="range-span-weight"></span>
+															<span class="range__span range__span--weight" id="range-scope-weight"></span>
 														</div>
-														<div class="range__slide" id="range-weight"></div>
+														<div class="range__slide" id="range-weight-scope"></div>
 													</div>
 												</div>
 											</div>
@@ -282,24 +282,24 @@
 													<div class="spollers__body">
 														<div class="options">
 															<div class="options__item">
-																<input id="c_1" class="options__input" type="radio" value="1" name="opt-status">
-																<label for="c_1" class="options__label"><span class="options__text">Не женет/ не замужем</span></label>
+																<input id="c_1" class="options__input form-chk" type="checkbox" value="1">
+																<label for="c_1" class="options__label lab-chk"><span class="options__text">Не женет/ не замужем</span></label>
 															</div>
 															<div class="options__item">
-																<input id="c_2" class="options__input" type="radio" value="2" name="opt-status">
-																<label for="c_2" class="options__label"><span class="options__text">Состою в браке</span></label>
+																<input id="c_2" class="options__input form-chk" type="checkbox" value="2">
+																<label for="c_2" class="options__label lab-chk"><span class="options__text">Состою в браке</span></label>
 															</div>
 															<div class="options__item">
-																<input id="c_3" class="options__input" type="radio" value="3" name="opt-status">
-																<label for="c_3" class="options__label"><span class="options__text">Вдовец/Вдова</span></label>
+																<input id="c_3" class="options__input form-chk" type="checkbox" value="3">
+																<label for="c_3" class="options__label lab-chk"><span class="options__text">Вдовец/Вдова</span></label>
 															</div>
 															<div class="options__item">
-																<input id="c_4" class="options__input" type="radio" value="4" name="opt-status">
-																<label for="c_4" class="options__label"><span class="options__text">В разводе</span></label>
+																<input id="c_4" class="options__input form-chk" type="checkbox" value="4">
+																<label for="c_4" class="options__label lab-chk"><span class="options__text">В разводе</span></label>
 															</div>
 															<div class="options__item">
-																<input id="c_5" class="options__input" type="radio" value="5" name="opt-status">
-																<label for="c_5" class="options__label"><span class="options__text">В процессе развода</span></label>
+																<input id="c_5" class="options__input form-chk" type="checkbox" value="5">
+																<label for="c_5" class="options__label lab-chk"><span class="options__text">В процессе развода</span></label>
 															</div>
 														</div>
 													</div>
@@ -311,20 +311,20 @@
 													<div class="spollers__body">
 														<div class="options">
 															<div class="options__item">
-																<input id="k_1" class="options__input" type="radio" value="1" name="opt-kids">
-																<label for="k_1" class="options__label"><span class="options__text">Нет детей</span></label>
+																<input id="k_1" class="options__input form-chk" type="checkbox" value="1">
+																<label for="k_1" class="options__label lab-chk"><span class="options__text">Нет детей</span></label>
 															</div>
 															<div class="options__item">
-																<input id="k_2" class="options__input" type="radio" value="2" name="opt-kids">
-																<label for="k_2" class="options__label"><span class="options__text">Нет детей, но хотелось бы</span></label>
+																<input id="k_2" class="options__input form-chk" type="checkbox" value="2">
+																<label for="k_2" class="options__label lab-chk"><span class="options__text">Нет детей, но хотелось бы</span></label>
 															</div>
 															<div class="options__item">
-																<input id="k_3" class="options__input" type="radio" value="3" name="opt-kids">
-																<label for="k_3" class="options__label"><span class="options__text">Есть дети, живут вмести со мной</span></label>
+																<input id="k_3" class="options__input form-chk" type="checkbox" value="3">
+																<label for="k_3" class="options__label lab-chk"><span class="options__text">Есть дети, живут вмести со мной</span></label>
 															</div>
 															<div class="options__item">
-																<input id="k_4" class="options__input" type="radio" value="4" name="opt-kids">
-																<label for="k_4" class="options__label"><span class="options__text">Есть дети, живут отдельно</span></label>
+																<input id="k_4" class="options__input form-chk" type="checkbox" value="4">
+																<label for="k_4" class="options__label lab-chk"><span class="options__text">Есть дети, живут отдельно</span></label>
 															</div>
 														</div>
 													</div>
@@ -598,52 +598,52 @@
 													<div class="spollers__body">
 														<div class="options">
 															<div class="options__item">
-																<input id="r_1" class="options__input" type="radio" value="1" name="opt-sign">
-																<label for="r_1" class="options__label"><span class="options__text _icon-sign-01">Овен</span></label>
+																<input id="r_1" class="options__input form-chk" type="checkbox" value="1">
+																<label for="r_1" class="options__label lab-chk"><span class="options__text _icon-sign-01">Овен</span></label>
 															</div>
 															<div class="options__item">
-																<input id="r_2" class="options__input" type="radio" value="2" name="opt-sign">
-																<label for="r_2" class="options__label"><span class="options__text _icon-sign-02">Телец</span></label>
+																<input id="r_2" class="options__input form-chk" type="checkbox" value="2">
+																<label for="r_2" class="options__label lab-chk"><span class="options__text _icon-sign-02">Телец</span></label>
 															</div>
 															<div class="options__item">
-																<input id="r_3" class="options__input" type="radio" value="3" name="opt-sign">
-																<label for="r_3" class="options__label"><span class="options__text _icon-sign-03">Близнецы</span></label>
+																<input id="r_3" class="options__input form-chk" type="checkbox" value="3">
+																<label for="r_3" class="options__label lab-chk"><span class="options__text _icon-sign-03">Близнецы</span></label>
 															</div>
 															<div class="options__item">
-																<input id="r_4" class="options__input" type="radio" value="4" name="opt-sign">
-																<label for="r_4" class="options__label"><span class="options__text _icon-sign-04">Рак</span></label>
+																<input id="r_4" class="options__input form-chk" type="checkbox" value="4">
+																<label for="r_4" class="options__label lab-chk"><span class="options__text _icon-sign-04">Рак</span></label>
 															</div>
 															<div class="options__item">
-																<input id="r_5" class="options__input" type="radio" value="5" name="opt-sign">
-																<label for="r_5" class="options__label"><span class="options__text _icon-sign-05">Лев</span></label>
+																<input id="r_5" class="options__input form-chk" type="checkbox" value="5">
+																<label for="r_5" class="options__label lab-chk"><span class="options__text _icon-sign-05">Лев</span></label>
 															</div>
 															<div class="options__item">
-																<input id="r_6" class="options__input" type="radio" value="6" name="opt-sign">
-																<label for="r_6" class="options__label"><span class="options__text _icon-sign-06">Дева</span></label>
+																<input id="r_6" class="options__input form-chk" type="checkbox" value="6">
+																<label for="r_6" class="options__label lab-chk"><span class="options__text _icon-sign-06">Дева</span></label>
 															</div>
 															<div class="options__item">
-																<input id="r_7" class="options__input" type="radio" value="7" name="opt-sign">
-																<label for="r_7" class="options__label"><span class="options__text _icon-sign-07">Весы</span></label>
+																<input id="r_7" class="options__input form-chk" type="checkbox" value="7">
+																<label for="r_7" class="options__label lab-chk"><span class="options__text _icon-sign-07">Весы</span></label>
 															</div>
 															<div class="options__item">
-																<input id="r_8" class="options__input" type="radio" value="8" name="opt-sign">
-																<label for="r_8" class="options__label"><span class="options__text _icon-sign-08">Скорпион</span></label>
+																<input id="r_8" class="options__input form-chk" type="checkbox" value="8">
+																<label for="r_8" class="options__label lab-chk"><span class="options__text _icon-sign-08">Скорпион</span></label>
 															</div>
 															<div class="options__item">
-																<input id="r_9" class="options__input" type="radio" value="9" name="opt-sign">
-																<label for="r_9" class="options__label"><span class="options__text _icon-sign-09">Стрелец</span></label>
+																<input id="r_9" class="options__input form-chk" type="checkbox" value="9">
+																<label for="r_9" class="options__label lab-chk"><span class="options__text _icon-sign-09">Стрелец</span></label>
 															</div>
 															<div class="options__item">
-																<input id="r_10" class="options__input" type="radio" value="10" name="opt-sign">
-																<label for="r_10" class="options__label"><span class="options__text _icon-sign-10">Козерог</span></label>
+																<input id="r_10" class="options__input form-chk" type="checkbox" value="10">
+																<label for="r_10" class="options__label lab-chk"><span class="options__text _icon-sign-10">Козерог</span></label>
 															</div>
 															<div class="options__item">
-																<input id="r_11" class="options__input" type="radio" value="11" name="opt-sign">
-																<label for="r_11" class="options__label"><span class="options__text _icon-sign-11">Водолей</span></label>
+																<input id="r_11" class="options__input form-chk" type="checkbox" value="11">
+																<label for="r_11" class="options__label lab-chk"><span class="options__text _icon-sign-11">Водолей</span></label>
 															</div>
 															<div class="options__item">
-																<input id="r_12" class="options__input" type="radio" value="12" name="opt-sign">
-																<label for="r_12" class="options__label"><span class="options__text _icon-sign-12">Рыбы</span></label>
+																<input id="r_12" class="options__input form-chk" type="checkbox" value="12">
+																<label for="r_12" class="options__label lab-chk"><span class="options__text _icon-sign-12">Рыбы</span></label>
 															</div>
 														</div>
 													</div>
@@ -770,8 +770,8 @@
 							<label for="pb_6" class="options__label"><span class="options__text">Полное</span></label>
 						</div>
 						<div class="options__item">
-							<input id="pb_7" class="options__input" type="radio" value="7" name="prop-body">
-							<label for="pb_7" class="options__label"><span class="options__text">Другое</span></label>
+							<input id="pb_7" class="options__input" type="radio" checked value="7" name="prop-body">
+							<label for="pb_7" class="options__label"><span class="options__text">Не важно</span></label>
 						</div>
 					</div>
 				</div>
@@ -824,8 +824,8 @@
 							<label for="ph_8" class="options__label"><span class="options__text">Лысый</span></label>
 						</div>
 						<div class="options__item">
-							<input id="ph_9" class="options__input" type="radio" value="9" name="prop-hair">
-							<label for="ph_9" class="options__label"><span class="options__text">Другой</span></label>
+							<input id="ph_9" class="options__input" type="radio" checked value="9" name="prop-hair">
+							<label for="ph_9" class="options__label"><span class="options__text">Не важно</span></label>
 						</div>
 					</div>
 				</div>
@@ -866,8 +866,8 @@
 							<label for="pe_5" class="options__label"><span class="options__text">Черные</span></label>
 						</div>
 						<div class="options__item">
-							<input id="pe_6" class="options__input" type="radio" value="6" name="prop-eye">
-							<label for="pe_6" class="options__label"><span class="options__text">Другой</span></label>
+							<input id="pe_6" class="options__input" type="radio" checked value="6" name="prop-eye">
+							<label for="pe_6" class="options__label"><span class="options__text">Не важно</span></label>
 						</div>
 					</div>
 				</div>
@@ -912,8 +912,8 @@
 							<label for="pf_6" class="options__label"><span class="options__text">Атеист</span></label>
 						</div>
 						<div class="options__item">
-							<input id="pf_7" class="options__input" type="radio" value="7" name="prop-belive">
-							<label for="pf_7" class="options__label"><span class="options__text">Другое</span></label>
+							<input id="pf_7" class="options__input" type="radio" checked value="7" name="prop-belive">
+							<label for="pf_7" class="options__label"><span class="options__text">Не важно</span></label>
 						</div>
 					</div>
 				</div>
@@ -954,8 +954,8 @@
 							<label for="pt_5" class="options__label"><span class="options__text">Африканский</span></label>
 						</div>
 						<div class="options__item">
-							<input id="pt_6" class="options__input" type="radio" value="6" name="prop-type">
-							<label for="pt_6" class="options__label"><span class="options__text">Другое</span></label>
+							<input id="pt_6" class="options__input" type="radio" checked value="6" name="prop-type">
+							<label for="pt_6" class="options__label"><span class="options__text">Не важно</span></label>
 						</div>
 					</div>
 				</div>
@@ -1013,8 +1013,8 @@
 							<label for="pd_9" class="options__label"><span class="options__text">Незак. III степень</span></label>
 						</div>
 						<div class="options__item">
-							<input id="pd_10" class="options__input" type="radio" value="10" name="prop-edu">
-							<label for="pd_10" class="options__label"><span class="options__text">Другое</span></label>
+							<input id="pd_10" class="options__input" type="radio" checked value="10" name="prop-edu">
+							<label for="pd_10" class="options__label"><span class="options__text">Не важно</span></label>
 						</div>
 					</div>
 				</div>
@@ -1055,8 +1055,8 @@
 							<label for="pp_5" class="options__label"><span class="options__text">Ищу работу</span></label>
 						</div>
 						<div class="options__item">
-							<input id="pp_6" class="options__input" type="radio" value="6" name="prop-prof">
-							<label for="pp_6" class="options__label"><span class="options__text">Другое</span></label>
+							<input id="pp_6" class="options__input" type="radio" checked value="6" name="prop-prof">
+							<label for="pp_6" class="options__label"><span class="options__text">Не важно</span></label>
 						</div>
 					</div>
 				</div>
@@ -1101,8 +1101,8 @@
 							<label for="pm_6" class="options__label"><span class="options__text">Инвестиции</span></label>
 						</div>
 						<div class="options__item">
-							<input id="pm_7" class="options__input" type="radio" value="7" name="prop-deal">
-							<label for="pm_7" class="options__label"><span class="options__text">Другое</span></label>
+							<input id="pm_7" class="options__input" type="radio" checked value="7" name="prop-deal">
+							<label for="pm_7" class="options__label"><span class="options__text">Не важно</span></label>
 						</div>
 					</div>
 				</div>
@@ -1139,8 +1139,8 @@
 							<label for="ps_4" class="options__label"><span class="options__text">Привилегия</span></label>
 						</div>
 						<div class="options__item">
-							<input id="ps_5" class="options__input" type="radio" value="5" name="prop-social">
-							<label for="ps_5" class="options__label"><span class="options__text">Другое</span></label>
+							<input id="ps_5" class="options__input" type="radio" checked value="5" name="prop-social">
+							<label for="ps_5" class="options__label"><span class="options__text">Не важно</span></label>
 						</div>
 					</div>
 				</div>
@@ -1177,8 +1177,8 @@
 							<label for="po_4" class="options__label"><span class="options__text">Личное жилье</span></label>
 						</div>
 						<div class="options__item">
-							<input id="po_5" class="options__input" type="radio" value="5" name="prop-home">
-							<label for="po_5" class="options__label"><span class="options__text">Другое</span></label>
+							<input id="po_5" class="options__input" type="radio" checked value="5" name="prop-home">
+							<label for="po_5" class="options__label"><span class="options__text">Не важно</span></label>
 						</div>
 					</div>
 				</div>
@@ -1215,8 +1215,8 @@
 							<label for="pv_4" class="options__label"><span class="options__text">Общественный</span></label>
 						</div>
 						<div class="options__item">
-							<input id="pv_5" class="options__input" type="radio" value="5" name="prop-move">
-							<label for="pv_5" class="options__label"><span class="options__text">Другое</span></label>
+							<input id="pv_5" class="options__input" type="radio" checked value="5" name="prop-move">
+							<label for="pv_5" class="options__label"><span class="options__text">Не важно</span></label>
 						</div>
 					</div>
 				</div>
@@ -1253,8 +1253,8 @@
 							<label for="pk_4" class="options__label"><span class="options__text">Позитивное</span></label>
 						</div>
 						<div class="options__item">
-							<input id="pk_5" class="options__input" type="radio" value="5" name="prop-smoke">
-							<label for="pk_5" class="options__label"><span class="options__text">Другое</span></label>
+							<input id="pk_5" class="options__input" type="radio" checked value="5" name="prop-smoke">
+							<label for="pk_5" class="options__label"><span class="options__text">Не важно</span></label>
 						</div>
 					</div>
 				</div>
@@ -1291,267 +1291,16 @@
 							<label for="pi_4" class="options__label"><span class="options__text">Позитивное</span></label>
 						</div>
 						<div class="options__item">
-							<input id="pi_5" class="options__input" type="radio" value="5" name="prop-drink">
-							<label for="pi_5" class="options__label"><span class="options__text">Другое</span></label>
+							<input id="pi_5" class="options__input" type="radio" checked value="5" name="prop-drink">
+							<label for="pi_5" class="options__label"><span class="options__text">Не важно</span></label>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<!-- //======================================================================================================================================================== -->
-		<!-- Picture -->
-		<div id="picture" aria-hidden="true" class="popup">
-			<div class="popup__wrapper">
-				<div class="popup__content picture bg-shad bg-shad--rbwr">
-					<div class="picture__top top-popup">
-						<h4 class="top-popup__title">Загрузка фотографии</h4>
-						<button data-close type="button" class="top-popup__close">
-							<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M18 6L6 18" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-								<path d="M6 6L18 18" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-							</svg>
-						</button>
-					</div>
-					<form action="" class="picture__form">
-						<div class="picture__upload upload">
-							<div class="upload__area" id="uploadArea">
-								<label class="upload__label" for="fileInput">Выберите фото или перетащите фото сюда</label>
-								<input type="file" id="fileInput" accept="image/*" class="upload__input" />
-							</div>
-						</div>
-						<div class="picture__tip">
-							<p><span>Совет:</span> Когда ваша фотография появится в окошке, вы сможете редактировать её (обрезать, перемещать кадр), нажав на значок <span class="_icon-aside-ed"></span> Постарайтесь сделать так, чтобы лицо на фото находилось в середине кадра.</p>
-						</div>
-						<div class="picture__textarea">
-							<textarea data-required="text" autocomplete="off" name="form[]" placeholder="Подпись к фотографии" rows="10" cols="50" maxlength="30" class="picture__input input request-textarea"></textarea>
-							<div class="count">0/30 символов</div>
-						</div>
-						<button type="submit" class="picture__button button button--ob _icon-image">Загрузить</button>
-					</form>
-				</div>
-			</div>
-		</div>
-		<!-- Photos -->
-		<div id="photos" aria-hidden="true" class="popup">
-			<div class="popup__wrapper">
-				<div class="popup__content photos bg-shad bg-shad--rbwr">
-					<div class="photos__top top-popup">
-						<h4 class="top-popup__title">Альбом Фотографий</h4>
-						<button data-close type="button" class="top-popup__close">
-							<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M18 6L6 18" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-								<path d="M6 6L18 18" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-							</svg>
-						</button>
-					</div>
-					<div class="photos__gallery">
-						<div class="photos__slider swiper">
-							<div class="photos__wrapper swiper-wrapper">
-								<div class="photos__slide slide-photos swiper-slide bg-shad">
-									<div class="slide-photos__image img"><img data-src="img/photo-women.webp" alt="Image"></div>
-									<div class="slide-photos__rate">
-										<span>Оцените эту фотографию:</span>
-										<div data-rating="set" class="rating"></div>
-									</div>
-								</div>
-								<div class="photos__slide slide-photos swiper-slide bg-shad">
-									<div class="slide-photos__image img"><img data-src="img/photo-men.webp" alt="Image"></div>
-									<div class="slide-photos__rate">
-										<span>Оцените эту фотографию:</span>
-										<div data-rating="set" class="rating"></div>
-									</div>
-								</div>
-								<div class="photos__slide slide-photos swiper-slide bg-shad">
-									<div class="slide-photos__image img"><img data-src="img/photo-women.webp" alt="Image"></div>
-									<div class="slide-photos__rate">
-										<span>Оцените эту фотографию:</span>
-										<div data-rating="set" class="rating"></div>
-									</div>
-								</div>
-								<div class="photos__slide slide-photos swiper-slide bg-shad">
-									<div class="slide-photos__image img"><img data-src="img/photo-men.webp" alt="Image"></div>
-									<div class="slide-photos__rate">
-										<span>Оцените эту фотографию:</span>
-										<div data-rating="set" class="rating"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="photos__bottom">
-						<div class="photos__tip _icon-help-circle">Для просмотра следующей фотографии, передвиньте верхнюю фотографию вправо или влево</div>
-						<div class="photos__controls controls-photos bg-ord">
-							<div class="controls-photos__fraction"></div>
-							<div class="controls-photos__arrows arrows">
-								<button type="button" class="arrows__arrow arrows__arrow--prev arrows__photos--prev _icon-arrow"></button>
-								<button type="button" class="arrows__arrow arrows__arrow--next arrows__photos--next _icon-arrow"></button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- //======================================================================================================================================================== -->
-		<!-- Greeting -->
-		<div id="greeting" aria-hidden="true" class="popup">
-			<div class="popup__wrapper">
-				<div class="popup__content greeting bg-shad bg-shad--rbwr">
-					<div class="greeting__top top-popup">
-						<h4 class="top-popup__title">Как хотите поприветствовать?</h4>
-						<button data-close type="button" class="top-popup__close">
-							<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M18 6L6 18" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-								<path d="M6 6L18 18" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-							</svg>
-						</button>
-					</div>
-					<form action="" class="greeting__form form">
-						<div class="form__select">
-							<span class="title title--min">Стандартное приветствие:</span>
-							<select name="form[]" data-class-modif="main">
-								<option value="1" selected>Привет!</option>
-								<option value="2">Привет))</option>
-								<option value="3">Привет :)</option>
-								<option value="4">שלום</option>
-								<option value="5">Привет ;)</option>
-								<option value="6">Приветик;-)</option>
-								<option value="7">Шалом!</option>
-								<option value="8">Приветик</option>
-								<option value="9">Hi</option>
-								<option value="10">Приветствую!</option>
-								<option value="11">Ты мне нравишься!</option>
-								<option value="12">Давай знакомиться!</option>
-							</select>
-						</div>
-						<div class="greeting__actions">
-							<span class="title title--min">Выбрать подарок:</span>
-							<div class="greeting__buttons">
-								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">💐</button>
-								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">🎁</button>
-								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">🍫</button>
-								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">💝</button>
-								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">💐</button>
-								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">🎁</button>
-								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">🍫</button>
-								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">💝</button>
-								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">💐</button>
-								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">🎁</button>
-								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">🍫</button>
-								<button data-popup="#done-greeting" type="button" class="greeting__button button button--ob">💝</button>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-		<!-- //======================================================================================================================================================== -->
-		<!-- Done Greeting -->
-		<div id="done-greeting" aria-hidden="true" class="popup">
-			<div class="popup__wrapper">
-				<div class="popup__content done bg-shad bg-shad--rbwr">
-					<div class="done__head">
-						<h4 class="done__title">Вы отправили приветствие!</h4>
-						<div class="done__text">
-							<p>Благодарим вас! Ваш <span>подарок</span> был успешно отправлен пользователю!</p>
-						</div>
-					</div>
-					<button data-close type="button" class="done__close button button--ord"><span>Отлично!</span></button>
-				</div>
-			</div>
-		</div>
-		<!-- Done Favorites -->
-		<div id="done-favorites" aria-hidden="true" class="popup">
-			<div class="popup__wrapper">
-				<div class="popup__content done bg-shad bg-shad--rbwr">
-					<div class="done__head">
-						<h4 class="done__title">Вы добавили пользователя!</h4>
-						<div class="done__text">
-							<p>Поздравляем вас! Вы успешно добавили этого пользователя в <a href="">фавориты</a>!</p>
-						</div>
-					</div>
-					<button data-close type="button" class="done__close button button--ord"><span>Отлично!</span></button>
-				</div>
-			</div>
-		</div>
-		<!-- Done Favorites Remove -->
-		<div id="done-favorites-remove" aria-hidden="true" class="popup">
-			<div class="popup__wrapper">
-				<div class="popup__content done bg-shad bg-shad--rbwr">
-					<div class="done__head">
-						<h4 class="done__title">Вы убрали пользователя!</h4>
-						<div class="done__text">
-							<p>Поздравляем вас! Вы успешно убрали этого пользователя из <a href="">фаворитов</a>!</p>
-						</div>
-					</div>
-					<button data-close type="button" class="done__close button button--ord"><span>Закрыть</span></button>
-				</div>
-			</div>
-		</div>
-		<!-- //======================================================================================================================================================== -->
-		<!-- Present -->
-		<div id="present" aria-hidden="true" class="popup">
-			<div class="popup__wrapper">
-				<div class="popup__content present bg-shad bg-shad--rbwr">
-					<div class="present__top top-popup">
-						<h4 class="top-popup__title">Выбрать подарок</h4>
-						<button data-close type="button" class="top-popup__close">
-							<svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M18 6L6 18" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-								<path d="M6 6L18 18" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-							</svg>
-						</button>
-					</div>
-					<form action="" class="present__form">
-						<div class="present__text text">
-							<p>Отправить виртуальный подарок человеку, который вам понравился - лучший способ начать знакомство!</p>
-						</div>
-						<div class="present__options talent">
-							<div class="talent__item">
-								<input id="g_1" class="talent__input" type="radio" value="1" name="talent">
-								<label for="g_1" class="talent__label"><span class="talent__img"><img src="img/present/01.webp" alt="Image"></span></label>
-							</div>
-							<div class="talent__item">
-								<input id="g_2" class="talent__input" type="radio" value="2" name="talent">
-								<label for="g_2" class="talent__label"><span class="talent__img"><img src="img/present/02.webp" alt="Image"></span></label>
-							</div>
-							<div class="talent__item">
-								<input id="g_3" class="talent__input" type="radio" value="3" name="talent">
-								<label for="g_3" class="talent__label"><span class="talent__img"><img src="img/present/03.webp" alt="Image"></span></label>
-							</div>
-							<div class="talent__item">
-								<input id="g_4" class="talent__input" type="radio" value="4" name="talent">
-								<label for="g_4" class="talent__label"><span class="talent__img"><img src="img/present/04.webp" alt="Image"></span></label>
-							</div>
-							<div class="talent__item">
-								<input id="g_5" class="talent__input" type="radio" value="5" name="talent">
-								<label for="g_5" class="talent__label"><span class="talent__img"><img src="img/present/02.webp" alt="Image"></span></label>
-							</div>
-							<div class="talent__item">
-								<input id="g_6" class="talent__input" type="radio" value="6" name="talent">
-								<label for="g_6" class="talent__label"><span class="talent__img"><img src="img/present/03.webp" alt="Image"></span></label>
-							</div>
-							<div class="talent__item">
-								<input id="g_7" class="talent__input" type="radio" value="7" name="talent">
-								<label for="g_7" class="talent__label"><span class="talent__img"><img src="img/present/01.webp" alt="Image"></span></label>
-							</div>
-							<div class="talent__item">
-								<input id="g_8" class="talent__input" type="radio" value="8" name="talent">
-								<label for="g_8" class="talent__label"><span class="talent__img"><img src="img/present/04.webp" alt="Image"></span></label>
-							</div>
-						</div>
-						<div class="present__textarea">
-							<textarea data-required="text" autocomplete="off" name="form[]" placeholder="Подпись к фотографии" rows="10" cols="50" maxlength="30" class="present__input input request-textarea"></textarea>
-							<div class="count">0/30 символов</div>
-						</div>
-						<button data-popup="#done-greeting" type="button" class="present__button button button--ob _icon-present">Подарить</button>
-					</form>
-				</div>
-			</div>
-		</div>
-		<!-- //======================================================================================================================================================== -->
-
 	</div>
-	<script src="js/app.min.js?_v=20241102200634"></script>
+	<script src="js/app.min.js?_v=20241104230200"></script>
 </body>
 
 </html>

@@ -97,6 +97,16 @@ summary {
 	@media (min-width: $tablet) {
 		grid-template-columns: toRem(300) 1fr;
 	}
+	.cont-menu-base {
+		@media (max-width: $tablet) {
+			order: 2;
+		}
+	}
+	.cont-menu-head {
+		@media (max-width: $tablet) {
+			order: 1;
+		}
+	}
 }
 // Navigation
 .nav {
@@ -668,9 +678,6 @@ summary {
 			background-color: $placeholderColor;
 		}
 	}
-	// .articles__offline
-	&__offline {
-	}
 	// .articles__content
 	&__content {
 		bottom: 0;
@@ -697,9 +704,6 @@ summary {
 		align-items: center;
 		justify-content: space-between;
 	}
-	// .articles__name
-	&__name {
-	}
 	// .articles__status
 	&__status {
 		border-radius: toRem(3);
@@ -708,9 +712,6 @@ summary {
 		box-shadow:
 			rgba($bgColor, 0.3) 0px 3px 15px 0px,
 			rgba($bgColor, 0.3) 0px 3px 15px 0px;
-	}
-	// .articles__region
-	&__region {
 	}
 	// .articles__actions
 	&__actions {
@@ -738,6 +739,205 @@ summary {
 			&:hover {
 				background-color: $bgColor;
 			}
+		}
+	}
+}
+// Accounts
+.accounts {
+	display: grid;
+	gap: toRem(20);
+	// .accounts__account
+	&__account {
+		opacity: 0;
+		display: grid;
+		gap: toRem(15);
+		transition: opacity 0.5s ease 0.05s;
+		border: toRem(1) solid rgba(#fff, 0.1);
+		background-color: rgba($greenColor, 0.1);
+		&._watcher-view {
+			opacity: 1;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				.accounts__image {
+					img {
+						transform: scale(1.1);
+					}
+				}
+			}
+		}
+		@media (min-width: $mobile) {
+			grid-template-columns: 35.928144% 1fr;
+		}
+		@media (max-width: $mobileSmall) {
+			background-color: #381d42;
+		}
+	}
+	// .accounts__image
+	&__image {
+		height: 100%;
+		position: relative;
+		max-height: toRem(340);
+		border-radius: toRem(15);
+	}
+	// .accounts__actions
+	&__actions {
+		top: 50%;
+		left: 5px;
+		display: flex;
+		gap: toRem(10);
+		position: absolute;
+		flex-direction: column;
+		transform: translate(0px, -50%);
+	}
+	// .articles__btn
+	&__btn {
+		height: toRem(48);
+		border-radius: 50%;
+		min-width: toRem(48);
+		font-size: toRem(18);
+	}
+	// .accounts__content
+	&__content {
+		display: flex;
+		gap: toRem(15);
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	// .accounts__head
+	&__head {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	// .accounts__label
+	&__label {
+		display: flex;
+		gap: toRem(10);
+		align-items: center;
+		@media (max-width: $mobileSmall) {
+			gap: toRem(5);
+		}
+	}
+	// .accounts__name
+	&__name {
+		@include adaptiveValue("font-size", 24, 20);
+		span {
+			@include adaptiveValue("font-size", 24, 20);
+		}
+	}
+	// .accounts__status
+	&__status {
+		@include adaptiveValue("font-size", 24, 20);
+	}
+	// .accounts__seen
+	&__seen {
+		pointer-events: none;
+		border-radius: toRem(12);
+		padding: toRem(3) toRem(8);
+		box-shadow:
+			rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+			rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+		&.online-true {
+			background-color: $greenColor;
+		}
+		&.online-false {
+			background-color: $placeholderColor;
+		}
+	}
+	// .accounts__optional
+	&__optional {
+		display: grid;
+		overflow: hidden;
+		border-radius: toRem(12);
+		background-color: rgba($bgColor, 0.75);
+		border: toRem(1) solid rgba($orangeColor, 0.3);
+		@media (min-width: $mobileSmall) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	// .accounts__option
+	&__option {
+		display: flex;
+		gap: toRem(8);
+		align-items: center;
+		justify-content: center;
+		padding: toRem(12) toRem(0);
+		transition:
+			background-color 0.3s ease 0s,
+			color 0.3s ease 0s;
+		&::before {
+			display: flex;
+			width: toRem(18);
+			height: toRem(18);
+			align-items: center;
+			justify-content: center;
+		}
+		&--one {
+			background-color: rgba($blueColor, 0.75);
+			border-bottom: toRem(1) solid rgba(#fff, 0.15);
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: rgba($blueColor, 1);
+				}
+			}
+			@media (min-width: $tablet) {
+				border-right: toRem(1) solid rgba(#fff, 0.15);
+			}
+		}
+		&--two {
+			border-bottom: toRem(1) solid rgba(#fff, 0.15);
+			@media (any-hover: hover) {
+				&:hover {
+					color: $mainColor;
+					background-color: rgba($yellowColor, 0.75);
+				}
+			}
+		}
+		&--three {
+			color: $yellowColor;
+			border-right: toRem(1) solid rgba(#fff, 0.15);
+			@media (any-hover: hover) {
+				&:hover {
+					color: $mainColor;
+					background-color: rgba($redColor, 0.75);
+				}
+			}
+			@media (max-width: $mobileSmall) {
+				border-bottom: toRem(1) solid rgba(#fff, 0.15);
+			}
+		}
+		&--four {
+			color: $orangeColor;
+			@media (any-hover: hover) {
+				&:hover {
+					color: $mainColor;
+					background-color: rgba($orangeColor, 0.75);
+				}
+			}
+		}
+	}
+	// .accounts__item
+	&__item {
+		display: flex;
+		font-weight: 500;
+		flex-wrap: wrap;
+		row-gap: toRem(10);
+		align-items: center;
+		justify-content: space-between;
+		&:not(:first-child) {
+			padding-top: toRem(12);
+		}
+		&:not(:last-child) {
+			padding-bottom: toRem(12);
+			border-bottom: toRem(1) dashed rgba(#fff, 0.3);
+		}
+		span {
+			font-weight: 400;
+			font-family: $fontFamilyMontAlt;
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: toRem(14);
 		}
 	}
 }
