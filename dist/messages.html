@@ -10,7 +10,7 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.min.css?_v=20241104230200">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241105232036">
 	<link rel="shortcut icon" href="img/icons/head-logo.svg">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -133,9 +133,275 @@
 						</ul>
 					</aside>
 					<div class="chat__content cont-menu-head bg-ord bg-ord--pm">
-						<div class="chat__head">
-							<h3 class="chat__title title title--red">Моя почта</h3>
-							<div class="chat__label">Почта активирована</div>
+						<div class="chat__heading">
+							<div class="chat__title">
+								<h3 class="title title--red">Моя почта</h3><span class="seen seen-true">Активирована</span>
+							</div>
+							<div class="chat__switch switch">
+								<h5>Посмотреть новые сообщения "инкогнито"</h5>
+								<label class="switch__label"><input type="checkbox"><span class="switch__slider switch__round"></span></label>
+							</div>
+						</div>
+						<div data-tabs class="chat__tabs tabs">
+							<nav data-tabs-titles class="tabs__navigation">
+								<button type="button" class="tabs__title _tab-active _icon-bell-full">Последние</button>
+								<button type="button" class="tabs__title _icon-aside-sr">Все сообщения</button>
+							</nav>
+							<div data-tabs-body class="tabs__content">
+								<div class="tabs__body body-tabs-chat">
+									<div class="body-tabs-chat__messages messages">
+										<article data-watch class="messages__article bg-shad">
+											<div class="messages__image img"><img src="img/photo-women.webp" alt="Image"></div>
+											<div class="messages__content">
+												<div class="messages__head">
+													<div class="messages__label">
+														<h4 class="messages__name">София <span>24</span></h4>
+													</div>
+													<div class="messages__seen seen seen-true">Онлайн</div>
+												</div>
+												<div class="messages__actions">
+													<div class="messages__buttons">
+														<a href="" class="messages__button button button--lb _icon-recive">Полученные<span>32</span></a>
+														<a href="" class="messages__button button button--ob _icon-send">Отправленные<span>3</span></a>
+														<a href="" class="messages__button button button--gb _icon-mail">Непрочитанные<span>3</span></a>
+													</div>
+													<div class="messages__buttons">
+														<button type="button" class="messages__button messages__button--trash button button--rb _icon-trash"></button>
+														<button type="button" class="messages__button messages__button--alert button button--ob _icon-alert"></button>
+													</div>
+												</div>
+											</div>
+										</article>
+										<article data-watch class="messages__article bg-shad article-messages-vip">
+											<div class="messages__image img"><img src="img/photo-men.webp" alt="Image"></div>
+											<div class="messages__content">
+												<div class="messages__head">
+													<div class="messages__label">
+														<h4 class="messages__name">Андрей <span>24</span></h4>
+														<div class="messages__status">"VIP"</div>
+													</div>
+													<div class="messages__seen seen seen-false">Вчера</div>
+												</div>
+												<div class="messages__actions">
+													<div class="messages__buttons">
+														<a href="" class="messages__button button button--lb _icon-recive">Полученные<span>32</span></a>
+														<a href="" class="messages__button button button--ob _icon-send">Отправленные<span>3</span></a>
+														<a href="" class="messages__button button button--gb _icon-mail">Непрочитанные<span>3</span></a>
+													</div>
+													<div class="messages__buttons">
+														<button type="button" class="messages__button messages__button--trash button button--rb _icon-trash"></button>
+														<button type="button" class="messages__button messages__button--alert button button--ob _icon-alert"></button>
+													</div>
+												</div>
+											</div>
+										</article>
+										<article data-watch class="messages__article bg-shad">
+											<div class="messages__image img"><img src="img/photo-women.webp" alt="Image"></div>
+											<div class="messages__content">
+												<div class="messages__head">
+													<div class="messages__label">
+														<h4 class="messages__name">София <span>24</span></h4>
+													</div>
+													<div class="messages__seen seen seen-true">Онлайн</div>
+												</div>
+												<div class="messages__actions">
+													<div class="messages__buttons">
+														<a href="" class="messages__button button button--lb _icon-recive">Полученные<span>32</span></a>
+														<a href="" class="messages__button button button--ob _icon-send">Отправленные<span>3</span></a>
+														<a href="" class="messages__button button button--gb _icon-mail">Непрочитанные<span>3</span></a>
+													</div>
+													<div class="messages__buttons">
+														<button type="button" class="messages__button messages__button--trash button button--rb _icon-trash"></button>
+														<button type="button" class="messages__button messages__button--alert button button--ob _icon-alert"></button>
+													</div>
+												</div>
+											</div>
+										</article>
+										<article data-watch class="messages__article bg-shad">
+											<div class="messages__image img"><img src="img/photo-women.webp" alt="Image"></div>
+											<div class="messages__content">
+												<div class="messages__head">
+													<div class="messages__label">
+														<h4 class="messages__name">София <span>24</span></h4>
+													</div>
+													<div class="messages__seen seen seen-true">Онлайн</div>
+												</div>
+												<div class="messages__actions">
+													<div class="messages__buttons">
+														<a href="" class="messages__button button button--lb _icon-recive">Полученные<span>32</span></a>
+														<a href="" class="messages__button button button--ob _icon-send">Отправленные<span>3</span></a>
+														<a href="" class="messages__button button button--gb _icon-mail">Непрочитанные<span>3</span></a>
+													</div>
+													<div class="messages__buttons">
+														<button type="button" class="messages__button messages__button--trash button button--rb _icon-trash"></button>
+														<button type="button" class="messages__button messages__button--alert button button--ob _icon-alert"></button>
+													</div>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+								<div class="tabs__body body-tabs-chat">
+									<div class="body-tabs-chat__messages messages">
+										<article data-watch class="messages__article bg-shad article-messages-vip">
+											<div class="messages__image img"><img src="img/photo-men.webp" alt="Image"></div>
+											<div class="messages__content">
+												<div class="messages__head">
+													<div class="messages__label">
+														<h4 class="messages__name">Андрей <span>24</span></h4>
+														<div class="messages__status">"VIP"</div>
+													</div>
+													<div class="messages__seen seen seen-false">Вчера</div>
+												</div>
+												<div class="messages__actions">
+													<div class="messages__buttons">
+														<a href="" class="messages__button button button--lb _icon-recive">Полученные<span>32</span></a>
+														<a href="" class="messages__button button button--ob _icon-send">Отправленные<span>3</span></a>
+														<a href="" class="messages__button button button--gb _icon-mail">Непрочитанные<span>3</span></a>
+													</div>
+													<div class="messages__buttons">
+														<button type="button" class="messages__button messages__button--trash button button--rb _icon-trash"></button>
+														<button type="button" class="messages__button messages__button--alert button button--ob _icon-alert"></button>
+													</div>
+												</div>
+											</div>
+										</article>
+										<article data-watch class="messages__article bg-shad">
+											<div class="messages__image img"><img src="img/photo-women.webp" alt="Image"></div>
+											<div class="messages__content">
+												<div class="messages__head">
+													<div class="messages__label">
+														<h4 class="messages__name">София <span>24</span></h4>
+													</div>
+													<div class="messages__seen seen seen-true">Онлайн</div>
+												</div>
+												<div class="messages__actions">
+													<div class="messages__buttons">
+														<a href="" class="messages__button button button--lb _icon-recive">Полученные<span>32</span></a>
+														<a href="" class="messages__button button button--ob _icon-send">Отправленные<span>3</span></a>
+														<a href="" class="messages__button button button--gb _icon-mail">Непрочитанные<span>3</span></a>
+													</div>
+													<div class="messages__buttons">
+														<button type="button" class="messages__button messages__button--trash button button--rb _icon-trash"></button>
+														<button type="button" class="messages__button messages__button--alert button button--ob _icon-alert"></button>
+													</div>
+												</div>
+											</div>
+										</article>
+										<article data-watch class="messages__article bg-shad article-messages-vip">
+											<div class="messages__image img"><img src="img/photo-men.webp" alt="Image"></div>
+											<div class="messages__content">
+												<div class="messages__head">
+													<div class="messages__label">
+														<h4 class="messages__name">Андрей <span>24</span></h4>
+														<div class="messages__status">"VIP"</div>
+													</div>
+													<div class="messages__seen seen seen-false">Вчера</div>
+												</div>
+												<div class="messages__actions">
+													<div class="messages__buttons">
+														<a href="" class="messages__button button button--lb _icon-recive">Полученные<span>32</span></a>
+														<a href="" class="messages__button button button--ob _icon-send">Отправленные<span>3</span></a>
+														<a href="" class="messages__button button button--gb _icon-mail">Непрочитанные<span>3</span></a>
+													</div>
+													<div class="messages__buttons">
+														<button type="button" class="messages__button messages__button--trash button button--rb _icon-trash"></button>
+														<button type="button" class="messages__button messages__button--alert button button--ob _icon-alert"></button>
+													</div>
+												</div>
+											</div>
+										</article>
+										<article data-watch class="messages__article bg-shad">
+											<div class="messages__image img"><img src="img/photo-women.webp" alt="Image"></div>
+											<div class="messages__content">
+												<div class="messages__head">
+													<div class="messages__label">
+														<h4 class="messages__name">София <span>24</span></h4>
+													</div>
+													<div class="messages__seen seen seen-true">Онлайн</div>
+												</div>
+												<div class="messages__actions">
+													<div class="messages__buttons">
+														<a href="" class="messages__button button button--lb _icon-recive">Полученные<span>32</span></a>
+														<a href="" class="messages__button button button--ob _icon-send">Отправленные<span>3</span></a>
+														<a href="" class="messages__button button button--gb _icon-mail">Непрочитанные<span>3</span></a>
+													</div>
+													<div class="messages__buttons">
+														<button type="button" class="messages__button messages__button--trash button button--rb _icon-trash"></button>
+														<button type="button" class="messages__button messages__button--alert button button--ob _icon-alert"></button>
+													</div>
+												</div>
+											</div>
+										</article>
+										<article data-watch class="messages__article bg-shad">
+											<div class="messages__image img"><img src="img/photo-women.webp" alt="Image"></div>
+											<div class="messages__content">
+												<div class="messages__head">
+													<div class="messages__label">
+														<h4 class="messages__name">София <span>24</span></h4>
+													</div>
+													<div class="messages__seen seen seen-true">Онлайн</div>
+												</div>
+												<div class="messages__actions">
+													<div class="messages__buttons">
+														<a href="" class="messages__button button button--lb _icon-recive">Полученные<span>32</span></a>
+														<a href="" class="messages__button button button--ob _icon-send">Отправленные<span>3</span></a>
+														<a href="" class="messages__button button button--gb _icon-mail">Непрочитанные<span>3</span></a>
+													</div>
+													<div class="messages__buttons">
+														<button type="button" class="messages__button messages__button--trash button button--rb _icon-trash"></button>
+														<button type="button" class="messages__button messages__button--alert button button--ob _icon-alert"></button>
+													</div>
+												</div>
+											</div>
+										</article>
+										<article data-watch class="messages__article bg-shad">
+											<div class="messages__image img"><img src="img/photo-women.webp" alt="Image"></div>
+											<div class="messages__content">
+												<div class="messages__head">
+													<div class="messages__label">
+														<h4 class="messages__name">София <span>24</span></h4>
+													</div>
+													<div class="messages__seen seen seen-true">Онлайн</div>
+												</div>
+												<div class="messages__actions">
+													<div class="messages__buttons">
+														<a href="" class="messages__button button button--lb _icon-recive">Полученные<span>32</span></a>
+														<a href="" class="messages__button button button--ob _icon-send">Отправленные<span>3</span></a>
+														<a href="" class="messages__button button button--gb _icon-mail">Непрочитанные<span>3</span></a>
+													</div>
+													<div class="messages__buttons">
+														<button type="button" class="messages__button messages__button--trash button button--rb _icon-trash"></button>
+														<button type="button" class="messages__button messages__button--alert button button--ob _icon-alert"></button>
+													</div>
+												</div>
+											</div>
+										</article>
+										<article data-watch class="messages__article bg-shad">
+											<div class="messages__image img"><img src="img/photo-women.webp" alt="Image"></div>
+											<div class="messages__content">
+												<div class="messages__head">
+													<div class="messages__label">
+														<h4 class="messages__name">София <span>24</span></h4>
+													</div>
+													<div class="messages__seen seen seen-true">Онлайн</div>
+												</div>
+												<div class="messages__actions">
+													<div class="messages__buttons">
+														<a href="" class="messages__button button button--lb _icon-recive">Полученные<span>32</span></a>
+														<a href="" class="messages__button button button--ob _icon-send">Отправленные<span>3</span></a>
+														<a href="" class="messages__button button button--gb _icon-mail">Непрочитанные<span>3</span></a>
+													</div>
+													<div class="messages__buttons">
+														<button type="button" class="messages__button messages__button--trash button button--rb _icon-trash"></button>
+														<button type="button" class="messages__button messages__button--alert button button--ob _icon-alert"></button>
+													</div>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -201,7 +467,7 @@
 		</footer>
 		<!-- Footer -->
 	</div>
-	<script src="js/app.min.js?_v=20241104230200"></script>
+	<script src="js/app.min.js?_v=20241105232036"></script>
 </body>
 
 </html>

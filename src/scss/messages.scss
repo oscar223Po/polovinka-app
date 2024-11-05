@@ -9,22 +9,43 @@
 	}
 	// .chat__content
 	&__content {
+		@media (max-width: $mobileSmall) {
+			padding: 0;
+			border: none;
+			background-color: transparent;
+		}
 	}
-	// .chat__head
-	&__head {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+	// .chat__heading
+	&__heading {
+		padding-bottom: toRem(15);
+		border-bottom: toRem(1) solid rgba($placeholderColor, 0.3);
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
 	}
 	// .chat__title
 	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		&:not(:last-child) {
+			margin-bottom: toRem(12);
+		}
+		span {
+			@include adaptiveValue("font-size", 16, 14);
+		}
 	}
-	// .chat__label
-	&__label {
-		border-radius: toRem(5);
-		padding: toRem(5) toRem(10);
-		background-color: rgba($pinkColor, 0.45);
-		border: toRem(1) solid rgba($mainColor, 0.15);
+	// .chat__switch
+	&__switch {
+		font-weight: 500;
+		justify-content: start;
+		flex-direction: row-reverse;
+		&.switch {
+			padding: 0;
+		}
+	}
+	// .chat__tabs
+	&__tabs {
 	}
 }
 // ========================================================================================================================================================

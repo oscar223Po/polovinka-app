@@ -27,7 +27,8 @@
 	// Buttons For Header Register
 	&--lb,
 	&--rb,
-	&--ob {
+	&--ob,
+	&--gb {
 		gap: toRem(8);
 		min-height: toRem(40);
 		border-radius: toRem(10);
@@ -65,6 +66,12 @@
 		color: $orangeColor;
 		background-color: $bgColor;
 		border: toRem(1) solid $orangeColor;
+	}
+	// .button--gb
+	&--gb {
+		color: $greenColor;
+		background-color: $bgColor;
+		border: toRem(1) solid $greenColor;
 	}
 	// -------------------------------
 	// .button--ord

@@ -16,6 +16,36 @@
 }
 //========================================================================================================================================================
 // Fonts Of Icons
+._icon-recive:before {
+	content: "\e967";
+}
+._icon-send:before {
+	content: "\e968";
+}
+._icon-bell-full:before {
+	content: "\e941";
+}
+._icon-undo:before {
+	content: "\e965";
+}
+._icon-redo:before {
+	content: "\e966";
+}
+._icon-lock:before {
+	content: "\e98f";
+}
+._icon-unlocked:before {
+	content: "\e990";
+}
+._icon-users:before {
+	content: "\e972";
+}
+._icon-user-plus:before {
+	content: "\e973";
+}
+._icon-user-check:before {
+	content: "\e975";
+}
 ._icon-about:before {
 	content: "\e900";
 }
@@ -210,26 +240,5 @@
 }
 ._icon-aside-wr:before {
 	content: "\e934";
-}
-._icon-undo:before {
-	content: "\e965";
-}
-._icon-redo:before {
-	content: "\e966";
-}
-._icon-lock:before {
-	content: "\e98f";
-}
-._icon-unlocked:before {
-	content: "\e990";
-}
-._icon-users:before {
-	content: "\e972";
-}
-._icon-user-plus:before {
-	content: "\e973";
-}
-._icon-user-check:before {
-	content: "\e975";
 }
 //========================================================================================================================================================

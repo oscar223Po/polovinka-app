@@ -665,18 +665,6 @@ summary {
 	// .articles__seen
 	&__seen {
 		font-size: toRem(14);
-		pointer-events: none;
-		border-radius: toRem(12);
-		padding: toRem(3) toRem(8);
-		box-shadow:
-			rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
-			rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
-		&.online-true {
-			background-color: $greenColor;
-		}
-		&.online-false {
-			background-color: $placeholderColor;
-		}
 	}
 	// .articles__content
 	&__content {
@@ -830,21 +818,6 @@ summary {
 	&__status {
 		@include adaptiveValue("font-size", 24, 20);
 	}
-	// .accounts__seen
-	&__seen {
-		pointer-events: none;
-		border-radius: toRem(12);
-		padding: toRem(3) toRem(8);
-		box-shadow:
-			rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
-			rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
-		&.online-true {
-			background-color: $greenColor;
-		}
-		&.online-false {
-			background-color: $placeholderColor;
-		}
-	}
 	// .accounts__optional
 	&__optional {
 		display: grid;
@@ -938,6 +911,168 @@ summary {
 		}
 		@media (max-width: $mobileSmall) {
 			font-size: toRem(14);
+		}
+	}
+}
+// Messages
+.messages {
+	display: grid;
+	gap: toRem(15);
+	// .messages__article
+	&__article {
+		opacity: 0;
+		display: flex;
+		gap: toRem(10);
+		padding: toRem(10);
+		border-radius: toRem(15);
+		background-color: $purpleColor;
+		transition: opacity 0.5s ease 0.05s;
+		border: toRem(1) solid rgba($mainColor, 0.15);
+		&._watcher-view {
+			opacity: 1;
+		}
+		&.article-messages-vip {
+			background: linear-gradient(90deg, rgba($blueColor, 0.15) 0%, rgba($yellowColor, 0.12) 100%);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				.messages__image {
+					img {
+						transform: scale(1.1);
+					}
+				}
+			}
+		}
+		@media (max-width: toEm(529.98)) {
+			gap: toRem(15);
+			flex-direction: column;
+		}
+		@media (max-width: $mobileSmall) {
+			background-color: #381d42;
+		}
+	}
+	// .messages__image
+	&__image {
+		max-width: toRem(95);
+		min-width: toRem(95);
+		border-radius: toRem(10);
+		@media (max-width: toEm(1114.98)) {
+			min-width: toRem(150);
+		}
+		@media (max-width: toEm(529.98)) {
+			max-width: 100%;
+		}
+	}
+	// .messages__content
+	&__content {
+		width: 100%;
+		display: flex;
+		gap: toRem(15);
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	// .messages__head
+	&__head {
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: toRem(10);
+		align-items: center;
+		justify-content: space-between;
+	}
+	// .messages__label
+	&__label {
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: toRem(5);
+		align-items: center;
+		column-gap: toRem(10);
+	}
+	// .messages__name
+	&__name {
+		font-weight: 500;
+		line-height: 125%;
+		font-size: toRem(24);
+		background: linear-gradient(90deg, $yellowColor 0%, $redColor 100%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	// .messages__status
+	&__status {
+		font-weight: 500;
+		border-radius: toRem(3);
+		margin-bottom: toRem(1.5);
+		padding: toRem(4) toRem(5);
+		background: linear-gradient(90deg, rgba($yellowColor, 0.75) 0%, $orangeColor 100%);
+		box-shadow:
+			rgba($bgColor, 0.3) 0px 3px 15px 0px,
+			rgba($bgColor, 0.3) 0px 3px 15px 0px;
+	}
+	// .messages__actions
+	&__actions {
+		display: flex;
+		gap: toRem(15);
+		justify-content: space-between;
+		@media (max-width: $mobileSmall) {
+			flex-direction: column;
+		}
+	}
+	// .messages__buttons
+	&__buttons {
+		display: flex;
+		gap: toRem(10);
+		&:first-child {
+			width: 100%;
+		}
+		@media (max-width: toEm(1114.98)) {
+			&:first-child {
+				flex-direction: column;
+			}
+			&:last-child {
+				flex-direction: column;
+				justify-content: space-between;
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			&:last-child {
+				flex-direction: row;
+			}
+		}
+	}
+	// .messages__button
+	&__button {
+		width: 100%;
+		display: flex;
+		position: relative;
+		align-items: center;
+		justify-content: center;
+		border-radius: toRem(10);
+		span {
+			top: -8px;
+			z-index: 1;
+			right: -5px;
+			display: flex;
+			color: $mainColor;
+			position: absolute;
+			align-items: center;
+			font-size: toRem(12);
+			pointer-events: none;
+			justify-content: center;
+			border-radius: toRem(5);
+			padding: toRem(0) toRem(5);
+			background-color: rgba($redColor, 0.85);
+		}
+		// .messages__button--trash
+		&--trash {
+			height: 100%;
+			color: $mainColor;
+			background-color: rgba($redColor, 0.35);
+		}
+		// .messages__button--alert
+		&--alert {
+			height: 100%;
+			color: $mainColor;
+			background-color: rgba($orangeColor, 0.35);
 		}
 	}
 }
@@ -1372,6 +1507,24 @@ summary {
 				background-color: red;
 			}
 		}
+	}
+}
+// ========================================================================================================================================================
+// Online & Ofline
+.seen {
+	display: inline-flex;
+	pointer-events: none;
+	border-radius: toRem(12);
+	padding: toRem(3) toRem(8);
+	border: toRem(1) solid rgba($mainColor, 0.25);
+	box-shadow:
+		rgba(50, 50, 105, 0.15) 0px 2px 5px 0px,
+		rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+	&.seen-true {
+		background-color: rgba($greenColor, 0.85);
+	}
+	&.seen-false {
+		background-color: rgba($placeholderColor, 0.75);
 	}
 }
 // ========================================================================================================================================================
