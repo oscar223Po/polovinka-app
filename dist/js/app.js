@@ -4543,6 +4543,12 @@
                         } else this.popupLogging(`Йой, не заповнено атрибут у ${buttonOpen.classList}`);
                         return;
                     }
+                    const buttonCancel = e.target.closest(".slim-btn-cancel");
+                    const buttonConfirm = e.target.closest(".slim-btn-confirm");
+                    if (buttonCancel || buttonConfirm) {
+                        e.preventDefault();
+                        return;
+                    }
                     const buttonClose = e.target.closest(`[${this.options.attributeCloseButton}]`);
                     if (buttonClose || !e.target.closest(`.${this.options.classes.popupContent}`) && this.isOpen) {
                         e.preventDefault();

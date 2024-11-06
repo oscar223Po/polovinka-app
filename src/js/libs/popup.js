@@ -129,6 +129,17 @@ class Popup {
 
 				return;
 			}
+
+			// Обработчик для кнопок "Cancel" и "Confirm"
+			const buttonCancel = e.target.closest('.slim-btn-cancel');  // Кнопка Cancel
+			const buttonConfirm = e.target.closest('.slim-btn-confirm'); // Кнопка Confirm
+
+			// Если нажата одна из этих кнопок, предотвращаем стандартное поведение (закрытие попапа)
+			if (buttonCancel || buttonConfirm) {
+				e.preventDefault();  // Прерываем выполнение, чтобы не закрывать попап
+				return; // Не закрываем попап
+			}
+
 			// Закриття на порожньому місці (popup__wrapper) та кнопки закриття (popup__close) для закриття
 			const buttonClose = e.target.closest(`[${this.options.attributeCloseButton}]`);
 			if (buttonClose || !e.target.closest(`.${this.options.classes.popupContent}`) && this.isOpen) {
@@ -137,7 +148,7 @@ class Popup {
 				return;
 			}
 		}.bind(this));
-		// Закриття ESC
+		// Закрытие ESC
 		document.addEventListener("keydown", function (e) {
 			if (this.options.closeEsc && e.which == 27 && e.code === 'Escape' && this.isOpen) {
 				e.preventDefault();
@@ -149,7 +160,6 @@ class Popup {
 				return;
 			}
 		}.bind(this))
-
 		// Відкриття по хешу
 		if (this.options.hashSettings.goHash) {
 			// Перевірка зміни адресного рядка

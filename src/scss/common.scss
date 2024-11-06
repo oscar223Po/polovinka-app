@@ -1528,3 +1528,121 @@ summary {
 	}
 }
 // ========================================================================================================================================================
+// Method
+.method {
+	// .method--base
+	&--base {
+		.method__head {
+			&::before {
+				background: url("@img/payment/method/base.png") center 5% / cover no-repeat;
+			}
+		}
+	}
+	// .method--prem
+	&--prem {
+		background: linear-gradient(-90deg, rgba(#34465a, 0.45) 0%, rgba(#105e19, 0.35) 100%);
+		.method__head {
+			&::before {
+				background: url("@img/payment/method/prem.png") center 5% / cover no-repeat;
+			}
+		}
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			.method__head {
+				&::before {
+					transform: scale(1.15);
+				}
+			}
+		}
+	}
+	// .method__head
+	&__head {
+		overflow: hidden;
+		position: relative;
+		border-radius: toRem(15);
+		padding: toRem(12) toRem(15);
+		margin: toRem(-15) toRem(-15) toRem(0) toRem(-15);
+		border-bottom: toRem(1) solid rgba($mainColor, 0.1);
+		border-radius: toRem(15) toRem(15) toRem(0) toRem(0);
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+		&::before {
+			left: -5%;
+			width: 105%;
+			content: "";
+			height: 100%;
+			top: toRem(0);
+			position: absolute;
+			transition: transform 0.5s ease 0s;
+		}
+	}
+	// .method__title
+	&__title {
+		position: relative;
+		&:not(:last-child) {
+			margin-bottom: toRem(5);
+		}
+		&.title--red {
+			font-weight: 500;
+			background: linear-gradient(90deg, $yellowColor 0%, $blueColor 100%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			@include adaptiveValue("font-size", 30, 22);
+		}
+	}
+	// .method__cost
+	&__cost {
+		position: relative;
+	}
+	// .method__lows
+	&__lows {
+		display: grid;
+		gap: toRem(12);
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+	// .method__item
+	&__item {
+		display: flex;
+		gap: toRem(8);
+		border-radius: toRem(8);
+		padding: toRem(10) toRem(8);
+		@include adaptiveValue("font-size", 16, 14, 0, $containerWidth, 479.98);
+		&::before {
+			display: flex;
+			height: toRem(20);
+			align-items: center;
+			min-width: toRem(20);
+			font-size: toRem(12);
+			justify-content: center;
+			border-radius: toRem(5);
+		}
+		li {
+			list-style: none;
+			line-height: 125%;
+		}
+		span {
+			color: $yellowColor;
+		}
+		&--base {
+			&::before {
+				background: $gradientPink;
+			}
+		}
+		&--prem {
+			&::before {
+				background: $gradientOrange;
+			}
+		}
+	}
+	// .method__button
+	&__button {
+		width: 100%;
+		min-height: toRem(45);
+	}
+}
+// ========================================================================================================================================================

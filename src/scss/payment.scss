@@ -149,20 +149,29 @@
 // ========================================================================================================================================================
 // Subscribe
 .subscribe {
+	padding-bottom: toRem(30);
 	// .subscribe__container
 	&__container {
-	}
-	// .subscribe__aside
-	&__aside {
-	}
-	// .subscribe__content
-	&__content {
 	}
 	// .subscribe__heading
 	&__heading {
 		.heading__text {
-			max-width: 100%;
+			max-width: toRem(850);
 		}
+	}
+	// .subscribe__methods
+	&__methods {
+		display: grid;
+		gap: toRem(15);
+		align-items: start;
+		grid-template-columns: repeat(2, 1fr);
+		@media (max-width: toEm(569.98)) {
+			gap: toRem(25);
+			grid-template-columns: auto;
+		}
+	}
+	// .subscribe__method
+	&__method {
 	}
 }
 // ========================================================================================================================================================
