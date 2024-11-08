@@ -293,24 +293,6 @@ body::after {
 		font-size: toRem(18);
 		justify-content: center;
 	}
-	// .greeting__done
-	&__done {
-		display: grid;
-		gap: toRem(20);
-	}
-	// .greeting__text
-	&__text {
-		font-weight: 500;
-		line-height: 130%;
-		text-align: center;
-		font-family: $fontFamilyMontAlt;
-		@include adaptiveValue("font-size", 18, 16);
-	}
-	// .greeting__close
-	&__close {
-		display: flex;
-		margin: 0 auto;
-	}
 }
 // ========================================================================================================================================================
 // Popup Done
@@ -341,19 +323,10 @@ body::after {
 	// .done__text
 	&__text {
 		font-weight: 500;
-		line-height: 130%;
-		font-family: $fontFamilyMontAlt;
-		@include adaptiveValue("font-size", 18, 14);
-		span {
-			color: $blueColor;
-		}
-		a {
-			color: $blueColor;
-			text-decoration: underline;
-			@media (any-hover: hover) {
-				&:hover {
-					text-decoration: none;
-				}
+		&.text {
+			a,
+			span {
+				color: $blueColor;
 			}
 		}
 	}

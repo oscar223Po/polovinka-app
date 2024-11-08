@@ -1,0 +1,43 @@
+// ========================================================================================================================================================
+// Weblog
+.weblog {
+	// .weblog__container
+	&__container {
+	}
+	// .weblog__heading
+	&__heading {
+		.heading__text {
+			max-width: 100%;
+			p {
+				padding: toRem(15);
+				position: relative;
+				background-color: rgba($purpleColor, 0.75);
+				border-radius: toRem(0) toRem(10) toRem(10) toRem(0);
+				border-top: toRem(1) solid rgba($mainColor, 0.15);
+				border-right: toRem(1) solid rgba($mainColor, 0.15);
+				border-bottom: toRem(1) solid rgba($mainColor, 0.15);
+				&::before {
+					top: 0;
+					left: 0;
+					content: "";
+					height: 100%;
+					display: flex;
+					position: absolute;
+					min-width: toRem(3);
+					border-radius: toRem(3);
+					background: $gradientOrange;
+				}
+			}
+		}
+	}
+	// .weblog__recomd
+	&__recomd {
+		@media (min-width: $mobileSmall) {
+			grid-template-columns: repeat(auto-fill, minmax(toRem(380), 1fr));
+		}
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 25);
+		}
+	}
+}
+// ========================================================================================================================================================

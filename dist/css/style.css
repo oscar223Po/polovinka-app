@@ -524,7 +524,7 @@ body {
   left: 0;
   position: absolute;
   background: linear-gradient(90deg,#ee0979 0,#ff6a00 100%);
-  transition: left .3s ease 0s
+  transition: left .4s ease 0s
 }
 input[type=email],
 input[type=tel],
@@ -1652,20 +1652,6 @@ body::after {
   font-size: 1.125rem;
   justify-content: center
 }
-.greeting__done {
-  display: grid;
-  gap: 1.25rem
-}
-.greeting__text {
-  font-weight: 500;
-  line-height: 130%;
-  text-align: center;
-  font-family: "Montserrat Alternates"
-}
-.greeting__close {
-  display: flex;
-  margin: 0 auto
-}
 .done {
   max-width: 489.98px
 }
@@ -1686,16 +1672,11 @@ body::after {
   margin-bottom: .9375rem
 }
 .done__text {
-  font-weight: 500;
-  line-height: 130%;
-  font-family: "Montserrat Alternates"
+  font-weight: 500
 }
-.done__text span {
+.done__text.text a,
+.done__text.text span {
   color: #66a1f7
-}
-.done__text a {
-  color: #66a1f7;
-  text-decoration: underline
 }
 .done__close {
   display: flex;
@@ -2059,6 +2040,65 @@ summary::marker {
   align-items: center;
   justify-content: center
 }
+.brows {
+  display: flex;
+  gap: .625rem;
+  align-items: center;
+  margin-top: 2.1875rem;
+  justify-content: center
+}
+.brows__button {
+  display: flex
+}
+.brows__button.button--ord {
+  padding: 0;
+  min-width: 2.625rem;
+  min-height: 2.625rem;
+  border-radius: .625rem
+}
+.brows__button i {
+  font-weight: 500;
+  position: relative;
+  font-size: 1.625rem
+}
+.brows__button--prev i {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg)
+}
+.brows__button--next i {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg)
+}
+.brows__list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: .625rem;
+  align-items: center;
+  border-radius: .3125rem;
+  padding: .3125rem 0;
+  background-color: #2d1436;
+  border: .0625rem solid rgba(247,248,249,.1)
+}
+.brows__item:not(:last-child) .brows__link {
+  border-right: .0625rem solid rgba(247,248,249,.25)
+}
+.brows__link {
+  display: flex;
+  width: 2.625rem;
+  align-items: center;
+  font-size: 1.5rem;
+  min-height: 2rem;
+  justify-content: center;
+  transition: color .3s ease 0s;
+  font-family: Kings
+}
+.brows__link.brows-active {
+  pointer-events: none;
+  color: rgba(247,248,249,.5)
+}
+.brows__link.brows-disable {
+  pointer-events: none
+}
 .title {
   line-height: 125%
 }
@@ -2098,6 +2138,13 @@ summary::marker {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent
 }
+.title--orn {
+  font-weight: 500;
+  background: linear-gradient(90deg,#ffba33 0,#f73d58 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
 .text {
   line-height: 130%
 }
@@ -2108,7 +2155,8 @@ summary::marker {
   margin-bottom: .625rem
 }
 .text a {
-  color: #ff6a00
+  color: #ff6a00;
+  text-decoration: underline
 }
 .text span {
   font-weight: 500;
@@ -2608,6 +2656,54 @@ summary::marker {
   height: 100%;
   color: #f7f8f9;
   background-color: rgba(255,106,0,.35)
+}
+.recomd {
+  display: grid;
+  gap: 1.25rem
+}
+.recomd__block {
+  border: .0625rem solid rgba(247,248,249,.15)
+}
+.recomd__label:not(:last-child) {
+  margin-bottom: .625rem
+}
+.journal {
+  display: grid;
+  gap: .9375rem
+}
+.journal__item {
+  opacity: 0;
+  transition: opacity .5s ease 0s,-webkit-transform .5s ease 0s;
+  transition: opacity .5s ease 0s,transform .5s ease 0s;
+  transition: opacity .5s ease 0s,transform .5s ease 0s,-webkit-transform .5s ease 0s;
+  display: flex;
+  gap: .9375rem
+}
+.journal__item._watcher-view {
+  opacity: 1
+}
+.journal__item:nth-child(2n) .journal__title {
+  background: linear-gradient(90deg,#ffba33 0,#f73d58 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
+.journal__image {
+  min-width: 12.5rem;
+  max-height: 8.75rem;
+  border-radius: .625rem
+}
+.journal__content {
+  display: grid;
+  gap: .5rem;
+  align-self: start
+}
+.journal__title {
+  font-weight: 400;
+  background: linear-gradient(90deg,#66a1f7 0,#f7f8f9 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
 }
 .video {
   display: grid
@@ -3487,6 +3583,29 @@ summary::marker {
 .item-parag__body span {
   font-weight: 600
 }
+.weblog__heading .heading__text {
+  max-width: 100%
+}
+.weblog__heading .heading__text p {
+  padding: .9375rem;
+  position: relative;
+  background-color: rgba(45,20,54,.75);
+  border-radius: 0 .625rem .625rem 0;
+  border-top: .0625rem solid rgba(247,248,249,.15);
+  border-right: .0625rem solid rgba(247,248,249,.15);
+  border-bottom: .0625rem solid rgba(247,248,249,.15)
+}
+.weblog__heading .heading__text p::before {
+  top: 0;
+  left: 0;
+  content: "";
+  height: 100%;
+  display: flex;
+  position: absolute;
+  min-width: .1875rem;
+  border-radius: .1875rem;
+  background: linear-gradient(90deg,#ee0979 0,#ff6a00 100%)
+}
 .search__heading .heading__text {
   max-width: 100%;
   font-size: .875rem
@@ -4041,6 +4160,9 @@ summary::marker {
   content: "-";
   margin-right: .3125rem
 }
+.photo__heading .heading__text {
+  max-width: 100%
+}
 .photo__tabs:not(:last-child) {
   margin-bottom: 1.5625rem
 }
@@ -4053,16 +4175,11 @@ summary::marker {
 .bottom-photo__button:not(:last-child) {
   margin-bottom: 1.25rem
 }
-.bottom-photo__text {
-  line-height: 125%;
-  font-family: "Montserrat Alternates"
-}
-.bottom-photo__text p:not(:last-child) {
+.bottom-photo__text.text p:not(:last-child) {
   margin-bottom: .3125rem
 }
-.bottom-photo__text a {
-  color: #66a1f7;
-  text-decoration: underline
+.bottom-photo__text.text a {
+  color: #66a1f7
 }
 .body-tabs-photo__code:not(:last-child) {
   margin-bottom: 1.25rem
@@ -4217,9 +4334,6 @@ summary::marker {
 }
 .body-tabs-payment__button {
   display: flex
-}
-.subscribe {
-  padding-bottom: 1.875rem
 }
 .subscribe__heading .heading__text {
   max-width: 53.125rem
@@ -4493,6 +4607,9 @@ summary::marker {
   .blog__items {
     grid-template-columns: repeat(auto-fill,minmax(18.75rem,1fr))
   }
+  .weblog__recomd {
+    grid-template-columns: repeat(auto-fill,minmax(23.75rem,1fr))
+  }
   .body-search__button {
     min-height: 3.125rem;
     padding: 0 1.875rem
@@ -4501,7 +4618,10 @@ summary::marker {
     grid-template-columns: repeat(auto-fill,minmax(13.125rem,1fr))
   }
   .body-tabs-photo__content {
-    grid-template-columns: repeat(auto-fill,minmax(14.375rem,1fr))
+    grid-template-columns: repeat(auto-fill,minmax(12.5rem,1fr))
+  }
+  .step__recomd {
+    grid-template-columns: repeat(auto-fill,minmax(18.75rem,1fr))
   }
 }
 @media (min-width:34.37375em) {
@@ -4564,6 +4684,18 @@ summary::marker {
   }
 }
 @media (min-width:47.99875em)and (any-hover:hover) {
+  .journal:hover .journal__item:not(:hover) {
+    opacity: .45
+  }
+  .journal__item:hover {
+    opacity: 1;
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02)
+  }
+  .journal__item:hover .journal__image img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1)
+  }
   .main-quest__option:hover {
     margin-left: 0;
     -webkit-transform: translate(0,0);
@@ -4612,17 +4744,11 @@ summary::marker {
   .top-popup__title {
     font-size: 1.875rem
   }
-  .greeting__text {
-    font-size: 1.125rem
-  }
   .done__head:not(:last-child) {
     margin-bottom: 1.875rem
   }
   .done__title {
     font-size: 1.875rem
-  }
-  .done__text {
-    font-size: 1.125rem
   }
   .spollers__span span {
     font-size: 1.25rem
@@ -4669,6 +4795,9 @@ summary::marker {
   .title--red span {
     font-size: 1.875rem
   }
+  .title--orn {
+    font-size: 1.875rem
+  }
   .text {
     font-size: 1.125rem
   }
@@ -4686,6 +4815,18 @@ summary::marker {
   }
   .accounts__status {
     font-size: 1.5rem
+  }
+  .recomd__label {
+    font-size: 1.5rem
+  }
+  .recomd__label span {
+    font-size: 1.625rem
+  }
+  .journal__title {
+    font-size: 1.5rem
+  }
+  .journal__text {
+    font-size: 1rem
   }
   .video {
     gap: 1.25rem
@@ -4712,7 +4853,7 @@ summary::marker {
     gap: 1.5625rem
   }
   .footer {
-    margin-top: 4.375rem
+    margin-top: 6.25rem
   }
   .footer__block {
     max-width: 25rem
@@ -4754,6 +4895,9 @@ summary::marker {
   }
   .item-parag__body {
     font-size: 1rem
+  }
+  .weblog__recomd:not(:last-child) {
+    margin-bottom: 3.125rem
   }
   .search__heading:not(:last-child) {
     margin-bottom: 2.1875rem
@@ -4802,6 +4946,12 @@ summary::marker {
   }
   .data-textual__label {
     font-size: 1.125rem
+  }
+  .bottom-photo__text {
+    font-size: 1rem
+  }
+  .step {
+    padding-top: 3.125rem
   }
   .body-tabs-payment__subtitle {
     font-size: 1.25rem
@@ -4858,17 +5008,11 @@ summary::marker {
   .top-popup__title {
     font-size: 1.25rem
   }
-  .greeting__text {
-    font-size: 1rem
-  }
   .done__head:not(:last-child) {
     margin-bottom: 1.25rem
   }
   .done__title {
     font-size: 1.125rem
-  }
-  .done__text {
-    font-size: .875rem
   }
   .spollers__span span {
     font-size: 1.125rem
@@ -4915,6 +5059,9 @@ summary::marker {
   .title--red span {
     font-size: 1.375rem
   }
+  .title--orn {
+    font-size: 1.375rem
+  }
   .text {
     font-size: .875rem
   }
@@ -4932,6 +5079,18 @@ summary::marker {
   }
   .accounts__status {
     font-size: 1.25rem
+  }
+  .recomd__label {
+    font-size: 1.125rem
+  }
+  .recomd__label span {
+    font-size: 1.125rem
+  }
+  .journal__title {
+    font-size: 1.125rem
+  }
+  .journal__text {
+    font-size: .75rem
   }
   .video {
     gap: .9375rem
@@ -4955,7 +5114,7 @@ summary::marker {
     gap: .9375rem
   }
   .footer {
-    margin-top: 1.875rem
+    margin-top: 3.125rem
   }
   .hero {
     padding-top: 1.875rem
@@ -4989,6 +5148,9 @@ summary::marker {
   }
   .item-parag__body {
     font-size: .875rem
+  }
+  .weblog__recomd:not(:last-child) {
+    margin-bottom: 1.5625rem
   }
   .search__heading:not(:last-child) {
     margin-bottom: 1.5625rem
@@ -5034,6 +5196,12 @@ summary::marker {
   }
   .data-textual__label {
     font-size: 1rem
+  }
+  .bottom-photo__text {
+    font-size: .875rem
+  }
+  .step {
+    padding-top: 1.5625rem
   }
   .body-tabs-payment__subtitle {
     font-size: 1rem
@@ -5224,6 +5392,19 @@ summary::marker {
   .menu-open .menu__body::before {
     left: 0
   }
+  .recomd {
+    gap: .9375rem
+  }
+  .journal__item {
+    gap: .75rem;
+    padding: .625rem;
+    border-radius: .625rem
+  }
+  .journal__image {
+    min-width: 6.25rem;
+    max-height: 5.625rem;
+    border-radius: .3125rem
+  }
   .header__logo {
     z-index: 1;
     position: relative
@@ -5346,6 +5527,9 @@ summary::marker {
     width: 1rem;
     height: 1rem
   }
+  .brows {
+    margin-top: 1.5625rem
+  }
   .accounts__account {
     background-color: #381d42
   }
@@ -5366,6 +5550,13 @@ summary::marker {
   }
   .messages__buttons:last-child {
     flex-direction: row
+  }
+  .journal__item {
+    flex-direction: column
+  }
+  .journal__image {
+    max-height: 9.375rem;
+    border-radius: .5rem
   }
   .method__item {
     font-size: .875rem
@@ -5500,16 +5691,6 @@ summary::marker {
       font-size: calc(1.25rem + .625*(100vw - 20rem)/ 54.375)
     }
   }
-  @supports (font-size:clamp(1rem ,0.9540229885rem + 0.2298850575vw ,1.125rem)) {
-    .greeting__text {
-      font-size: clamp(1rem ,.9540229885rem + .2298850575vw ,1.125rem)
-    }
-  }
-  @supports not (font-size:clamp(1rem ,0.9540229885rem + 0.2298850575vw ,1.125rem)) {
-    .greeting__text {
-      font-size: calc(1rem + .125*(100vw - 20rem)/ 54.375)
-    }
-  }
   @supports (margin-bottom:clamp(1.25rem ,1.0201149425rem + 1.1494252874vw ,1.875rem)) {
     .done__head:not(:last-child) {
       margin-bottom: clamp(1.25rem ,1.0201149425rem + 1.1494252874vw ,1.875rem)
@@ -5528,16 +5709,6 @@ summary::marker {
   @supports not (font-size:clamp(1.125rem ,0.849137931rem + 1.3793103448vw ,1.875rem)) {
     .done__title {
       font-size: calc(1.125rem + .75*(100vw - 20rem)/ 54.375)
-    }
-  }
-  @supports (font-size:clamp(0.875rem ,0.783045977rem + 0.4597701149vw ,1.125rem)) {
-    .done__text {
-      font-size: clamp(.875rem ,.783045977rem + .4597701149vw ,1.125rem)
-    }
-  }
-  @supports not (font-size:clamp(0.875rem ,0.783045977rem + 0.4597701149vw ,1.125rem)) {
-    .done__text {
-      font-size: calc(.875rem + .25*(100vw - 20rem)/ 54.375)
     }
   }
   @supports (font-size:clamp(1.125rem ,1.0790229885rem + 0.2298850575vw ,1.25rem)) {
@@ -5690,6 +5861,16 @@ summary::marker {
       font-size: calc(1.375rem + .5*(100vw - 20rem)/ 54.375)
     }
   }
+  @supports (font-size:clamp(1.375rem ,1.191091954rem + 0.9195402299vw ,1.875rem)) {
+    .title--orn {
+      font-size: clamp(1.375rem ,1.191091954rem + .9195402299vw ,1.875rem)
+    }
+  }
+  @supports not (font-size:clamp(1.375rem ,1.191091954rem + 0.9195402299vw ,1.875rem)) {
+    .title--orn {
+      font-size: calc(1.375rem + .5*(100vw - 20rem)/ 54.375)
+    }
+  }
   @supports (font-size:clamp(0.875rem ,0.783045977rem + 0.4597701149vw ,1.125rem)) {
     .text {
       font-size: clamp(.875rem ,.783045977rem + .4597701149vw ,1.125rem)
@@ -5748,6 +5929,46 @@ summary::marker {
   @supports not (font-size:clamp(1.25rem ,1.158045977rem + 0.4597701149vw ,1.5rem)) {
     .accounts__status {
       font-size: calc(1.25rem + .25*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (font-size:clamp(1.125rem ,0.9870689655rem + 0.6896551724vw ,1.5rem)) {
+    .recomd__label {
+      font-size: clamp(1.125rem ,.9870689655rem + .6896551724vw ,1.5rem)
+    }
+  }
+  @supports not (font-size:clamp(1.125rem ,0.9870689655rem + 0.6896551724vw ,1.5rem)) {
+    .recomd__label {
+      font-size: calc(1.125rem + .375*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (font-size:clamp(1.125rem ,0.941091954rem + 0.9195402299vw ,1.625rem)) {
+    .recomd__label span {
+      font-size: clamp(1.125rem ,.941091954rem + .9195402299vw ,1.625rem)
+    }
+  }
+  @supports not (font-size:clamp(1.125rem ,0.941091954rem + 0.9195402299vw ,1.625rem)) {
+    .recomd__label span {
+      font-size: calc(1.125rem + .5*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (font-size:clamp(1.125rem ,0.9870689655rem + 0.6896551724vw ,1.5rem)) {
+    .journal__title {
+      font-size: clamp(1.125rem ,.9870689655rem + .6896551724vw ,1.5rem)
+    }
+  }
+  @supports not (font-size:clamp(1.125rem ,0.9870689655rem + 0.6896551724vw ,1.5rem)) {
+    .journal__title {
+      font-size: calc(1.125rem + .375*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (font-size:clamp(0.75rem ,0.658045977rem + 0.4597701149vw ,1rem)) {
+    .journal__text {
+      font-size: clamp(.75rem ,.658045977rem + .4597701149vw ,1rem)
+    }
+  }
+  @supports not (font-size:clamp(0.75rem ,0.658045977rem + 0.4597701149vw ,1rem)) {
+    .journal__text {
+      font-size: calc(.75rem + .25*(100vw - 20rem)/ 54.375)
     }
   }
   @supports (gap:clamp(0.9375rem ,0.8225574713rem + 0.5747126437vw ,1.25rem)) {
@@ -5820,14 +6041,14 @@ summary::marker {
       gap: calc(.9375rem + .625*(100vw - 20rem)/ 54.375)
     }
   }
-  @supports (margin-top:clamp(1.875rem ,0.9554597701rem + 4.5977011494vw ,4.375rem)) {
+  @supports (margin-top:clamp(3.125rem ,1.9755747126rem + 5.7471264368vw ,6.25rem)) {
     .footer {
-      margin-top: clamp(1.875rem ,.9554597701rem + 4.5977011494vw ,4.375rem)
+      margin-top: clamp(3.125rem ,1.9755747126rem + 5.7471264368vw ,6.25rem)
     }
   }
-  @supports not (margin-top:clamp(1.875rem ,0.9554597701rem + 4.5977011494vw ,4.375rem)) {
+  @supports not (margin-top:clamp(3.125rem ,1.9755747126rem + 5.7471264368vw ,6.25rem)) {
     .footer {
-      margin-top: calc(1.875rem + 2.5*(100vw - 20rem)/ 54.375)
+      margin-top: calc(3.125rem + 3.125*(100vw - 20rem)/ 54.375)
     }
   }
   @supports (padding-top:clamp(1.875rem ,0.9554597701rem + 4.5977011494vw ,4.375rem)) {
@@ -5938,6 +6159,16 @@ summary::marker {
   @supports not (font-size:clamp(0.875rem ,0.8290229885rem + 0.2298850575vw ,1rem)) {
     .item-parag__body {
       font-size: calc(.875rem + .125*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (margin-bottom:clamp(1.5625rem ,0.9877873563rem + 2.8735632184vw ,3.125rem)) {
+    .weblog__recomd:not(:last-child) {
+      margin-bottom: clamp(1.5625rem ,.9877873563rem + 2.8735632184vw ,3.125rem)
+    }
+  }
+  @supports not (margin-bottom:clamp(1.5625rem ,0.9877873563rem + 2.8735632184vw ,3.125rem)) {
+    .weblog__recomd:not(:last-child) {
+      margin-bottom: calc(1.5625rem + 1.5625*(100vw - 20rem)/ 54.375)
     }
   }
   @supports (margin-bottom:clamp(1.5625rem ,1.3326149425rem + 1.1494252874vw ,2.1875rem)) {
@@ -6088,6 +6319,26 @@ summary::marker {
   @supports not (font-size:clamp(1rem ,0.9540229885rem + 0.2298850575vw ,1.125rem)) {
     .data-textual__label {
       font-size: calc(1rem + .125*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (font-size:clamp(0.875rem ,0.8290229885rem + 0.2298850575vw ,1rem)) {
+    .bottom-photo__text {
+      font-size: clamp(.875rem ,.8290229885rem + .2298850575vw ,1rem)
+    }
+  }
+  @supports not (font-size:clamp(0.875rem ,0.8290229885rem + 0.2298850575vw ,1rem)) {
+    .bottom-photo__text {
+      font-size: calc(.875rem + .125*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (padding-top:clamp(1.5625rem ,0.9877873563rem + 2.8735632184vw ,3.125rem)) {
+    .step {
+      padding-top: clamp(1.5625rem ,.9877873563rem + 2.8735632184vw ,3.125rem)
+    }
+  }
+  @supports not (padding-top:clamp(1.5625rem ,0.9877873563rem + 2.8735632184vw ,3.125rem)) {
+    .step {
+      padding-top: calc(1.5625rem + 1.5625*(100vw - 20rem)/ 54.375)
     }
   }
   @supports (font-size:clamp(1rem ,0.908045977rem + 0.4597701149vw ,1.25rem)) {
@@ -6309,11 +6560,11 @@ summary::marker {
   .top-popup__close:hover {
     opacity: .75
   }
-  .done__text a:hover {
-    text-decoration: none
+  .brows__link:hover {
+    color: #ffba33
   }
   .text a:hover {
-    text-decoration: underline
+    text-decoration: none
   }
   .aside__item:hover {
     background-color: rgba(247,61,88,.35)
@@ -6444,9 +6695,6 @@ summary::marker {
   }
   .other-block-game__item:hover {
     opacity: .75
-  }
-  .bottom-photo__text a:hover {
-    text-decoration: none
   }
   .body-tabs-photo__item:hover .body-tabs-photo__image img {
     -webkit-transform: scale(1.1);

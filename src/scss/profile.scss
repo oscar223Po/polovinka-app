@@ -888,6 +888,9 @@
 	}
 	// .photo__heading
 	&__heading {
+		.heading__text {
+			max-width: 100%;
+		}
 	}
 	// .photo__tabs
 	&__tabs {
@@ -912,20 +915,15 @@
 	}
 	// .bottom-photo__text
 	&__text {
-		line-height: 125%;
-		font-family: $fontFamilyMontAlt;
-		p {
-			&:not(:last-child) {
-				margin-bottom: toRem(5);
-			}
-		}
-		a {
-			color: $blueColor;
-			text-decoration: underline;
-			@media (any-hover: hover) {
-				&:hover {
-					text-decoration: none;
+		@include adaptiveValue("font-size", 16, 14);
+		&.text {
+			p {
+				&:not(:last-child) {
+					margin-bottom: toRem(5);
 				}
+			}
+			a {
+				color: $blueColor;
 			}
 		}
 	}
@@ -969,7 +967,7 @@
 		gap: toRem(15);
 		background: linear-gradient(90deg, rgba($bgColor, 1) 0%, rgba($yellowColor, 0.05) 100%);
 		@media (min-width: $mobileSmall) {
-			grid-template-columns: repeat(auto-fill, minmax(toRem(230), 1fr));
+			grid-template-columns: repeat(auto-fill, minmax(toRem(200), 1fr));
 		}
 	}
 	// .body-tabs-photo__item
@@ -1045,6 +1043,23 @@
 					background-color: $blueColor;
 				}
 			}
+		}
+	}
+}
+// ========================================================================================================================================================
+// Step
+.step {
+	@include adaptiveValue("padding-top", 50, 25);
+	// .step__container
+	&__container {
+	}
+	// .step__heading
+	&__heading {
+	}
+	// .step__recomd
+	&__recomd {
+		@media (min-width: $mobileSmall) {
+			grid-template-columns: repeat(auto-fill, minmax(toRem(300), 1fr));
 		}
 	}
 }
