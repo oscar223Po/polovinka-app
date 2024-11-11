@@ -720,39 +720,6 @@
 	&:not(:last-child) {
 		@include adaptiveValue("margin-bottom", 50, 30);
 	}
-	// .note__container
-	&__container {
-	}
-	// .note__heading
-	&__heading {
-	}
-	// .note__body
-	&__body {
-	}
-	// .note__atricles
-	&__atricles {
-	}
-}
-// Quote
-.quote {
-	&:not(:last-child) {
-		@include adaptiveValue("margin-bottom", 50, 30);
-	}
-	// .quote__container
-	&__container {
-	}
-	// .quote__body
-	&__body {
-	}
-	// .quote__heading
-	&__heading {
-		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 20, 15);
-		}
-	}
-	// .quote__text
-	&__text {
-	}
 }
 // ========================================================================================================================================================
 // Textual
@@ -799,19 +766,7 @@
 	}
 	// .quote-textual__blockquote
 	&__blockquote {
-		position: relative;
-		padding-left: toRem(14);
 		font-family: $fontFamilyMontAlt;
-		&::before {
-			left: 0;
-			content: "";
-			height: 100%;
-			display: flex;
-			position: absolute;
-			min-width: toRem(3);
-			border-radius: toRem(3);
-			background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
-		}
 	}
 }
 .data-textual {

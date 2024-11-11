@@ -368,19 +368,7 @@
 	}
 	// .item-parag__title
 	&__title {
-		position: relative;
-		padding-left: toRem(14);
 		font-family: $fontFamilyMontAlt;
-		&::before {
-			left: 0;
-			content: "";
-			height: 100%;
-			display: flex;
-			position: absolute;
-			min-width: toRem(3);
-			border-radius: toRem(3);
-			background: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
-		}
 	}
 	// .item-parag__body
 	&__body {

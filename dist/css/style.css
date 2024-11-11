@@ -2151,6 +2151,26 @@ summary::marker {
 .text--sf {
   font-family: "Montserrat Alternates"
 }
+.text--gr p {
+  padding: .9375rem;
+  position: relative;
+  background-color: rgba(45,20,54,.75);
+  border-radius: 0 .625rem .625rem 0;
+  border-top: .0625rem solid rgba(247,248,249,.15);
+  border-right: .0625rem solid rgba(247,248,249,.15);
+  border-bottom: .0625rem solid rgba(247,248,249,.15)
+}
+.text--gr p::before {
+  top: 0;
+  left: 0;
+  content: "";
+  height: 100%;
+  display: flex;
+  position: absolute;
+  min-width: .1875rem;
+  border-radius: .1875rem;
+  background: linear-gradient(90deg,#ee0979 0,#ff6a00 100%)
+}
 .text p:not(:last-child) {
   margin-bottom: .625rem
 }
@@ -2195,6 +2215,20 @@ summary::marker {
 }
 .img-no::before {
   color: rgba(247,248,249,.85)
+}
+.bl-pad {
+  position: relative;
+  padding-left: .875rem
+}
+.bl-pad::before {
+  left: 0;
+  content: "";
+  height: 100%;
+  display: flex;
+  position: absolute;
+  min-width: .1875rem;
+  border-radius: .1875rem;
+  background: linear-gradient(90deg,#ee0979 0,#ff6a00 100%)
 }
 .bg-ord {
   padding: .9375rem;
@@ -2704,6 +2738,21 @@ summary::marker {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent
+}
+.post__head {
+  display: flex;
+  gap: .625rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between
+}
+.post__subtitle {
+  font-weight: 500;
+  line-height: 125%;
+  pointer-events: none;
+  border-radius: .3125rem;
+  padding: .1875rem .5rem;
+  background-color: rgba(255,106,0,.7)
 }
 .video {
   display: grid
@@ -3563,19 +3612,7 @@ summary::marker {
   padding-top: 1.25rem
 }
 .item-parag__title {
-  position: relative;
-  padding-left: .875rem;
   font-family: "Montserrat Alternates"
-}
-.item-parag__title::before {
-  left: 0;
-  content: "";
-  height: 100%;
-  display: flex;
-  position: absolute;
-  min-width: .1875rem;
-  border-radius: .1875rem;
-  background: linear-gradient(90deg,#ee0979 0,#ff6a00 100%)
 }
 .item-parag__body {
   padding-top: .9375rem
@@ -3586,25 +3623,67 @@ summary::marker {
 .weblog__heading .heading__text {
   max-width: 100%
 }
-.weblog__heading .heading__text p {
-  padding: .9375rem;
-  position: relative;
-  background-color: rgba(45,20,54,.75);
-  border-radius: 0 .625rem .625rem 0;
-  border-top: .0625rem solid rgba(247,248,249,.15);
-  border-right: .0625rem solid rgba(247,248,249,.15);
-  border-bottom: .0625rem solid rgba(247,248,249,.15)
+.personal__heading .heading__text {
+  max-width: 100%
 }
-.weblog__heading .heading__text p::before {
+.personal__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 1.5625rem;
+  align-items: center;
+  margin-top: 2.1875rem;
+  -webkit-column-gap: .625rem;
+  -moz-column-gap: .625rem;
+  column-gap: .625rem;
+  justify-content: space-between
+}
+.personal__bottom .brows {
+  margin-top: 0
+}
+.personal__button.button--ord {
+  min-height: 2.8125rem;
+  border: .0625rem solid rgba(35,166,64,.65)
+}
+.personal__button.button--ord::before {
+  background: linear-gradient(90deg,#23a640 0,#ee0979 100%)
+}
+.publish__image {
+  position: relative;
+  border: .0625rem solid rgba(247,248,249,.15)
+}
+.publish__title {
   top: 0;
   left: 0;
-  content: "";
-  height: 100%;
-  display: flex;
   position: absolute;
-  min-width: .1875rem;
-  border-radius: .1875rem;
-  background: linear-gradient(90deg,#ee0979 0,#ff6a00 100%)
+  background-color: rgba(45,20,54,.9);
+  border-radius: 0 0 .9375rem 0
+}
+.publish__content {
+  display: grid
+}
+.block-publish__block:nth-child(2n) .block-publish__title {
+  background: linear-gradient(90deg,#ffba33 0,#f73d58 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
+.block-publish__block:nth-child(3n) .block-publish__title {
+  background: linear-gradient(90deg,#23a640 0,#ffba33 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
+.block-publish__title {
+  background: linear-gradient(90deg,#ee0979 0,#ff6a00 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
+.block-publish__title:not(:last-child) {
+  margin-bottom: .9375rem
+}
+.block-publish__text.text a {
+  color: #66a1f7
 }
 .search__heading .heading__text {
   max-width: 100%;
@@ -4104,19 +4183,7 @@ summary::marker {
   margin-bottom: .625rem
 }
 .quote-textual__blockquote {
-  position: relative;
-  padding-left: .875rem;
   font-family: "Montserrat Alternates"
-}
-.quote-textual__blockquote::before {
-  left: 0;
-  content: "";
-  height: 100%;
-  display: flex;
-  position: absolute;
-  min-width: .1875rem;
-  border-radius: .1875rem;
-  background: linear-gradient(90deg,#ee0979 0,#ff6a00 100%)
 }
 .data-textual__title {
   text-align: center
@@ -4828,6 +4895,18 @@ summary::marker {
   .journal__text {
     font-size: 1rem
   }
+  .post__head:not(:last-child) {
+    margin-bottom: 1.25rem
+  }
+  .post__title {
+    font-size: 1.75rem
+  }
+  .post__title span {
+    font-size: 1.75rem
+  }
+  .post__subtitle {
+    font-size: 1.25rem
+  }
   .video {
     gap: 1.25rem
   }
@@ -4899,6 +4978,30 @@ summary::marker {
   .weblog__recomd:not(:last-child) {
     margin-bottom: 3.125rem
   }
+  .personal:not(:last-child) {
+    margin-bottom: 3.125rem
+  }
+  .publish__image {
+    border-radius: 1.5625rem
+  }
+  .publish__image:not(:last-child) {
+    margin-bottom: 2.1875rem
+  }
+  .publish__title {
+    padding: .9375rem
+  }
+  .publish__title span {
+    font-size: 1.875rem
+  }
+  .publish__content {
+    gap: 1.875rem
+  }
+  .block-publish__title {
+    font-size: 1.625rem
+  }
+  .block-publish__text:not(:last-child) {
+    margin-bottom: 1.875rem
+  }
   .search__heading:not(:last-child) {
     margin-bottom: 2.1875rem
   }
@@ -4931,12 +5034,6 @@ summary::marker {
   }
   .note:not(:last-child) {
     margin-bottom: 3.125rem
-  }
-  .quote:not(:last-child) {
-    margin-bottom: 3.125rem
-  }
-  .quote__heading:not(:last-child) {
-    margin-bottom: 1.25rem
   }
   .textual {
     padding-top: 1.875rem
@@ -5092,6 +5189,18 @@ summary::marker {
   .journal__text {
     font-size: .75rem
   }
+  .post__head:not(:last-child) {
+    margin-bottom: .9375rem
+  }
+  .post__title {
+    font-size: 1.25rem
+  }
+  .post__title span {
+    font-size: 1.25rem
+  }
+  .post__subtitle {
+    font-size: 1rem
+  }
   .video {
     gap: .9375rem
   }
@@ -5152,6 +5261,30 @@ summary::marker {
   .weblog__recomd:not(:last-child) {
     margin-bottom: 1.5625rem
   }
+  .personal:not(:last-child) {
+    margin-bottom: 1.875rem
+  }
+  .publish__image {
+    border-radius: .75rem
+  }
+  .publish__image:not(:last-child) {
+    margin-bottom: 1.5625rem
+  }
+  .publish__title {
+    padding: .5rem
+  }
+  .publish__title span {
+    font-size: 1rem
+  }
+  .publish__content {
+    gap: 1.25rem
+  }
+  .block-publish__title {
+    font-size: 1rem
+  }
+  .block-publish__text:not(:last-child) {
+    margin-bottom: 1.25rem
+  }
   .search__heading:not(:last-child) {
     margin-bottom: 1.5625rem
   }
@@ -5181,12 +5314,6 @@ summary::marker {
   }
   .note:not(:last-child) {
     margin-bottom: 1.875rem
-  }
-  .quote:not(:last-child) {
-    margin-bottom: 1.875rem
-  }
-  .quote__heading:not(:last-child) {
-    margin-bottom: .9375rem
   }
   .textual {
     padding-top: 1.5625rem
@@ -5437,6 +5564,12 @@ summary::marker {
   .item-blog:nth-child(2n) {
     flex-direction: column
   }
+  .personal__bottom {
+    flex-direction: column
+  }
+  .publish__title {
+    border-radius: 0 0 .625rem 0
+  }
   .search__heading .heading__text p:last-child {
     display: none
   }
@@ -5570,6 +5703,12 @@ summary::marker {
   }
   .new__button .button {
     padding: 0 .9375rem
+  }
+  .personal__bottom {
+    margin-top: 1.5625rem
+  }
+  .personal__button {
+    width: 100%
   }
   .search__content {
     border: none;
@@ -5971,6 +6110,46 @@ summary::marker {
       font-size: calc(.75rem + .25*(100vw - 20rem)/ 54.375)
     }
   }
+  @supports (margin-bottom:clamp(0.9375rem ,0.8225574713rem + 0.5747126437vw ,1.25rem)) {
+    .post__head:not(:last-child) {
+      margin-bottom: clamp(.9375rem ,.8225574713rem + .5747126437vw ,1.25rem)
+    }
+  }
+  @supports not (margin-bottom:clamp(0.9375rem ,0.8225574713rem + 0.5747126437vw ,1.25rem)) {
+    .post__head:not(:last-child) {
+      margin-bottom: calc(.9375rem + .3125*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (font-size:clamp(1.25rem ,1.066091954rem + 0.9195402299vw ,1.75rem)) {
+    .post__title {
+      font-size: clamp(1.25rem ,1.066091954rem + .9195402299vw ,1.75rem)
+    }
+  }
+  @supports not (font-size:clamp(1.25rem ,1.066091954rem + 0.9195402299vw ,1.75rem)) {
+    .post__title {
+      font-size: calc(1.25rem + .5*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (font-size:clamp(1.25rem ,1.066091954rem + 0.9195402299vw ,1.75rem)) {
+    .post__title span {
+      font-size: clamp(1.25rem ,1.066091954rem + .9195402299vw ,1.75rem)
+    }
+  }
+  @supports not (font-size:clamp(1.25rem ,1.066091954rem + 0.9195402299vw ,1.75rem)) {
+    .post__title span {
+      font-size: calc(1.25rem + .5*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (font-size:clamp(1rem ,0.908045977rem + 0.4597701149vw ,1.25rem)) {
+    .post__subtitle {
+      font-size: clamp(1rem ,.908045977rem + .4597701149vw ,1.25rem)
+    }
+  }
+  @supports not (font-size:clamp(1rem ,0.908045977rem + 0.4597701149vw ,1.25rem)) {
+    .post__subtitle {
+      font-size: calc(1rem + .25*(100vw - 20rem)/ 54.375)
+    }
+  }
   @supports (gap:clamp(0.9375rem ,0.8225574713rem + 0.5747126437vw ,1.25rem)) {
     .video {
       gap: clamp(.9375rem ,.8225574713rem + .5747126437vw ,1.25rem)
@@ -6171,6 +6350,86 @@ summary::marker {
       margin-bottom: calc(1.5625rem + 1.5625*(100vw - 20rem)/ 54.375)
     }
   }
+  @supports (margin-bottom:clamp(1.875rem ,1.4152298851rem + 2.2988505747vw ,3.125rem)) {
+    .personal:not(:last-child) {
+      margin-bottom: clamp(1.875rem ,1.4152298851rem + 2.2988505747vw ,3.125rem)
+    }
+  }
+  @supports not (margin-bottom:clamp(1.875rem ,1.4152298851rem + 2.2988505747vw ,3.125rem)) {
+    .personal:not(:last-child) {
+      margin-bottom: calc(1.875rem + 1.25*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (border-radius:clamp(0.75rem ,0.4511494253rem + 1.4942528736vw ,1.5625rem)) {
+    .publish__image {
+      border-radius: clamp(.75rem ,.4511494253rem + 1.4942528736vw ,1.5625rem)
+    }
+  }
+  @supports not (border-radius:clamp(0.75rem ,0.4511494253rem + 1.4942528736vw ,1.5625rem)) {
+    .publish__image {
+      border-radius: calc(.75rem + .8125*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (margin-bottom:clamp(1.5625rem ,1.3326149425rem + 1.1494252874vw ,2.1875rem)) {
+    .publish__image:not(:last-child) {
+      margin-bottom: clamp(1.5625rem ,1.3326149425rem + 1.1494252874vw ,2.1875rem)
+    }
+  }
+  @supports not (margin-bottom:clamp(1.5625rem ,1.3326149425rem + 1.1494252874vw ,2.1875rem)) {
+    .publish__image:not(:last-child) {
+      margin-bottom: calc(1.5625rem + .625*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (padding:clamp(0.5rem ,0.3390804598rem + 0.8045977011vw ,0.9375rem)) {
+    .publish__title {
+      padding: clamp(.5rem ,.3390804598rem + .8045977011vw ,.9375rem)
+    }
+  }
+  @supports not (padding:clamp(0.5rem ,0.3390804598rem + 0.8045977011vw ,0.9375rem)) {
+    .publish__title {
+      padding: calc(.5rem + .4375*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (font-size:clamp(1rem ,0.6781609195rem + 1.6091954023vw ,1.875rem)) {
+    .publish__title span {
+      font-size: clamp(1rem ,.6781609195rem + 1.6091954023vw ,1.875rem)
+    }
+  }
+  @supports not (font-size:clamp(1rem ,0.6781609195rem + 1.6091954023vw ,1.875rem)) {
+    .publish__title span {
+      font-size: calc(1rem + .875*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (gap:clamp(1.25rem ,1.0201149425rem + 1.1494252874vw ,1.875rem)) {
+    .publish__content {
+      gap: clamp(1.25rem ,1.0201149425rem + 1.1494252874vw ,1.875rem)
+    }
+  }
+  @supports not (gap:clamp(1.25rem ,1.0201149425rem + 1.1494252874vw ,1.875rem)) {
+    .publish__content {
+      gap: calc(1.25rem + .625*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (font-size:clamp(1rem ,0.7701149425rem + 1.1494252874vw ,1.625rem)) {
+    .block-publish__title {
+      font-size: clamp(1rem ,.7701149425rem + 1.1494252874vw ,1.625rem)
+    }
+  }
+  @supports not (font-size:clamp(1rem ,0.7701149425rem + 1.1494252874vw ,1.625rem)) {
+    .block-publish__title {
+      font-size: calc(1rem + .625*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (margin-bottom:clamp(1.25rem ,1.0201149425rem + 1.1494252874vw ,1.875rem)) {
+    .block-publish__text:not(:last-child) {
+      margin-bottom: clamp(1.25rem ,1.0201149425rem + 1.1494252874vw ,1.875rem)
+    }
+  }
+  @supports not (margin-bottom:clamp(1.25rem ,1.0201149425rem + 1.1494252874vw ,1.875rem)) {
+    .block-publish__text:not(:last-child) {
+      margin-bottom: calc(1.25rem + .625*(100vw - 20rem)/ 54.375)
+    }
+  }
   @supports (margin-bottom:clamp(1.5625rem ,1.3326149425rem + 1.1494252874vw ,2.1875rem)) {
     .search__heading:not(:last-child) {
       margin-bottom: clamp(1.5625rem ,1.3326149425rem + 1.1494252874vw ,2.1875rem)
@@ -6269,26 +6528,6 @@ summary::marker {
   @supports not (margin-bottom:clamp(1.875rem ,1.4152298851rem + 2.2988505747vw ,3.125rem)) {
     .note:not(:last-child) {
       margin-bottom: calc(1.875rem + 1.25*(100vw - 20rem)/ 54.375)
-    }
-  }
-  @supports (margin-bottom:clamp(1.875rem ,1.4152298851rem + 2.2988505747vw ,3.125rem)) {
-    .quote:not(:last-child) {
-      margin-bottom: clamp(1.875rem ,1.4152298851rem + 2.2988505747vw ,3.125rem)
-    }
-  }
-  @supports not (margin-bottom:clamp(1.875rem ,1.4152298851rem + 2.2988505747vw ,3.125rem)) {
-    .quote:not(:last-child) {
-      margin-bottom: calc(1.875rem + 1.25*(100vw - 20rem)/ 54.375)
-    }
-  }
-  @supports (margin-bottom:clamp(0.9375rem ,0.8225574713rem + 0.5747126437vw ,1.25rem)) {
-    .quote__heading:not(:last-child) {
-      margin-bottom: clamp(.9375rem ,.8225574713rem + .5747126437vw ,1.25rem)
-    }
-  }
-  @supports not (margin-bottom:clamp(0.9375rem ,0.8225574713rem + 0.5747126437vw ,1.25rem)) {
-    .quote__heading:not(:last-child) {
-      margin-bottom: calc(.9375rem + .3125*(100vw - 20rem)/ 54.375)
     }
   }
   @supports (padding-top:clamp(1.5625rem ,1.4475574713rem + 0.5747126437vw ,1.875rem)) {
