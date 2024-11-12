@@ -50,18 +50,10 @@
 		font-weight: 500;
 		line-height: 125%;
 		color: $mainColor;
-		position: relative;
 		padding-left: toRem(12);
 		@include adaptiveValue("font-size", 20, 16);
 		&::before {
-			left: 0;
-			content: "";
-			height: 100%;
-			display: flex;
-			position: absolute;
-			min-width: toRem(3);
-			border-radius: toRem(3);
-			background-color: $blueColor;
+			background: $blueColor;
 		}
 		&:not(:last-child) {
 			margin-bottom: toRem(15);

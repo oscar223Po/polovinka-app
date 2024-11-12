@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Polovinka (PersonalBlogAdd) - PersonalBlogAddPage"
+})
+
+<body class="bg-main bg-hart">
+	<div class="wrapper">
+		@@include('html/_header-menu-auth.htm',{})
+		<main class="page pad-min">
+			<!-- [Breadcrumbs] -->
+			<nav class="breadcrumbs">
+				<div class="breadcrumbs__container">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+						<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Мой профиль</a></li>
+						<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Мой дневник</a></li>
+						<li class="breadcrumbs__item"><div class="breadcrumbs__current">Добавление записи в дневник</div></li>
+					</ul>
+				</div>
+			</nav>
+			<!-- [Gain] -->
+			<section class="gain">
+				<div class="gain__container">
+					<div class="gain__heading heading heading--mr">
+						<h3 class="heading__title title title--red">Добавление записи в дневник</h3>
+						<h3 class="heading__subtitle">Обязательные поля отмечены символом ⭐</h3>
+						<div class="heading__text text text--gr text--sf">
+							<p>Здесь вы можете добавить свою личную статью, экспертные советы и практические рекомендации по всем аспектам построения гармоничных и долгосрочных отношений.</p>
+						</div>
+					</div>
+					<form action="" class="gain__form form">
+						<div class="form__labels bg-ord bg-ord--pm bg-shad bg-shad--rbwr">
+							<label for="" class="form__label">
+								<span>⭐ Название вашего поста</span>
+								<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Пожалуйста введите название" placeholder="Название..." class="form__input input">
+							</label>
+							<label for="" class="form__label">
+								<span>⭐ Короткое описание вашего поста</span>
+								<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Пожалуйста введите описание" placeholder="Описание..." class="form__input input">
+							</label>
+						</div>
+						<div class="form-publisher" id="editor"></div>
+						<button type="submit" class="form__button button button--ord"><span>Добавить запись</span></button>
+					</form>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+		@@include('html/_nav.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

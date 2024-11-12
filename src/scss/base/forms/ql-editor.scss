@@ -1,0 +1,82 @@
+#editor {
+	height: 200px;
+	font-size: 16px;
+	overflow: hidden;
+	border-radius: 0 0 10px 10px;
+	border: 1px solid rgba(#fff, 0.15);
+}
+
+#editor .ql-editor {
+	background-color: $purpleColor;
+}
+
+#editor .ql-editor.ql-blank::before {
+	color: rgba(#fff, 0.75);
+}
+
+.ql-toolbar.ql-snow {
+	border-top: 1px solid rgba(#fff, 0.15) !important;
+	border-bottom: 1px solid rgba(#fff, 0) !important;
+	border-left: 1px solid rgba(#fff, 0.15) !important;
+	border-right: 1px solid rgba(#fff, 0.15) !important;
+	z-index: 3;
+	position: relative;
+	background-color: $bgColor;
+	border-radius: 10px 10px 0 0;
+}
+
+.ql-toolbar svg .ql-stroke {
+	stroke: #fff;
+}
+
+.ql-toolbar .ql-formats .ql-picker.ql-expanded .ql-picker-label {
+	border-color: transparent !important;
+}
+
+.ql-toolbar .ql-formats .ql-picker .ql-picker-label {
+	color: #fff;
+}
+
+.ql-toolbar .ql-formats .ql-picker:hover .ql-picker-label,
+.ql-toolbar .ql-formats .ql-picker .ql-picker-label.ql-active {
+	color: $orangeColor;
+}
+
+.ql-toolbar .ql-formats .ql-picker:hover .ql-picker-label svg .ql-stroke,
+.ql-toolbar .ql-formats .ql-picker .ql-picker-label.ql-active svg .ql-stroke {
+	stroke: $orangeColor;
+}
+
+.ql-toolbar .ql-formats .ql-picker .ql-picker-options {
+	z-index: 15;
+	color: $mainColor;
+	border-radius: 10px;
+	background-color: $bgColor;
+	border: 1px solid rgba(#fff, 0.15) !important;
+}
+
+.ql-toolbar .ql-formats .ql-picker.ql-expanded .ql-picker-options {
+	margin-top: 4px;
+}
+
+.ql-toolbar .ql-formats .ql-picker .ql-picker-options .ql-picker-item:hover,
+.ql-toolbar .ql-formats .ql-picker .ql-picker-options .ql-picker-item.ql-selected {
+	color: $pinkColor;
+}
+
+.ql-toolbar .ql-formats button {
+	border-radius: 5px;
+	transition: background-color 0.3s ease 0s;
+	svg .ql-fill {
+		stroke: $mainColor;
+	}
+	&:hover {
+		background-color: rgba(#fff, 0.1);
+	}
+	&:hover svg .ql-stroke,
+	&:hover svg .ql-fill,
+	&.ql-active svg .ql-stroke,
+	&.ql-active svg .ql-fill {
+		stroke: $orangeColor;
+	}
+}

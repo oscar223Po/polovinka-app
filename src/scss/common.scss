@@ -46,6 +46,23 @@ summary {
 		right: 100%;
 	}
 }
+// Background With Harts
+.bg-hart {
+	position: relative;
+	&::before {
+		top: 0;
+		content: "";
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		opacity: 0.1;
+		left: toRem(0);
+		right: toRem(0);
+		bottom: toRem(0);
+		position: absolute;
+		background: url("@img/bg-hearts-blue.svg") 0 0 repeat;
+	}
+}
 // Heading
 .heading {
 	display: grid;

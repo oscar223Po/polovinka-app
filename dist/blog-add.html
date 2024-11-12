@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html term="en">
+<html lang="en">
 
 <head>
-	<title>Polovinka (PaymentSubscribe) - PaymentSubscribePage</title>
+	<title>Polovinka (PersonalBlogAdd) - PersonalBlogAddPage</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<style>
@@ -16,7 +16,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body class="bg-main">
+<body class="bg-main bg-hart">
 	<div class="wrapper">
 		<!-- Header -->
 		<header class="header">
@@ -132,107 +132,37 @@
 					<ul class="breadcrumbs__list">
 						<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
 						<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Мой профиль</a></li>
+						<li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Мой дневник</a></li>
 						<li class="breadcrumbs__item">
-							<div class="breadcrumbs__current">Выбор абонемента</div>
+							<div class="breadcrumbs__current">Добавление записи в дневник</div>
 						</li>
 					</ul>
 				</div>
 			</nav>
-			<!-- [Subscribe] -->
-			<section class="subscribe">
-				<div class="subscribe__container">
-					<div class="subscribe__heading heading heading--mr">
-						<h3 class="heading__title title title--red">Выбор "Абонемента"</h3>
-						<div class="heading__text text text--sf">
-							<p>Вы попали на эту страницу, т.к. ваш абонемент завершился или вы еще не купили абонемент. Для использования функций сайта в полном объеме, включая чат, пожалуйста <span>выберите</span> подходящий вам абонемент.</p>
+			<!-- [Gain] -->
+			<section class="gain">
+				<div class="gain__container">
+					<div class="gain__heading heading heading--mr">
+						<h3 class="heading__title title title--red">Добавление записи в дневник</h3>
+						<h3 class="heading__subtitle">Обязательные поля отмечены символом ⭐</h3>
+						<div class="heading__text text text--gr text--sf">
+							<p>Здесь вы можете добавить свою личную статью, экспертные советы и практические рекомендации по всем аспектам построения гармоничных и долгосрочных отношений.</p>
 						</div>
 					</div>
-					<div class="subscribe__methods">
-						<div class="subscribe__method method method--base bg-ord bg-ord--pr">
-							<div class="method__head">
-								<h3 class="method__title title title--blu">Базовый</h3>
-								<div class="method__cost text">От <span>33₪</span> в месяц при покупке абонемента на год</div>
-							</div>
-							<div class="method__lows">
-								<div class="method__item method__item--base bg-ord bg-ord--pm _icon-check">
-									<li>Возможность выбрать абонемент на разные сроки: на 1 месяц, 2 месяца, 3 месяца, пол-года, 1 год, <span>навсегда</span></li>
-								</div>
-								<div class="method__item method__item--base bg-ord bg-ord--pm _icon-check">
-									<li>Просмотр анкет без ограничений</li>
-								</div>
-								<div class="method__item method__item--base bg-ord bg-ord--pm _icon-check">
-									<li>Собщения в чатах: без ограничений</li>
-								</div>
-								<div class="method__item method__item--base bg-ord bg-ord--pm _icon-check">
-									<li>100 сообщений с вложениями</li>
-								</div>
-								<div class="method__item method__item--base bg-ord bg-ord--pm _icon-check">
-									<li>50 виртуальных подарков в месяц бесплатно</li>
-								</div>
-								<div class="method__item method__item--base bg-ord bg-ord--pm _icon-check">
-									<li>Ограничение в показе рекламы</li>
-								</div>
-							</div>
-							<a href="" class="method__button button button--ob">Базовый продолжить</a>
+					<form action="" class="gain__form form">
+						<div class="form__labels bg-ord bg-ord--pm bg-shad bg-shad--rbwr">
+							<label for="" class="form__label">
+								<span>⭐ Название вашего поста</span>
+								<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Пожалуйста введите название" placeholder="Название..." class="form__input input">
+							</label>
+							<label for="" class="form__label">
+								<span>⭐ Короткое описание вашего поста</span>
+								<input data-required="text" autocomplete="off" type="text" name="form[]" data-error="Пожалуйста введите описание" placeholder="Описание..." class="form__input input">
+							</label>
 						</div>
-						<div class="subscribe__method method method--prem bg-ord bg-ord--gr bg-shad bg-shad--rbwr">
-							<div class="method__head">
-								<h3 class="method__title title title--red">Премиум <span>"VIP"</span></h3>
-								<div class="method__cost text">От <span>39₪</span> в месяц при покупке абонемента на год</div>
-							</div>
-							<div class="method__lows method">
-								<div class="method__item method__item--prem bg-ord bg-ord--pm _icon-check">
-									<li>Возможность выбрать абонемент на разные сроки: на 1 месяц, 2 месяца, 3 месяца, пол-года, 1 год, <span>навсегда</span></li>
-								</div>
-								<div class="method__item method__item--prem bg-ord bg-ord--pm _icon-check">
-									<li>Просмотр анкет: без ограничений</li>
-								</div>
-								<div class="method__item method__item--prem bg-ord bg-ord--pm _icon-check">
-									<li>Собщения в чатах: без ограничений</li>
-								</div>
-								<div class="method__item method__item--prem bg-ord bg-ord--pm _icon-check">
-									<li>Фотографии в профиле: без ограничений</li>
-								</div>
-								<div class="method__item method__item--prem bg-ord bg-ord--pm _icon-check">
-									<li>Сообщения с вложениями: без ограничений</li>
-								</div>
-								<div class="method__item method__item--prem bg-ord bg-ord--pm _icon-check">
-									<li>Возможность отправлять и получать голосовые сообщения</li>
-								</div>
-								<div class="method__item method__item--prem bg-ord bg-ord--pm _icon-check">
-									<li>Выделение сообщений от VIP пользователей специальным фоном и рамкой для привлечения максимального внимания</li>
-								</div>
-								<div class="method__item method__item--prem bg-ord bg-ord--pm _icon-check">
-									<li>100 виртуальных подарков в месяц бесплатно</li>
-								</div>
-								<div class="method__item method__item--prem bg-ord bg-ord--pm _icon-check">
-									<li>Чтение сообщений инкогнито: включено</li>
-								</div>
-								<div class="method__item method__item--prem bg-ord bg-ord--pm _icon-check">
-									<li>Анкета-невидимка: включено <span>бесплатно (цена услуги 20₪)</span></li>
-								</div>
-								<div class="method__item method__item--prem bg-ord bg-ord--pm _icon-check">
-									<li>Автоматическое поднятие анкеты на главную страницу, в поиске и в фотогалерее раз в месяц: включено <span>бесплатно (цена услуги 25₪)</span></li>
-								</div>
-								<div class="method__item method__item--prem bg-ord bg-ord--pm _icon-check">
-									<li>Выделение анкеты специальными символами</li>
-								</div>
-								<div class="method__item method__item--prem bg-ord bg-ord--pm _icon-check">
-									<li>30 <span>бесплатных</span> уведомлений о заходе выбранных пользователей на сайт: включено. <span>(цена одного уведомления 15₪)</span></li>
-								</div>
-								<div class="method__item method__item--prem bg-ord bg-ord--pm _icon-check">
-									<li>Автоматическое поднятие рейтинга на 100 пунктов раз в месяц</li>
-								</div>
-								<div class="method__item method__item--prem bg-ord bg-ord--pm _icon-check">
-									<li>Возможность один раз в квартал заморозить абонемент на неограниченное время (для абонементов на период больше 3-х месяцев)</li>
-								</div>
-								<div class="method__item method__item--prem bg-ord bg-ord--pm _icon-check">
-									<li>Полное отсутствие рекламы</li>
-								</div>
-							</div>
-							<a href="" class="method__button button button--ord"><span>Премиум продолжить</span></a>
-						</div>
-					</div>
+						<div class="form-publisher" id="editor"></div>
+						<button type="submit" class="form__button button button--ord"><span>Добавить запись</span></button>
+					</form>
 				</div>
 			</section>
 		</main>

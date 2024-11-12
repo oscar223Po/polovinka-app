@@ -65,6 +65,7 @@
 		"nouislider": "latest",
 		"pug": "latest",
 		"pug-loader": "latest",
+		"quill": "^2.0.2",
 		"sass": "latest",
 		"sass-loader": "latest",
 		"smooth-scroll": "latest",

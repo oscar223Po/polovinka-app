@@ -58,6 +58,7 @@
 	&__button {
 		&.button--ord {
 			min-height: toRem(45);
+			background-color: $purpleColor;
 			border: toRem(1) solid rgba($greenColor, 0.65);
 			&::before {
 				background: linear-gradient(90deg, $greenColor 0%, $pinkColor 100%);
@@ -148,6 +149,35 @@
 	}
 	// .block-publish__recomd
 	&__recomd {
+	}
+}
+// ========================================================================================================================================================
+// Gain
+.gain {
+	// .gain__container
+	&__container {
+	}
+	// .gain__heading
+	&__heading {
+		.heading__text {
+			max-width: 100%;
+		}
+	}
+	// .gain__form
+	&__form {
+		.form__labels {
+			&:not(:last-child) {
+				margin-bottom: toRem(30);
+			}
+			@media (min-width: $mobile) {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+		.form-publisher {
+			&:not(:last-child) {
+				margin-bottom: toRem(25);
+			}
+		}
 	}
 }
 // ========================================================================================================================================================

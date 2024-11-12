@@ -89,6 +89,9 @@ $responsiveType: 1;
 body {
 	// scrollbar-gutter: stable;
 	background-color: $bgColor;
+	&.bg-hart {
+		background: $bgColor url("@img/bg-hearts-blue.svg") 0 0 repeat;
+	}
 	// Скролл заблоковано
 	.lock & {
 		overflow: hidden;
