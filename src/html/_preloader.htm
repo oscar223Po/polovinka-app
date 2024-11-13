@@ -15,7 +15,7 @@
 						box-sizing: border-box;
 					}
 					/* Головний блок */
-					.fls-preloader{
+					.fls-preloader {
 						pointer-events: none;
 						z-index: -1;
 						position: fixed;
@@ -27,17 +27,36 @@
 						justify-content:center;
 						align-items: center;
 						background-color: #230e2b;
+						--units: 1.5vmax;
+						--brick1: #26072b;
+						--brick2: #430101;
+						--lines: #000000;
+						--gp-ln: 50% / calc(var(--units) * 10) calc(var(--units) * 5);
+						--gp-cn: 50% / calc(var(--units) * 5) calc(var(--units) * 5);
+						height: 100vh;
+						background:
+							repeating-conic-gradient(from 90deg at 95% 55%, var(--lines) 0% 25%, #fff0 0% 100%) var(--gp-cn),
+							repeating-linear-gradient(180deg, var(--lines) 0 5%, #fff0 0 50%, var(--lines) 0 55%, var(--brick2) 0 100%)
+								var(--gp-ln),
+							repeating-linear-gradient(
+									90deg,
+									var(--brick1) 0 47.5%,
+									var(--lines) 0 50%,
+									var(--brick1) 0 97.5%,
+									var(--lines) 0 100%
+								)
+								var(--gp-ln);
 					}
 					/* Блок з елементами */
 					.fls-preloader__body {
 						gap: 25px;
 						width: 100%;
+						padding: 15px;
 						display: flex;
-						height: 90.83px;
+						height: 109.2px;
 						max-width: 900px;
 						align-items: center;
 						flex-direction: column;
-						padding: 0px 15px 15px 15px;
 						transition: height 1.5s ease 1.5s;
 						animation: show 1.5s ease 1 forwards 1.5s;
 					}
@@ -50,18 +69,20 @@
 						opacity: 0;
 						font-size: 18px;
 						line-height: 145%;
-						padding: 7px 15px;
+						padding: 7px 12px;
 						border-radius: 7px;
 						text-align: center;
-						background-color: rgb(255, 255, 255, 0.1);
+						line-height: 125%;
+						border-radius: 10px;
 						border: 1px solid rgba(255, 255, 255, 0.05);
 						animation: title 1.5s ease 1 forwards 1.5s;
+						background: linear-gradient(90deg, rgb(81, 65, 151, 1) 0%, rgb(126, 20, 80, 1) 100%);
 						box-shadow:
-							rgba(102, 161, 247, 0.25) 0px 1px 10px 0px,
-							rgba(102, 161, 247, 0.25) 0px 1px 10px 0px;
+							rgba(102, 161, 247, 0.15) 0px 1px 15px 0px,
+							rgba(102, 161, 247, 0.15) 0px 1px 15px 0px;
 					}
 					.fls-preloader__body h3 span {
-						color: #ff6a00;
+						color: #ffba33;
 						font-weight: 500;
 						font-family: "Montserrat Alternates";
 					}
@@ -89,7 +110,7 @@
 					}
 					@keyframes show {
 						0% {
-							height: 90.83px;
+							height: 109.2px;
 						}
 						100% {
 							height: 175px;
@@ -101,6 +122,33 @@
 						}
 						100% {
 							opacity: 1;
+						}
+					}
+					@media (max-width: 489.98px) {
+						.fls-preloader__body {
+							gap: 15px;
+						}
+						.fls-preloader__body h3 {
+							font-size: 12px;
+						}
+						.fls-preloader__body img {
+							width: 250px;
+						}
+						@keyframes image {
+							0% {
+								width: 100px;
+							}
+							100% {
+								width: 250px;
+							}
+						}
+						@keyframes show {
+							0% {
+								height: 109.2px;
+							}
+							100% {
+								height: 142px;
+							}
 						}
 					}
 				</style>`;
