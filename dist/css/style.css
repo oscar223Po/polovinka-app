@@ -2571,7 +2571,8 @@ summary::marker {
   height: 100%;
   position: relative;
   max-height: 21.25rem;
-  border-radius: .9375rem
+  border-radius: .9375rem;
+  box-shadow: rgba(35,14,43,.4) 0 3px 15px 0,rgba(35,14,43,.4) 0 3px 15px 0
 }
 .accounts__actions {
   top: 50%;
@@ -2659,6 +2660,68 @@ summary::marker {
 .accounts__item span {
   font-weight: 400;
   font-family: "Montserrat Alternates"
+}
+.accounts__base {
+  display: grid;
+  gap: .9375rem
+}
+.accounts__rating {
+  display: grid;
+  gap: .625rem;
+  padding: .625rem;
+  align-items: start;
+  border-radius: .625rem;
+  grid-template-rows: 1fr auto;
+  background: linear-gradient(90deg,rgba(81,65,151,.85) 0,rgba(255,186,51,.35) 100%)
+}
+.accounts__rating.rating-first span {
+  background-color: rgba(35,166,64,.85)
+}
+.accounts__rating.rating-second span {
+  background-color: rgba(255,106,0,.75)
+}
+.accounts__rating.rating-third span {
+  background-color: rgba(255,186,51,.75)
+}
+.accounts__rating.rating-four span {
+  background-color: rgba(102,161,247,.75)
+}
+.accounts__rating.rating-five span {
+  background-color: rgba(238,9,121,.75)
+}
+.accounts__range {
+  display: flex;
+  align-items: center;
+  border-radius: .625rem;
+  padding: .5rem .625rem;
+  justify-content: space-between;
+  border: .0625rem solid hsla(0,0%,100%,.2);
+  box-shadow: rgba(35,14,43,.1) 0 3px 15px 0,rgba(35,14,43,.1) 0 3px 15px 0
+}
+.accounts__range:first-child h5::before {
+  color: #ffba33
+}
+.accounts__range:last-child h5::before {
+  color: #66a1f7
+}
+.accounts__range h5 {
+  gap: .4375rem;
+  display: flex;
+  font-weight: 500;
+  align-items: center
+}
+.accounts__range span {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  font-size: 1.25rem;
+  border-radius: .5rem;
+  justify-content: center;
+  font-family: Kings;
+  border: .0625rem solid hsla(0,0%,100%,.1);
+  padding: .25rem .625rem .125rem .625rem;
+  box-shadow: rgba(35,14,43,.1) 0 3px 15px 0,rgba(35,14,43,.1) 0 3px 15px 0;
+  background-color: rgba(149,149,149,.75)
 }
 .messages {
   display: grid;
@@ -3267,7 +3330,7 @@ summary::marker {
   right: 0;
   bottom: 0;
   position: absolute;
-  background: url(../img/bg-hearts.svg) 0 0 repeat
+  background: url(../img/bagr/hearts-red.svg) 0 0 repeat
 }
 .header__container {
   display: flex;
@@ -3773,6 +3836,15 @@ summary::marker {
 }
 .gain__form .form-publisher:not(:last-child) {
   margin-bottom: 1.5625rem
+}
+.chart__heading .heading__text {
+  max-width: 100%
+}
+.chart__heading .heading__text.text a {
+  color: #66a1f7
+}
+.chart__accounts .accounts__account {
+  background-color: #381d42
 }
 .search__heading .heading__text {
   max-width: 100%;
@@ -5836,6 +5908,9 @@ summary::marker {
   .accounts__account {
     grid-template-columns: 35.928144% 1fr
   }
+  .accounts__base {
+    grid-template-columns: repeat(2,1fr)
+  }
   .video__button {
     opacity: .7
   }
@@ -5978,6 +6053,9 @@ summary::marker {
   }
   .accounts__status {
     font-size: 1.5rem
+  }
+  .accounts__range h5 {
+    font-size: 1.25rem
   }
   .recomd__label {
     font-size: 1.5rem
@@ -6272,6 +6350,9 @@ summary::marker {
   }
   .accounts__status {
     font-size: 1.25rem
+  }
+  .accounts__range h5 {
+    font-size: 1rem
   }
   .recomd__label {
     font-size: 1.125rem
@@ -7164,6 +7245,16 @@ summary::marker {
   @supports not (font-size:clamp(1.25rem ,1.158045977rem + 0.4597701149vw ,1.5rem)) {
     .accounts__status {
       font-size: calc(1.25rem + .25*(100vw - 20rem)/ 54.375)
+    }
+  }
+  @supports (font-size:clamp(1rem ,0.908045977rem + 0.4597701149vw ,1.25rem)) {
+    .accounts__range h5 {
+      font-size: clamp(1rem ,.908045977rem + .4597701149vw ,1.25rem)
+    }
+  }
+  @supports not (font-size:clamp(1rem ,0.908045977rem + 0.4597701149vw ,1.25rem)) {
+    .accounts__range h5 {
+      font-size: calc(1rem + .25*(100vw - 20rem)/ 54.375)
     }
   }
   @supports (font-size:clamp(1.125rem ,0.9870689655rem + 0.6896551724vw ,1.5rem)) {

@@ -891,6 +891,9 @@ summary {
 		position: relative;
 		max-height: toRem(340);
 		border-radius: toRem(15);
+		box-shadow:
+			rgba($bgColor, 0.4) 0px 3px 15px 0px,
+			rgba($bgColor, 0.4) 0px 3px 15px 0px;
 	}
 	// .accounts__actions
 	&__actions {
@@ -1035,6 +1038,97 @@ summary {
 		}
 		@media (max-width: $mobileSmall) {
 			font-size: toRem(14);
+		}
+	}
+	// .accounts__base
+	&__base {
+		display: grid;
+		gap: toRem(15);
+		@media (min-width: $mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	// .accounts__rating
+	&__rating {
+		display: grid;
+		gap: toRem(10);
+		padding: toRem(10);
+		align-items: start;
+		border-radius: toRem(10);
+		grid-template-rows: 1fr auto;
+		background: linear-gradient(90deg, rgba(#514197, 0.85) 0%, rgba($yellowColor, 0.35) 100%);
+		&.rating-first {
+			span {
+				background-color: rgba($greenColor, 0.85);
+			}
+		}
+		&.rating-second {
+			span {
+				background-color: rgba($orangeColor, 0.75);
+			}
+		}
+		&.rating-third {
+			span {
+				background-color: rgba($yellowColor, 0.75);
+			}
+		}
+		&.rating-four {
+			span {
+				background-color: rgba($blueColor, 0.75);
+			}
+		}
+		&.rating-five {
+			span {
+				background-color: rgba($pinkColor, 0.75);
+			}
+		}
+	}
+	// .accounts__range
+	&__range {
+		display: flex;
+		align-items: center;
+		border-radius: toRem(10);
+		padding: toRem(8) toRem(10);
+		justify-content: space-between;
+		border: toRem(1) solid rgba(#fff, 0.2);
+		box-shadow:
+			rgba($bgColor, 0.1) 0px 3px 15px 0px,
+			rgba($bgColor, 0.1) 0px 3px 15px 0px;
+		&:first-child {
+			h5 {
+				&::before {
+					color: $yellowColor;
+				}
+			}
+		}
+		&:last-child {
+			h5 {
+				&::before {
+					color: $blueColor;
+				}
+			}
+		}
+		h5 {
+			gap: toRem(7);
+			display: flex;
+			font-weight: 500;
+			align-items: center;
+			@include adaptiveValue("font-size", 20, 16);
+		}
+		span {
+			display: flex;
+			overflow: hidden;
+			align-items: center;
+			font-size: toRem(20);
+			border-radius: toRem(8);
+			justify-content: center;
+			font-family: $fontFamilyNumbers;
+			border: toRem(1) solid rgba(#fff, 0.1);
+			padding: toRem(4) toRem(10) toRem(2) toRem(10);
+			box-shadow:
+				rgba($bgColor, 0.1) 0px 3px 15px 0px,
+				rgba($bgColor, 0.1) 0px 3px 15px 0px;
+			background-color: rgba($placeholderColor, 0.75);
 		}
 	}
 }
