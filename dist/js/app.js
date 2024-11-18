@@ -6839,6 +6839,7 @@
                     const buttonCancel = e.target.closest(".slim-btn-cancel");
                     const buttonConfirm = e.target.closest(".slim-btn-confirm");
                     if (buttonCancel || buttonConfirm) {
+                        e.stopPropagation();
                         e.preventDefault();
                         return;
                     }
