@@ -200,12 +200,16 @@ export function spollers() {
 			});
 		}
 		// Робота з контентом
-		function initSpollerBody(spollersBlock, hideSpollerBody = false) {
+		function initSpollerBody(spollersBlock, hideSpollerBody = true) {
 			let spollerItems = spollersBlock.querySelectorAll('details');
 			if (spollerItems.length) {
 				//spollerItems = Array.from(spollerItems).filter(item => item.closest('[data-spollers]') === spollersBlock);
 				spollerItems.forEach(spollerItem => {
 					let spollerTitle = spollerItem.querySelector('summary');
+/* 					// Проверка, есть ли класс payment-spoller
+					if (spollerItem.classList.contains('closed-spolr')) {
+						hideSpollerBody = true; // Для споллера с этим классом всегда true
+					} */
 					if (hideSpollerBody) {
 						spollerTitle.removeAttribute('tabindex');
 						if (!spollerItem.hasAttribute('data-open')) {

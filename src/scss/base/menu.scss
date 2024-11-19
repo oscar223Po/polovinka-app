@@ -19,6 +19,13 @@
 	// .menu__body
 	&__body {
 		@media (min-width: $mobile) {
+			::-webkit-scrollbar {
+				width: toRem(2);
+				background-color: rgba($yellowColor, 0.1);
+			}
+			::-webkit-scrollbar-thumb {
+				background-color: rgba($yellowColor, 0.75);
+			}
 			left: 0;
 			top: 50px;
 			opacity: 0;
@@ -38,6 +45,17 @@
 				opacity: 1;
 				transform: scale(1);
 				visibility: visible;
+			}
+			.aside {
+				overflow-y: auto;
+				border-radius: toRem(12);
+				background-color: $purpleColor;
+				.aside__list {
+					max-height: 580px;
+					overflow-x: hidden;
+					padding-right: toRem(5);
+					border-radius: toRem(12);
+				}
 			}
 		}
 		@media (max-width: $mobile) {

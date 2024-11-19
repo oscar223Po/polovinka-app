@@ -5899,11 +5899,29 @@ summary::marker {
     transition: opacity .3s ease 0s,transform .3s ease 0s,visibility .3s ease 0s;
     transition: opacity .3s ease 0s,transform .3s ease 0s,visibility .3s ease 0s,-webkit-transform .3s ease 0s
   }
+  .menu__body ::-webkit-scrollbar {
+    width: .125rem;
+    background-color: rgba(255,186,51,.1)
+  }
+  .menu__body ::-webkit-scrollbar-thumb {
+    background-color: rgba(255,186,51,.75)
+  }
   .menu-open .menu__body {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
     visibility: visible
+  }
+  .menu__body .aside {
+    overflow-y: auto;
+    border-radius: .75rem;
+    background-color: #2d1436
+  }
+  .menu__body .aside .aside__list {
+    max-height: 580px;
+    overflow-x: hidden;
+    padding-right: .3125rem;
+    border-radius: .75rem
   }
   .accounts__account {
     grid-template-columns: 35.928144% 1fr

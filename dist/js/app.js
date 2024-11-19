@@ -6512,7 +6512,7 @@
                         }
                     }));
                 }
-                function initSpollerBody(spollersBlock, hideSpollerBody = false) {
+                function initSpollerBody(spollersBlock, hideSpollerBody = true) {
                     let spollerItems = spollersBlock.querySelectorAll("details");
                     if (spollerItems.length) spollerItems.forEach((spollerItem => {
                         let spollerTitle = spollerItem.querySelector("summary");
